@@ -5,6 +5,7 @@ def extract_junctions_and_reservoirs(features):
     reservoirs = set()
     coordinates = {}
     elevations = {}
+    demands = {}
 
     for feature in features:
         name = feature['properties']['name']
@@ -16,13 +17,15 @@ def extract_junctions_and_reservoirs(features):
             coordinates[name] = coords[:2]
             # Use the third coordinate as elevation (if available)
             elevations[name] = coords[2] if len(coords) > 2 else 0
+            # Get the demand from the 'DEMAND' property
+            demands[name] = feature['properties'].get('DEMAND', 0)
 
         if name.startswith('Reservoir'):
             reservoirs.add(name)
             coordinates[name] = coords[:2]
             elevations[name] = coords[2] if len(coords) > 2 else 0
 
-    return list(junctions), list(reservoirs), coordinates, elevations
+    return list(junctions), list(reservoirs), coordinates, elevations, demands
 
 def extract_vertices(features):
     vertices = {}
@@ -39,7 +42,7 @@ def extract_vertices(features):
 
 def geojson_to_epanet(geojson_data, inp_file):
     features = geojson_data['features']
-    junctions, reservoirs, coordinates, elevations = extract_junctions_and_reservoirs(features)
+    junctions, reservoirs, coordinates, elevations, demands = extract_junctions_and_reservoirs(features)
     vertices = extract_vertices(features)
 
     with open(inp_file, 'w') as file:
@@ -49,7 +52,8 @@ def geojson_to_epanet(geojson_data, inp_file):
         file.write("[JUNCTIONS]\n")
         file.write(";ID     Elevation       Demand      Pattern\n")
         for junction in junctions:
-            file.write(f"{junction}     {elevations[junction]}       0 \n")
+            # Write the demand value from the DEMAND property in the GeoJSON
+            file.write(f"{junction}     {elevations[junction]}       {demands[junction]} \n")
         file.write("\n")
 
         file.write("[RESERVOIRS]\n")
