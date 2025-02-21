@@ -4,16 +4,25 @@ def extract_junctions_and_reservoirs(features):
     junctions = set()
     reservoirs = set()
     coordinates = {}
+    elevations = {}
 
     for feature in features:
-        if feature['properties']['name'].startswith('Junction'):
-            junctions.add(feature['properties']['name'])
-            coordinates[feature['properties']['name']] = feature['geometry']['coordinates'][:2]
-        if feature['properties']['name'].startswith('Reservoir'):
-            reservoirs.add(feature['properties']['name'])
-            coordinates[feature['properties']['name']] = feature['geometry']['coordinates'][:2]
-    
-    return list(junctions), list(reservoirs), coordinates
+        name = feature['properties']['name']
+        coords = feature['geometry']['coordinates']
+        
+        # Handle junctions and reservoirs
+        if name.startswith('Junction'):
+            junctions.add(name)
+            coordinates[name] = coords[:2]
+            # Use the third coordinate as elevation (if available)
+            elevations[name] = coords[2] if len(coords) > 2 else 0
+
+        if name.startswith('Reservoir'):
+            reservoirs.add(name)
+            coordinates[name] = coords[:2]
+            elevations[name] = coords[2] if len(coords) > 2 else 0
+
+    return list(junctions), list(reservoirs), coordinates, elevations
 
 def extract_vertices(features):
     vertices = {}
@@ -30,7 +39,7 @@ def extract_vertices(features):
 
 def geojson_to_epanet(geojson_data, inp_file):
     features = geojson_data['features']
-    junctions, reservoirs, coordinates = extract_junctions_and_reservoirs(features)
+    junctions, reservoirs, coordinates, elevations = extract_junctions_and_reservoirs(features)
     vertices = extract_vertices(features)
 
     with open(inp_file, 'w') as file:
@@ -40,13 +49,13 @@ def geojson_to_epanet(geojson_data, inp_file):
         file.write("[JUNCTIONS]\n")
         file.write(";ID     Elevation       Demand      Pattern\n")
         for junction in junctions:
-            file.write(f"{junction}     0       0 \n")
+            file.write(f"{junction}     {elevations[junction]}       0 \n")
         file.write("\n")
 
         file.write("[RESERVOIRS]\n")
         file.write(";ID Head\n")
         for reservoir in reservoirs:
-            file.write(f"{reservoir}        0 \n")
+            file.write(f"{reservoir}        {elevations[reservoir]} \n")
         file.write("\n")
 
         file.write("[PIPES]\n")
