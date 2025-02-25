@@ -22,7 +22,7 @@ Generated from GeoPackage
  Junction-472492 	111.995	0           	                	;
  Junction-11191  	107.11	0           	                	;
  Junction-23597  	103.295	0           	                	;
- Junction-62477  	110.69	nan         	                	;
+ Junction-62477  	110.69	0         	                	;
  Junction-473880 	104.6	0           	                	;
  Junction-465565 	106.425	2.024	                	;
  Junction-34006  	95.42	0           	                	;
@@ -86,7 +86,7 @@ Generated from GeoPackage
  Junction-33591  	105.407	0           	                	;
  Junction-48986  	105.055	2.418	                	;
  Junction-10287  	111.9	0           	                	;
- Junction-62462  	111.16	nan         	                	;
+ Junction-62462  	111.16	0         	                	;
  Junction-60430  	108.127	2.888	                	;
  Junction-54321  	111.14	1.888	                	;
  Junction-53648  	119.512	4.139	                	;
@@ -95,10 +95,10 @@ Generated from GeoPackage
  Junction-11183  	87.24	0           	                	;
  Junction-9501   	119.53	15.754	                	;
  Junction-11014  	88.49	0           	                	;
- Junction-62447  	84.522	0           	                	;
+ Junction-62447  	84.522	0         	                	;
  Junction-23426  	92.43	2.324	                	;
  Junction-473890 	111.925	0           	                	;
- Junction-62481  	103.66	nan         	                	;
+ Junction-62481  	103.66	0         	                	;
  Junction-32327  	113.23	0           	                	;
  Junction-42105  	112.163	0           	                	;
  Junction-23127  	111.92	0           	                	;
@@ -333,8 +333,7 @@ Generated from GeoPackage
  Junction-471221 	123.62	0           	                	;
  Junction-11193  	110.99	0           	                	;
  Junction-473514 	121.965	0           	                	;
- Junction-62446  	84.553	0           	                	;
- Junction-460581 	113.723	nan         	                	;
+ Junction-62446  	84.553	0         	                	;
  Junction-49053  	110.003	1.585	                	;
  Junction-476247 	104.1	0           	                	;
  Junction-33062  	108.403	0           	                	;
@@ -436,7 +435,7 @@ Generated from GeoPackage
  Junction-33209  	125.46	1.355	                	;
  Junction-49168  	93.11	1.352	                	;
  Junction-22913  	137.95	0           	                	;
- Junction-62465  	114.2	nan         	                	;
+ Junction-62465  	114.2	0         	                	;
  Junction-464891 	88.25       	4.244	                	;
  Junction-23696  	99.14	3.421	                	;
  Junction-54452  	91.227	1.038	                	;
@@ -501,16 +500,17 @@ Generated from GeoPackage
  Junction-49377  	81.367	0.033	                	;
  Junction-42677  	85.092	0.106	                	;
  Junction-10825  	119.427	0           	                	;
+ Junction-62448  	84.541	0         	                	;
  Junction-60612  	97.295	3.912	                	;
  Junction-476251 	104.533	0           	                	;
- Junction-62485  	84.367	0           	                	;
+ Junction-62485  	84.367	0         	                	;
  Junction-34191  	80.22	0.024	                	;
  Junction-460584 	115.81	0           	                	;
  Junction-11011  	93.286	0.602	                	;
  Junction-53914  	118.945	1.638	                	;
  Junction-468903 	111.31	0           	                	;
  Junction-23595  	104.393	2.094	                	;
- Junction-62469  	101.49	nan         	                	;
+ Junction-62469  	101.49	0         	                	;
  Junction-468750 	106.057	0           	                	;
  Junction-10507  	127.235	0           	                	;
  Junction-23448  	114.04	0.777	                	;
@@ -539,7 +539,6 @@ Generated from GeoPackage
  Junction-10290  	111.56	0           	                	;
  Junction-33584  	100.633	3.661	                	;
  Junction-49263  	104.145	2.349	                	;
- Junction-466030 	112.86	nan         	                	;
  Junction-33195  	104.07	0           	                	;
  Junction-21330  	122.83	2.666	                	;
  Junction-32517  	111.177	0           	                	;
@@ -640,7 +639,7 @@ Generated from GeoPackage
  Junction-23692  	101.613	0.861	                	;
  Junction-465711 	113.213	0           	                	;
  Junction-53911  	113.08	1.687	                	;
- Junction-62468  	101.608	nan         	                	;
+ Junction-62468  	101.608	0         	                	;
  Junction-473826 	104.57	0           	                	;
  Junction-22523  	122.855	0           	                	;
  Junction-58240  	85.873	0           	                	;
@@ -791,7 +790,7 @@ Generated from GeoPackage
  Junction-32764  	105.338	1.408	                	;
  Junction-11313  	95.915	0           	                	;
  Junction-9861   	121.821	1.334	                	;
- Junction-62489  	111.097	nan         	                	;
+ Junction-62489  	111.097	0         	                	;
  Junction-33279  	103.57	0           	                	;
  Junction-22670  	104.155	0           	                	;
  Junction-33770  	110.847	0           	                	;
@@ -830,13 +829,13 @@ Generated from GeoPackage
  Junction-474007 	104.48	0           	                	;
  Junction-11034  	114.198	0           	                	;
  Junction-11567  	84.795	0           	                	;
- Junction-62474  	101.167	nan         	                	;
+ Junction-62474  	101.167	0         	                	;
  Junction-460468 	114.25      	0           	                	;
  Junction-23596  	103.42	0           	                	;
  Junction-21976  	111.247	0           	                	;
  Junction-473825 	104.41	0           	                	;
  Junction-42624  	82.55	0           	                	;
- Junction-62487  	103.28	nan         	                	;
+ Junction-62487  	103.28	0         	                	;
  Junction-41522  	128.11	0           	                	;
  Junction-10492  	112.685	0           	                	;
  Junction-49177  	98.94	0           	                	;
@@ -938,7 +937,7 @@ Generated from GeoPackage
  Junction-54448  	93.583	1.543	                	;
  Junction-33589  	106.89	0.787	                	;
  Junction-10628  	113.09	1.467	                	;
- Junction-62466  	111.01	nan         	                	;
+ Junction-62466  	111.01	0         	                	;
  Junction-476651 	104.93	0           	                	;
  Junction-22791  	102.977	0           	                	;
  Junction-33582  	99.27	4.052	                	;
@@ -948,14 +947,14 @@ Generated from GeoPackage
  Junction-473515 	122.027	0           	                	;
  Junction-48820  	116.73	1.038	                	;
  Junction-54184  	104.22	5.38	                	;
- Junction-62472  	102.175	nan         	                	;
+ Junction-62472  	102.175	0         	                	;
  Junction-9288   	111.197	1.564	                	;
  Junction-11190  	99.98	0           	                	;
  Junction-10803  	101.993	0           	                	;
  Junction-48546  	126.92	2.449	                	;
  Junction-476252 	105.05	0           	                	;
  Junction-57908  	126.155	0.993	                	;
- Junction-62456  	113.985	nan         	                	;
+ Junction-62456  	113.985	0         	                	;
  Junction-22903  	120.495	0           	                	;
  Junction-452401 	88.7	0           	                	;
  Junction-49388  	87.915	0.042	                	;
@@ -972,7 +971,7 @@ Generated from GeoPackage
  Junction-48549  	124.865	1.024	                	;
  Junction-48133  	120       	2.717	                	;
  Junction-33578  	101.89	0           	                	;
- Junction-62482  	105.44	nan         	                	;
+ Junction-62482  	105.44	0         	                	;
  Junction-48815  	111.65	1.324	                	;
  Junction-11194  	110.96	0           	                	;
  Junction-42617  	89.473	0.042	                	;
@@ -982,7 +981,7 @@ Generated from GeoPackage
  Junction-23443  	117.33	4.766	                	;
  Junction-23254  	95.46	0           	                	;
  Junction-476667 	106.82	0           	                	;
- Junction-62488  	104.07	nan         	                	;
+ Junction-62488  	104.07	0         	                	;
  Junction-42014  	110.5       	0           	                	;
  Junction-57807  	111.96	0           	                	;
  Junction-23280  	119.717	0           	                	;
@@ -1077,7 +1076,6 @@ Generated from GeoPackage
  Junction-33278  	103.42	0           	                	;
  Junction-9286   	110.057	1.229	                	;
  Junction-473944 	104.715	0           	                	;
- Junction-465497 	113.135	nan         	                	;
  Junction-23424  	93.537	0           	                	;
  Junction-33757  	92.31	0           	                	;
  Junction-58245  	114.435	3.359	                	;
@@ -1142,10 +1140,11 @@ Generated from GeoPackage
  Junction-21513  	119.22	2.905	                	;
  Junction-10138  	103.715	0           	                	;
  Junction-10499  	123.845	0           	                	;
+ Junction-54043  	96.407	0           	                	;
  Junction-474021 	110.597	0           	                	;
  Junction-476614 	106.59	0           	                	;
  Junction-33204  	111.89	1.39	                	;
- Junction-62460  	117.18	nan         	                	;
+ Junction-62460  	117.18	0         	                	;
  Junction-23567  	102.98	1.902	                	;
  Junction-34095  	87.805	0           	                	;
  Junction-10506  	126.983	0           	                	;
@@ -1154,10 +1153,10 @@ Generated from GeoPackage
  Junction-23251  	101.65	0           	                	;
  Junction-42435  	97.553	0           	                	;
  Junction-54316  	102.155	0           	                	;
- Junction-62449  	84.525	0           	                	;
+ Junction-62449  	84.525	0         	                	;
  Junction-476059 	109.352	0           	                	;
  Junction-476245 	104.168	0           	                	;
- Junction-62470  	113.183	nan         	                	;
+ Junction-62470  	113.183	0         	                	;
  Junction-49176  	102.767	3.091	                	;
  Junction-60583  	108.865	1.425	                	;
  Junction-477137 	105.2	0           	                	;
@@ -1190,6 +1189,7 @@ Generated from GeoPackage
  Junction-469314 	122.105	0           	                	;
  Junction-57743  	107.28	0           	                	;
  Junction-42627  	79.07	0           	                	;
+ Junction-61301  	84.515	0           	                	;
  Junction-465667 	132.892	0           	                	;
  Junction-10830  	121.243	5.487	                	;
  Junction-54090  	109.32	2.076	                	;
@@ -1206,7 +1206,7 @@ Generated from GeoPackage
  Junction-23263  	106.41	0.99	                	;
  Junction-476548 	113.477	5.39	                	;
  Junction-10263  	103.973	0.868	                	;
- Junction-62490  	108.005	nan         	                	;
+ Junction-62490  	108.005	0         	                	;
  Junction-33892  	97.577	1.411	                	;
  Junction-48873  	121.633	55.454	                	;
  Junction-473948 	111.908	0           	                	;
@@ -1332,14 +1332,13 @@ Generated from GeoPackage
  Junction-33280  	104.075	0.665	                	;
  Junction-54455  	89.665	0           	                	;
  Junction-42307  	101.9	1.185	                	;
- Junction-62459  	114.413	nan         	                	;
+ Junction-62459  	114.413	0         	                	;
  Junction-49245  	97.603	0           	                	;
  Junction-10631  	112.55	0           	                	;
  Junction-11348  	84.65	0           	                	;
  Junction-471222 	123.71	14.448	                	;
  Junction-49062  	106.9	2.324	                	;
  Junction-461031 	83.33	0.055	                	;
- Junction-465712 	113.53	nan         	                	;
  Junction-54180  	103.75      	1.062	                	;
  Junction-473837 	110.077	0           	                	;
  Junction-464006 	88.673	0.034	                	;
@@ -1443,7 +1442,7 @@ Generated from GeoPackage
  Junction-21975  	111.15	0.975	                	;
  Junction-463447 	124.853	1.484	                	;
  Junction-54579  	79.867	0           	                	;
- Junction-62473  	103.875     	nan         	                	;
+ Junction-62473  	103.875     	0         	                	;
  Junction-58190  	112.63	1.77	                	;
  Junction-54232  	111.353	2.411	                	;
  Junction-471903 	87.184	1.338	                	;
@@ -1595,7 +1594,7 @@ Generated from GeoPackage
  Junction-474017 	109.207	0           	                	;
  Junction-23826  	80.775	0           	                	;
  Junction-42332  	113.943	0           	                	;
- Junction-62480  	107.61	nan         	                	;
+ Junction-62480  	107.61	0         	                	;
  Junction-33477  	113.63	0           	                	;
  Junction-49386  	86.687	0.069	                	;
  Junction-474012 	104.175	0           	                	;
@@ -1734,6 +1733,7 @@ Generated from GeoPackage
  Junction-54145  	110.1	0.84	                	;
  Junction-54647  	79.655	0.055	                	;
  Junction-469304 	104.53	2.825	                	;
+ Junction-57938  	96.671	0           	                	;
  Junction-42525  	96.055	1.642	                	;
  Junction-33061  	103.47	2.265	                	;
  Junction-33281  	105.77	0.446	                	;
@@ -1815,7 +1815,7 @@ Generated from GeoPackage
  Junction-54322  	118.46	3.012	                	;
  Junction-33593  	105.6	0           	                	;
  Junction-10276  	101.6	0.195	                	;
- Junction-62486  	105.547	nan         	                	;
+ Junction-62486  	105.547	0         	                	;
  Junction-48826  	129.6	0.138	                	;
  Junction-474890 	107.913	0           	                	;
  Junction-476590 	104.085	0           	                	;
@@ -1844,23 +1844,11 @@ Generated from GeoPackage
  Junction-10401  	127       	1.54	                	;
  Junction-48615  	96.668	0           	                	;
  Junction-23569  	96.025	2.24	                	;
- 1               	84.5        	0           	                	;
- 2               	84.5        	0           	                	;
- 3               	84.5        	0           	                	;
- 4               	96.6        	0           	                	;
- 5               	96.9        	0           	                	;
- 7               	96.6        	0           	                	;
- 8               	96.6        	0           	                	;
- 9               	96.6        	0           	                	;
- 10              	96.6        	0           	                	;
- 12              	84.5        	0           	                	;
- 13              	84.5        	0           	                	;
- 14              	84.5        	0           	                	;
 
 [RESERVOIRS]
 ;ID              	Head        	Pattern         
- 6               	155         	                	;
- 11              	155         	                	;
+ Reservoir-62451 	0           	                	;
+ Reservoir-62450 	0           	                	;
 
 [TANKS]
 ;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
@@ -2534,6 +2522,7 @@ Generated from GeoPackage
  Pipe-43719      	Junction-22680  	Junction-10130  	18.651	70        	0.18        	0           	Open  	;
  Pipe-6123       	Junction-11348  	Junction-11349  	11.404	42        	0.18        	0           	Open  	;
  Pipe-52097      	Junction-42623  	Junction-23821  	11.775	36        	0.18        	0           	Open  	;
+ Pipe-21366      	Junction-23704  	Junction-61301  	17.005	263       	0.18        	0           	Open  	;
  Pipe-36146      	Junction-22911  	Junction-48877  	22.517	22        	0.18        	0           	Open  	;
  Pipe-12881      	Junction-32857  	Junction-22374  	6.612	133       	0.18        	0           	Open  	;
  Pipe-549604     	Junction-476724 	Junction-476725 	19.895	21.7	0.18        	0           	Open  	;
@@ -2560,6 +2549,7 @@ Generated from GeoPackage
  Pipe-13148      	Junction-10120  	Junction-10270  	7.658	54        	0.18        	0           	Open  	;
  Pipe-13074      	Junction-22677  	Junction-10128  	30.347	54        	0.18        	0           	Open  	;
  Pipe-28274      	Junction-41796  	Junction-33194  	84.92	263       	0.18        	0           	Open  	;
+ Pipe-51188      	Junction-48615  	Junction-57938  	3.321	313       	0.18        	0           	Open  	;
  Pipe-13437      	Junction-23245  	Junction-10790  	12.518	83        	0.18        	0           	Open  	;
  Pipe-531399     	Junction-464122 	Junction-467698 	3.076	36        	0.18        	0           	Open  	;
  Pipe-6105       	Junction-11313  	Junction-11314  	9.716	29        	0.18        	0           	Open  	;
@@ -2676,6 +2666,7 @@ Generated from GeoPackage
  Pipe-36667      	Junction-11423  	Junction-49322  	31.946	70        	0.18        	0           	Open  	;
  Pipe-36492      	Junction-11028  	Junction-42322  	57.661	133       	0.18        	0           	Open  	;
  Pipe-36380      	Junction-49072  	Junction-10827  	7.069	107       	0.18        	0           	Open  	;
+ Pipe-62585      	Junction-42536  	Junction-62446  	2.01	344       	0.18        	0           	Open  	;
  Pipe-13366      	Junction-23137  	Junction-23138  	23.114	29        	0.18        	0           	Open  	;
  Pipe-20815      	Junction-33289  	Junction-33290  	12.996	54        	0.18        	0           	Open  	;
  Pipe-6169       	Junction-11435  	Junction-11436  	7.799	22        	0.18        	0           	Open  	;
@@ -2992,6 +2983,7 @@ Generated from GeoPackage
  Pipe-50760      	Junction-21750  	Junction-462036 	18.37	36        	0.18        	0           	Open  	;
  Pipe-51857      	Junction-11019  	Junction-58240  	2	29        	0.18        	0           	Open  	;
  Pipe-21430      	Junction-23819  	Junction-34105  	3.951	36        	0.18        	0           	Open  	;
+ Pipe-62584      	Junction-61301  	Junction-62447  	6.039	263       	0.18        	0           	Open  	;
  Pipe-51943      	Junction-58279  	Junction-11188  	32.4	83        	0.18        	0           	Open  	;
  Pipe-5847       	Junction-10831  	Junction-10832  	59.144	107       	0.18        	0           	Open  	;
  Pipe-5668       	Junction-61114  	Junction-10504  	13.446	54        	0.18        	0           	Open  	;
@@ -3081,6 +3073,7 @@ Generated from GeoPackage
  Pipe-28639      	Junction-42181  	Junction-42182  	15.015	54        	0.18        	0           	Open  	;
  Pipe-5465       	Junction-10124  	Junction-10125  	15.442	54        	0.18        	0           	Open  	;
  Pipe-548948     	Junction-476247 	Junction-476248 	1.108	37.2	0.18        	0           	Open  	;
+ Pipe-62589      	Junction-62449  	Reservoir-62451 	2.01	263       	0.18        	0           	Open  	;
  Pipe-21053      	Junction-33605  	Junction-23441  	28.493	42        	0.18        	0           	Open  	;
  Pipe-548949     	Junction-476249 	Junction-476250 	1.167	21.7	0.18        	0           	Open  	;
  Pipe-51876      	Junction-33777  	Junction-58245  	10.38	107       	0.18        	0           	Open  	;
@@ -3375,8 +3368,10 @@ Generated from GeoPackage
  Pipe-550446     	Junction-9508   	Junction-475209 	26.336	28.8	0.18        	0           	Open  	;
  Pipe-547221     	Junction-474886 	Junction-474887 	0.088	43.1	0.18        	0           	Open  	;
  Pipe-44194      	Junction-33741  	Junction-54441  	9.3	54        	0.18        	0           	Open  	;
+ Pipe-51187      	Junction-57938  	Junction-61113  	1.553	263       	0.18        	0           	Open  	;
  Pipe-5562       	Junction-10307  	Junction-10308  	11.697	54        	0.18        	0           	Open  	;
  Pipe-35844      	Junction-48613  	Junction-9859   	14.478	70        	0.18        	0           	Open  	;
+ Pipe-62588      	Junction-62448  	Reservoir-62450 	1.756	344       	0.18        	0           	Open  	;
  Pipe-51511      	Junction-41948  	Junction-58075  	8.506	54        	0.18        	0           	Open  	;
  Pipe-58988      	Junction-10121  	Junction-33058  	13.098	133       	0.18        	0           	Open  	;
  Pipe-545802     	Junction-473888 	Junction-473952 	3.254	21.7	0.18        	0           	Open  	;
@@ -3572,6 +3567,7 @@ Generated from GeoPackage
  Pipe-542673     	Junction-471897 	Junction-471900 	8.209	43.1	0.18        	0           	Open  	;
  Pipe-59188      	Junction-58113  	Junction-60478  	9.513	29        	0.18        	0           	Open  	;
  Pipe-51867      	Junction-33761  	Junction-49179  	3.735	42        	0.18        	0           	Open  	;
+ Pipe-28961      	Junction-34013  	Junction-42538  	1.991	495       	0.18        	0           	Open  	;
  Pipe-13781      	Junction-23804  	Junction-23805  	21.499	29        	0.18        	0           	Open  	;
  Pipe-547224     	Junction-474891 	Junction-474892 	32.025	21.7	0.18        	0           	Open  	;
  Pipe-20807      	Junction-33278  	Junction-33279  	1.928	42        	0.18        	0           	Open  	;
@@ -3710,42 +3706,16 @@ Generated from GeoPackage
  Pipe-28787      	Junction-460478 	Junction-33776  	28.145	107       	0.18        	0           	Open  	;
  Pipe-531753     	Junction-475187 	Junction-475188 	2.105	70        	0.18        	0           	Open  	;
  Pipe-548951     	Junction-476253 	Junction-476254 	22.011	21.7	0.18        	0           	Open  	;
- 1               	Junction-11345  	Junction-54525  	67.72       	120         	0.4         	0           	Open  	;
- 5               	2               	3               	3.06        	150         	0.18        	0           	CV    	;
- 6               	Junction-62447  	Junction-34013  	3.05        	200         	0.18        	0           	CV    	;
- 7               	Junction-34013  	3               	2.05        	150         	0.18        	0           	Closed	;
- 8               	3               	Junction-42536  	1.94        	350         	0.18        	0           	Open  	;
- 10              	Junction-42538  	Junction-62449  	8           	300         	0.18        	0           	Open  	;
- 11              	Junction-62449  	1               	2.05        	300         	0.18        	0           	Open  	;
- 13              	Junction-62446  	Junction-42536  	3.06        	150         	0.18        	0           	CV    	;
- 14              	Junction-42538  	Junction-34013  	1.83        	200         	0.18        	0           	CV    	;
- 15              	Junction-9869   	Junction-48615  	30.37       	313         	0.4         	0           	Open  	;
- 18              	6               	5               	1217        	700         	0.18        	0           	Open  	;
- 19              	5               	4               	3.32        	313         	0.4         	0           	Open  	;
- 20              	4               	Junction-54042  	1.55        	263         	0.4         	0           	Open  	;
- 21              	Junction-54042  	Junction-61113  	0.82        	250         	0.18        	0           	CV    	;
- 22              	7               	Junction-54042  	0.82        	250         	0.18        	0           	Open  	;
- 23              	7               	9               	1           	200         	0.18        	0           	Open  	;
- 24              	10              	8               	1           	200         	0.18        	0           	CV    	;
- 25              	8               	Junction-61113  	1           	200         	0.18        	0           	CV    	;
- 26              	Junction-48615  	Junction-61113  	7.87        	300         	0.18        	0           	Open  	;
- 27              	Junction-54579  	11              	1           	300         	0.18        	0           	Open  	;
- 32              	1               	13              	3.1         	200         	0.18        	0           	Open  	;
- 33              	Junction-62449  	14              	3.1         	200         	0.18        	0           	Open  	;
- 34              	1               	12              	5.02        	200         	0.18        	0           	Open  	;
- 35              	Junction-34013  	Junction-23704  	20.36       	250         	0.18        	0           	Open  	;
- 36              	Junction-33468  	Junction-460581 	9.2         	20          	0.18        	0           	Open  	;
- 37              	Junction-465711 	Junction-465712 	9.93        	20          	0.18        	0           	Open  	;
- 38              	Junction-465496 	Junction-465497 	0.55        	20          	0.18        	0           	Open  	;
- 39              	Junction-465496 	Junction-466030 	4.44        	20          	0.18        	0           	Open  	;
+ 1               	Junction-11345  	Junction-54525  	56          	100         	0.18        	0           	Open  	;
+ 2               	Junction-54042  	Junction-61113  	1000        	12          	100         	0           	Open  	;
+ 3               	Junction-61113  	Junction-54043  	1000        	12          	100         	0           	Open  	;
+ 4               	Junction-48615  	Junction-9869   	1000        	12          	100         	0           	Open  	;
+ 5               	Junction-34013  	Junction-42536  	1000        	12          	100         	0           	Open  	;
+ 6               	Junction-62448  	Junction-62446  	1000        	12          	100         	0           	Open  	;
+ 7               	Junction-62449  	Junction-62447  	1000        	12          	100         	0           	Open  	;
 
 [PUMPS]
 ;ID              	Node1           	Node2           	Parameters
- 16              	7               	8               	HEAD 3	;
- 17              	9               	10              	HEAD 3	;
- 28              	12              	Junction-62446  	HEAD 1	;
- 29              	13              	2               	HEAD 1	;
- 30              	14              	Junction-62447  	HEAD 2	;
 
 [VALVES]
 ;ID              	Node1           	Node2           	Diameter    	Type	Setting     	MinorLoss   
@@ -3763,22 +3733,6 @@ Generated from GeoPackage
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: IC 125-100-400
- 1               	100         	55          
- 1               	150         	50          
- 1               	175         	44          
-;PUMP: IC 150-125-315
- 2               	160         	34          
- 2               	225         	32          
- 2               	275         	28          
-;PUMP: IC 150-125-400
- 3               	80          	60          
- 3               	200         	55          
- 3               	255         	50          
-;PUMP: IC 200-150-315
- 4               	260         	35          
- 4               	350         	33.5        
- 4               	400         	30.5        
 
 [CONTROLS]
 
@@ -3815,8 +3769,8 @@ Generated from GeoPackage
 ;Tank            	Model
 
 [TIMES]
- Duration           	1
- Hydraulic Timestep 	0:30
+ Duration           	0
+ Hydraulic Timestep 	1:00
  Quality Timestep   	0:05
  Pattern Timestep   	1:00
  Pattern Start      	0:00
@@ -3859,7 +3813,7 @@ Junction-11315  	363267.328        	401495.065
 Junction-473829 	361407.214        	400637.55        
 Junction-23570  	363139.609        	400570.315        
 Junction-467411 	363246.73        	401621.173        
-Junction-42538  	363338.743        	402198.481        
+Junction-42538  	363338.798        	402197.518        
 Junction-60323  	361109.247        	401296.542        
 Junction-48401  	361069.023        	401245.156        
 Junction-474084 	361639.285        	400705.705        
@@ -3942,7 +3896,7 @@ Junction-10395  	362225.691        	401340.231
 Junction-11183  	363139.968        	400697.807        
 Junction-9501   	361221.304        	401091.368        
 Junction-11014  	363007.366        	400870.316        
-Junction-62447  	363337.705        	402196.602        
+Junction-62447  	363337.594        	402195.754        
 Junction-23426  	362971.293        	400786.901        
 Junction-473890 	361502.815        	400664.747        
 Junction-62481  	362217.624        	401013.81        
@@ -4023,7 +3977,7 @@ Junction-476804 	361127.547        	400438.839
 Junction-23813  	363458.915        	401807.522        
 Junction-54512  	363224.641        	400480.346        
 Junction-473821 	361708.593        	400641.647        
-Junction-11349  	363324.443        	402198.671        
+Junction-11349  	363325.755        	402198.294        
 Junction-11450  	363538.574        	402233.493        
 Junction-476118 	361249.3        	400556.857        
 Junction-54459  	362954.37        	401430.421        
@@ -4180,8 +4134,7 @@ Junction-48872  	362377.277        	401221.099
 Junction-471221 	362892.843        	402022.821        
 Junction-11193  	363098.166        	401714.014        
 Junction-473514 	361303.653        	401089.415        
-Junction-62446  	363333.076        	402196.757        
-Junction-460581 	362670.462        	400990.536        
+Junction-62446  	363332.921        	402195.786        
 Junction-49053  	362903.306        	400472.616        
 Junction-476247 	361180.993        	400387.805        
 Junction-33062  	361983.984        	400840.598        
@@ -4348,6 +4301,7 @@ Junction-60446  	362063.8        	400534.922
 Junction-49377  	363479.295        	401304.47        
 Junction-42677  	363611.341        	401821.964        
 Junction-10825  	362766.065        	401622.2        
+Junction-62448  	363332.883        	402194.357        
 Junction-60612  	363331.777        	401624.885        
 Junction-476251 	361209.349        	400415.27        
 Junction-62485  	363322.681        	402207.052        
@@ -4386,7 +4340,6 @@ Junction-23697  	363379.278        	401525.08
 Junction-10290  	362179.339        	401384.124        
 Junction-33584  	362883.095        	400662.606        
 Junction-49263  	363191.4        	401896.889        
-Junction-466030 	362691.738        	400974.878        
 Junction-33195  	362099.997        	401002.984        
 Junction-21330  	360692.713        	401220.575        
 Junction-32517  	361138.642        	401223.148        
@@ -4924,7 +4877,6 @@ Junction-42341  	363082.178        	401748.541
 Junction-33278  	362270.355        	400580.539        
 Junction-9286   	361081.065        	401266.947        
 Junction-473944 	361411.037        	400547.637        
-Junction-465497 	362688.586        	400976.669        
 Junction-23424  	363003.167        	400694.614        
 Junction-33757  	362929.163        	401031.539        
 Junction-58245  	362963.299        	402265.842        
@@ -4989,6 +4941,7 @@ Junction-473819 	361738.156        	400649.246
 Junction-21513  	360799.693        	401248.013        
 Junction-10138  	362049.728        	401356.216        
 Junction-10499  	362415.157        	401260.748        
+Junction-54043  	361605.624        	401717.745        
 Junction-474021 	361605.291        	400704.801        
 Junction-476614 	361274.788        	400480.385        
 Junction-33204  	362185.098        	401393.756        
@@ -5037,6 +4990,7 @@ Junction-23421  	363057.442        	400491.698
 Junction-469314 	361302.938        	401086.233        
 Junction-57743  	361022.885        	401327.676        
 Junction-42627  	363542.915        	402188.721        
+Junction-61301  	363336.867        	402200.732        
 Junction-465667 	362717.985        	402036.693        
 Junction-10830  	362830.445        	401745.005        
 Junction-54090  	361882.689        	401512.694        
@@ -5186,7 +5140,6 @@ Junction-11348  	363322.251        	402190.087
 Junction-471222 	362917.706        	402004.914        
 Junction-49062  	362795.374        	401217.311        
 Junction-461031 	363138.366        	401117.932        
-Junction-465712 	362680.145        	400984.482        
 Junction-54180  	362053.651        	400443.216        
 Junction-473837 	361672.563        	400720.924        
 Junction-464006 	363488.801        	401878.427        
@@ -5207,7 +5160,7 @@ Junction-42176  	362822.916        	400491.688
 Junction-33776  	362995.38        	402230.423        
 Junction-11448  	363451.186        	402094.823        
 Junction-54446  	363049.493        	400471.61        
-Junction-42536  	363333.114        	402198.691        
+Junction-42536  	363332.975        	402197.795        
 Junction-54576  	363349.277        	402026.921        
 Junction-465061 	363319.858        	401866.025        
 Junction-33194  	362082.116        	401045.636        
@@ -5289,7 +5242,7 @@ Junction-33201  	362080.499        	401360.417
 Junction-23252  	362827.948        	400625.64        
 Junction-21975  	361070.447        	401247.956        
 Junction-463447 	361541.627        	401143.752        
-Junction-54579  	363321.678        	402218.335        
+Junction-54579  	363471.196        	402261.992        
 Junction-62473  	362947.18        	401317.097        
 Junction-58190  	362750.2        	401338.432        
 Junction-54232  	362232.686        	401351.037        
@@ -5471,7 +5424,7 @@ Junction-476246 	361155.683        	400413.373
 Junction-10392  	362342.373        	401250.033        
 Junction-54571  	363253.395        	401556.369        
 Junction-473940 	361651.1        	400628.078        
-Junction-34013  	363337.708        	402198.533        
+Junction-34013  	363336.809        	402197.612        
 Junction-41025  	360774.822        	401196.26        
 Junction-11578  	363653.077        	402052.231        
 Junction-41620  	361653.602        	400973.687        
@@ -5519,7 +5472,7 @@ Junction-11331  	363278.218        	401722.014
 Junction-477157 	361221.213        	400532.815        
 Junction-11326  	363313.955        	401505.955        
 Junction-33598  	362835.639        	401346.89        
-Junction-61113  	361606.726        	401716.941        
+Junction-61113  	361606.922        	401716.67        
 Junction-61037  	362729.289        	401374.168        
 Junction-60346  	361280.176        	401080.417        
 Junction-473836 	361675.974        	400714.358        
@@ -5581,6 +5534,7 @@ Junction-32980  	361889.389        	401422.697
 Junction-54145  	362022.163        	401439.664        
 Junction-54647  	363626.146        	401294.629        
 Junction-469304 	361504.827        	401317.644        
+Junction-57938  	361607.885        	401717.889        
 Junction-42525  	363280.789        	401372.389        
 Junction-33061  	361999.758        	400580.752        
 Junction-33281  	362335.714        	400605.836        
@@ -5689,47 +5643,13 @@ Junction-33767  	362947.816        	401732.169
 Junction-42016  	362454.159        	400780.901        
 Junction-42679  	363745.624        	401972.526        
 Junction-10401  	362357.761        	401365.964        
-Junction-48615  	361611.924        	401717.91        
+Junction-48615  	361611.065        	401718.841        
 Junction-23569  	363141.379        	400586.385        
-1               	363335.146        	402194.211        
-2               	363335.119        	402196.783        
-3               	363335.12        	402198.636        
-4               	361609.26        	401715.583        
-5               	361612.092        	401715.803        
-7               	361606.687        	401715.249        
-8               	361605.601        	401716.439        
-9               	361605.652        	401714.641        
-10              	361604.489        	401715.792        
-12              	363332.999        	402195.503        
-13              	363335.184        	402195.387        
-14              	363337.705        	402195.193        
-6               	361610.152        	401721.003        
-11              	363321.064        	402219.729        
+Reservoir-62451 	363337.638        	402192.213        
+Reservoir-62450 	363332.855        	402192.601        
 
 [VERTICES]
 ;Link            	X-Coord           	Y-Coord
-Pipe-6123       	363322.206        	402195.344        
-Pipe-6123       	363324.405        	402195.344        
-Pipe-59682      	363323.271        	402202.748        
-Pipe-59682      	363340.454        	402202.36        
-Pipe-59682      	363340.325        	402200.16        
-Pipe-59682      	363338.746        	402200.186        
-Pipe-62615      	363322.257        	402198.458        
-Pipe-62615      	363324.235        	402198.484        
-Pipe-21363      	363321.947        	402198.781        
-10              	363338.691        	402194.133        
-15              	361623.274        	401725.095        
-15              	361615.401        	401717.896        
-15              	361613.863        	401719.242        
-19              	361610.527        	401716.023        
-22              	361607.423        	401715.56        
-22              	361607.862        	401714.818        
-26              	361610.914        	401717.22        
-26              	361609.686        	401719.289        
-26              	361606.505        	401717.492        
-34              	363332.973        	402194.21        
-35              	363337.708        	402200.197        
-35              	363324.665        	402200.507        
 
 [LABELS]
 ;X-Coord             Y-Coord             Label & Anchor Node
