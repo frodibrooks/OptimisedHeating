@@ -1,0 +1,5598 @@
+[TITLE]
+Generated from GeoJSON
+
+[JUNCTIONS]
+;ID   Elevation Demand
+node_1 0 0
+node_2 0 0
+node_3 0 0
+node_4 0 0
+node_5 0 0
+node_6 0 0
+node_7 0 0
+node_8 0 0
+node_9 0 0
+node_10 0 0
+node_11 0 0
+node_12 0 0
+node_13 0 0
+node_14 0 0
+node_15 0 0
+node_16 0 0
+node_17 0 0
+node_18 0 0
+node_19 0 0
+node_20 0 0
+node_21 0 0
+node_22 0 0
+node_23 0 0
+node_24 0 0
+node_25 0 0
+node_26 0 0
+node_27 0 0
+node_28 0 0
+node_29 0 0
+node_30 0 0
+node_31 0 0
+node_32 0 0
+node_33 0 0
+node_34 0 0
+node_35 0 0
+node_36 0 0
+node_37 0 0
+node_38 0 0
+node_39 0 0
+node_40 0 0
+node_41 0 0
+node_42 0 0
+node_43 0 0
+node_44 0 0
+node_45 0 0
+node_46 0 0
+node_47 0 0
+node_48 0 0
+node_49 0 0
+node_50 0 0
+node_51 0 0
+node_52 0 0
+node_53 0 0
+node_54 0 0
+node_55 0 0
+node_56 0 0
+node_57 0 0
+node_58 0 0
+node_59 0 0
+node_60 0 0
+node_61 0 0
+node_62 0 0
+node_63 0 0
+node_64 0 0
+node_65 0 0
+node_66 0 0
+node_67 0 0
+node_68 0 0
+node_69 0 0
+node_70 0 0
+node_71 0 0
+node_72 0 0
+node_73 0 0
+node_74 0 0
+node_75 0 0
+node_76 0 0
+node_77 0 0
+node_78 0 0
+node_79 0 0
+node_80 0 0
+node_81 0 0
+node_82 0 0
+node_83 0 0
+node_84 0 0
+node_85 0 0
+node_86 0 0
+node_87 0 0
+node_88 0 0
+node_89 0 0
+node_90 0 0
+node_91 0 0
+node_92 0 0
+node_93 0 0
+node_94 0 0
+node_95 0 0
+node_96 0 0
+node_97 0 0
+node_98 0 0
+node_99 0 0
+node_100 0 0
+node_101 0 0
+node_102 0 0
+node_103 0 0
+node_104 0 0
+node_105 0 0
+node_106 0 0
+node_107 0 0
+node_108 0 0
+node_109 0 0
+node_110 0 0
+node_111 0 0
+node_112 0 0
+node_113 0 0
+node_114 0 0
+node_115 0 0
+node_116 0 0
+node_117 0 0
+node_118 0 0
+node_119 0 0
+node_120 0 0
+node_121 0 0
+node_122 0 0
+node_123 0 0
+node_124 0 0
+node_125 0 0
+node_126 0 0
+node_127 0 0
+node_128 0 0
+node_129 0 0
+node_130 0 0
+node_131 0 0
+node_132 0 0
+node_133 0 0
+node_134 0 0
+node_135 0 0
+node_136 0 0
+node_137 0 0
+node_138 0 0
+node_139 0 0
+node_140 0 0
+node_141 0 0
+node_142 0 0
+node_143 0 0
+node_144 0 0
+node_145 0 0
+node_146 0 0
+node_147 0 0
+node_148 0 0
+node_149 0 0
+node_150 0 0
+node_151 0 0
+node_152 0 0
+node_153 0 0
+node_154 0 0
+node_155 0 0
+node_156 0 0
+node_157 0 0
+node_158 0 0
+node_159 0 0
+node_160 0 0
+node_161 0 0
+node_162 0 0
+node_163 0 0
+node_164 0 0
+node_165 0 0
+node_166 0 0
+node_167 0 0
+node_168 0 0
+node_169 0 0
+node_170 0 0
+node_171 0 0
+node_172 0 0
+node_173 0 0
+node_174 0 0
+node_175 0 0
+node_176 0 0
+node_177 0 0
+node_178 0 0
+node_179 0 0
+node_180 0 0
+node_181 0 0
+node_182 0 0
+node_183 0 0
+node_184 0 0
+node_185 0 0
+node_186 0 0
+node_187 0 0
+node_188 0 0
+node_189 0 0
+node_190 0 0
+node_191 0 0
+node_192 0 0
+node_193 0 0
+node_194 0 0
+node_195 0 0
+node_196 0 0
+node_197 0 0
+node_198 0 0
+node_199 0 0
+node_200 0 0
+node_201 0 0
+node_202 0 0
+node_203 0 0
+node_204 0 0
+node_205 0 0
+node_206 0 0
+node_207 0 0
+node_208 0 0
+node_209 0 0
+node_210 0 0
+node_211 0 0
+node_212 0 0
+node_213 0 0
+node_214 0 0
+node_215 0 0
+node_216 0 0
+node_217 0 0
+node_218 0 0
+node_219 0 0
+node_220 0 0
+node_221 0 0
+node_222 0 0
+node_223 0 0
+node_224 0 0
+node_225 0 0
+node_226 0 0
+node_227 0 0
+node_228 0 0
+node_229 0 0
+node_230 0 0
+node_231 0 0
+node_232 0 0
+node_233 0 0
+node_234 0 0
+node_235 0 0
+node_236 0 0
+node_237 0 0
+node_238 0 0
+node_239 0 0
+node_240 0 0
+node_241 0 0
+node_242 0 0
+node_243 0 0
+node_244 0 0
+node_245 0 0
+node_246 0 0
+node_247 0 0
+node_248 0 0
+node_249 0 0
+node_250 0 0
+node_251 0 0
+node_252 0 0
+node_253 0 0
+node_254 0 0
+node_255 0 0
+node_256 0 0
+node_257 0 0
+node_258 0 0
+node_259 0 0
+node_260 0 0
+node_261 0 0
+node_262 0 0
+node_263 0 0
+node_264 0 0
+node_265 0 0
+node_266 0 0
+node_267 0 0
+node_268 0 0
+node_269 0 0
+node_270 0 0
+node_271 0 0
+node_272 0 0
+node_273 0 0
+node_274 0 0
+node_275 0 0
+node_276 0 0
+node_277 0 0
+node_278 0 0
+node_279 0 0
+node_280 0 0
+node_281 0 0
+node_282 0 0
+node_283 0 0
+node_284 0 0
+node_285 0 0
+node_286 0 0
+node_287 0 0
+node_288 0 0
+node_289 0 0
+node_290 0 0
+node_291 0 0
+node_292 0 0
+node_293 0 0
+node_294 0 0
+node_295 0 0
+node_296 0 0
+node_297 0 0
+node_298 0 0
+node_299 0 0
+node_300 0 0
+node_301 0 0
+node_302 0 0
+node_303 0 0
+node_304 0 0
+node_305 0 0
+node_306 0 0
+node_307 0 0
+node_308 0 0
+node_309 0 0
+node_310 0 0
+node_311 0 0
+node_312 0 0
+node_313 0 0
+node_314 0 0
+node_315 0 0
+node_316 0 0
+node_317 0 0
+node_318 0 0
+node_319 0 0
+node_320 0 0
+node_321 0 0
+node_322 0 0
+node_323 0 0
+node_324 0 0
+node_325 0 0
+node_326 0 0
+node_327 0 0
+node_328 0 0
+node_329 0 0
+node_330 0 0
+node_331 0 0
+node_332 0 0
+node_333 0 0
+node_334 0 0
+node_335 0 0
+node_336 0 0
+node_337 0 0
+node_338 0 0
+node_339 0 0
+node_340 0 0
+node_341 0 0
+node_342 0 0
+node_343 0 0
+node_344 0 0
+node_345 0 0
+node_346 0 0
+node_347 0 0
+node_348 0 0
+node_349 0 0
+node_350 0 0
+node_351 0 0
+node_352 0 0
+node_353 0 0
+node_354 0 0
+node_355 0 0
+node_356 0 0
+node_357 0 0
+node_358 0 0
+node_359 0 0
+node_360 0 0
+node_361 0 0
+node_362 0 0
+node_363 0 0
+node_364 0 0
+node_365 0 0
+node_366 0 0
+node_367 0 0
+node_368 0 0
+node_369 0 0
+node_370 0 0
+node_371 0 0
+node_372 0 0
+node_373 0 0
+node_374 0 0
+node_375 0 0
+node_376 0 0
+node_377 0 0
+node_378 0 0
+node_379 0 0
+node_380 0 0
+node_381 0 0
+node_382 0 0
+node_383 0 0
+node_384 0 0
+node_385 0 0
+node_386 0 0
+node_387 0 0
+node_388 0 0
+node_389 0 0
+node_390 0 0
+node_391 0 0
+node_392 0 0
+node_393 0 0
+node_394 0 0
+node_395 0 0
+node_396 0 0
+node_397 0 0
+node_398 0 0
+node_399 0 0
+node_400 0 0
+node_401 0 0
+node_402 0 0
+node_403 0 0
+node_404 0 0
+node_405 0 0
+node_406 0 0
+node_407 0 0
+node_408 0 0
+node_409 0 0
+node_410 0 0
+node_411 0 0
+node_412 0 0
+node_413 0 0
+node_414 0 0
+node_415 0 0
+node_416 0 0
+node_417 0 0
+node_418 0 0
+node_419 0 0
+node_420 0 0
+node_421 0 0
+node_422 0 0
+node_423 0 0
+node_424 0 0
+node_425 0 0
+node_426 0 0
+node_427 0 0
+node_428 0 0
+node_429 0 0
+node_430 0 0
+node_431 0 0
+node_432 0 0
+node_433 0 0
+node_434 0 0
+node_435 0 0
+node_436 0 0
+node_437 0 0
+node_438 0 0
+node_439 0 0
+node_440 0 0
+node_441 0 0
+node_442 0 0
+node_443 0 0
+node_444 0 0
+node_445 0 0
+node_446 0 0
+node_447 0 0
+node_448 0 0
+node_449 0 0
+node_450 0 0
+node_451 0 0
+node_452 0 0
+node_453 0 0
+node_454 0 0
+node_455 0 0
+node_456 0 0
+node_457 0 0
+node_458 0 0
+node_459 0 0
+node_460 0 0
+node_461 0 0
+node_462 0 0
+node_463 0 0
+node_464 0 0
+node_465 0 0
+node_466 0 0
+node_467 0 0
+node_468 0 0
+node_469 0 0
+node_470 0 0
+node_471 0 0
+node_472 0 0
+node_473 0 0
+node_474 0 0
+node_475 0 0
+node_476 0 0
+node_477 0 0
+node_478 0 0
+node_479 0 0
+node_480 0 0
+node_481 0 0
+node_482 0 0
+node_483 0 0
+node_484 0 0
+node_485 0 0
+node_486 0 0
+node_487 0 0
+node_488 0 0
+node_489 0 0
+node_490 0 0
+node_491 0 0
+node_492 0 0
+node_493 0 0
+node_494 0 0
+node_495 0 0
+node_496 0 0
+node_497 0 0
+node_498 0 0
+node_499 0 0
+node_500 0 0
+node_501 0 0
+node_502 0 0
+node_503 0 0
+node_504 0 0
+node_505 0 0
+node_506 0 0
+node_507 0 0
+node_508 0 0
+node_509 0 0
+node_510 0 0
+node_511 0 0
+node_512 0 0
+node_513 0 0
+node_514 0 0
+node_515 0 0
+node_516 0 0
+node_517 0 0
+node_518 0 0
+node_519 0 0
+node_520 0 0
+node_521 0 0
+node_522 0 0
+node_523 0 0
+node_524 0 0
+node_525 0 0
+node_526 0 0
+node_527 0 0
+node_528 0 0
+node_529 0 0
+node_530 0 0
+node_531 0 0
+node_532 0 0
+node_533 0 0
+node_534 0 0
+node_535 0 0
+node_536 0 0
+node_537 0 0
+node_538 0 0
+node_539 0 0
+node_540 0 0
+node_541 0 0
+node_542 0 0
+node_543 0 0
+node_544 0 0
+node_545 0 0
+node_546 0 0
+node_547 0 0
+node_548 0 0
+node_549 0 0
+node_550 0 0
+node_551 0 0
+node_552 0 0
+node_553 0 0
+node_554 0 0
+node_555 0 0
+node_556 0 0
+node_557 0 0
+node_558 0 0
+node_559 0 0
+node_560 0 0
+node_561 0 0
+node_562 0 0
+node_563 0 0
+node_564 0 0
+node_565 0 0
+node_566 0 0
+node_567 0 0
+node_568 0 0
+node_569 0 0
+node_570 0 0
+node_571 0 0
+node_572 0 0
+node_573 0 0
+node_574 0 0
+node_575 0 0
+node_576 0 0
+node_577 0 0
+node_578 0 0
+node_579 0 0
+node_580 0 0
+node_581 0 0
+node_582 0 0
+node_583 0 0
+node_584 0 0
+node_585 0 0
+node_586 0 0
+node_587 0 0
+node_588 0 0
+node_589 0 0
+node_590 0 0
+node_591 0 0
+node_592 0 0
+node_593 0 0
+node_594 0 0
+node_595 0 0
+node_596 0 0
+node_597 0 0
+node_598 0 0
+node_599 0 0
+node_600 0 0
+node_601 0 0
+node_602 0 0
+node_603 0 0
+node_604 0 0
+node_605 0 0
+node_606 0 0
+node_607 0 0
+node_608 0 0
+node_609 0 0
+node_610 0 0
+node_611 0 0
+node_612 0 0
+node_613 0 0
+node_614 0 0
+node_615 0 0
+node_616 0 0
+node_617 0 0
+node_618 0 0
+node_619 0 0
+node_620 0 0
+node_621 0 0
+node_622 0 0
+node_623 0 0
+node_624 0 0
+node_625 0 0
+node_626 0 0
+node_627 0 0
+node_628 0 0
+node_629 0 0
+node_630 0 0
+node_631 0 0
+node_632 0 0
+node_633 0 0
+node_634 0 0
+node_635 0 0
+node_636 0 0
+node_637 0 0
+node_638 0 0
+node_639 0 0
+node_640 0 0
+node_641 0 0
+node_642 0 0
+node_643 0 0
+node_644 0 0
+node_645 0 0
+node_646 0 0
+node_647 0 0
+node_648 0 0
+node_649 0 0
+node_650 0 0
+node_651 0 0
+node_652 0 0
+node_653 0 0
+node_654 0 0
+node_655 0 0
+node_656 0 0
+node_657 0 0
+node_658 0 0
+node_659 0 0
+node_660 0 0
+node_661 0 0
+node_662 0 0
+node_663 0 0
+node_664 0 0
+node_665 0 0
+node_666 0 0
+node_667 0 0
+node_668 0 0
+node_669 0 0
+node_670 0 0
+node_671 0 0
+node_672 0 0
+node_673 0 0
+node_674 0 0
+node_675 0 0
+node_676 0 0
+node_677 0 0
+node_678 0 0
+node_679 0 0
+node_680 0 0
+node_681 0 0
+node_682 0 0
+node_683 0 0
+node_684 0 0
+node_685 0 0
+node_686 0 0
+node_687 0 0
+node_688 0 0
+node_689 0 0
+node_690 0 0
+node_691 0 0
+node_692 0 0
+node_693 0 0
+node_694 0 0
+node_695 0 0
+node_696 0 0
+node_697 0 0
+node_698 0 0
+node_699 0 0
+node_700 0 0
+node_701 0 0
+node_702 0 0
+node_703 0 0
+node_704 0 0
+node_705 0 0
+node_706 0 0
+node_707 0 0
+node_708 0 0
+node_709 0 0
+node_710 0 0
+node_711 0 0
+node_712 0 0
+node_713 0 0
+node_714 0 0
+node_715 0 0
+node_716 0 0
+node_717 0 0
+node_718 0 0
+node_719 0 0
+node_720 0 0
+node_721 0 0
+node_722 0 0
+node_723 0 0
+node_724 0 0
+node_725 0 0
+node_726 0 0
+node_727 0 0
+node_728 0 0
+node_729 0 0
+node_730 0 0
+node_731 0 0
+node_732 0 0
+node_733 0 0
+node_734 0 0
+node_735 0 0
+node_736 0 0
+node_737 0 0
+node_738 0 0
+node_739 0 0
+node_740 0 0
+node_741 0 0
+node_742 0 0
+node_743 0 0
+node_744 0 0
+node_745 0 0
+node_746 0 0
+node_747 0 0
+node_748 0 0
+node_749 0 0
+node_750 0 0
+node_751 0 0
+node_752 0 0
+node_753 0 0
+node_754 0 0
+node_755 0 0
+node_756 0 0
+node_757 0 0
+node_758 0 0
+node_759 0 0
+node_760 0 0
+node_761 0 0
+node_762 0 0
+node_763 0 0
+node_764 0 0
+node_765 0 0
+node_766 0 0
+node_767 0 0
+node_768 0 0
+node_769 0 0
+node_770 0 0
+node_771 0 0
+node_772 0 0
+node_773 0 0
+node_774 0 0
+node_775 0 0
+node_776 0 0
+node_777 0 0
+node_778 0 0
+node_779 0 0
+node_780 0 0
+node_781 0 0
+node_782 0 0
+node_783 0 0
+node_784 0 0
+node_785 0 0
+node_786 0 0
+node_787 0 0
+node_788 0 0
+node_789 0 0
+node_790 0 0
+node_791 0 0
+node_792 0 0
+node_793 0 0
+node_794 0 0
+node_795 0 0
+node_796 0 0
+node_797 0 0
+node_798 0 0
+node_799 0 0
+node_800 0 0
+node_801 0 0
+node_802 0 0
+node_803 0 0
+node_804 0 0
+node_805 0 0
+node_806 0 0
+node_807 0 0
+node_808 0 0
+node_809 0 0
+node_810 0 0
+node_811 0 0
+node_812 0 0
+node_813 0 0
+node_814 0 0
+node_815 0 0
+node_816 0 0
+node_817 0 0
+node_818 0 0
+node_819 0 0
+node_820 0 0
+node_821 0 0
+node_822 0 0
+node_823 0 0
+node_824 0 0
+node_825 0 0
+node_826 0 0
+node_827 0 0
+node_828 0 0
+node_829 0 0
+node_830 0 0
+node_831 0 0
+node_832 0 0
+node_833 0 0
+node_834 0 0
+node_835 0 0
+node_836 0 0
+node_837 0 0
+node_838 0 0
+node_839 0 0
+node_840 0 0
+node_841 0 0
+node_842 0 0
+node_843 0 0
+node_844 0 0
+node_845 0 0
+node_846 0 0
+node_847 0 0
+node_848 0 0
+node_849 0 0
+node_850 0 0
+node_851 0 0
+node_852 0 0
+node_853 0 0
+node_854 0 0
+node_855 0 0
+node_856 0 0
+node_857 0 0
+node_858 0 0
+node_859 0 0
+node_860 0 0
+node_861 0 0
+node_862 0 0
+node_863 0 0
+node_864 0 0
+node_865 0 0
+node_866 0 0
+node_867 0 0
+node_868 0 0
+node_869 0 0
+node_870 0 0
+node_871 0 0
+node_872 0 0
+node_873 0 0
+node_874 0 0
+node_875 0 0
+node_876 0 0
+node_877 0 0
+node_878 0 0
+node_879 0 0
+node_880 0 0
+node_881 0 0
+node_882 0 0
+node_883 0 0
+node_884 0 0
+node_885 0 0
+node_886 0 0
+node_887 0 0
+node_888 0 0
+node_889 0 0
+node_890 0 0
+node_891 0 0
+node_892 0 0
+node_893 0 0
+node_894 0 0
+node_895 0 0
+node_896 0 0
+node_897 0 0
+node_898 0 0
+node_899 0 0
+node_900 0 0
+node_901 0 0
+node_902 0 0
+node_903 0 0
+node_904 0 0
+node_905 0 0
+node_906 0 0
+node_907 0 0
+node_908 0 0
+node_909 0 0
+node_910 0 0
+node_911 0 0
+node_912 0 0
+node_913 0 0
+node_914 0 0
+node_915 0 0
+node_916 0 0
+node_917 0 0
+node_918 0 0
+node_919 0 0
+node_920 0 0
+node_921 0 0
+node_922 0 0
+node_923 0 0
+node_924 0 0
+node_925 0 0
+node_926 0 0
+node_927 0 0
+node_928 0 0
+node_929 0 0
+node_930 0 0
+node_931 0 0
+node_932 0 0
+node_933 0 0
+node_934 0 0
+node_935 0 0
+node_936 0 0
+node_937 0 0
+node_938 0 0
+node_939 0 0
+node_940 0 0
+node_941 0 0
+node_942 0 0
+node_943 0 0
+node_944 0 0
+node_945 0 0
+node_946 0 0
+node_947 0 0
+node_948 0 0
+node_949 0 0
+node_950 0 0
+node_951 0 0
+node_952 0 0
+node_953 0 0
+node_954 0 0
+node_955 0 0
+node_956 0 0
+node_957 0 0
+node_958 0 0
+node_959 0 0
+node_960 0 0
+node_961 0 0
+node_962 0 0
+node_963 0 0
+node_964 0 0
+node_965 0 0
+node_966 0 0
+node_967 0 0
+node_968 0 0
+node_969 0 0
+node_970 0 0
+node_971 0 0
+node_972 0 0
+node_973 0 0
+node_974 0 0
+node_975 0 0
+node_976 0 0
+node_977 0 0
+node_978 0 0
+node_979 0 0
+node_980 0 0
+node_981 0 0
+node_982 0 0
+node_983 0 0
+node_984 0 0
+node_985 0 0
+node_986 0 0
+node_987 0 0
+node_988 0 0
+node_989 0 0
+node_990 0 0
+node_991 0 0
+node_992 0 0
+node_993 0 0
+node_994 0 0
+node_995 0 0
+node_996 0 0
+node_997 0 0
+node_998 0 0
+node_999 0 0
+node_1000 0 0
+node_1001 0 0
+node_1002 0 0
+node_1003 0 0
+node_1004 0 0
+node_1005 0 0
+node_1006 0 0
+node_1007 0 0
+node_1008 0 0
+node_1009 0 0
+node_1010 0 0
+node_1011 0 0
+node_1012 0 0
+node_1013 0 0
+node_1014 0 0
+node_1015 0 0
+node_1016 0 0
+node_1017 0 0
+node_1018 0 0
+node_1019 0 0
+node_1020 0 0
+node_1021 0 0
+node_1022 0 0
+node_1023 0 0
+node_1024 0 0
+node_1025 0 0
+node_1026 0 0
+node_1027 0 0
+node_1028 0 0
+node_1029 0 0
+node_1030 0 0
+node_1031 0 0
+node_1032 0 0
+node_1033 0 0
+node_1034 0 0
+node_1035 0 0
+node_1036 0 0
+node_1037 0 0
+node_1038 0 0
+node_1039 0 0
+node_1040 0 0
+node_1041 0 0
+node_1042 0 0
+node_1043 0 0
+node_1044 0 0
+node_1045 0 0
+node_1046 0 0
+node_1047 0 0
+node_1048 0 0
+node_1049 0 0
+node_1050 0 0
+node_1051 0 0
+node_1052 0 0
+node_1053 0 0
+node_1054 0 0
+node_1055 0 0
+node_1056 0 0
+node_1057 0 0
+node_1058 0 0
+node_1059 0 0
+node_1060 0 0
+node_1061 0 0
+node_1062 0 0
+node_1063 0 0
+node_1064 0 0
+node_1065 0 0
+node_1066 0 0
+node_1067 0 0
+node_1068 0 0
+node_1069 0 0
+node_1070 0 0
+node_1071 0 0
+node_1072 0 0
+node_1073 0 0
+node_1074 0 0
+node_1075 0 0
+node_1076 0 0
+node_1077 0 0
+node_1078 0 0
+node_1079 0 0
+node_1080 0 0
+node_1081 0 0
+node_1082 0 0
+node_1083 0 0
+node_1084 0 0
+node_1085 0 0
+node_1086 0 0
+node_1087 0 0
+node_1088 0 0
+node_1089 0 0
+node_1090 0 0
+node_1091 0 0
+node_1092 0 0
+node_1093 0 0
+node_1094 0 0
+node_1095 0 0
+node_1096 0 0
+node_1097 0 0
+node_1098 0 0
+node_1099 0 0
+node_1100 0 0
+node_1101 0 0
+node_1102 0 0
+node_1103 0 0
+node_1104 0 0
+node_1105 0 0
+node_1106 0 0
+node_1107 0 0
+node_1108 0 0
+node_1109 0 0
+node_1110 0 0
+node_1111 0 0
+node_1112 0 0
+node_1113 0 0
+node_1114 0 0
+node_1115 0 0
+node_1116 0 0
+node_1117 0 0
+node_1118 0 0
+node_1119 0 0
+node_1120 0 0
+node_1121 0 0
+node_1122 0 0
+node_1123 0 0
+node_1124 0 0
+node_1125 0 0
+node_1126 0 0
+node_1127 0 0
+node_1128 0 0
+node_1129 0 0
+node_1130 0 0
+node_1131 0 0
+node_1132 0 0
+node_1133 0 0
+node_1134 0 0
+node_1135 0 0
+node_1136 0 0
+node_1137 0 0
+node_1138 0 0
+node_1139 0 0
+node_1140 0 0
+node_1141 0 0
+node_1142 0 0
+node_1143 0 0
+node_1144 0 0
+node_1145 0 0
+node_1146 0 0
+node_1147 0 0
+node_1148 0 0
+node_1149 0 0
+node_1150 0 0
+node_1151 0 0
+node_1152 0 0
+node_1153 0 0
+node_1154 0 0
+node_1155 0 0
+node_1156 0 0
+node_1157 0 0
+node_1158 0 0
+node_1159 0 0
+node_1160 0 0
+node_1161 0 0
+node_1162 0 0
+node_1163 0 0
+node_1164 0 0
+node_1165 0 0
+node_1166 0 0
+node_1167 0 0
+node_1168 0 0
+node_1169 0 0
+node_1170 0 0
+node_1171 0 0
+node_1172 0 0
+node_1173 0 0
+node_1174 0 0
+node_1175 0 0
+node_1176 0 0
+node_1177 0 0
+node_1178 0 0
+node_1179 0 0
+node_1180 0 0
+node_1181 0 0
+node_1182 0 0
+node_1183 0 0
+node_1184 0 0
+node_1185 0 0
+node_1186 0 0
+node_1187 0 0
+node_1188 0 0
+node_1189 0 0
+node_1190 0 0
+node_1191 0 0
+node_1192 0 0
+node_1193 0 0
+node_1194 0 0
+node_1195 0 0
+node_1196 0 0
+node_1197 0 0
+node_1198 0 0
+node_1199 0 0
+node_1200 0 0
+node_1201 0 0
+node_1202 0 0
+node_1203 0 0
+node_1204 0 0
+node_1205 0 0
+node_1206 0 0
+node_1207 0 0
+node_1208 0 0
+node_1209 0 0
+node_1210 0 0
+node_1211 0 0
+node_1212 0 0
+node_1213 0 0
+node_1214 0 0
+node_1215 0 0
+node_1216 0 0
+node_1217 0 0
+node_1218 0 0
+node_1219 0 0
+node_1220 0 0
+node_1221 0 0
+node_1222 0 0
+node_1223 0 0
+node_1224 0 0
+node_1225 0 0
+node_1226 0 0
+node_1227 0 0
+node_1228 0 0
+node_1229 0 0
+node_1230 0 0
+node_1231 0 0
+node_1232 0 0
+node_1233 0 0
+node_1234 0 0
+node_1235 0 0
+node_1236 0 0
+node_1237 0 0
+node_1238 0 0
+node_1239 0 0
+node_1240 0 0
+node_1241 0 0
+node_1242 0 0
+node_1243 0 0
+node_1244 0 0
+node_1245 0 0
+node_1246 0 0
+node_1247 0 0
+node_1248 0 0
+node_1249 0 0
+node_1250 0 0
+node_1251 0 0
+node_1252 0 0
+node_1253 0 0
+node_1254 0 0
+node_1255 0 0
+node_1256 0 0
+node_1257 0 0
+node_1258 0 0
+node_1259 0 0
+node_1260 0 0
+node_1261 0 0
+node_1262 0 0
+node_1263 0 0
+node_1264 0 0
+node_1265 0 0
+node_1266 0 0
+node_1267 0 0
+node_1268 0 0
+node_1269 0 0
+node_1270 0 0
+node_1271 0 0
+node_1272 0 0
+node_1273 0 0
+node_1274 0 0
+node_1275 0 0
+node_1276 0 0
+node_1277 0 0
+node_1278 0 0
+node_1279 0 0
+node_1280 0 0
+node_1281 0 0
+node_1282 0 0
+node_1283 0 0
+node_1284 0 0
+node_1285 0 0
+node_1286 0 0
+node_1287 0 0
+node_1288 0 0
+node_1289 0 0
+node_1290 0 0
+node_1291 0 0
+node_1292 0 0
+node_1293 0 0
+node_1294 0 0
+node_1295 0 0
+node_1296 0 0
+node_1297 0 0
+node_1298 0 0
+node_1299 0 0
+node_1300 0 0
+node_1301 0 0
+node_1302 0 0
+node_1303 0 0
+node_1304 0 0
+node_1305 0 0
+node_1306 0 0
+node_1307 0 0
+node_1308 0 0
+node_1309 0 0
+node_1310 0 0
+node_1311 0 0
+node_1312 0 0
+node_1313 0 0
+node_1314 0 0
+node_1315 0 0
+node_1316 0 0
+node_1317 0 0
+node_1318 0 0
+node_1319 0 0
+node_1320 0 0
+node_1321 0 0
+node_1322 0 0
+node_1323 0 0
+node_1324 0 0
+node_1325 0 0
+node_1326 0 0
+node_1327 0 0
+node_1328 0 0
+node_1329 0 0
+node_1330 0 0
+node_1331 0 0
+node_1332 0 0
+node_1333 0 0
+node_1334 0 0
+node_1335 0 0
+node_1336 0 0
+node_1337 0 0
+node_1338 0 0
+node_1339 0 0
+node_1340 0 0
+node_1341 0 0
+node_1342 0 0
+node_1343 0 0
+node_1344 0 0
+node_1345 0 0
+node_1346 0 0
+node_1347 0 0
+node_1348 0 0
+node_1349 0 0
+node_1350 0 0
+node_1351 0 0
+node_1352 0 0
+node_1353 0 0
+node_1354 0 0
+node_1355 0 0
+node_1356 0 0
+node_1357 0 0
+node_1358 0 0
+node_1359 0 0
+node_1360 0 0
+node_1361 0 0
+node_1362 0 0
+node_1363 0 0
+node_1364 0 0
+node_1365 0 0
+node_1366 0 0
+node_1367 0 0
+node_1368 0 0
+node_1369 0 0
+node_1370 0 0
+node_1371 0 0
+node_1372 0 0
+node_1373 0 0
+node_1374 0 0
+node_1375 0 0
+node_1376 0 0
+node_1377 0 0
+node_1378 0 0
+node_1379 0 0
+node_1380 0 0
+node_1381 0 0
+node_1382 0 0
+node_1383 0 0
+node_1384 0 0
+node_1385 0 0
+node_1386 0 0
+node_1387 0 0
+node_1388 0 0
+node_1389 0 0
+node_1390 0 0
+node_1391 0 0
+node_1392 0 0
+node_1393 0 0
+node_1394 0 0
+node_1395 0 0
+node_1396 0 0
+node_1397 0 0
+node_1398 0 0
+node_1399 0 0
+node_1400 0 0
+node_1401 0 0
+node_1402 0 0
+node_1403 0 0
+node_1404 0 0
+node_1405 0 0
+node_1406 0 0
+node_1407 0 0
+node_1408 0 0
+node_1409 0 0
+node_1410 0 0
+node_1411 0 0
+node_1412 0 0
+node_1413 0 0
+node_1414 0 0
+node_1415 0 0
+node_1416 0 0
+node_1417 0 0
+node_1418 0 0
+node_1419 0 0
+node_1420 0 0
+node_1421 0 0
+node_1422 0 0
+node_1423 0 0
+node_1424 0 0
+node_1425 0 0
+node_1426 0 0
+node_1427 0 0
+node_1428 0 0
+node_1429 0 0
+node_1430 0 0
+node_1431 0 0
+node_1432 0 0
+node_1433 0 0
+node_1434 0 0
+node_1435 0 0
+node_1436 0 0
+node_1437 0 0
+node_1438 0 0
+node_1439 0 0
+node_1440 0 0
+node_1441 0 0
+node_1442 0 0
+node_1443 0 0
+node_1444 0 0
+node_1445 0 0
+node_1446 0 0
+node_1447 0 0
+node_1448 0 0
+node_1449 0 0
+node_1450 0 0
+node_1451 0 0
+node_1452 0 0
+node_1453 0 0
+node_1454 0 0
+node_1455 0 0
+node_1456 0 0
+node_1457 0 0
+node_1458 0 0
+node_1459 0 0
+node_1460 0 0
+node_1461 0 0
+node_1462 0 0
+node_1463 0 0
+node_1464 0 0
+node_1465 0 0
+node_1466 0 0
+node_1467 0 0
+node_1468 0 0
+node_1469 0 0
+node_1470 0 0
+node_1471 0 0
+node_1472 0 0
+node_1473 0 0
+node_1474 0 0
+node_1475 0 0
+node_1476 0 0
+node_1477 0 0
+node_1478 0 0
+node_1479 0 0
+node_1480 0 0
+node_1481 0 0
+node_1482 0 0
+node_1483 0 0
+node_1484 0 0
+node_1485 0 0
+node_1486 0 0
+node_1487 0 0
+node_1488 0 0
+node_1489 0 0
+node_1490 0 0
+node_1491 0 0
+node_1492 0 0
+node_1493 0 0
+node_1494 0 0
+node_1495 0 0
+node_1496 0 0
+node_1497 0 0
+node_1498 0 0
+node_1499 0 0
+node_1500 0 0
+node_1501 0 0
+node_1502 0 0
+node_1503 0 0
+node_1504 0 0
+node_1505 0 0
+node_1506 0 0
+node_1507 0 0
+node_1508 0 0
+node_1509 0 0
+node_1510 0 0
+node_1511 0 0
+node_1512 0 0
+node_1513 0 0
+node_1514 0 0
+node_1515 0 0
+node_1516 0 0
+node_1517 0 0
+node_1518 0 0
+node_1519 0 0
+node_1520 0 0
+node_1521 0 0
+node_1522 0 0
+node_1523 0 0
+node_1524 0 0
+node_1525 0 0
+node_1526 0 0
+node_1527 0 0
+node_1528 0 0
+node_1529 0 0
+node_1530 0 0
+node_1531 0 0
+node_1532 0 0
+node_1533 0 0
+node_1534 0 0
+node_1535 0 0
+node_1536 0 0
+node_1537 0 0
+node_1538 0 0
+node_1539 0 0
+node_1540 0 0
+node_1541 0 0
+node_1542 0 0
+node_1543 0 0
+node_1544 0 0
+node_1545 0 0
+node_1546 0 0
+node_1547 0 0
+node_1548 0 0
+node_1549 0 0
+node_1550 0 0
+node_1551 0 0
+node_1552 0 0
+node_1553 0 0
+node_1554 0 0
+node_1555 0 0
+node_1556 0 0
+node_1557 0 0
+node_1558 0 0
+node_1559 0 0
+node_1560 0 0
+node_1561 0 0
+node_1562 0 0
+node_1563 0 0
+node_1564 0 0
+node_1565 0 0
+node_1566 0 0
+node_1567 0 0
+node_1568 0 0
+node_1569 0 0
+node_1570 0 0
+node_1571 0 0
+node_1572 0 0
+node_1573 0 0
+node_1574 0 0
+node_1575 0 0
+node_1576 0 0
+node_1577 0 0
+node_1578 0 0
+node_1579 0 0
+node_1580 0 0
+node_1581 0 0
+node_1582 0 0
+node_1583 0 0
+node_1584 0 0
+node_1585 0 0
+node_1586 0 0
+node_1587 0 0
+node_1588 0 0
+node_1589 0 0
+node_1590 0 0
+node_1591 0 0
+node_1592 0 0
+node_1593 0 0
+node_1594 0 0
+node_1595 0 0
+node_1596 0 0
+node_1597 0 0
+node_1598 0 0
+node_1599 0 0
+node_1600 0 0
+node_1601 0 0
+node_1602 0 0
+node_1603 0 0
+node_1604 0 0
+node_1605 0 0
+node_1606 0 0
+node_1607 0 0
+node_1608 0 0
+node_1609 0 0
+node_1610 0 0
+node_1611 0 0
+node_1612 0 0
+node_1613 0 0
+node_1614 0 0
+node_1615 0 0
+node_1616 0 0
+node_1617 0 0
+node_1618 0 0
+node_1619 0 0
+node_1620 0 0
+node_1621 0 0
+node_1622 0 0
+node_1623 0 0
+node_1624 0 0
+node_1625 0 0
+node_1626 0 0
+node_1627 0 0
+node_1628 0 0
+node_1629 0 0
+node_1630 0 0
+node_1631 0 0
+node_1632 0 0
+node_1633 0 0
+node_1634 0 0
+node_1635 0 0
+node_1636 0 0
+node_1637 0 0
+node_1638 0 0
+node_1639 0 0
+node_1640 0 0
+node_1641 0 0
+node_1642 0 0
+node_1643 0 0
+node_1644 0 0
+node_1645 0 0
+node_1646 0 0
+node_1647 0 0
+node_1648 0 0
+node_1649 0 0
+node_1650 0 0
+node_1651 0 0
+node_1652 0 0
+node_1653 0 0
+node_1654 0 0
+node_1655 0 0
+node_1656 0 0
+node_1657 0 0
+node_1658 0 0
+node_1659 0 0
+node_1660 0 0
+node_1661 0 0
+node_1662 0 0
+node_1663 0 0
+node_1664 0 0
+node_1665 0 0
+node_1666 0 0
+node_1667 0 0
+node_1668 0 0
+node_1669 0 0
+node_1670 0 0
+node_1671 0 0
+node_1672 0 0
+node_1673 0 0
+node_1674 0 0
+node_1675 0 0
+node_1676 0 0
+node_1677 0 0
+node_1678 0 0
+node_1679 0 0
+node_1680 0 0
+node_1681 0 0
+node_1682 0 0
+node_1683 0 0
+node_1684 0 0
+node_1685 0 0
+node_1686 0 0
+node_1687 0 0
+node_1688 0 0
+node_1689 0 0
+node_1690 0 0
+node_1691 0 0
+node_1692 0 0
+node_1693 0 0
+node_1694 0 0
+node_1695 0 0
+node_1696 0 0
+node_1697 0 0
+node_1698 0 0
+node_1699 0 0
+node_1700 0 0
+node_1701 0 0
+node_1702 0 0
+node_1703 0 0
+node_1704 0 0
+node_1705 0 0
+node_1706 0 0
+node_1707 0 0
+node_1708 0 0
+node_1709 0 0
+node_1710 0 0
+node_1711 0 0
+node_1712 0 0
+node_1713 0 0
+node_1714 0 0
+node_1715 0 0
+node_1716 0 0
+node_1717 0 0
+node_1718 0 0
+node_1719 0 0
+node_1720 0 0
+node_1721 0 0
+node_1722 0 0
+node_1723 0 0
+node_1724 0 0
+node_1725 0 0
+node_1726 0 0
+node_1727 0 0
+node_1728 0 0
+node_1729 0 0
+node_1730 0 0
+node_1731 0 0
+node_1732 0 0
+node_1733 0 0
+node_1734 0 0
+node_1735 0 0
+node_1736 0 0
+node_1737 0 0
+node_1738 0 0
+node_1739 0 0
+node_1740 0 0
+node_1741 0 0
+node_1742 0 0
+node_1743 0 0
+node_1744 0 0
+node_1745 0 0
+node_1746 0 0
+node_1747 0 0
+node_1748 0 0
+node_1749 0 0
+node_1750 0 0
+node_1751 0 0
+node_1752 0 0
+node_1753 0 0
+node_1754 0 0
+node_1755 0 0
+node_1756 0 0
+node_1757 0 0
+node_1758 0 0
+node_1759 0 0
+node_1760 0 0
+node_1761 0 0
+node_1762 0 0
+node_1763 0 0
+node_1764 0 0
+node_1765 0 0
+node_1766 0 0
+node_1767 0 0
+node_1768 0 0
+node_1769 0 0
+node_1770 0 0
+node_1771 0 0
+node_1772 0 0
+node_1773 0 0
+node_1774 0 0
+node_1775 0 0
+node_1776 0 0
+node_1777 0 0
+node_1778 0 0
+node_1779 0 0
+node_1780 0 0
+node_1781 0 0
+node_1782 0 0
+node_1783 0 0
+node_1784 0 0
+node_1785 0 0
+node_1786 0 0
+node_1787 0 0
+node_1788 0 0
+node_1789 0 0
+node_1790 0 0
+node_1791 0 0
+node_1792 0 0
+node_1793 0 0
+node_1794 0 0
+node_1795 0 0
+node_1796 0 0
+node_1797 0 0
+node_1798 0 0
+node_1799 0 0
+node_1800 0 0
+node_1801 0 0
+node_1802 0 0
+node_1803 0 0
+node_1804 0 0
+node_1805 0 0
+node_1806 0 0
+node_1807 0 0
+node_1808 0 0
+node_1809 0 0
+node_1810 0 0
+node_1811 0 0
+node_1812 0 0
+node_1813 0 0
+node_1814 0 0
+node_1815 0 0
+node_1816 0 0
+node_1817 0 0
+node_1818 0 0
+node_1819 0 0
+node_1820 0 0
+node_1821 0 0
+node_1822 0 0
+node_1823 0 0
+node_1824 0 0
+node_1825 0 0
+node_1826 0 0
+node_1827 0 0
+node_1828 0 0
+node_1829 0 0
+node_1830 0 0
+node_1831 0 0
+node_1832 0 0
+node_1833 0 0
+node_1834 0 0
+node_1835 0 0
+node_1836 0 0
+node_1837 0 0
+node_1838 0 0
+node_1839 0 0
+node_1840 0 0
+node_1841 0 0
+node_1842 0 0
+node_1843 0 0
+node_1844 0 0
+node_1845 0 0
+node_1846 0 0
+node_1847 0 0
+node_1848 0 0
+node_1849 0 0
+node_1850 0 0
+node_1851 0 0
+node_1852 0 0
+node_1853 0 0
+node_1854 0 0
+node_1855 0 0
+node_1856 0 0
+node_1857 0 0
+
+[RESERVOIRS]
+;ID   Head
+
+[TANKS]
+;ID   Elevation InitLevel MinLevel MaxLevel Diameter
+
+[PIPES]
+;ID   StartNode EndNode Length Diameter Roughness
+pipe_1 Junction-41891 Junction-10396 1.5175219 300 100
+pipe_2 Junction-62481 Junction-10277 113.41344 300 100
+pipe_3 Junction-474015 Junction-474016 6.9395776 300 100
+pipe_4 Junction-61115 Junction-10506 12.980225 300 100
+pipe_5 Junction-22677 Junction-22678 0.9727058 300 100
+pipe_6 Junction-11035 Junction-23442 5.6965094 300 100
+pipe_7 Junction-49377 Junction-11429 20.03765 300 100
+pipe_8 Junction-32324 Junction-32325 18.087465 300 100
+pipe_9 Junction-42523 Junction-42525 1.9614173 300 100
+pipe_10 Junction-9502 Junction-9503 31.412998 300 100
+pipe_11 Junction-42343 Junction-474623 0.068153135 300 100
+pipe_12 Junction-11349 Junction-42536 7.3056045 300 100
+pipe_13 Junction-54507 Junction-49235 18.624496 300 100
+pipe_14 Junction-41890 Junction-33204 10.941947 300 100
+pipe_15 Junction-23281 Junction-42194 177.17036 300 100
+pipe_16 Junction-54616 Junction-42627 4.541141 300 100
+pipe_17 Junction-34001 Junction-467411 9.761937 300 100
+pipe_18 Junction-23801 Junction-477554 61.420185 300 100
+pipe_19 Junction-473877 Junction-473879 0.7588478 300 100
+pipe_20 Junction-54512 Junction-54510 4.3901505 300 100
+pipe_21 Junction-60429 Junction-33071 1.0714264 300 100
+pipe_22 Junction-42434 Junction-42435 14.870047 300 100
+pipe_23 Junction-9284 Junction-9285 13.532529 300 100
+pipe_24 Junction-11573 Junction-11574 48.82367 300 100
+pipe_25 Junction-32870 Junction-54037 2.0978286 300 100
+pipe_26 Junction-473881 Junction-473883 1.0691324 300 100
+pipe_27 Junction-477199 Junction-477200 12.014541 300 100
+pipe_28 Junction-22521 Junction-41705 8.715896 300 100
+pipe_29 Junction-42677 Junction-42678 9.983039 300 100
+pipe_30 Junction-474887 Junction-476183 20.249512 300 100
+pipe_31 Junction-32978 Junction-22524 12.056812 300 100
+pipe_32 Junction-474014 Junction-474017 3.295553 300 100
+pipe_33 Junction-48993 Junction-48994 23.00108 300 100
+pipe_34 Junction-32518 Junction-21978 24.106167 300 100
+pipe_35 Junction-33574 Junction-23246 9.751878 300 100
+pipe_36 Junction-48673 Junction-48674 24.192959 300 100
+pipe_37 Junction-42106 Junction-33465 28.871883 300 100
+pipe_38 Junction-473947 Junction-476005 1.00902 300 100
+pipe_39 Junction-473816 Junction-473818 2.2667103 300 100
+pipe_40 Junction-42626 Junction-58354 4.147152 300 100
+pipe_41 Junction-58113 Junction-48993 10.887556 300 100
+pipe_42 Junction-22683 Junction-22684 20.927118 300 100
+pipe_43 Junction-62477 Junction-62482 186.0337 300 100
+pipe_44 Junction-10122 Junction-10123 2.730162 300 100
+pipe_45 Junction-42624 Junction-42625 22.390537 300 100
+pipe_46 Junction-474083 Junction-473837 36.091866 300 100
+pipe_47 Junction-33599 Junction-23270 32.862576 300 100
+pipe_48 Junction-460472 Junction-42185 4.527361 300 100
+pipe_49 Junction-23424 Junction-463968 15.576319 300 100
+pipe_50 Junction-10501 Junction-54273 80.59117 300 100
+pipe_51 Junction-477132 Junction-477133 32.71362 300 100
+pipe_52 Junction-23246 Junction-60513 14.703597 300 100
+pipe_53 Junction-9506 Junction-53913 21.408726 300 100
+pipe_54 Junction-49241 Junction-49242 8.0845785 300 100
+pipe_55 Junction-49166 Junction-54448 23.356394 300 100
+pipe_56 Junction-58190 Junction-58191 0.4999087 300 100
+pipe_57 Junction-34104 Junction-11444 5.2918134 300 100
+pipe_58 Junction-33463 Junction-42105 31.798939 300 100
+pipe_59 Junction-23427 Junction-49168 5.1021824 300 100
+pipe_60 Junction-42611 Junction-11431 6.6783524 300 100
+pipe_61 Junction-465061 Junction-54574 1.8100381 300 100
+pipe_62 Junction-10618 Junction-48988 6.988649 300 100
+pipe_63 Junction-42428 Junction-33875 4.109574 300 100
+pipe_64 Junction-22992 Junction-10501 110.03985 300 100
+pipe_65 Junction-476651 Junction-476652 7.138588 300 100
+pipe_66 Junction-22374 Junction-22246 99.05459 300 100
+pipe_67 Junction-9286 Junction-9287 15.328597 300 100
+pipe_68 Junction-62469 Junction-33194 84.76023 300 100
+pipe_69 Junction-474012 Junction-474077 1.8066533 300 100
+pipe_70 Junction-10138 Junction-48744 1.0092087 300 100
+pipe_71 Junction-61116 Junction-32327 65.55783 300 100
+pipe_72 Junction-49054 Junction-58182 5.4522123 300 100
+pipe_73 Junction-54229 Junction-42017 103.27319 300 100
+pipe_74 Junction-23244 Junction-54373 20.32404 300 100
+pipe_75 Junction-54269 Junction-54228 77.25524 300 100
+pipe_76 Junction-10142 Junction-10143 14.008259 300 100
+pipe_77 Junction-9280 Junction-9281 14.187246 300 100
+pipe_78 Junction-54228 Junction-22897 39.842144 300 100
+pipe_79 Junction-32327 Junction-21743 8.681804 300 100
+pipe_80 Junction-22799 Junction-58056 8.048971 300 100
+pipe_81 Junction-33748 Junction-49166 13.2928295 300 100
+pipe_82 Junction-11344 Junction-11345 30.39939 300 100
+pipe_83 Junction-53571 Junction-21329 3.7958274 300 100
+pipe_84 Junction-21329 Junction-21330 7.331374 300 100
+pipe_85 Junction-33363 Junction-58111 9.758189 300 100
+pipe_86 Junction-23439 Junction-23440 8.771902 300 100
+pipe_87 Junction-11034 Junction-42336 0.9057588 300 100
+pipe_88 Junction-10485 Junction-10486 3.3485203 300 100
+pipe_89 Junction-32321 Junction-9049 14.572926 300 100
+pipe_90 Junction-58287 Junction-11197 6.625113 300 100
+pipe_91 Junction-23916 Junction-11571 6.134715 300 100
+pipe_92 Junction-23442 Junction-23443 16.499413 300 100
+pipe_93 Junction-23812 Junction-23813 20.361341 300 100
+pipe_94 Junction-477135 Junction-477132 0.24963702 300 100
+pipe_95 Junction-11565 Junction-49434 9.76879 300 100
+pipe_96 Junction-57809 Junction-57859 9.751197 300 100
+pipe_97 Junction-473820 Junction-473821 2.2522924 300 100
+pipe_98 Junction-473834 Junction-473887 3.3347285 300 100
+pipe_99 Junction-10294 Junction-33211 2.5134923 300 100
+pipe_100 Junction-42312 Junction-23421 67.85518 300 100
+pipe_101 Junction-34185 Junction-42620 20.712978 300 100
+pipe_102 Junction-33278 Junction-22891 210.4804 300 100
+pipe_103 Junction-42014 Junction-42015 35.534615 300 100
+pipe_104 Junction-49240 Junction-42430 5.1771245 300 100
+pipe_105 Junction-42441 Junction-49256 29.499828 300 100
+pipe_106 Junction-9284 Junction-41318 5.836524 300 100
+pipe_107 Junction-53914 Junction-60349 16.118658 300 100
+pipe_108 Junction-10125 Junction-41795 22.02364 300 100
+pipe_109 Junction-54572 Junction-54573 14.898496 300 100
+pipe_110 Junction-48675 Junction-9866 138.99266 300 100
+pipe_111 Junction-11182 Junction-23575 14.689742 300 100
+pipe_112 Junction-10805 Junction-464530 27.705372 300 100
+pipe_113 Junction-471080 Junction-474036 18.569832 300 100
+pipe_114 Junction-9662 Junction-9663 15.245927 300 100
+pipe_115 Junction-473829 Junction-474080 6.9930387 300 100
+pipe_116 Junction-22375 Junction-32861 10.832069 300 100
+pipe_117 Junction-33374 Junction-41947 68.31321 300 100
+pipe_118 Junction-33477 Junction-61037 35.89677 300 100
+pipe_119 Junction-471221 Junction-471222 31.69287 300 100
+pipe_120 Junction-470702 Junction-470703 20.425787 300 100
+pipe_121 Junction-476251 Junction-476252 17.209475 300 100
+pipe_122 Junction-10397 Junction-22900 1.1122608 300 100
+pipe_123 Junction-10392 Junction-10393 36.857292 300 100
+pipe_124 Junction-23584 Junction-23585 12.543364 300 100
+pipe_125 Junction-21976 Junction-48402 11.516706 300 100
+pipe_126 Junction-60608 Junction-42521 9.799375 300 100
+pipe_127 Junction-11191 Junction-11192 21.017178 300 100
+pipe_128 Junction-11203 Junction-11199 82.2606 300 100
+pipe_129 Junction-54465 Junction-11040 11.544655 300 100
+pipe_130 Junction-9663 Junction-32761 17.217726 300 100
+pipe_131 Junction-22671 Junction-58021 32.8364 300 100
+pipe_132 Junction-454508 Junction-454509 3.9315324 300 100
+pipe_133 Junction-34182 Junction-34183 4.7131686 300 100
+pipe_134 Junction-23800 Junction-23801 64.90941 300 100
+pipe_135 Junction-9500 Junction-9502 19.658268 300 100
+pipe_136 Junction-33756 Junction-33757 13.292334 300 100
+pipe_137 Junction-48677 Junction-48679 3.957888 300 100
+pipe_138 Junction-10143 Junction-22681 13.513096 300 100
+pipe_139 Junction-62460 Junction-22992 25.803139 300 100
+pipe_140 Junction-10798 Junction-10799 27.90856 300 100
+pipe_141 Junction-48737 Junction-60427 2.7250714 300 100
+pipe_142 Junction-61113 Junction-54042 2.0449004 300 100
+pipe_143 Junction-473821 Junction-473875 0.7131028 300 100
+pipe_144 Junction-54457 Junction-23274 3.1999216 300 100
+pipe_145 Junction-10136 Junction-58027 2.515392 300 100
+pipe_146 Junction-10281 Junction-54182 11.619263 300 100
+pipe_147 Junction-10283 Junction-10284 30.107845 300 100
+pipe_148 Junction-32123 Junction-460641 10.002937 300 100
+pipe_149 Junction-33888 Junction-33885 27.958189 300 100
+pipe_150 Junction-23139 Junction-58151 9.409908 300 100
+pipe_151 Junction-474076 Junction-473822 33.166954 300 100
+pipe_152 Junction-10793 Junction-10794 4.497597 300 100
+pipe_153 Junction-10264 Junction-10265 28.482393 300 100
+pipe_154 Junction-33887 Junction-33888 18.443428 300 100
+pipe_155 Junction-11009 Junction-61035 7.5149975 300 100
+pipe_156 Junction-41706 Junction-32978 5.2095666 300 100
+pipe_157 Junction-49172 Junction-61033 24.803642 300 100
+pipe_158 Junction-11189 Junction-42433 71.84027 300 100
+pipe_159 Junction-60580 Junction-42428 19.183119 300 100
+pipe_160 Junction-42447 Junction-54525 54.132225 300 100
+pipe_161 Junction-23267 Junction-23268 6.137039 300 100
+pipe_162 Junction-33192 Junction-33193 37.767246 300 100
+pipe_163 Junction-42610 Junction-11562 28.527739 300 100
+pipe_164 Junction-476226 Junction-476227 16.091015 300 100
+pipe_165 Junction-9668 Junction-469304 6.2265587 300 100
+pipe_166 Junction-54441 Junction-54442 9.754502 300 100
+pipe_167 Junction-23833 Junction-49439 17.089705 300 100
+pipe_168 Junction-464378 Junction-475187 22.152065 300 100
+pipe_169 Junction-49068 Junction-42191 46.20203 300 100
+pipe_170 Junction-62456 Junction-54271 102.58864 300 100
+pipe_171 Junction-54571 Junction-11323 24.238964 300 100
+pipe_172 Junction-9285 Junction-48399 6.4288473 300 100
+pipe_173 Junction-42340 Junction-23439 23.172033 300 100
+pipe_174 Junction-32861 Junction-9857 14.866123 300 100
+pipe_175 Junction-22800 Junction-48813 15.542694 300 100
+pipe_176 Junction-49174 Junction-42326 12.510824 300 100
+pipe_177 Junction-53570 Junction-8529 20.863508 300 100
+pipe_178 Junction-473944 Junction-473945 0.8073136 300 100
+pipe_179 Junction-33216 Junction-54192 5.262609 300 100
+pipe_180 Junction-33064 Junction-33065 79.233315 300 100
+pipe_181 Junction-473941 Junction-474008 35.647602 300 100
+pipe_182 Junction-54090 Junction-33069 15.370683 300 100
+pipe_183 Junction-41169 Junction-32326 6.0955234 300 100
+pipe_184 Junction-49388 Junction-23824 24.119026 300 100
+pipe_185 Junction-33072 Junction-33073 23.301962 300 100
+pipe_186 Junction-476802 Junction-476804 34.604557 300 100
+pipe_187 Junction-473829 Junction-473830 31.063192 300 100
+pipe_188 Junction-33896 Junction-33894 8.943218 300 100
+pipe_189 Junction-23915 Junction-11566 1.2773752 300 100
+pipe_190 Junction-33993 Junction-49319 6.973051 300 100
+pipe_191 Junction-42622 Junction-42623 25.570854 300 100
+pipe_192 Junction-58024 Junction-10122 2.8998492 300 100
+pipe_193 Junction-476118 Junction-477197 1.0423635 300 100
+pipe_194 Junction-10493 Junction-33372 16.010284 300 100
+pipe_195 Junction-11017 Junction-42321 13.191088 300 100
+pipe_196 Junction-23139 Junction-58150 29.411623 300 100
+pipe_197 Junction-469304 Junction-41529 29.883102 300 100
+pipe_198 Junction-9984 Junction-22521 22.13189 300 100
+pipe_199 Junction-11566 Junction-11567 0.12509502 300 100
+pipe_200 Junction-473826 Junction-473827 3.1136272 300 100
+pipe_201 Junction-42431 Junction-23584 19.614511 300 100
+pipe_202 Junction-474074 Junction-474075 0.9488785 300 100
+pipe_203 Junction-466551 Junction-33468 35.597588 300 100
+pipe_204 Junction-10822 Junction-23269 14.272724 300 100
+pipe_205 Junction-41801 Junction-10136 63.36796 300 100
+pipe_206 Junction-11188 Junction-42319 95.87686 300 100
+pipe_207 Junction-48988 Junction-48989 15.411107 300 100
+pipe_208 Junction-42679 Junction-49438 62.344746 300 100
+pipe_209 Junction-48265 Junction-53743 9.586671 300 100
+pipe_210 Junction-23129 Junction-23132 13.59198 300 100
+pipe_211 Junction-48813 Junction-10283 15.035351 300 100
+pipe_212 Junction-48549 Junction-463447 5.003431 300 100
+pipe_213 Junction-58284 Junction-60583 10.235139 300 100
+pipe_214 Junction-476654 Junction-476655 33.921608 300 100
+pipe_215 Junction-11013 Junction-23426 9.898653 300 100
+pipe_216 Junction-473831 Junction-473832 6.8741803 300 100
+pipe_217 Junction-22375 Junction-32860 13.14387 300 100
+pipe_218 Junction-10624 Junction-10625 13.082749 300 100
+pipe_219 Junction-10627 Junction-10628 38.56066 300 100
+pipe_220 Junction-62480 Junction-62481 72.0892 300 100
+pipe_221 Junction-10403 Junction-22911 14.269194 300 100
+pipe_222 Junction-10306 Junction-48826 17.006927 300 100
+pipe_223 Junction-34002 Junction-11321 19.07363 300 100
+pipe_224 Junction-22673 Junction-33061 19.696335 300 100
+pipe_225 Junction-475187 Junction-476739 0.014023648 300 100
+pipe_226 Junction-468750 Junction-48407 13.350268 300 100
+pipe_227 Junction-33602 Junction-10829 48.909973 300 100
+pipe_228 Junction-48875 Junction-33289 6.205041 300 100
+pipe_229 Junction-33219 Junction-33218 11.327741 300 100
+pipe_230 Junction-49067 Junction-23276 5.493072 300 100
+pipe_231 Junction-460473 Junction-466127 0.74564576 300 100
+pipe_232 Junction-42188 Junction-33597 14.026189 300 100
+pipe_233 Junction-33365 Junction-60461 30.32598 300 100
+pipe_234 Junction-22682 Junction-58028 14.066908 300 100
+pipe_235 Junction-23576 Junction-464465 14.730166 300 100
+pipe_236 Junction-10144 Junction-33074 1.5288785 300 100
+pipe_237 Junction-22112 Junction-9502 25.937313 300 100
+pipe_238 Junction-10276 Junction-33187 39.15603 300 100
+pipe_239 Junction-23687 Junction-61031 43.088978 300 100
+pipe_240 Junction-48402 Junction-41318 53.286118 300 100
+pipe_241 Junction-476590 Junction-476591 18.832441 300 100
+pipe_242 Junction-33589 Junction-54379 11.503128 300 100
+pipe_243 Junction-42110 Junction-48990 11.201017 300 100
+pipe_244 Junction-476581 Junction-476580 1.098302 300 100
+pipe_245 Junction-23263 Junction-23264 41.302063 300 100
+pipe_246 Junction-41947 Junction-54235 24.641012 300 100
+pipe_247 Junction-48824 Junction-22811 12.953616 300 100
+pipe_248 Junction-41886 Junction-41887 11.300497 300 100
+pipe_249 Junction-476210 Junction-476212 1.6228054 300 100
+pipe_250 Junction-9869 Junction-22385 456.66663 300 100
+pipe_251 Junction-49260 Junction-49261 9.246759 300 100
+pipe_252 Junction-10832 Junction-49072 32.245552 300 100
+pipe_253 Junction-22520 Junction-9983 15.678145 300 100
+pipe_254 Junction-33375 Junction-33376 9.894743 300 100
+pipe_255 Junction-23592 Junction-42439 3.9840052 300 100
+pipe_256 Junction-48740 Junction-48741 14.686532 300 100
+pipe_257 Junction-460578 Junction-472492 48.337246 300 100
+pipe_258 Junction-33586 Junction-54378 7.0887847 300 100
+pipe_259 Junction-33279 Junction-33280 11.33737 300 100
+pipe_260 Junction-54578 Junction-54579 186.64622 300 100
+pipe_261 Junction-49381 Junction-34101 49.558327 300 100
+pipe_262 Junction-10625 Junction-10626 18.388409 300 100
+pipe_263 Junction-10135 Junction-32979 15.967028 300 100
+pipe_264 Junction-42434 Junction-23587 9.783742 300 100
+pipe_265 Junction-41886 Junction-10138 25.84485 300 100
+pipe_266 Junction-49378 Junction-54648 7.0015507 300 100
+pipe_267 Junction-54440 Junction-49053 3.2485626 300 100
+pipe_268 Junction-49161 Junction-49162 5.47324 300 100
+pipe_269 Junction-474082 Junction-474083 1.9759023 300 100
+pipe_270 Junction-57743 Junction-32328 3.9117148 300 100
+pipe_271 Junction-476061 Junction-476059 0.44540665 300 100
+pipe_272 Junction-61984 Junction-61985 0.6845221 300 100
+pipe_273 Junction-470031 Junction-33184 26.699427 300 100
+pipe_274 Junction-9505 Junction-9506 4.6716723 300 100
+pipe_275 Junction-33768 Junction-33771 10.69975 300 100
+pipe_276 Junction-54466 Junction-23444 1.6682583 300 100
+pipe_277 Junction-23587 Junction-23588 4.4995246 300 100
+pipe_278 Junction-54376 Junction-33578 8.889531 300 100
+pipe_279 Junction-9858 Junction-22520 8.598854 300 100
+pipe_280 Junction-9854 Junction-9855 17.723335 300 100
+pipe_281 Junction-476228 Junction-476898 16.292685 300 100
+pipe_282 Junction-473514 Junction-473515 1.6990571 300 100
+pipe_283 Junction-48676 Junction-41709 29.519787 300 100
+pipe_284 Junction-465676 Junction-470196 41.49506 300 100
+pipe_285 Junction-9503 Junction-9504 30.951067 300 100
+pipe_286 Junction-33599 Junction-23273 10.296509 300 100
+pipe_287 Junction-473821 Junction-473876 26.362043 300 100
+pipe_288 Junction-469315 Junction-41429 4.231715 300 100
+pipe_289 Junction-33208 Junction-48816 13.701292 300 100
+pipe_290 Junction-11181 Junction-11182 3.432742 300 100
+pipe_291 Junction-58349 Junction-461729 13.4656925 300 100
+pipe_292 Junction-22804 Junction-58057 1.6315596 300 100
+pipe_293 Junction-49178 Junction-49173 13.536955 300 100
+pipe_294 Junction-476213 Junction-476212 1.1765924 300 100
+pipe_295 Junction-48994 Junction-60495 9.477343 300 100
+pipe_296 Junction-33280 Junction-33281 82.2427 300 100
+pipe_297 Junction-21975 Junction-9286 21.774525 300 100
+pipe_298 Junction-477158 Junction-476180 0.5053436 300 100
+pipe_299 Junction-10816 Junction-460584 22.92698 300 100
+pipe_300 Junction-49074 Junction-58192 21.778973 300 100
+pipe_301 Junction-41171 Junction-21748 21.68734 300 100
+pipe_302 Junction-42614 Junction-11329 90.166855 300 100
+pipe_303 Junction-22894 Junction-33285 19.758528 300 100
+pipe_304 Junction-54039 Junction-48613 17.004976 300 100
+pipe_305 Junction-33376 Junction-10506 18.016542 300 100
+pipe_306 Junction-472535 Junction-465060 8.45153 300 100
+pipe_307 Junction-469314 Junction-469315 9.972408 300 100
+pipe_308 Junction-48998 Junction-54322 5.7337093 300 100
+pipe_309 Junction-34013 Junction-61301 3.1205387 300 100
+pipe_310 Junction-41890 Junction-10290 2.0359972 300 100
+pipe_311 Junction-33465 Junction-23120 16.255848 300 100
+pipe_312 Junction-10276 Junction-10120 82.380684 300 100
+pipe_313 Junction-33760 Junction-11031 13.543147 300 100
+pipe_314 Junction-469326 Junction-10803 3.64379 300 100
+pipe_315 Junction-22247 Junction-9657 14.628026 300 100
+pipe_316 Junction-10288 Junction-10289 10.471529 300 100
+pipe_317 Junction-9860 Junction-452856 4.674833 300 100
+pipe_318 Junction-23116 Junction-33363 44.766075 300 100
+pipe_319 Junction-33998 Junction-11320 36.63753 300 100
+pipe_320 Junction-10496 Junction-10491 139.29292 300 100
+pipe_321 Junction-48610 Junction-57934 0.8671122 300 100
+pipe_322 Junction-33061 Junction-10118 37.022522 300 100
+pipe_323 Junction-10302 Junction-10307 14.472044 300 100
+pipe_324 Junction-23252 Junction-10795 10.356621 300 100
+pipe_325 Junction-11044 Junction-33770 87.54919 300 100
+pipe_326 Junction-41799 Junction-32980 15.616643 300 100
+pipe_327 Junction-11197 Junction-11198 43.151955 300 100
+pipe_328 Junction-54183 Junction-22795 13.3569765 300 100
+pipe_329 Junction-33602 Junction-33604 71.93529 300 100
+pipe_330 Junction-41619 Junction-54036 38.567226 300 100
+pipe_331 Junction-33213 Junction-33207 12.556579 300 100
+pipe_332 Junction-473818 Junction-473820 28.198881 300 100
+pipe_333 Junction-54182 Junction-10279 1.973146 300 100
+pipe_334 Junction-11194 Junction-49253 83.488205 300 100
+pipe_335 Junction-11442 Junction-11443 8.499678 300 100
+pipe_336 Junction-61034 Junction-42013 4.3518624 300 100
+pipe_337 Junction-42329 Junction-23436 18.005144 300 100
+pipe_338 Junction-477250 Junction-476208 1.4857523 300 100
+pipe_339 Junction-54233 Junction-10403 14.877638 300 100
+pipe_340 Junction-54455 Junction-54454 77.331604 300 100
+pipe_341 Junction-469128 Junction-8758 18.945501 300 100
+pipe_342 Junction-49064 Junction-33478 10.245688 300 100
+pipe_343 Junction-42196 Junction-471221 12.137069 300 100
+pipe_344 Junction-476250 Junction-476666 13.434953 300 100
+pipe_345 Junction-23276 Junction-23277 6.393472 300 100
+pipe_346 Junction-474888 Junction-474886 1.0595825 300 100
+pipe_347 Junction-23590 Junction-23591 5.2425184 300 100
+pipe_348 Junction-54521 Junction-11189 6.4208965 300 100
+pipe_349 Junction-23595 Junction-23596 19.870535 300 100
+pipe_350 Junction-11581 Junction-11582 29.453566 300 100
+pipe_351 Junction-11452 Junction-11450 10.702387 300 100
+pipe_352 Junction-42016 Junction-33367 23.28293 300 100
+pipe_353 Junction-42312 Junction-49160 20.524746 300 100
+pipe_354 Junction-22248 Junction-22249 15.508655 300 100
+pipe_355 Junction-41519 Junction-53973 10.770563 300 100
+pipe_356 Junction-54446 Junction-49161 7.1276484 300 100
+pipe_357 Junction-469495 Junction-22523 3.074016 300 100
+pipe_358 Junction-477200 Junction-477198 1.0586585 300 100
+pipe_359 Junction-476582 Junction-476583 17.671274 300 100
+pipe_360 Junction-62462 Junction-62477 65.50926 300 100
+pipe_361 Junction-10499 Junction-33374 8.6592655 300 100
+pipe_362 Junction-33893 Junction-60585 28.327093 300 100
+pipe_363 Junction-22992 Junction-54271 0.8440297 300 100
+pipe_364 Junction-22788 Junction-10264 3.9497519 300 100
+pipe_365 Junction-57808 Junction-57809 17.053429 300 100
+pipe_366 Junction-23825 Junction-49385 32.053177 300 100
+pipe_367 Junction-22112 Junction-60346 19.400566 300 100
+pipe_368 Junction-21978 Junction-21979 4.2657228 300 100
+pipe_369 Junction-11036 Junction-33766 12.827264 300 100
+pipe_370 Junction-61036 Junction-54516 33.85597 300 100
+pipe_371 Junction-32521 Junction-57807 25.487188 300 100
+pipe_372 Junction-473940 Junction-473941 2.3070657 300 100
+pipe_373 Junction-477268 Junction-476230 29.749392 300 100
+pipe_374 Junction-22802 Junction-22803 0.960849 300 100
+pipe_375 Junction-41947 Junction-41948 4.8392544 300 100
+pipe_376 Junction-10812 Junction-10810 17.474741 300 100
+pipe_377 Junction-476225 Junction-474891 0.5247727 300 100
+pipe_378 Junction-49173 Junction-23433 31.422281 300 100
+pipe_379 Junction-23567 Junction-23568 22.72864 300 100
+pipe_380 Junction-10399 Junction-41946 13.847711 300 100
+pipe_381 Junction-33582 Junction-33585 3.2016892 300 100
+pipe_382 Junction-34099 Junction-58347 11.399579 300 100
+pipe_383 Junction-11428 Junction-11429 22.726765 300 100
+pipe_384 Junction-474074 Junction-473816 29.100962 300 100
+pipe_385 Junction-23130 Junction-10627 5.178454 300 100
+pipe_386 Junction-470141 Junction-465847 10.270104 300 100
+pipe_387 Junction-10825 Junction-10826 4.8994455 300 100
+pipe_388 Junction-23418 Junction-33742 47.39366 300 100
+pipe_389 Junction-48994 Junction-23125 3.2329726 300 100
+pipe_390 Junction-474071 Junction-474072 45.903847 300 100
+pipe_391 Junction-42609 Junction-11424 24.44632 300 100
+pipe_392 Junction-33999 Junction-54571 36.936874 300 100
+pipe_393 Junction-473824 Junction-473826 34.48044 300 100
+pipe_394 Junction-472531 Junction-472532 0.3045165 300 100
+pipe_395 Junction-48874 Junction-48872 49.73303 300 100
+pipe_396 Junction-22526 Junction-22527 58.277588 300 100
+pipe_397 Junction-49250 Junction-23590 9.103695 300 100
+pipe_398 Junction-22809 Junction-22810 14.723927 300 100
+pipe_399 Junction-42177 Junction-23417 14.473372 300 100
+pipe_400 Junction-54146 Junction-54147 3.7084732 300 100
+pipe_401 Junction-33206 Junction-22804 1.9435517 300 100
+pipe_402 Junction-41629 Junction-22526 60.479515 300 100
+pipe_403 Junction-33062 Junction-33063 33.37572 300 100
+pipe_404 Junction-34005 Junction-23694 26.901602 300 100
+pipe_405 Junction-473953 Junction-473954 2.0373137 300 100
+pipe_406 Junction-23251 Junction-33579 13.38895 300 100
+pipe_407 Junction-476656 Junction-476726 1.1591078 300 100
+pipe_408 Junction-42435 Junction-49245 4.5568485 300 100
+pipe_409 Junction-472532 Junction-469571 0.37408206 300 100
+pipe_410 Junction-11040 Junction-23444 4.274072 300 100
+pipe_411 Junction-23130 Junction-23131 9.491777 300 100
+pipe_412 Junction-49243 Junction-33880 21.718266 300 100
+pipe_413 Junction-58348 Junction-54611 27.872192 300 100
+pipe_414 Junction-9664 Junction-9665 42.305996 300 100
+pipe_415 Junction-34099 Junction-23812 31.594038 300 100
+pipe_416 Junction-11027 Junction-11028 4.012329 300 100
+pipe_417 Junction-33363 Junction-33364 9.942989 300 100
+pipe_418 Junction-33063 Junction-41791 2.7053676 300 100
+pipe_419 Junction-33475 Junction-23142 28.79841 300 100
+pipe_420 Junction-474021 Junction-474018 2.043327 300 100
+pipe_421 Junction-60613 Junction-23702 0.1298024 300 100
+pipe_422 Junction-476061 Junction-476115 1.7229831 300 100
+pipe_423 Junction-473839 Junction-473840 6.996266 300 100
+pipe_424 Junction-9281 Junction-53843 3.9760935 300 100
+pipe_425 Junction-32517 Junction-32518 16.820932 300 100
+pipe_426 Junction-60638 Junction-23833 56.344845 300 100
+pipe_427 Junction-33184 Junction-48805 60.882175 300 100
+pipe_428 Junction-10790 Junction-10791 13.006219 300 100
+pipe_429 Junction-10304 Junction-48823 1.974122 300 100
+pipe_430 Junction-42521 Junction-61032 13.80757 300 100
+pipe_431 Junction-23118 Junction-476992 15.10776 300 100
+pipe_432 Junction-62459 Junction-62460 139.29294 300 100
+pipe_433 Junction-470196 Junction-470197 13.896628 300 100
+pipe_434 Junction-467856 Junction-469128 2.0573113 300 100
+pipe_435 Junction-474890 Junction-474893 0.55381054 300 100
+pipe_436 Junction-49262 Junction-42443 9.599397 300 100
+pipe_437 Junction-54229 Junction-48871 120.95559 300 100
+pipe_438 Junction-54523 Junction-11193 0.7558245 300 100
+pipe_439 Junction-34011 Junction-472535 22.09822 300 100
+pipe_440 Junction-53911 Junction-53912 11.458774 300 100
+pipe_441 Junction-61114 Junction-22999 36.454834 300 100
+pipe_442 Junction-22526 Junction-41707 11.223981 300 100
+pipe_443 Junction-10137 Junction-10135 9.889742 300 100
+pipe_444 Junction-33877 Junction-11183 9.199537 300 100
+pipe_445 Junction-10266 Junction-10267 1.4747304 300 100
+pipe_446 Junction-54321 Junction-54379 65.60541 300 100
+pipe_447 Junction-33886 Junction-49258 11.231874 300 100
+pipe_448 Junction-41803 Junction-41804 16.22941 300 100
+pipe_449 Junction-49386 Junction-23819 16.318283 300 100
+pipe_450 Junction-33755 Junction-58278 18.006447 300 100
+pipe_451 Junction-62470 Junction-23449 34.401405 300 100
+pipe_452 Junction-474869 Junction-48405 9.8530035 300 100
+pipe_453 Junction-22997 Junction-22998 9.067017 300 100
+pipe_454 Junction-33209 Junction-33210 8.670224 300 100
+pipe_455 Junction-10268 Junction-10269 4.155547 300 100
+pipe_456 Junction-54316 Junction-54317 5.8145294 300 100
+pipe_457 Junction-22116 Junction-22114 17.822859 300 100
+pipe_458 Junction-473840 Junction-473948 31.198204 300 100
+pipe_459 Junction-33578 Junction-58148 68.66135 300 100
+pipe_460 Junction-23576 Junction-23577 10.492879 300 100
+pipe_461 Junction-23684 Junction-49320 1.4914143 300 100
+pipe_462 Junction-22900 Junction-22901 1.1542393 300 100
+pipe_463 Junction-23132 Junction-466551 9.004339 300 100
+pipe_464 Junction-472491 Junction-472492 5.535386 300 100
+pipe_465 Junction-10814 Junction-33588 8.592771 300 100
+pipe_466 Junction-9859 Junction-41628 9.388628 300 100
+pipe_467 Junction-22904 Junction-33205 72.96039 300 100
+pipe_468 Junction-22988 Junction-33364 10.598015 300 100
+pipe_469 Junction-41798 Junction-41796 5.9996066 300 100
+pipe_470 Junction-49065 Junction-42184 55.7465 300 100
+pipe_471 Junction-54518 Junction-23685 73.40947 300 100
+pipe_472 Junction-23421 Junction-23422 35.55271 300 100
+pipe_473 Junction-23248 Junction-10788 23.570065 300 100
+pipe_474 Junction-11201 Junction-42443 20.778894 300 100
+pipe_475 Junction-23804 Junction-54610 16.672941 300 100
+pipe_476 Junction-10118 Junction-10119 3.836513 300 100
+pipe_477 Junction-33190 Junction-33191 28.779629 300 100
+pipe_478 Junction-11343 Junction-23703 11.599557 300 100
+pipe_479 Junction-470197 Junction-470198 2.7567596 300 100
+pipe_480 Junction-10791 Junction-54376 39.931313 300 100
+pipe_481 Junction-48736 Junction-48737 13.118484 300 100
+pipe_482 Junction-23422 Junction-49164 3.655616 300 100
+pipe_483 Junction-9861 Junction-468961 28.10562 300 100
+pipe_484 Junction-11574 Junction-42679 20.033829 300 100
+pipe_485 Junction-10491 Junction-22992 25.303238 300 100
+pipe_486 Junction-49059 Junction-23254 5.1845465 300 100
+pipe_487 Junction-11185 Junction-11186 22.150112 300 100
+pipe_488 Junction-42443 Junction-42444 63.644203 300 100
+pipe_489 Junction-54451 Junction-49061 14.848443 300 100
+pipe_490 Junction-23808 Junction-42617 35.799587 300 100
+pipe_491 Junction-477012 Junction-476245 14.889229 300 100
+pipe_492 Junction-58025 Junction-58026 1.1187539 300 100
+pipe_493 Junction-49237 Junction-33872 15.615428 300 100
+pipe_494 Junction-23278 Junction-23279 64.239334 300 100
+pipe_495 Junction-11033 Junction-42335 30.157887 300 100
+pipe_496 Junction-54522 Junction-49249 9.857081 300 100
+pipe_497 Junction-23826 Junction-23827 4.0520906 300 100
+pipe_498 Junction-473889 Junction-473953 80.98171 300 100
+pipe_499 Junction-10507 Junction-10508 33.542507 300 100
+pipe_500 Junction-10140 Junction-10141 14.780376 300 100
+pipe_501 Junction-48872 Junction-48873 2.3104918 300 100
+pipe_502 Junction-469493 Junction-469494 8.266872 300 100
+pipe_503 Junction-23441 Junction-33766 11.391857 300 100
+pipe_504 Junction-23264 Junction-23262 3.8112063 300 100
+pipe_505 Junction-60555 Junction-54453 5.815205 300 100
+pipe_506 Junction-49261 Junction-49263 28.16945 300 100
+pipe_507 Junction-473822 Junction-473823 1.4006569 300 100
+pipe_508 Junction-53974 Junction-57908 14.599471 300 100
+pipe_509 Junction-33470 Junction-23139 10.107438 300 100
+pipe_510 Junction-58021 Junction-58022 21.523073 300 100
+pipe_511 Junction-470141 Junction-475030 23.594378 300 100
+pipe_512 Junction-474072 Junction-474074 5.1276555 300 100
+pipe_513 Junction-10276 Junction-33188 12.998241 300 100
+pipe_514 Junction-11423 Junction-54606 11.368246 300 100
+pipe_515 Junction-54577 Junction-11341 9.39334 300 100
+pipe_516 Junction-42342 Junction-23449 34.542824 300 100
+pipe_517 Junction-33743 Junction-33744 9.51243 300 100
+pipe_518 Junction-474892 Junction-477225 18.34028 300 100
+pipe_519 Junction-53974 Junction-53973 9.881753 300 100
+pipe_520 Junction-475816 Junction-42313 32.830795 300 100
+pipe_521 Junction-22679 Junction-22680 12.9074 300 100
+pipe_522 Junction-10135 Junction-10127 141.56416 300 100
+pipe_523 Junction-49392 Junction-23828 70.72687 300 100
+pipe_524 Junction-23705 Junction-11344 6.6153293 300 100
+pipe_525 Junction-11447 Junction-23819 28.412092 300 100
+pipe_526 Junction-22524 Junction-9985 16.194876 300 100
+pipe_527 Junction-468877 Junction-475209 0.034802068 300 100
+pipe_528 Junction-34189 Junction-34191 38.220757 300 100
+pipe_529 Junction-32321 Junction-32320 10.824009 300 100
+pipe_530 Junction-10391 Junction-22899 3.1239119 300 100
+pipe_531 Junction-476548 Junction-23116 30.275988 300 100
+pipe_532 Junction-21979 Junction-32519 11.091121 300 100
+pipe_533 Junction-34095 Junction-452400 0.6255336 300 100
+pipe_534 Junction-466029 Junction-474007 0.9867123 300 100
+pipe_535 Junction-33763 Junction-54464 1.79092 300 100
+pipe_536 Junction-11428 Junction-34093 27.210869 300 100
+pipe_537 Junction-460577 Junction-460578 12.063981 300 100
+pipe_538 Junction-58116 Junction-54275 15.9080715 300 100
+pipe_539 Junction-10631 Junction-10633 3.5926619 300 100
+pipe_540 Junction-42313 Junction-49165 26.995235 300 100
+pipe_541 Junction-476062 Junction-476063 33.899494 300 100
+pipe_542 Junction-34101 Junction-54611 6.0410385 300 100
+pipe_543 Junction-466552 Junction-472531 0.61863256 300 100
+pipe_544 Junction-10626 Junction-461074 6.098307 300 100
+pipe_545 Junction-22385 Junction-10135 25.777487 300 100
+pipe_546 Junction-465666 Junction-465667 60.30222 300 100
+pipe_547 Junction-477134 Junction-477135 0.26237965 300 100
+pipe_548 Junction-42617 Junction-49383 9.197016 300 100
+pipe_549 Junction-23596 Junction-23598 4.8684907 300 100
+pipe_550 Junction-451222 Junction-451223 1.7618275 300 100
+pipe_551 Junction-23254 Junction-23255 12.611954 300 100
+pipe_552 Junction-54190 Junction-54188 13.291335 300 100
+pipe_553 Junction-54148 Junction-48747 10.244348 300 100
+pipe_554 Junction-10144 Junction-54148 13.893856 300 100
+pipe_555 Junction-42534 Junction-34011 28.909416 300 100
+pipe_556 Junction-23810 Junction-58349 13.204932 300 100
+pipe_557 Junction-474020 Junction-474021 7.1014886 300 100
+pipe_558 Junction-42427 Junction-54512 18.163355 300 100
+pipe_559 Junction-49247 Junction-42435 1.4010001 300 100
+pipe_560 Junction-460476 Junction-460477 0.5457586 300 100
+pipe_561 Junction-23695 Junction-11327 5.3698254 300 100
+pipe_562 Junction-34189 Junction-11573 4.187463 300 100
+pipe_563 Junction-473824 Junction-473825 0.39854708 300 100
+pipe_564 Junction-34006 Junction-23695 17.444105 300 100
+pipe_565 Junction-33771 Junction-60558 74.1241 300 100
+pipe_566 Junction-23135 Junction-23136 5.832209 300 100
+pipe_567 Junction-22791 Junction-41797 70.20207 300 100
+pipe_568 Junction-32323 Junction-21513 88.636314 300 100
+pipe_569 Junction-11204 Junction-33890 11.162746 300 100
+pipe_570 Junction-49169 Junction-11028 62.89076 300 100
+pipe_571 Junction-42439 Junction-23597 78.13283 300 100
+pipe_572 Junction-41797 Junction-54142 3.616364 300 100
+pipe_573 Junction-54273 Junction-42023 12.751645 300 100
+pipe_574 Junction-473940 Junction-473942 7.0675073 300 100
+pipe_575 Junction-49437 Junction-34187 8.76426 300 100
+pipe_576 Junction-11452 Junction-60638 33.49478 300 100
+pipe_577 Junction-54034 Junction-22375 99.207825 300 100
+pipe_578 Junction-42533 Junction-34007 15.07012 300 100
+pipe_579 Junction-10391 Junction-10392 25.008041 300 100
+pipe_580 Junction-11316 Junction-33996 5.2209873 300 100
+pipe_581 Junction-10268 Junction-58054 6.4864063 300 100
+pipe_582 Junction-22382 Junction-22383 12.778277 300 100
+pipe_583 Junction-58151 Junction-60496 31.69914 300 100
+pipe_584 Junction-54615 Junction-58355 39.83481 300 100
+pipe_585 Junction-11199 Junction-11198 14.739728 300 100
+pipe_586 Junction-10281 Junction-10282 23.170006 300 100
+pipe_587 Junction-49323 Junction-33998 4.160939 300 100
+pipe_588 Junction-33372 Junction-48991 66.34002 300 100
+pipe_589 Junction-42013 Junction-22891 75.944954 300 100
+pipe_590 Junction-33472 Junction-33473 28.82908 300 100
+pipe_591 Junction-9657 Junction-60376 15.768275 300 100
+pipe_592 Junction-33763 Junction-11035 7.620613 300 100
+pipe_593 Junction-475536 Junction-476667 0.52407867 300 100
+pipe_594 Junction-10811 Junction-23256 6.556944 300 100
+pipe_595 Junction-11005 Junction-33577 10.354946 300 100
+pipe_596 Junction-23254 Junction-10812 61.248142 300 100
+pipe_597 Junction-473830 Junction-473833 3.2443304 300 100
+pipe_598 Junction-10635 Junction-54321 24.437693 300 100
+pipe_599 Junction-11434 Junction-471899 92.98626 300 100
+pipe_600 Junction-49169 Junction-49170 14.925015 300 100
+pipe_601 Junction-462500 Junction-10807 3.2056284 300 100
+pipe_602 Junction-41529 Junction-41528 23.487957 300 100
+pipe_603 Junction-10120 Junction-10121 76.692856 300 100
+pipe_604 Junction-473831 Junction-473834 28.479788 300 100
+pipe_605 Junction-41951 Junction-58076 23.083895 300 100
+pipe_606 Junction-465565 Junction-11009 25.394163 300 100
+pipe_607 Junction-23812 Junction-23816 12.299532 300 100
+pipe_608 Junction-10136 Junction-10137 19.567717 300 100
+pipe_609 Junction-9985 Junction-9986 79.94198 300 100
+pipe_610 Junction-9869 Junction-9870 30.371721 300 100
+pipe_611 Junction-58238 Junction-33756 12.013232 300 100
+pipe_612 Junction-33469 Junction-33470 26.351192 300 100
+pipe_613 Junction-10617 Junction-10618 16.197252 300 100
+pipe_614 Junction-9983 Junction-9984 18.408962 300 100
+pipe_615 Junction-33468 Junction-465711 8.644032 300 100
+pipe_616 Junction-23142 Junction-10496 17.642878 300 100
+pipe_617 Junction-22907 Junction-41949 13.063907 300 100
+pipe_618 Junction-33063 Junction-54141 2.881275 300 100
+pipe_619 Junction-471899 Junction-471897 13.604874 300 100
+pipe_620 Junction-473876 Junction-473877 1.9543124 300 100
+pipe_621 Junction-22798 Junction-10285 17.249037 300 100
+pipe_622 Junction-54525 Junction-33896 56.632385 300 100
+pipe_623 Junction-23446 Junction-23448 9.953945 300 100
+pipe_624 Junction-48612 Junction-32863 22.977993 300 100
+pipe_625 Junction-42333 Junction-42334 20.278996 300 100
+pipe_626 Junction-54379 Junction-49062 15.442274 300 100
+pipe_627 Junction-23912 Junction-23913 14.799433 300 100
+pipe_628 Junction-10794 Junction-33580 22.229828 300 100
+pipe_629 Junction-474076 Junction-474078 0.4703055 300 100
+pipe_630 Junction-48679 Junction-54090 8.3918085 300 100
+pipe_631 Junction-11345 Junction-58291 67.72868 300 100
+pipe_632 Junction-477157 Junction-477158 1.0466664 300 100
+pipe_633 Junction-33592 Junction-62486 11.664479 300 100
+pipe_634 Junction-474009 Junction-474011 0.752373 300 100
+pipe_635 Junction-42322 Junction-54456 7.5601807 300 100
+pipe_636 Junction-23574 Junction-23575 12.226031 300 100
+pipe_637 Junction-33182 Junction-41879 2.6852756 300 100
+pipe_638 Junction-10507 Junction-23000 1.0062517 300 100
+pipe_639 Junction-23691 Junction-23692 11.064031 300 100
+pipe_640 Junction-32763 Junction-32764 15.517742 300 100
+pipe_641 Junction-41025 Junction-57687 9.419987 300 100
+pipe_642 Junction-23434 Junction-42327 49.37919 300 100
+pipe_643 Junction-32322 Junction-32323 38.999527 300 100
+pipe_644 Junction-22891 Junction-33365 11.056994 300 100
+pipe_645 Junction-60632 Junction-60633 7.292036 300 100
+pipe_646 Junction-10792 Junction-10793 20.97864 300 100
+pipe_647 Junction-11424 Junction-11425 8.302537 300 100
+pipe_648 Junction-33766 Junction-33767 38.83514 300 100
+pipe_649 Junction-21512 Junction-21513 12.244652 300 100
+pipe_650 Junction-54179 Junction-33190 14.276651 300 100
+pipe_651 Junction-23280 Junction-23449 141.95619 300 100
+pipe_652 Junction-33193 Junction-58074 30.33973 300 100
+pipe_653 Junction-54509 Junction-49239 18.94424 300 100
+pipe_654 Junction-11335 Junction-11336 0.50044596 300 100
+pipe_655 Junction-42101 Junction-476993 1.2001321 300 100
+pipe_656 Junction-49434 Junction-34183 19.58055 300 100
+pipe_657 Junction-32762 Junction-456397 23.370049 300 100
+pipe_658 Junction-33996 Junction-42433 67.27459 300 100
+pipe_659 Junction-23684 Junction-33993 31.94324 300 100
+pipe_660 Junction-23573 Junction-462494 17.281332 300 100
+pipe_661 Junction-23423 Junction-42315 18.305801 300 100
+pipe_662 Junction-54513 Junction-54514 34.895466 300 100
+pipe_663 Junction-48738 Junction-58024 48.9465 300 100
+pipe_664 Junction-11202 Junction-11201 10.42945 300 100
+pipe_665 Junction-49166 Junction-475816 21.875053 300 100
+pipe_666 Junction-21513 Junction-53648 10.567846 300 100
+pipe_667 Junction-468903 Junction-9280 10.96694 300 100
+pipe_668 Junction-22250 Junction-9666 22.001095 300 100
+pipe_669 Junction-42328 Junction-11029 6.5669427 300 100
+pipe_670 Junction-11327 Junction-60609 7.5966163 300 100
+pipe_671 Junction-22680 Junction-10130 18.65091 300 100
+pipe_672 Junction-11348 Junction-11349 11.403576 300 100
+pipe_673 Junction-42623 Junction-23821 11.775297 300 100
+pipe_674 Junction-23704 Junction-61301 17.004757 300 100
+pipe_675 Junction-22911 Junction-48877 22.516699 300 100
+pipe_676 Junction-32857 Junction-22374 6.6120434 300 100
+pipe_677 Junction-476724 Junction-476725 19.894667 300 100
+pipe_678 Junction-476210 Junction-476208 31.24204 300 100
+pipe_679 Junction-22798 Junction-41888 23.53843 300 100
+pipe_680 Junction-54575 Junction-54576 14.817989 300 100
+pipe_681 Junction-49325 Junction-49326 29.800161 300 100
+pipe_682 Junction-460472 Junction-460473 8.92888 300 100
+pipe_683 Junction-23132 Junction-23127 11.178028 300 100
+pipe_684 Junction-22995 Junction-10492 6.3148136 300 100
+pipe_685 Junction-54229 Junction-62456 103.5708 300 100
+pipe_686 Junction-48264 Junction-21743 16.785 300 100
+pipe_687 Junction-33747 Junction-11012 3.5751805 300 100
+pipe_688 Junction-60394 Junction-9860 10.457163 300 100
+pipe_689 Junction-469325 Junction-469326 94.38076 300 100
+pipe_690 Junction-33597 Junction-33598 21.392315 300 100
+pipe_691 Junction-11346 Junction-42535 17.70102 300 100
+pipe_692 Junction-473837 Junction-473838 2.8724797 300 100
+pipe_693 Junction-473888 Junction-473889 1.9552317 300 100
+pipe_694 Junction-9050 Junction-469106 2.6520834 300 100
+pipe_695 Junction-49263 Junction-42445 18.223988 300 100
+pipe_696 Junction-62486 Junction-62490 93.08847 300 100
+pipe_697 Junction-460641 Junction-467856 8.045119 300 100
+pipe_698 Junction-10120 Junction-10270 7.6575966 300 100
+pipe_699 Junction-22677 Junction-10128 30.346792 300 100
+pipe_700 Junction-41796 Junction-33194 84.91987 300 100
+pipe_701 Junction-48615 Junction-57938 3.3210647 300 100
+pipe_702 Junction-23245 Junction-10790 12.517527 300 100
+pipe_703 Junction-464122 Junction-467698 3.0759995 300 100
+pipe_704 Junction-11313 Junction-11314 9.716346 300 100
+pipe_705 Junction-54275 Junction-42028 13.53115 300 100
+pipe_706 Junction-48264 Junction-471020 9.130093 300 100
+pipe_707 Junction-53648 Junction-21510 18.264475 300 100
+pipe_708 Junction-477013 Junction-477012 3.5692682 300 100
+pipe_709 Junction-32325 Junction-41168 9.512806 300 100
+pipe_710 Junction-23248 Junction-23249 0.5002036 300 100
+pipe_711 Junction-465060 Junction-465061 28.285534 300 100
+pipe_712 Junction-48399 Junction-48397 21.312227 300 100
+pipe_713 Junction-10493 Junction-54271 130.4701 300 100
+pipe_714 Junction-11042 Junction-42339 9.662666 300 100
+pipe_715 Junction-467411 Junction-61984 77.07821 300 100
+pipe_716 Junction-474072 Junction-474073 7.051028 300 100
+pipe_717 Junction-42330 Junction-42331 0.9848402 300 100
+pipe_718 Junction-48816 Junction-41806 12.998845 300 100
+pipe_719 Junction-41171 Junction-9278 0.92705446 300 100
+pipe_720 Junction-461031 Junction-54456 141.65988 300 100
+pipe_721 Junction-473885 Junction-473888 33.596497 300 100
+pipe_722 Junction-21979 Junction-57808 19.768192 300 100
+pipe_723 Junction-11023 Junction-476791 41.929375 300 100
+pipe_724 Junction-11438 Junction-471903 0.51645607 300 100
+pipe_725 Junction-10264 Junction-10266 1.3722684 300 100
+pipe_726 Junction-49239 Junction-42427 15.396863 300 100
+pipe_727 Junction-23832 Junction-34107 18.724886 300 100
+pipe_728 Junction-58353 Junction-49388 10.402941 300 100
+pipe_729 Junction-42189 Junction-49066 36.65574 300 100
+pipe_730 Junction-22523 Junction-48673 11.589328 300 100
+pipe_731 Junction-33747 Junction-33748 48.48322 300 100
+pipe_732 Junction-42189 Junction-10823 81.00046 300 100
+pipe_733 Junction-474007 Junction-474071 153.35019 300 100
+pipe_734 Junction-32863 Junction-9861 32.733902 300 100
+pipe_735 Junction-10401 Junction-10399 14.420094 300 100
+pipe_736 Junction-61985 Junction-62101 9.875175 300 100
+pipe_737 Junction-22675 Junction-22676 3.2361 300 100
+pipe_738 Junction-33763 Junction-33764 5.3100123 300 100
+pipe_739 Junction-49259 Junction-33886 24.33666 300 100
+pipe_740 Junction-33188 Junction-54181 32.746365 300 100
+pipe_741 Junction-10288 Junction-41890 29.780285 300 100
+pipe_742 Junction-32764 Junction-9668 18.005388 300 100
+pipe_743 Junction-11582 Junction-34189 6.767933 300 100
+pipe_744 Junction-42025 Junction-22997 9.073075 300 100
+pipe_745 Junction-9657 Junction-32760 40.038742 300 100
+pipe_746 Junction-10613 Junction-10614 27.32232 300 100
+pipe_747 Junction-11334 Junction-23702 16.490389 300 100
+pipe_748 Junction-11014 Junction-11016 80.95024 300 100
+pipe_749 Junction-34095 Junction-34096 0.489464 300 100
+pipe_750 Junction-42191 Junction-33600 11.742591 300 100
+pipe_751 Junction-464891 Junction-42316 10.137921 300 100
+pipe_752 Junction-23578 Junction-23579 7.9763994 300 100
+pipe_753 Junction-23576 Junction-60581 34.99324 300 100
+pipe_754 Junction-11564 Junction-11565 20.02058 300 100
+pipe_755 Junction-11572 Junction-11570 6.1997895 300 100
+pipe_756 Junction-10820 Junction-33598 1.8797197 300 100
+pipe_757 Junction-23116 Junction-33362 9.665583 300 100
+pipe_758 Junction-42429 Junction-33876 4.6861606 300 100
+pipe_759 Junction-10492 Junction-10493 4.1922264 300 100
+pipe_760 Junction-22797 Junction-10283 0.9272864 300 100
+pipe_761 Junction-11313 Junction-42523 5.3181763 300 100
+pipe_762 Junction-58186 Junction-42179 39.144115 300 100
+pipe_763 Junction-23810 Junction-23811 8.099708 300 100
+pipe_764 Junction-477451 Junction-477452 15.210525 300 100
+pipe_765 Junction-469325 Junction-462500 36.06766 300 100
+pipe_766 Junction-473830 Junction-473831 2.1161036 300 100
+pipe_767 Junction-32326 Junction-48262 10.174678 300 100
+pipe_768 Junction-469311 Junction-60497 2.0312808 300 100
+pipe_769 Junction-42533 Junction-11325 20.452394 300 100
+pipe_770 Junction-11317 Junction-61031 0.97028357 300 100
+pipe_771 Junction-464465 Junction-23569 13.952727 300 100
+pipe_772 Junction-62482 Junction-62487 103.733345 300 100
+pipe_773 Junction-469572 Junction-10624 14.043263 300 100
+pipe_774 Junction-58025 Junction-22680 11.485549 300 100
+pipe_775 Junction-23449 Junction-23450 15.563172 300 100
+pipe_776 Junction-22997 Junction-42026 28.081598 300 100
+pipe_777 Junction-475030 Junction-475421 1.1268516 300 100
+pipe_778 Junction-41791 Junction-48737 43.155167 300 100
+pipe_779 Junction-11199 Junction-11196 91.26569 300 100
+pipe_780 Junction-58291 Junction-23603 3.8414338 300 100
+pipe_781 Junction-469470 Junction-48405 2.1437683 300 100
+pipe_782 Junction-60460 Junction-41939 8.746631 300 100
+pipe_783 Junction-22893 Junction-60460 12.5469 300 100
+pipe_784 Junction-62480 Junction-54229 12.420017 300 100
+pipe_785 Junction-468956 Junction-468957 68.82749 300 100
+pipe_786 Junction-42014 Junction-61034 102.33555 300 100
+pipe_787 Junction-460468 Junction-460469 8.712028 300 100
+pipe_788 Junction-474013 Junction-474014 30.356184 300 100
+pipe_789 Junction-54273 Junction-10499 30.47737 300 100
+pipe_790 Junction-42102 Junction-42103 157.20528 300 100
+pipe_791 Junction-54513 Junction-23579 1.3783368 300 100
+pipe_792 Junction-58076 Junction-10404 26.810854 300 100
+pipe_793 Junction-474015 Junction-474079 34.39955 300 100
+pipe_794 Junction-42180 Junction-469326 21.674913 300 100
+pipe_795 Junction-49438 Junction-34278 13.191937 300 100
+pipe_796 Junction-42017 Junction-54271 103.011406 300 100
+pipe_797 Junction-41024 Junction-8759 28.082087 300 100
+pipe_798 Junction-34186 Junction-23915 4.014018 300 100
+pipe_799 Junction-9667 Junction-48549 19.788815 300 100
+pipe_800 Junction-23704 Junction-23705 32.4688 300 100
+pipe_801 Junction-41893 Junction-10305 18.861895 300 100
+pipe_802 Junction-11323 Junction-11324 24.41967 300 100
+pipe_803 Junction-9052 Junction-32327 4.1247826 300 100
+pipe_804 Junction-42103 Junction-58147 26.609837 300 100
+pipe_805 Junction-9504 Junction-32521 57.54799 300 100
+pipe_806 Junction-460470 Junction-472491 10.766246 300 100
+pipe_807 Junction-11190 Junction-58243 150.18246 300 100
+pipe_808 Junction-54450 Junction-54451 11.055008 300 100
+pipe_809 Junction-58182 Junction-58187 5.9526095 300 100
+pipe_810 Junction-49069 Junction-49070 3.8001525 300 100
+pipe_811 Junction-473946 Junction-473947 109.89088 300 100
+pipe_812 Junction-49253 Junction-54460 65.50926 300 100
+pipe_813 Junction-10290 Junction-33206 29.980547 300 100
+pipe_814 Junction-23698 Junction-23699 23.789461 300 100
+pipe_815 Junction-42326 Junction-54457 7.188413 300 100
+pipe_816 Junction-11423 Junction-49322 31.94593 300 100
+pipe_817 Junction-11028 Junction-42322 57.660538 300 100
+pipe_818 Junction-49072 Junction-10827 7.0693502 300 100
+pipe_819 Junction-42536 Junction-62446 2.010219 300 100
+pipe_820 Junction-23137 Junction-23138 23.114399 300 100
+pipe_821 Junction-33289 Junction-33290 12.995846 300 100
+pipe_822 Junction-11435 Junction-11436 7.7993317 300 100
+pipe_823 Junction-54145 Junction-54146 23.253124 300 100
+pipe_824 Junction-42329 Junction-42330 32.445206 300 100
+pipe_825 Junction-49165 Junction-33583 3.0674148 300 100
+pipe_826 Junction-48811 Junction-48812 37.87523 300 100
+pipe_827 Junction-9986 Junction-48740 56.07443 300 100
+pipe_828 Junction-22793 Junction-22794 72.0892 300 100
+pipe_829 Junction-33601 Junction-23267 7.06194 300 100
+pipe_830 Junction-48735 Junction-22672 4.1870117 300 100
+pipe_831 Junction-23594 Junction-34003 12.810177 300 100
+pipe_832 Junction-11331 Junction-11332 34.35887 300 100
+pipe_833 Junction-476224 Junction-476225 23.117558 300 100
+pipe_834 Junction-54460 Junction-54461 186.0337 300 100
+pipe_835 Junction-58278 Junction-58279 4.2312155 300 100
+pipe_836 Junction-32760 Junction-53974 15.5636425 300 100
+pipe_837 Junction-48739 Junction-10124 49.120953 300 100
+pipe_838 Junction-61115 Junction-10507 2.1334655 300 100
+pipe_839 Junction-22808 Junction-48819 10.361967 300 100
+pipe_840 Junction-465667 Junction-471226 56.760216 300 100
+pipe_841 Junction-54453 Junction-54452 12.488336 300 100
+pipe_842 Junction-53743 Junction-41170 15.744331 300 100
+pipe_843 Junction-42179 Junction-10792 5.7859178 300 100
+pipe_844 Junction-10279 Junction-41882 30.21241 300 100
+pipe_845 Junction-32869 Junction-32870 11.278457 300 100
+pipe_846 Junction-476580 Junction-476579 2.3235378 300 100
+pipe_847 Junction-10795 Junction-60514 18.869007 300 100
+pipe_848 Junction-23270 Junction-10821 19.208036 300 100
+pipe_849 Junction-11333 Junction-11334 12.469647 300 100
+pipe_850 Junction-54578 Junction-42538 34.98462 300 100
+pipe_851 Junction-33578 Junction-23251 12.522974 300 100
+pipe_852 Junction-9664 Junction-41526 14.633745 300 100
+pipe_853 Junction-22670 Junction-22671 10.406766 300 100
+pipe_854 Junction-476727 Junction-476729 1.9837234 300 100
+pipe_855 Junction-23601 Junction-23602 3.8785696 300 100
+pipe_856 Junction-48810 Junction-48811 6.60123 300 100
+pipe_857 Junction-10284 Junction-41886 5.001654 300 100
+pipe_858 Junction-49068 Junction-23277 10.736554 300 100
+pipe_859 Junction-10132 Junction-10133 19.532917 300 100
+pipe_860 Junction-23813 Junction-23810 9.833333 300 100
+pipe_861 Junction-41884 Junction-41885 25.178701 300 100
+pipe_862 Junction-42539 Junction-34016 1.8213344 300 100
+pipe_863 Junction-21330 Junction-32123 25.17677 300 100
+pipe_864 Junction-41807 Junction-33072 11.579448 300 100
+pipe_865 Junction-33873 Junction-33874 15.904192 300 100
+pipe_866 Junction-48810 Junction-54183 25.073812 300 100
+pipe_867 Junction-48401 Junction-57805 4.643317 300 100
+pipe_868 Junction-33767 Junction-11044 74.68924 300 100
+pipe_869 Junction-474008 Junction-474010 6.85596 300 100
+pipe_870 Junction-454645 Junction-454646 9.761782 300 100
+pipe_871 Junction-42621 Junction-34182 27.920818 300 100
+pipe_872 Junction-32519 Junction-32520 1.4744228 300 100
+pipe_873 Junction-60323 Junction-469470 8.88309 300 100
+pipe_874 Junction-42184 Junction-33477 8.199578 300 100
+pipe_875 Junction-22246 Junction-22247 6.9766493 300 100
+pipe_876 Junction-23279 Junction-42193 5.444479 300 100
+pipe_877 Junction-41885 Junction-41889 1.0396161 300 100
+pipe_878 Junction-42620 Junction-34104 11.999206 300 100
+pipe_879 Junction-33369 Junction-22991 39.095364 300 100
+pipe_880 Junction-54035 Junction-9854 17.682695 300 100
+pipe_881 Junction-468903 Junction-468904 1.1815287 300 100
+pipe_882 Junction-10788 Junction-33575 13.022326 300 100
+pipe_883 Junction-42522 Junction-60607 9.638745 300 100
+pipe_884 Junction-10284 Junction-33201 1.4219239 300 100
+pipe_885 Junction-62489 Junction-62470 208.01765 300 100
+pipe_886 Junction-48995 Junction-23135 7.5404263 300 100
+pipe_887 Junction-10301 Junction-10302 12.876042 300 100
+pipe_888 Junction-48133 Junction-60221 34.121918 300 100
+pipe_889 Junction-10396 Junction-10397 30.992428 300 100
+pipe_890 Junction-22903 Junction-22904 12.115512 300 100
+pipe_891 Junction-472169 Junction-472172 0.6552142 300 100
+pipe_892 Junction-11444 Junction-54613 33.97716 300 100
+pipe_893 Junction-41628 Junction-32763 4.4913964 300 100
+pipe_894 Junction-473947 Junction-476061 11.473167 300 100
+pipe_895 Junction-49174 Junction-54458 16.401255 300 100
+pipe_896 Junction-23823 Junction-58353 22.445011 300 100
+pipe_897 Junction-11346 Junction-11347 36.26192 300 100
+pipe_898 Junction-48740 Junction-48739 8.873127 300 100
+pipe_899 Junction-11431 Junction-60634 11.243745 300 100
+pipe_900 Junction-23430 Junction-49173 2.3795912 300 100
+pipe_901 Junction-474623 Junction-460468 1.0498551 300 100
+pipe_902 Junction-62101 Junction-11203 11.079433 300 100
+pipe_903 Junction-48674 Junction-22519 3.8180804 300 100
+pipe_904 Junction-33463 Junction-476548 27.002722 300 100
+pipe_905 Junction-33760 Junction-33761 37.07008 300 100
+pipe_906 Junction-33872 Junction-54508 10.143592 300 100
+pipe_907 Junction-42186 Junction-42187 30.995277 300 100
+pipe_908 Junction-34016 Junction-58320 12.750359 300 100
+pipe_909 Junction-11018 Junction-58239 17.514599 300 100
+pipe_910 Junction-32124 Junction-41026 11.041641 300 100
+pipe_911 Junction-33876 Junction-33877 19.734879 300 100
+pipe_912 Junction-49324 Junction-11338 16.750166 300 100
+pipe_913 Junction-23445 Junction-33768 24.50976 300 100
+pipe_914 Junction-469133 Junction-469311 46.212795 300 100
+pipe_915 Junction-33215 Junction-33216 17.35682 300 100
+pipe_916 Junction-62472 Junction-62468 122.02648 300 100
+pipe_917 Junction-473827 Junction-473880 0.49186274 300 100
+pipe_918 Junction-23682 Junction-42427 17.164957 300 100
+pipe_919 Junction-473949 Junction-474013 1.6691726 300 100
+pipe_920 Junction-23697 Junction-34008 24.02554 300 100
+pipe_921 Junction-473885 Junction-473886 6.9747834 300 100
+pipe_922 Junction-476730 Junction-476802 1.5965279 300 100
+pipe_923 Junction-11021 Junction-11022 12.695813 300 100
+pipe_924 Junction-33210 Junction-33219 17.470587 300 100
+pipe_925 Junction-10138 Junction-10139 49.494213 300 100
+pipe_926 Junction-23246 Junction-42177 130.7518 300 100
+pipe_927 Junction-21511 Junction-8758 30.052406 300 100
+pipe_928 Junction-11580 Junction-23919 7.9449096 300 100
+pipe_929 Junction-10285 Junction-10287 30.167658 300 100
+pipe_930 Junction-49164 Junction-33743 31.585093 300 100
+pipe_931 Junction-473949 Junction-473950 31.651405 300 100
+pipe_932 Junction-42316 Junction-469693 16.583763 300 100
+pipe_933 Junction-23696 Junction-23697 3.81273 300 100
+pipe_934 Junction-22675 Junction-48738 1.4989588 300 100
+pipe_935 Junction-32124 Junction-32125 19.026363 300 100
+pipe_936 Junction-54574 Junction-60614 23.38776 300 100
+pipe_937 Junction-11338 Junction-49325 6.5145154 300 100
+pipe_938 Junction-23603 Junction-42447 0.72814786 300 100
+pipe_939 Junction-473889 Junction-473890 7.1070194 300 100
+pipe_940 Junction-48808 Junction-48809 23.599554 300 100
+pipe_941 Junction-10639 Junction-48998 28.628702 300 100
+pipe_942 Junction-48747 Junction-41805 16.647913 300 100
+pipe_943 Junction-10122 Junction-41793 25.77408 300 100
+pipe_944 Junction-61113 Junction-54043 1.684942 300 100
+pipe_945 Junction-23417 Junction-23418 12.728295 300 100
+pipe_946 Junction-48262 Junction-48263 2.0129015 300 100
+pipe_947 Junction-62468 Junction-62469 5.9996066 300 100
+pipe_948 Junction-54606 Junction-11428 56.766933 300 100
+pipe_949 Junction-474471 Junction-470141 42.839367 300 100
+pipe_950 Junction-11193 Junction-11194 0.6047115 300 100
+pipe_951 Junction-22669 Junction-10116 17.280354 300 100
+pipe_952 Junction-48611 Junction-54035 16.217196 300 100
+pipe_953 Junction-10486 Junction-33369 40.92284 300 100
+pipe_954 Junction-54515 Junction-54516 6.606505 300 100
+pipe_955 Junction-471082 Junction-471080 48.16927 300 100
+pipe_956 Junction-9282 Junction-61116 13.342272 300 100
+pipe_957 Junction-476245 Junction-476589 9.104073 300 100
+pipe_958 Junction-60290 Junction-21750 5.4178915 300 100
+pipe_959 Junction-23433 Junction-42324 2.726174 300 100
+pipe_960 Junction-462036 Junction-57743 20.649448 300 100
+pipe_961 Junction-11571 Junction-11572 36.7947 300 100
+pipe_962 Junction-49052 Junction-49053 19.016502 300 100
+pipe_963 Junction-474083 Junction-474084 7.2235446 300 100
+pipe_964 Junction-476656 Junction-476727 30.797892 300 100
+pipe_965 Junction-60584 Junction-42442 18.484491 300 100
+pipe_966 Junction-60221 Junction-60222 15.7557955 300 100
+pipe_967 Junction-474009 Junction-474012 74.608795 300 100
+pipe_968 Junction-474834 Junction-34393 91.26894 300 100
+pipe_969 Junction-23277 Junction-49069 9.885781 300 100
+pipe_970 Junction-49064 Junction-23266 18.710272 300 100
+pipe_971 Junction-22113 Junction-22114 12.875331 300 100
+pipe_972 Junction-62466 Junction-11193 0.67465377 300 100
+pipe_973 Junction-32864 Junction-22382 7.3305855 300 100
+pipe_974 Junction-58355 Junction-42624 10.054853 300 100
+pipe_975 Junction-471900 Junction-11438 32.759678 300 100
+pipe_976 Junction-10121 Junction-22673 6.4869227 300 100
+pipe_977 Junction-33758 Junction-33759 4.374413 300 100
+pipe_978 Junction-9866 Junction-57935 4.3178363 300 100
+pipe_979 Junction-57859 Junction-53911 17.756344 300 100
+pipe_980 Junction-49259 Junction-42441 4.499744 300 100
+pipe_981 Junction-60324 Junction-471421 2.0019104 300 100
+pipe_982 Junction-49175 Junction-49176 1.0813519 300 100
+pipe_983 Junction-42327 Junction-33592 65.81317 300 100
+pipe_984 Junction-22789 Junction-33182 31.584318 300 100
+pipe_985 Junction-32125 Junction-41025 18.901478 300 100
+pipe_986 Junction-54374 Junction-23248 33.946342 300 100
+pipe_987 Junction-54185 Junction-48810 49.466957 300 100
+pipe_988 Junction-476227 Junction-476225 0.9887852 300 100
+pipe_989 Junction-476729 Junction-476730 35.451057 300 100
+pipe_990 Junction-473941 Junction-473943 0.76639444 300 100
+pipe_991 Junction-33477 Junction-469133 5.5496306 300 100
+pipe_992 Junction-23262 Junction-33589 38.277096 300 100
+pipe_993 Junction-475421 Junction-471082 36.74033 300 100
+pipe_994 Junction-469242 Junction-469243 56.96881 300 100
+pipe_995 Junction-10829 Junction-10830 20.746529 300 100
+pipe_996 Junction-61034 Junction-58112 38.10328 300 100
+pipe_997 Junction-23422 Junction-58236 12.004913 300 100
+pipe_998 Junction-9289 Junction-32517 10.614501 300 100
+pipe_999 Junction-474079 Junction-474081 3.2519348 300 100
+pipe_1000 Junction-54313 Junction-42106 22.425467 300 100
+pipe_1001 Junction-61319 Junction-10489 10.817282 300 100
+pipe_1002 Junction-11186 Junction-49240 7.653264 300 100
+pipe_1003 Junction-58148 Junction-54316 9.437059 300 100
+pipe_1004 Junction-49235 Junction-49236 11.2894945 300 100
+pipe_1005 Junction-33871 Junction-49237 34.750275 300 100
+pipe_1006 Junction-23279 Junction-42189 35.540836 300 100
+pipe_1007 Junction-49175 Junction-58241 25.33562 300 100
+pipe_1008 Junction-54185 Junction-48871 50.386734 300 100
+pipe_1009 Junction-34008 Junction-34009 5.1155205 300 100
+pipe_1010 Junction-11329 Junction-11330 10.749945 300 100
+pipe_1011 Junction-469693 Junction-33755 4.833024 300 100
+pipe_1012 Junction-9867 Junction-469074 10.201069 300 100
+pipe_1013 Junction-10823 Junction-10824 9.26282 300 100
+pipe_1014 Junction-32860 Junction-22377 12.22474 300 100
+pipe_1015 Junction-57806 Junction-60323 16.170385 300 100
+pipe_1016 Junction-468961 Junction-9867 12.575308 300 100
+pipe_1017 Junction-33287 Junction-22901 0.6926644 300 100
+pipe_1018 Junction-32861 Junction-469165 31.499725 300 100
+pipe_1019 Junction-465711 Junction-48995 3.3723304 300 100
+pipe_1020 Junction-22377 Junction-22378 10.47733 300 100
+pipe_1021 Junction-49243 Junction-49244 29.721397 300 100
+pipe_1022 Junction-42187 Junction-49065 20.316303 300 100
+pipe_1023 Junction-33743 Junction-49163 2.3452969 300 100
+pipe_1024 Junction-11012 Junction-11013 20.891113 300 100
+pipe_1025 Junction-42026 Junction-33469 23.436222 300 100
+pipe_1026 Junction-23824 Junction-23825 16.965984 300 100
+pipe_1027 Junction-62485 Junction-11349 12.316879 300 100
+pipe_1028 Junction-23827 Junction-49393 6.681883 300 100
+pipe_1029 Junction-22810 Junction-54190 13.038069 300 100
+pipe_1030 Junction-32858 Junction-32859 16.950212 300 100
+pipe_1031 Junction-32873 Junction-54039 10.993476 300 100
+pipe_1032 Junction-33883 Junction-33884 6.824802 300 100
+pipe_1033 Junction-41522 Junction-41523 14.21991 300 100
+pipe_1034 Junction-10304 Junction-33215 31.909912 300 100
+pipe_1035 Junction-33580 Junction-33582 30.225115 300 100
+pipe_1036 Junction-41623 Junction-48610 1.0881134 300 100
+pipe_1037 Junction-60447 Junction-48812 0.9054932 300 100
+pipe_1038 Junction-34184 Junction-34185 19.627594 300 100
+pipe_1039 Junction-10827 Junction-23278 17.486326 300 100
+pipe_1040 Junction-33183 Junction-60446 0.73903614 300 100
+pipe_1041 Junction-10396 Junction-10395 1.6883909 300 100
+pipe_1042 Junction-473515 Junction-473593 0.7370347 300 100
+pipe_1043 Junction-23703 Junction-49382 25.067139 300 100
+pipe_1044 Junction-467698 Junction-11011 5.725617 300 100
+pipe_1045 Junction-42108 Junction-48986 16.981318 300 100
+pipe_1046 Junction-33778 Junction-460478 40.104187 300 100
+pipe_1047 Junction-41703 Junction-9981 17.47619 300 100
+pipe_1048 Junction-473839 Junction-473891 7.1627774 300 100
+pipe_1049 Junction-10821 Junction-10822 9.344279 300 100
+pipe_1050 Junction-9867 Junction-41626 2.739369 300 100
+pipe_1051 Junction-49055 Junction-10798 25.147564 300 100
+pipe_1052 Junction-477136 Junction-477137 24.04184 300 100
+pipe_1053 Junction-22896 Junction-61319 27.413366 300 100
+pipe_1054 Junction-54651 Junction-11576 8.938317 300 100
+pipe_1055 Junction-54188 Junction-54189 11.906822 300 100
+pipe_1056 Junction-461030 Junction-54518 113.58565 300 100
+pipe_1057 Junction-48872 Junction-10391 38.2508 300 100
+pipe_1058 Junction-477198 Junction-477197 13.4583025 300 100
+pipe_1059 Junction-23450 Junction-62485 483.54465 300 100
+pipe_1060 Junction-23591 Junction-23592 16.19541 300 100
+pipe_1061 Junction-42028 Junction-61115 25.029179 300 100
+pipe_1062 Junction-41167 Junction-32322 17.989471 300 100
+pipe_1063 Junction-62466 Junction-62489 45.00404 300 100
+pipe_1064 Junction-10814 Junction-23263 18.64849 300 100
+pipe_1065 Junction-9666 Junction-9667 3.5542073 300 100
+pipe_1066 Junction-477134 Junction-477136 1.1853744 300 100
+pipe_1067 Junction-33283 Junction-48808 4.7295165 300 100
+pipe_1068 Junction-53843 Junction-41171 22.106926 300 100
+pipe_1069 Junction-42613 Junction-11434 84.519966 300 100
+pipe_1070 Junction-474623 Junction-460577 1.2920238 300 100
+pipe_1071 Junction-23245 Junction-49054 20.913837 300 100
+pipe_1072 Junction-34012 Junction-11349 12.5458975 300 100
+pipe_1073 Junction-62447 Junction-62449 1.5312679 300 100
+pipe_1074 Junction-9052 Junction-9050 13.264862 300 100
+pipe_1075 Junction-23127 Junction-42021 29.378433 300 100
+pipe_1076 Junction-34191 Junction-54651 11.265331 300 100
+pipe_1077 Junction-33592 Junction-33593 11.700897 300 100
+pipe_1078 Junction-23688 Junction-42528 23.32557 300 100
+pipe_1079 Junction-10130 Junction-10131 1.1677278 300 100
+pipe_1080 Junction-11184 Junction-58281 9.011788 300 100
+pipe_1081 Junction-60615 Junction-58320 9.738029 300 100
+pipe_1082 Junction-8758 Junction-48133 32.216515 300 100
+pipe_1083 Junction-49177 Junction-42329 13.204506 300 100
+pipe_1084 Junction-42196 Junction-474471 32.316097 300 100
+pipe_1085 Junction-477196 Junction-477250 21.1181 300 100
+pipe_1086 Junction-10501 Junction-10502 7.437514 300 100
+pipe_1087 Junction-42528 Junction-23687 13.512214 300 100
+pipe_1088 Junction-33186 Junction-470030 0.86574817 300 100
+pipe_1089 Junction-10494 Junction-10495 26.102545 300 100
+pipe_1090 Junction-54461 Junction-58242 103.733345 300 100
+pipe_1091 Junction-9981 Junction-60407 3.278413 300 100
+pipe_1092 Junction-460584 Junction-466127 0.54945093 300 100
+pipe_1093 Junction-33058 Junction-466028 61.30843 300 100
+pipe_1094 Junction-468904 Junction-21974 6.1877284 300 100
+pipe_1095 Junction-49389 Junction-49391 2.5365722 300 100
+pipe_1096 Junction-33747 Junction-42317 18.990486 300 100
+pipe_1097 Junction-22247 Junction-41522 14.0091715 300 100
+pipe_1098 Junction-41891 Junction-54232 11.058459 300 100
+pipe_1099 Junction-11425 Junction-11422 32.78372 300 100
+pipe_1100 Junction-464302 Junction-49380 0.81674635 300 100
+pipe_1101 Junction-58352 Junction-11448 15.611695 300 100
+pipe_1102 Junction-10405 Junction-54236 3.2543426 300 100
+pipe_1103 Junction-10788 Junction-58183 8.907999 300 100
+pipe_1104 Junction-33759 Junction-49174 29.553879 300 100
+pipe_1105 Junction-11029 Junction-11030 15.939912 300 100
+pipe_1106 Junction-41882 Junction-10132 25.05918 300 100
+pipe_1107 Junction-465493 Junction-42343 0.6970459 300 100
+pipe_1108 Junction-41805 Junction-10142 9.582576 300 100
+pipe_1109 Junction-10297 Junction-22808 8.629685 300 100
+pipe_1110 Junction-460472 Junction-33596 11.7626 300 100
+pipe_1111 Junction-41951 Junction-58077 1.3157965 300 100
+pipe_1112 Junction-58183 Junction-49052 20.686472 300 100
+pipe_1113 Junction-42527 Junction-49321 13.099317 300 100
+pipe_1114 Junction-42335 Junction-42332 30.823387 300 100
+pipe_1115 Junction-33584 Junction-54377 5.546268 300 100
+pipe_1116 Junction-23597 Junction-23598 4.4361305 300 100
+pipe_1117 Junction-33211 Junction-10297 5.8783975 300 100
+pipe_1118 Junction-476802 Junction-476654 1.8815403 300 100
+pipe_1119 Junction-42436 Junction-42434 5.73903 300 100
+pipe_1120 Junction-11321 Junction-23690 12.863393 300 100
+pipe_1121 Junction-48407 Junction-53845 11.152861 300 100
+pipe_1122 Junction-23126 Junction-23129 49.371414 300 100
+pipe_1123 Junction-23589 Junction-23590 9.950761 300 100
+pipe_1124 Junction-11005 Junction-49158 23.28626 300 100
+pipe_1125 Junction-469532 Junction-23452 10.9766655 300 100
+pipe_1126 Junction-22897 Junction-48869 8.6299305 300 100
+pipe_1127 Junction-461030 Junction-461031 44.860783 300 100
+pipe_1128 Junction-10287 Junction-10288 2.6898956 300 100
+pipe_1129 Junction-33875 Junction-23574 23.065409 300 100
+pipe_1130 Junction-33764 Junction-33765 6.315181 300 100
+pipe_1131 Junction-23593 Junction-42439 11.788916 300 100
+pipe_1132 Junction-33191 Junction-33192 36.525757 300 100
+pipe_1133 Junction-474008 Junction-474009 2.2648618 300 100
+pipe_1134 Junction-468921 Junction-22523 10.333286 300 100
+pipe_1135 Junction-11337 Junction-11338 11.726243 300 100
+pipe_1136 Junction-21750 Junction-462036 18.369812 300 100
+pipe_1137 Junction-11019 Junction-58240 1.9998899 300 100
+pipe_1138 Junction-23819 Junction-34105 3.951321 300 100
+pipe_1139 Junction-61301 Junction-62447 6.039247 300 100
+pipe_1140 Junction-58279 Junction-11188 32.400223 300 100
+pipe_1141 Junction-10831 Junction-10832 59.144295 300 100
+pipe_1142 Junction-61114 Junction-10504 13.44561 300 100
+pipe_1143 Junction-48397 Junction-468903 2.1630201 300 100
+pipe_1144 Junction-22912 Junction-41951 28.73239 300 100
+pipe_1145 Junction-23705 Junction-34014 60.857243 300 100
+pipe_1146 Junction-10495 Junction-58113 17.183046 300 100
+pipe_1147 Junction-32872 Junction-32873 11.664327 300 100
+pipe_1148 Junction-476118 Junction-476182 1.2389057 300 100
+pipe_1149 Junction-11435 Junction-23804 8.985244 300 100
+pipe_1150 Junction-42323 Junction-11019 36.581318 300 100
+pipe_1151 Junction-33181 Junction-48804 18.838482 300 100
+pipe_1152 Junction-468950 Junction-48265 22.730843 300 100
+pipe_1153 Junction-468957 Junction-474834 13.227932 300 100
+pipe_1154 Junction-474018 Junction-474019 4.1329775 300 100
+pipe_1155 Junction-10285 Junction-48814 1.4864202 300 100
+pipe_1156 Junction-48738 Junction-60428 10.697541 300 100
+pipe_1157 Junction-62446 Junction-62448 1.4293457 300 100
+pipe_1158 Junction-33367 Junction-33368 4.580313 300 100
+pipe_1159 Junction-60581 Junction-11185 21.788658 300 100
+pipe_1160 Junction-11325 Junction-11326 9.197081 300 100
+pipe_1161 Junction-33767 Junction-11039 5.703384 300 100
+pipe_1162 Junction-477250 Junction-477251 16.606005 300 100
+pipe_1163 Junction-11341 Junction-11342 17.052984 300 100
+pipe_1164 Junction-9050 Junction-9051 9.6552305 300 100
+pipe_1165 Junction-9857 Junction-22379 25.590864 300 100
+pipe_1166 Junction-22991 Junction-42016 26.384352 300 100
+pipe_1167 Junction-42436 Junction-60582 1.4698721 300 100
+pipe_1168 Junction-22245 Junction-9661 23.422432 300 100
+pipe_1169 Junction-48405 Junction-468750 23.618275 300 100
+pipe_1170 Junction-49250 Junction-58286 11.409312 300 100
+pipe_1171 Junction-33194 Junction-62488 46.558662 300 100
+pipe_1172 Junction-9500 Junction-9501 31.499088 300 100
+pipe_1173 Junction-11039 Junction-11040 31.497595 300 100
+pipe_1174 Junction-473827 Junction-473881 36.13455 300 100
+pipe_1175 Junction-472538 Junction-33998 0.98466533 300 100
+pipe_1176 Junction-476993 Junction-10616 13.115468 300 100
+pipe_1177 Junction-34014 Junction-34016 3.809144 300 100
+pipe_1178 Junction-22990 Junction-22991 10.181154 300 100
+pipe_1179 Junction-451226 Junction-451227 3.4940653 300 100
+pipe_1180 Junction-49393 Junction-49394 3.7886076 300 100
+pipe_1181 Junction-41170 Junction-41169 11.177068 300 100
+pipe_1182 Junction-23126 Junction-23130 23.32128 300 100
+pipe_1183 Junction-34093 Junction-34094 25.443869 300 100
+pipe_1184 Junction-471421 Junction-57811 25.887135 300 100
+pipe_1185 Junction-23826 Junction-42626 6.120847 300 100
+pipe_1186 Junction-23916 Junction-23917 79.20503 300 100
+pipe_1187 Junction-42193 Junction-49068 30.053148 300 100
+pipe_1188 Junction-10619 Junction-49055 22.417147 300 100
+pipe_1189 Junction-41623 Junction-48611 13.36844 300 100
+pipe_1190 Junction-10297 Junction-41888 10.536893 300 100
+pipe_1191 Junction-49439 Junction-23918 49.03084 300 100
+pipe_1192 Junction-60638 Junction-54616 12.284942 300 100
+pipe_1193 Junction-54613 Junction-42619 4.17673 300 100
+pipe_1194 Junction-462909 Junction-32517 7.2643995 300 100
+pipe_1195 Junction-53973 Junction-22117 36.243847 300 100
+pipe_1196 Junction-42315 Junction-23424 0.10469144 300 100
+pipe_1197 Junction-10279 Junction-10280 0.8691938 300 100
+pipe_1198 Junction-41884 Junction-54184 11.000342 300 100
+pipe_1199 Junction-58239 Junction-54455 81.202385 300 100
+pipe_1200 Junction-42332 Junction-33758 31.834492 300 100
+pipe_1201 Junction-22905 Junction-48875 6.555762 300 100
+pipe_1202 Junction-23257 Junction-23258 7.069263 300 100
+pipe_1203 Junction-473951 Junction-473946 0.8317565 300 100
+pipe_1204 Junction-11324 Junction-34005 25.406887 300 100
+pipe_1205 Junction-48812 Junction-41884 3.5863352 300 100
+pipe_1206 Junction-476180 Junction-476181 30.58865 300 100
+pipe_1207 Junction-476898 Junction-477013 1.5802683 300 100
+pipe_1208 Junction-11183 Junction-11184 3.9875293 300 100
+pipe_1209 Junction-41318 Junction-61116 9.3775835 300 100
+pipe_1210 Junction-41793 Junction-33062 12.804016 300 100
+pipe_1211 Junction-61319 Junction-22995 64.40454 300 100
+pipe_1212 Junction-22800 Junction-33202 0.8201916 300 100
+pipe_1213 Junction-23688 Junction-23689 4.595404 300 100
+pipe_1214 Junction-22912 Junction-22913 5.2745857 300 100
+pipe_1215 Junction-476230 Junction-476231 31.436283 300 100
+pipe_1216 Junction-33364 Junction-10613 45.85752 300 100
+pipe_1217 Junction-41939 Junction-41940 3.310411 300 100
+pipe_1218 Junction-11037 Junction-58244 12.142911 300 100
+pipe_1219 Junction-41791 Junction-41792 12.974503 300 100
+pipe_1220 Junction-61031 Junction-11313 12.574007 300 100
+pipe_1221 Junction-62465 Junction-62459 17.64288 300 100
+pipe_1222 Junction-477084 Junction-454645 0.123359054 300 100
+pipe_1223 Junction-10634 Junction-10635 5.097335 300 100
+pipe_1224 Junction-22519 Junction-41703 20.762123 300 100
+pipe_1225 Junction-456397 Junction-469491 2.4197218 300 100
+pipe_1226 Junction-32863 Junction-48608 84.272385 300 100
+pipe_1227 Junction-42181 Junction-42182 15.01484 300 100
+pipe_1228 Junction-10124 Junction-10125 15.441805 300 100
+pipe_1229 Junction-476247 Junction-476248 1.107571 300 100
+pipe_1230 Junction-62449 Reservoir-62451 2.0097146 300 100
+pipe_1231 Junction-33605 Junction-23441 28.492952 300 100
+pipe_1232 Junction-476249 Junction-476250 1.1674613 300 100
+pipe_1233 Junction-33777 Junction-58245 10.380402 300 100
+pipe_1234 Junction-42535 Junction-11348 10.949474 300 100
+pipe_1235 Junction-41949 Junction-10401 16.650513 300 100
+pipe_1236 Junction-49264 Junction-23602 2.8190756 300 100
+pipe_1237 Junction-33212 Junction-33213 14.708937 300 100
+pipe_1238 Junction-23685 Junction-469242 111.94147 300 100
+pipe_1239 Junction-60349 Junction-471288 14.814841 300 100
+pipe_1240 Junction-42309 Junction-42307 4.9381657 300 100
+pipe_1241 Junction-477509 Junction-471356 26.115515 300 100
+pipe_1242 Junction-61037 Junction-10639 12.427179 300 100
+pipe_1243 Junction-54610 Junction-34099 16.154072 300 100
+pipe_1244 Junction-11320 Junction-23698 90.55899 300 100
+pipe_1245 Junction-41940 Junction-33282 26.7169 300 100
+pipe_1246 Junction-476655 Junction-476229 1.5966991 300 100
+pipe_1247 Junction-477452 Junction-476804 1.0592042 300 100
+pipe_1248 Junction-41430 Junction-9505 24.665262 300 100
+pipe_1249 Junction-41523 Junction-48546 5.0002556 300 100
+pipe_1250 Junction-22804 Junction-41891 30.309387 300 100
+pipe_1251 Junction-58150 Junction-10629 62.755886 300 100
+pipe_1252 Junction-473953 Junction-473956 4.181936 300 100
+pipe_1253 Junction-10830 Junction-49074 21.398222 300 100
+pipe_1254 Junction-48805 Junction-54179 13.153448 300 100
+pipe_1255 Junction-469243 Junction-472538 11.2050905 300 100
+pipe_1256 Junction-11036 Junction-11037 0.49994513 300 100
+pipe_1257 Junction-33187 Junction-33186 37.773464 300 100
+pipe_1258 Junction-23598 Junction-11203 12.436689 300 100
+pipe_1259 Junction-42430 Junction-42429 19.00178 300 100
+pipe_1260 Junction-11576 Junction-23916 92.72212 300 100
+pipe_1261 Junction-41804 Junction-41802 60.267212 300 100
+pipe_1262 Junction-54146 Junction-33068 10.497947 300 100
+pipe_1263 Junction-42024 Junction-33376 8.291553 300 100
+pipe_1264 Junction-33742 Junction-11007 9.726444 300 100
+pipe_1265 Junction-476727 Junction-476728 0.71063393 300 100
+pipe_1266 Junction-473818 Junction-473819 0.60860765 300 100
+pipe_1267 Junction-42177 Junction-54374 11.728519 300 100
+pipe_1268 Junction-477158 Junction-477198 23.064098 300 100
+pipe_1269 Junction-477195 Junction-477196 14.575166 300 100
+pipe_1270 Junction-49381 Junction-11435 14.849565 300 100
+pipe_1271 Junction-54455 Junction-11020 17.13386 300 100
+pipe_1272 Junction-474014 Junction-474015 2.1667225 300 100
+pipe_1273 Junction-476211 Junction-476210 21.452847 300 100
+pipe_1274 Junction-49322 Junction-49323 6.5069494 300 100
+pipe_1275 Junction-48992 Junction-54313 144.08922 300 100
+pipe_1276 Junction-54510 Junction-58277 27.281858 300 100
+pipe_1277 Junction-58288 Junction-23595 15.057118 300 100
+pipe_1278 Junction-23813 Junction-58351 9.004033 300 100
+pipe_1279 Junction-466551 Junction-466552 4.6230316 300 100
+pipe_1280 Junction-22799 Junction-22800 12.619281 300 100
+pipe_1281 Junction-60289 Junction-32321 15.446378 300 100
+pipe_1282 Junction-48821 Junction-22809 12.994197 300 100
+pipe_1283 Junction-23258 Junction-23259 18.862843 300 100
+pipe_1284 Junction-22668 Junction-58022 12.6916275 300 100
+pipe_1285 Junction-54648 Junction-23912 37.222103 300 100
+pipe_1286 Junction-41802 Junction-41801 11.424993 300 100
+pipe_1287 Junction-476580 Junction-476584 29.49627 300 100
+pipe_1288 Junction-477252 Junction-477157 19.96043 300 100
+pipe_1289 Junction-473954 Junction-474018 30.879383 300 100
+pipe_1290 Junction-476116 Junction-476118 20.279448 300 100
+pipe_1291 Junction-42625 Junction-58352 12.332299 300 100
+pipe_1292 Junction-32870 Junction-32871 11.616935 300 100
+pipe_1293 Junction-23694 Junction-34006 11.947408 300 100
+pipe_1294 Junction-473840 Junction-473892 3.1415558 300 100
+pipe_1295 Junction-60429 Junction-54145 23.47396 300 100
+pipe_1296 Junction-10629 Junction-10630 20.027582 300 100
+pipe_1297 Junction-476245 Junction-476246 1.1479204 300 100
+pipe_1298 Junction-460585 Junction-54447 14.184083 300 100
+pipe_1299 Junction-22527 Junction-57984 11.07735 300 100
+pipe_1300 Junction-23600 Junction-54469 59.7747 300 100
+pipe_1301 Junction-23448 Junction-42340 18.064758 300 100
+pipe_1302 Junction-42678 Junction-34184 0.9397045 300 100
+pipe_1303 Junction-42023 Junction-48874 6.9869895 300 100
+pipe_1304 Junction-9278 Junction-9279 4.529894 300 100
+pipe_1305 Junction-9288 Junction-9289 5.72151 300 100
+pipe_1306 Junction-11444 Junction-11442 8.29965 300 100
+pipe_1307 Junction-33742 Junction-42312 13.039618 300 100
+pipe_1308 Junction-49062 Junction-49063 22.14077 300 100
+pipe_1309 Junction-33603 Junction-33604 0.8394098 300 100
+pipe_1310 Junction-452400 Junction-452401 20.25821 300 100
+pipe_1311 Junction-11032 Junction-42333 21.231453 300 100
+pipe_1312 Junction-33579 Junction-58186 4.046969 300 100
+pipe_1313 Junction-60610 Junction-60611 19.170471 300 100
+pipe_1314 Junction-22999 Junction-22913 56.389328 300 100
+pipe_1315 Junction-471288 Junction-464163 10.083482 300 100
+pipe_1316 Junction-10821 Junction-42188 7.866202 300 100
+pipe_1317 Junction-62490 Junction-33475 136.38138 300 100
+pipe_1318 Junction-49170 Junction-11021 46.033215 300 100
+pipe_1319 Junction-34185 Junction-54650 8.599673 300 100
+pipe_1320 Junction-33290 Junction-54234 13.038074 300 100
+pipe_1321 Junction-473835 Junction-473839 34.664997 300 100
+pipe_1322 Junction-10487 Junction-10485 10.156691 300 100
+pipe_1323 Junction-23584 Junction-23586 1.3226666 300 100
+pipe_1324 Junction-54652 Junction-11581 2.1539202 300 100
+pipe_1325 Junction-60610 Junction-11331 11.644399 300 100
+pipe_1326 Junction-42182 Junction-49059 6.8715177 300 100
+pipe_1327 Junction-22377 Junction-41623 16.27338 300 100
+pipe_1328 Junction-57935 Junction-32864 17.073025 300 100
+pipe_1329 Junction-41805 Junction-48746 3.228832 300 100
+pipe_1330 Junction-476231 Junction-476589 0.486674 300 100
+pipe_1331 Junction-23599 Junction-23600 17.283422 300 100
+pipe_1332 Junction-22383 Junction-32872 12.1549015 300 100
+pipe_1333 Junction-42021 Junction-42020 30.332687 300 100
+pipe_1334 Junction-61037 Junction-33478 4.8466864 300 100
+pipe_1335 Junction-62488 Junction-10277 23.160852 300 100
+pipe_1336 Junction-11578 Junction-11581 36.864418 300 100
+pipe_1337 Junction-23280 Junction-23281 13.316639 300 100
+pipe_1338 Junction-476652 Junction-476584 1.1814971 300 100
+pipe_1339 Junction-471903 Junction-472169 22.545475 300 100
+pipe_1340 Junction-54235 Junction-22903 105.18206 300 100
+pipe_1341 Junction-11562 Junction-54647 38.60949 300 100
+pipe_1342 Junction-49179 Junction-49180 20.481169 300 100
+pipe_1343 Junction-22379 Junction-22380 12.55363 300 100
+pipe_1344 Junction-42531 Junction-42530 12.696549 300 100
+pipe_1345 Junction-33196 Junction-33197 8.413983 300 100
+pipe_1346 Junction-476062 Junction-476656 1.4604884 300 100
+pipe_1347 Junction-49160 Junction-465565 6.3591523 300 100
+pipe_1348 Junction-476228 Junction-476229 0.92253774 300 100
+pipe_1349 Junction-466028 Junction-466029 13.7641 300 100
+pipe_1350 Junction-11193 Junction-11196 14.520425 300 100
+pipe_1351 Junction-460470 Junction-465844 1.3355523 300 100
+pipe_1352 Junction-41528 Junction-9664 4.33475 300 100
+pipe_1353 Junction-22909 Junction-48824 13.8754835 300 100
+pipe_1354 Junction-33883 Junction-54524 17.962091 300 100
+pipe_1355 Junction-476653 Junction-476063 1.1267534 300 100
+pipe_1356 Junction-42431 Junction-42432 9.511669 300 100
+pipe_1357 Junction-54458 Junction-54459 28.509344 300 100
+pipe_1358 Junction-11034 Junction-23438 0.34815982 300 100
+pipe_1359 Junction-473835 Junction-473836 7.1877284 300 100
+pipe_1360 Junction-41519 Junction-22245 23.002317 300 100
+pipe_1361 Junction-33592 Junction-33591 8.652029 300 100
+pipe_1362 Junction-22117 Junction-22116 16.84427 300 100
+pipe_1363 Junction-23700 Junction-23691 38.624027 300 100
+pipe_1364 Junction-60556 Junction-49169 19.559887 300 100
+pipe_1365 Junction-23815 Junction-469493 3.2417526 300 100
+pipe_1366 Junction-48608 Junction-32857 36.87205 300 100
+pipe_1367 Junction-33880 Junction-33881 9.49168 300 100
+pipe_1368 Junction-32871 Junction-468921 23.57369 300 100
+pipe_1369 Junction-32980 Junction-9988 26.96932 300 100
+pipe_1370 Junction-23437 Junction-49175 25.894808 300 100
+pipe_1371 Junction-23256 Junction-23257 19.410208 300 100
+pipe_1372 Junction-11013 Junction-23427 33.236214 300 100
+pipe_1373 Junction-33890 Junction-33891 22.391914 300 100
+pipe_1374 Junction-469494 Junction-463202 0.03882703 300 100
+pipe_1375 Junction-10808 Junction-469325 12.610933 300 100
+pipe_1376 Junction-21744 Junction-41167 37.525352 300 100
+pipe_1377 Junction-473820 Junction-473874 7.1073127 300 100
+pipe_1378 Junction-10404 Junction-10405 25.058481 300 100
+pipe_1379 Junction-41802 Junction-41799 4.047615 300 100
+pipe_1380 Junction-474079 Junction-473829 2.0557904 300 100
+pipe_1381 Junction-474888 Junction-474889 0.49478933 300 100
+pipe_1382 Junction-41950 Junction-22908 13.0079 300 100
+pipe_1383 Junction-469494 Junction-464006 1.2411201 300 100
+pipe_1384 Junction-10502 Junction-58114 13.194244 300 100
+pipe_1385 Junction-49245 Junction-42432 8.77243 300 100
+pipe_1386 Junction-62474 Junction-33592 66.096146 300 100
+pipe_1387 Junction-33207 Junction-33208 12.953857 300 100
+pipe_1388 Junction-33891 Junction-60584 29.624535 300 100
+pipe_1389 Junction-23428 Junction-11018 4.4586554 300 100
+pipe_1390 Junction-48401 Junction-21975 3.141334 300 100
+pipe_1391 Junction-58190 Junction-42184 10.665716 300 100
+pipe_1392 Junction-11445 Junction-11447 21.06748 300 100
+pipe_1393 Junction-58245 Junction-465493 65.46634 300 100
+pipe_1394 Junction-61035 Junction-42309 26.78315 300 100
+pipe_1395 Junction-33884 Junction-23595 42.6598 300 100
+pipe_1396 Junction-33213 Junction-22807 2.0269952 300 100
+pipe_1397 Junction-472172 Junction-451226 1.0447026 300 100
+pipe_1398 Junction-10614 Junction-23118 14.856818 300 100
+pipe_1399 Junction-10631 Junction-10634 1.3697586 300 100
+pipe_1400 Junction-42196 Junction-58193 53.59032 300 100
+pipe_1401 Junction-10828 Junction-10825 35.911682 300 100
+pipe_1402 Junction-10816 Junction-10636 12.895508 300 100
+pipe_1403 Junction-58243 Junction-49178 27.398973 300 100
+pipe_1404 Junction-33194 Junction-33195 46.269913 300 100
+pipe_1405 Junction-33181 Junction-10263 2.2905848 300 100
+pipe_1406 Junction-33478 Junction-10815 36.66817 300 100
+pipe_1407 Junction-473950 Junction-473951 0.2642708 300 100
+pipe_1408 Junction-53845 Junction-60324 22.99112 300 100
+pipe_1409 Junction-476060 Junction-477195 0.14992693 300 100
+pipe_1410 Junction-33291 Junction-33292 4.2888656 300 100
+pipe_1411 Junction-473882 Junction-473944 31.815994 300 100
+pipe_1412 Junction-22788 Junction-60445 9.714314 300 100
+pipe_1413 Junction-473944 Junction-473949 102.919716 300 100
+pipe_1414 Junction-11342 Junction-11343 31.0683 300 100
+pipe_1415 Junction-53913 Junction-53914 9.69596 300 100
+pipe_1416 Junction-10799 Junction-42180 24.775837 300 100
+pipe_1417 Junction-42019 Junction-42020 18.778 300 100
+pipe_1418 Junction-34000 Junction-34001 7.028709 300 100
+pipe_1419 Junction-33182 Junction-33183 5.6594114 300 100
+pipe_1420 Junction-473834 Junction-473885 1.8012253 300 100
+pipe_1421 Junction-22672 Junction-22670 15.808805 300 100
+pipe_1422 Junction-49380 Junction-464378 31.46972 300 100
+pipe_1423 Junction-23599 Junction-33775 71.708 300 100
+pipe_1424 Junction-54452 Junction-54450 12.984469 300 100
+pipe_1425 Junction-477550 Junction-49378 54.528282 300 100
+pipe_1426 Junction-22906 Junction-22907 14.598185 300 100
+pipe_1427 Junction-474036 Junction-471356 34.788795 300 100
+pipe_1428 Junction-23833 Junction-49395 9.68011 300 100
+pipe_1429 Junction-21976 Junction-462909 10.3950405 300 100
+pipe_1430 Junction-10831 Junction-23441 10.480482 300 100
+pipe_1431 Junction-476739 Junction-475188 2.1051655 300 100
+pipe_1432 Junction-33205 Junction-10304 44.877453 300 100
+pipe_1433 Junction-469106 Junction-462456 2.0902789 300 100
+pipe_1434 Junction-42446 Junction-11204 8.166323 300 100
+pipe_1435 Junction-469572 Junction-58149 10.209429 300 100
+pipe_1436 Junction-476248 Junction-476664 16.462326 300 100
+pipe_1437 Junction-49256 Junction-49257 11.799851 300 100
+pipe_1438 Junction-54469 Junction-33774 4.069844 300 100
+pipe_1439 Junction-33074 Junction-10294 101.08022 300 100
+pipe_1440 Junction-54269 Junction-10485 25.122675 300 100
+pipe_1441 Junction-472172 Junction-34095 2.3154275 300 100
+pipe_1442 Junction-58191 Junction-60517 18.089855 300 100
+pipe_1443 Junction-58075 Junction-22906 4.0122776 300 100
+pipe_1444 Junction-476896 Junction-476247 69.84486 300 100
+pipe_1445 Junction-21741 Junction-60289 11.763684 300 100
+pipe_1446 Junction-469165 Junction-41622 1.2732996 300 100
+pipe_1447 Junction-32328 Junction-32329 25.5993 300 100
+pipe_1448 Junction-476993 Junction-476992 21.646368 300 100
+pipe_1449 Junction-48991 Junction-48992 14.126329 300 100
+pipe_1450 Junction-53744 Junction-57742 6.6837964 300 100
+pipe_1451 Junction-9861 Junction-9862 2.1871977 300 100
+pipe_1452 Junction-42613 Junction-42614 8.755417 300 100
+pipe_1453 Junction-11333 Junction-54573 0.10024072 300 100
+pipe_1454 Junction-23585 Junction-49243 10.8152485 300 100
+pipe_1455 Junction-42617 Junction-23814 25.256426 300 100
+pipe_1456 Junction-49158 Junction-58184 19.436003 300 100
+pipe_1457 Junction-48987 Junction-42108 7.6420226 300 100
+pipe_1458 Junction-10819 Junction-10820 16.822199 300 100
+pipe_1459 Junction-10624 Junction-23121 9.581412 300 100
+pipe_1460 Junction-33772 Junction-23450 15.42716 300 100
+pipe_1461 Junction-462456 Junction-468950 0.01303787 300 100
+pipe_1462 Junction-9870 Junction-54043 7.8793507 300 100
+pipe_1463 Junction-42627 Junction-23832 9.814153 300 100
+pipe_1464 Junction-58280 Junction-11181 62.778233 300 100
+pipe_1465 Junction-33292 Junction-41950 38.513477 300 100
+pipe_1466 Junction-476247 Junction-476665 0.52831423 300 100
+pipe_1467 Junction-11346 Junction-58319 39.918324 300 100
+pipe_1468 Junction-474893 Junction-475535 12.803269 300 100
+pipe_1469 Junction-57982 Junction-57983 20.749231 300 100
+pipe_1470 Junction-54377 Junction-60515 1.7358186 300 100
+pipe_1471 Junction-33750 Junction-33751 2.489068 300 100
+pipe_1472 Junction-33775 Junction-33772 4.8640428 300 100
+pipe_1473 Junction-42437 Junction-11191 4.454137 300 100
+pipe_1474 Junction-54576 Junction-54577 5.882035 300 100
+pipe_1475 Junction-23437 Junction-42328 12.896498 300 100
+pipe_1476 Junction-11189 Junction-11190 0.71370566 300 100
+pipe_1477 Junction-473826 Junction-473828 1.3718755 300 100
+pipe_1478 Junction-60461 Junction-22894 9.893564 300 100
+pipe_1479 Junction-54275 Junction-61114 94.073395 300 100
+pipe_1480 Junction-462456 Junction-468950 0.013039253 300 100
+pipe_1481 Junction-11332 Junction-54572 12.609503 300 100
+pipe_1482 Junction-33585 Junction-33586 21.762323 300 100
+pipe_1483 Junction-23918 Junction-49437 1.1694636 300 100
+pipe_1484 Junction-11315 Junction-11316 58.16351 300 100
+pipe_1485 Junction-34186 Junction-34184 15.772032 300 100
+pipe_1486 Junction-42317 Junction-33752 11.365797 300 100
+pipe_1487 Junction-42337 Junction-23445 10.264779 300 100
+pipe_1488 Junction-34105 Junction-42622 26.50613 300 100
+pipe_1489 Junction-48820 Junction-33212 15.53667 300 100
+pipe_1490 Junction-42307 Junction-460585 26.794533 300 100
+pipe_1491 Junction-41526 Junction-469379 6.3279257 300 100
+pipe_1492 Junction-33285 Junction-22892 25.208488 300 100
+pipe_1493 Junction-11014 Junction-54454 19.287682 300 100
+pipe_1494 Junction-22987 Junction-22988 25.612473 300 100
+pipe_1495 Junction-41806 Junction-41807 14.443112 300 100
+pipe_1496 Junction-11570 Junction-11565 42.86782 300 100
+pipe_1497 Junction-22114 Junction-473514 17.174238 300 100
+pipe_1498 Junction-54521 Junction-42431 36.19108 300 100
+pipe_1499 Junction-469074 Junction-32869 22.689672 300 100
+pipe_1500 Junction-23570 Junction-49235 19.36517 300 100
+pipe_1501 Junction-42530 Junction-11315 7.900499 300 100
+pipe_1502 Junction-11205 Junction-23601 27.727037 300 100
+pipe_1503 Junction-33069 Junction-10140 12.495855 300 100
+pipe_1504 Junction-23260 Junction-58188 18.887047 300 100
+pipe_1505 Junction-474890 Junction-476224 1.0769547 300 100
+pipe_1506 Junction-23270 Junction-23271 1.3075651 300 100
+pipe_1507 Junction-476579 Junction-476212 30.728085 300 100
+pipe_1508 Junction-474834 Junction-474835 0.93225443 300 100
+pipe_1509 Junction-474021 Junction-474082 31.1358 300 100
+pipe_1510 Junction-42194 Junction-465666 12.905515 300 100
+pipe_1511 Junction-54318 Junction-23137 3.694113 300 100
+pipe_1512 Junction-42015 Junction-33465 11.837055 300 100
+pipe_1513 Junction-48819 Junction-48820 10.174661 300 100
+pipe_1514 Junction-11448 Junction-11447 4.9474835 300 100
+pipe_1515 Junction-23444 Junction-23445 32.929794 300 100
+pipe_1516 Junction-49385 Junction-42621 13.915922 300 100
+pipe_1517 Junction-23681 Junction-23682 19.772749 300 100
+pipe_1518 Junction-33282 Junction-33283 22.176588 300 100
+pipe_1519 Junction-10141 Junction-41803 23.932842 300 100
+pipe_1520 Junction-33206 Junction-10293 12.286672 300 100
+pipe_1521 Junction-10135 Junction-62472 142.04262 300 100
+pipe_1522 Junction-460470 Junction-465844 1.3355523 300 100
+pipe_1523 Junction-9508 Junction-475209 26.33618 300 100
+pipe_1524 Junction-474886 Junction-474887 0.0878427 300 100
+pipe_1525 Junction-33741 Junction-54441 9.299706 300 100
+pipe_1526 Junction-57938 Junction-61113 1.5534171 300 100
+pipe_1527 Junction-10307 Junction-10308 11.696524 300 100
+pipe_1528 Junction-48613 Junction-9859 14.4777 300 100
+pipe_1529 Junction-62448 Reservoir-62450 1.755785 300 100
+pipe_1530 Junction-41948 Junction-58075 8.506457 300 100
+pipe_1531 Junction-10121 Junction-33058 13.098187 300 100
+pipe_1532 Junction-473888 Junction-473952 3.253799 300 100
+pipe_1533 Junction-10124 Junction-33064 71.984146 300 100
+pipe_1534 Junction-10820 Junction-42186 16.66265 300 100
+pipe_1535 Junction-10815 Junction-10816 0.9175843 300 100
+pipe_1536 Junction-54573 Junction-49324 39.972584 300 100
+pipe_1537 Junction-465493 Junction-474623 0.7519436 300 100
+pipe_1538 Junction-473514 Junction-22112 21.493305 300 100
+pipe_1539 Junction-33757 Junction-23428 36.318565 300 100
+pipe_1540 Junction-477196 Junction-477249 10.78525 300 100
+pipe_1541 Junction-10269 Junction-22788 24.372055 300 100
+pipe_1542 Junction-48401 Junction-9282 8.973296 300 100
+pipe_1543 Junction-9865 Junction-41624 2.506968 300 100
+pipe_1544 Junction-54318 Junction-33475 23.025515 300 100
+pipe_1545 Junction-33600 Junction-33601 2.008441 300 100
+pipe_1546 Junction-33073 Junction-58029 8.963359 300 100
+pipe_1547 Junction-23417 Junction-33741 19.15598 300 100
+pipe_1548 Junction-10305 Junction-10306 9.692301 300 100
+pipe_1549 Junction-11198 Junction-11201 19.045513 300 100
+pipe_1550 Junction-469379 Junction-57910 21.70384 300 100
+pipe_1551 Junction-32857 Junction-54034 8.9023285 300 100
+pipe_1552 Junction-23918 Junction-23919 15.76275 300 100
+pipe_1553 Junction-34101 Junction-11567 60.383163 300 100
+pipe_1554 Junction-41619 Junction-41620 16.56288 300 100
+pipe_1555 Junction-10128 Junction-33066 1.0639495 300 100
+pipe_1556 Junction-476589 Junction-476590 1.1314913 300 100
+pipe_1557 Junction-48546 Junction-22248 18.426527 300 100
+pipe_1558 Junction-33199 Junction-54185 14.471479 300 100
+pipe_1559 Junction-33774 Junction-469532 59.534622 300 100
+pipe_1560 Junction-54236 Junction-33291 22.766163 300 100
+pipe_1561 Junction-21741 Junction-32322 9.01724 300 100
+pipe_1562 Junction-57811 Junction-9508 29.703182 300 100
+pipe_1563 Junction-49061 Junction-42181 11.104857 300 100
+pipe_1564 Junction-42437 Junction-23589 11.339927 300 100
+pipe_1565 Junction-23593 Junction-23594 38.36878 300 100
+pipe_1566 Junction-49391 Junction-49392 49.030487 300 100
+pipe_1567 Junction-23828 Junction-11452 16.674747 300 100
+pipe_1568 Junction-42445 Junction-42446 11.485148 300 100
+pipe_1569 Junction-54523 Junction-42341 45.004036 300 100
+pipe_1570 Junction-61035 Junction-23420 10.221048 300 100
+pipe_1571 Junction-473882 Junction-473884 0.47041053 300 100
+pipe_1572 Junction-23683 Junction-23684 183.30363 300 100
+pipe_1573 Junction-476730 Junction-476803 1.2240393 300 100
+pipe_1574 Junction-49382 Junction-23808 16.217333 300 100
+pipe_1575 Junction-9855 Junction-469433 21.927944 300 100
+pipe_1576 Junction-11017 Junction-11018 65.5069 300 100
+pipe_1577 Junction-33776 Junction-33777 37.48425 300 100
+pipe_1578 Junction-33188 Junction-33278 103.470665 300 100
+pipe_1579 Junction-42332 Junction-54462 29.584396 300 100
+pipe_1580 Junction-49063 Junction-460476 33.917152 300 100
+pipe_1581 Junction-41882 Junction-41883 0.89746463 300 100
+pipe_1582 Junction-10119 Junction-48735 27.730621 300 100
+pipe_1583 Junction-23120 Junction-42102 3.8326073 300 100
+pipe_1584 Junction-48990 Junction-10619 7.3401093 300 100
+pipe_1585 Junction-9661 Junction-9662 9.709016 300 100
+pipe_1586 Junction-475535 Junction-475536 37.666847 300 100
+pipe_1587 Junction-48805 Junction-469245 55.39536 300 100
+pipe_1588 Junction-9048 Junction-9046 3.9988608 300 100
+pipe_1589 Junction-10265 Junction-33181 4.0699434 300 100
+pipe_1590 Junction-11422 Junction-11423 27.040487 300 100
+pipe_1591 Junction-58284 Junction-54522 9.469222 300 100
+pipe_1592 Junction-22668 Junction-22669 5.506903 300 100
+pipe_1593 Junction-42306 Junction-11005 9.014222 300 100
+pipe_1594 Junction-34094 Junction-42610 33.344997 300 100
+pipe_1595 Junction-42528 Junction-42527 7.0113783 300 100
+pipe_1596 Junction-61036 Junction-11188 2.6678855 300 100
+pipe_1597 Junction-34096 Junction-451233 22.915379 300 100
+pipe_1598 Junction-23699 Junction-11329 4.7975855 300 100
+pipe_1599 Junction-49384 Junction-60636 8.499644 300 100
+pipe_1600 Junction-476249 Junction-476251 30.966103 300 100
+pipe_1601 Junction-42322 Junction-11017 33.25443 300 100
+pipe_1602 Junction-11321 Junction-33999 3.9062424 300 100
+pipe_1603 Junction-23917 Junction-11566 16.839708 300 100
+pipe_1604 Junction-23433 Junction-49172 12.510784 300 100
+pipe_1605 Junction-34393 Junction-34394 20.29402 300 100
+pipe_1606 Junction-11194 Junction-62462 83.795494 300 100
+pipe_1607 Junction-61032 Junction-42522 12.639394 300 100
+pipe_1608 Junction-10127 Junction-41798 122.026474 300 100
+pipe_1609 Junction-42339 Junction-23448 27.633968 300 100
+pipe_1610 Junction-475188 Junction-11434 17.493208 300 100
+pipe_1611 Junction-58188 Junction-58238 14.846992 300 100
+pipe_1612 Junction-476063 Junction-476584 2.2909467 300 100
+pipe_1613 Junction-22524 Junction-48675 25.527473 300 100
+pipe_1614 Junction-22903 Junction-22905 5.5318913 300 100
+pipe_1615 Junction-33889 Junction-33887 4.766685 300 100
+pipe_1616 Junction-471897 Junction-49381 11.7921715 300 100
+pipe_1617 Junction-465844 Junction-465440 3.2003593 300 100
+pipe_1618 Junction-465847 Junction-465848 33.627666 300 100
+pipe_1619 Junction-23800 Junction-11425 25.285942 300 100
+pipe_1620 Junction-54454 Junction-42319 65.859985 300 100
+pipe_1621 Junction-473816 Junction-473817 7.6159716 300 100
+pipe_1622 Junction-474082 Junction-474085 2.9103293 300 100
+pipe_1623 Junction-22113 Junction-41430 20.214033 300 100
+pipe_1624 Junction-464906 Junction-10805 0.73895955 300 100
+pipe_1625 Junction-10290 Junction-48815 1.6091245 300 100
+pipe_1626 Junction-10265 Junction-54180 5.1674542 300 100
+pipe_1627 Junction-58193 Junction-23280 26.246878 300 100
+pipe_1628 Junction-22117 Junction-60348 14.860851 300 100
+pipe_1629 Junction-22892 Junction-22893 4.4621506 300 100
+pipe_1630 Junction-9049 Junction-9048 12.621239 300 100
+pipe_1631 Junction-33894 Junction-42448 55.229664 300 100
+pipe_1632 Junction-11577 Junction-11578 6.5527816 300 100
+pipe_1633 Junction-10832 Junction-33603 1.4511875 300 100
+pipe_1634 Junction-42307 Junction-42308 10.357231 300 100
+pipe_1635 Junction-22802 Junction-22799 18.196735 300 100
+pipe_1636 Junction-11033 Junction-11034 0.5002358 300 100
+pipe_1637 Junction-476059 Junction-476060 7.2469435 300 100
+pipe_1638 Junction-58280 Junction-58279 10.9323 300 100
+pipe_1639 Junction-21512 Junction-32124 8.023707 300 100
+pipe_1640 Junction-477133 Junction-454508 18.38238 300 100
+pipe_1641 Junction-476115 Junction-476116 16.055252 300 100
+pipe_1642 Junction-61033 Junction-60556 24.481422 300 100
+pipe_1643 Junction-10637 Junction-48997 10.97727 300 100
+pipe_1644 Junction-34007 Junction-23696 19.649393 300 100
+pipe_1645 Junction-33892 Junction-33893 13.314894 300 100
+pipe_1646 Junction-62473 Junction-62474 49.37919 300 100
+pipe_1647 Junction-41946 Junction-48876 12.990489 300 100
+pipe_1648 Junction-10308 Junction-48827 22.205877 300 100
+pipe_1649 Junction-10831 Junction-11035 42.505238 300 100
+pipe_1650 Junction-11025 Junction-61033 0.30012974 300 100
+pipe_1651 Junction-476992 Junction-465499 37.11287 300 100
+pipe_1652 Junction-10803 Junction-464906 23.237352 300 100
+pipe_1653 Junction-476665 Junction-476249 9.108207 300 100
+pipe_1654 Junction-472169 Junction-451222 0.96889806 300 100
+pipe_1655 Junction-22246 Junction-9660 15.689281 300 100
+pipe_1656 Junction-10133 Junction-48742 0.8607666 300 100
+pipe_1657 Junction-49394 Junction-49395 9.938024 300 100
+pipe_1658 Junction-33575 Junction-33576 21.050316 300 100
+pipe_1659 Junction-23135 Junction-465496 9.210532 300 100
+pipe_1660 Junction-41804 Junction-10144 65.56332 300 100
+pipe_1661 Junction-42103 Junction-23244 45.460346 300 100
+pipe_1662 Junction-33463 Junction-42104 10.878896 300 100
+pipe_1663 Junction-11330 Junction-33996 105.063194 300 100
+pipe_1664 Junction-23436 Junction-23437 7.6269336 300 100
+pipe_1665 Junction-54189 Junction-33209 23.260397 300 100
+pipe_1666 Junction-476614 Junction-476668 17.850695 300 100
+pipe_1667 Junction-465440 Junction-465441 45.5981 300 100
+pipe_1668 Junction-9279 Junction-53842 0.46865535 300 100
+pipe_1669 Junction-33871 Junction-462113 4.985687 300 100
+pipe_1670 Junction-33074 Junction-60431 16.602266 300 100
+pipe_1671 Junction-33885 Junction-49259 11.704094 300 100
+pipe_1672 Junction-473876 Junction-473878 7.026642 300 100
+pipe_1673 Junction-10618 Junction-54315 1.4916488 300 100
+pipe_1674 Junction-33598 Junction-33591 79.02558 300 100
+pipe_1675 Junction-476583 Junction-476579 1.1233519 300 100
+pipe_1676 Junction-22795 Junction-22796 1.0226544 300 100
+pipe_1677 Junction-23602 Junction-33892 11.024705 300 100
+pipe_1678 Junction-58114 Junction-42025 28.52044 300 100
+pipe_1679 Junction-10499 Junction-58116 25.340635 300 100
+pipe_1680 Junction-21743 Junction-21744 8.39131 300 100
+pipe_1681 Junction-49162 Junction-23567 41.571762 300 100
+pipe_1682 Junction-49377 Junction-60632 21.563595 300 100
+pipe_1683 Junction-469165 Junction-41619 1.3604459 300 100
+pipe_1684 Junction-469571 Junction-469572 76.693504 300 100
+pipe_1685 Junction-49178 Junction-49177 23.773571 300 100
+pipe_1686 Junction-42341 Junction-42342 208.01764 300 100
+pipe_1687 Junction-33583 Junction-33584 25.81915 300 100
+pipe_1688 Junction-57742 Junction-60290 23.01621 300 100
+pipe_1689 Junction-49326 Junction-49380 17.9361 300 100
+pipe_1690 Junction-10397 Junction-33288 10.159943 300 100
+pipe_1691 Junction-48822 Junction-48821 13.82323 300 100
+pipe_1692 Junction-48827 Junction-41893 8.261157 300 100
+pipe_1693 Junction-54650 Junction-60637 8.299676 300 100
+pipe_1694 Junction-9857 Junction-9858 100.14878 300 100
+pipe_1695 Junction-33752 Junction-464891 17.171547 300 100
+pipe_1696 Junction-54607 Junction-42611 21.034283 300 100
+pipe_1697 Junction-42444 Junction-49261 12.922658 300 100
+pipe_1698 Junction-477554 Junction-477552 2.2211432 300 100
+pipe_1699 Junction-42191 Junction-10819 108.836205 300 100
+pipe_1700 Junction-49327 Junction-42534 11.946793 300 100
+pipe_1701 Junction-42619 Junction-49384 8.499681 300 100
+pipe_1702 Junction-34004 Junction-42532 11.919833 300 100
+pipe_1703 Junction-476804 Junction-477134 10.213234 300 100
+pipe_1704 Junction-10810 Junction-10808 0.5331853 300 100
+pipe_1705 Junction-9988 Junction-48676 24.2713 300 100
+pipe_1706 Junction-465667 Junction-465676 69.469086 300 100
+pipe_1707 Junction-10116 Junction-33057 28.02201 300 100
+pipe_1708 Junction-470030 Junction-470031 10.330038 300 100
+pipe_1709 Junction-473837 Junction-473835 1.9184244 300 100
+pipe_1710 Junction-10133 Junction-58025 30.43327 300 100
+pipe_1711 Junction-23692 Junction-34000 9.342356 300 100
+pipe_1712 Junction-54270 Junction-33369 10.396328 300 100
+pipe_1713 Junction-41885 Junction-22802 31.573444 300 100
+pipe_1714 Junction-10810 Junction-10811 12.945278 300 100
+pipe_1715 Junction-54142 Junction-22675 41.831863 300 100
+pipe_1716 Junction-34009 Junction-54607 15.272837 300 100
+pipe_1717 Junction-54315 Junction-48987 15.704805 300 100
+pipe_1718 Junction-473877 Junction-473940 30.774765 300 100
+pipe_1719 Junction-10270 Junction-22789 25.158163 300 100
+pipe_1720 Junction-476725 Junction-476062 1.3566903 300 100
+pipe_1721 Junction-49319 Junction-54513 154.36427 300 100
+pipe_1722 Junction-471897 Junction-471900 8.209154 300 100
+pipe_1723 Junction-58113 Junction-60478 9.513423 300 100
+pipe_1724 Junction-33761 Junction-49179 3.7348633 300 100
+pipe_1725 Junction-34013 Junction-42538 1.991311 300 100
+pipe_1726 Junction-23804 Junction-23805 21.499168 300 100
+pipe_1727 Junction-474891 Junction-474892 32.0245 300 100
+pipe_1728 Junction-33278 Junction-33279 1.9276276 300 100
+pipe_1729 Junction-10130 Junction-22677 29.733952 300 100
+pipe_1730 Reservoir-61346 Junction-42538 2.7705774 300 100
+pipe_1731 Junction-473822 Junction-473824 2.1471741 300 100
+pipe_1732 Junction-33475 Junction-62465 28.693933 300 100
+pipe_1733 Junction-62487 Junction-62473 45.4543 300 100
+pipe_1734 Junction-11194 Junction-33770 13.9201 300 100
+pipe_1735 Junction-465060 Junction-452105 1.1338205 300 100
+pipe_1736 Junction-22896 Junction-54269 12.717833 300 100
+pipe_1737 Junction-42102 Junction-54314 25.81485 300 100
+pipe_1738 Junction-54441 Junction-42306 22.73102 300 100
+pipe_1739 Junction-41025 Junction-41024 5.781374 300 100
+pipe_1740 Junction-54466 Junction-54467 111.605865 300 100
+pipe_1741 Junction-23244 Junction-23245 56.167805 300 100
+pipe_1742 Junction-42326 Junction-33599 23.564762 300 100
+pipe_1743 Junction-42522 Junction-42436 12.876593 300 100
+pipe_1744 Junction-474889 Junction-474890 13.8311405 300 100
+pipe_1745 Junction-477552 Junction-477550 2.6914048 300 100
+pipe_1746 Junction-33760 Junction-11033 9.6229925 300 100
+pipe_1747 Junction-41622 Junction-32858 21.098394 300 100
+pipe_1748 Junction-54228 Junction-41942 6.234166 300 100
+pipe_1749 Junction-471020 Junction-53744 2.989931 300 100
+pipe_1750 Junction-9046 Junction-9047 13.41454 300 100
+pipe_1751 Junction-473954 Junction-473955 7.0547314 300 100
+pipe_1752 Junction-53570 Junction-53571 12.651808 300 100
+pipe_1753 Junction-476181 Junction-477253 21.520372 300 100
+pipe_1754 Junction-58242 Junction-23434 45.4543 300 100
+pipe_1755 Junction-23603 Junction-23604 0.74815375 300 100
+pipe_1756 Junction-477013 Junction-477084 0.38446614 300 100
+pipe_1757 Junction-10128 Junction-10129 16.502747 300 100
+pipe_1758 Junction-57807 Junction-48402 23.883913 300 100
+pipe_1759 Junction-23259 Junction-23260 7.1073804 300 100
+pipe_1760 Junction-54448 Junction-23423 19.316954 300 100
+pipe_1761 Junction-11315 Junction-34002 3.0955067 300 100
+pipe_1762 Junction-41627 Junction-32869 10.188183 300 100
+pipe_1763 Junction-8759 Junction-8760 9.599762 300 100
+pipe_1764 Junction-23702 Junction-11335 6.7668653 300 100
+pipe_1765 Junction-42609 Junction-54608 26.299057 300 100
+pipe_1766 Junction-41624 Junction-48612 84.500336 300 100
+pipe_1767 Junction-54317 Junction-10617 19.006788 300 100
+pipe_1768 Junction-10827 Junction-10828 73.75791 300 100
+pipe_1769 Junction-474036 Junction-470702 9.600642 300 100
+pipe_1770 Junction-22249 Junction-22250 8.59776 300 100
+pipe_1771 Junction-9859 Junction-9860 43.734623 300 100
+pipe_1772 Junction-54234 Junction-54233 15.812312 300 100
+pipe_1773 Junction-11579 Junction-11580 29.248095 300 100
+pipe_1774 Junction-32978 Junction-32979 80.13018 300 100
+pipe_1775 Junction-54314 Junction-42105 32.04178 300 100
+pipe_1776 Junction-23450 Junction-34012 483.2542 300 100
+pipe_1777 Junction-60612 Junction-23700 26.719875 300 100
+pipe_1778 Junction-9287 Junction-57806 9.530736 300 100
+pipe_1779 Junction-473593 Junction-469314 0.8384091 300 100
+pipe_1780 Junction-476229 Junction-476896 1.6083499 300 100
+pipe_1781 Junction-9866 Junction-9865 6.4461045 300 100
+pipe_1782 Junction-476182 Junction-474888 21.580172 300 100
+pipe_1783 Junction-54147 Junction-60430 40.081913 300 100
+pipe_1784 Junction-32326 Junction-32324 9.029492 300 100
+pipe_1785 Junction-462494 Junction-33873 15.842581 300 100
+pipe_1786 Junction-10636 Junction-10637 36.920475 300 100
+pipe_1787 Junction-49070 Junction-49071 0.45779487 300 100
+pipe_1788 Junction-34003 Junction-34004 12.994933 300 100
+pipe_1789 Junction-22811 Junction-10301 14.23708 300 100
+pipe_1790 Junction-61032 Junction-11312 1.0008548 300 100
+pipe_1791 Junction-58346 Junction-54608 28.214449 300 100
+pipe_1792 Junction-34187 Junction-34188 3.2025394 300 100
+pipe_1793 Junction-41879 Junction-10268 28.951096 300 100
+pipe_1794 Junction-22793 Junction-54229 12.502982 300 100
+pipe_1795 Junction-21510 Junction-21511 12.835825 300 100
+pipe_1796 Junction-475536 Junction-476614 1.0308267 300 100
+pipe_1797 Junction-42315 Junction-464122 6.665126 300 100
+pipe_1798 Junction-42523 Junction-42521 12.812097 300 100
+pipe_1799 Junction-23814 Junction-23815 21.067116 300 100
+pipe_1800 Junction-42317 Junction-33750 10.721422 300 100
+pipe_1801 Junction-474012 Junction-474076 2.526513 300 100
+pipe_1802 Junction-461729 Junction-49327 15.785623 300 100
+pipe_1803 Junction-476246 Junction-476592 7.3058844 300 100
+pipe_1804 Junction-58187 Junction-23252 14.708323 300 100
+pipe_1805 Junction-11326 Junction-42531 27.365026 300 100
+pipe_1806 Junction-476655 Junction-476897 1.184536 300 100
+pipe_1807 Junction-33872 Junction-54509 13.513073 300 100
+pipe_1808 Junction-54318 Junction-10634 31.518246 300 100
+pipe_1809 Junction-58182 Junction-33574 25.735867 300 100
+pipe_1810 Junction-476667 Junction-476253 32.70334 300 100
+pipe_1811 Junction-42619 Junction-464006 38.664135 300 100
+pipe_1812 Junction-23421 Junction-49161 20.512434 300 100
+pipe_1813 Junction-23125 Junction-23126 20.739538 300 100
+pipe_1814 Junction-22908 Junction-22909 13.960991 300 100
+pipe_1815 Junction-34278 Junction-468956 41.492283 300 100
+pipe_1816 Junction-22795 Junction-54182 30.237705 300 100
+pipe_1817 Junction-23274 Junction-23275 3.5992987 300 100
+pipe_1818 Junction-33593 Junction-33474 93.08846 300 100
+pipe_1819 Junction-460476 Junction-58189 0.3177913 300 100
+pipe_1820 Junction-58320 Junction-49391 25.81947 300 100
+pipe_1821 Junction-22681 Junction-22682 13.001615 300 100
+pipe_1822 Junction-34107 Junction-54615 10.89935 300 100
+pipe_1823 Junction-22527 Junction-41706 65.813774 300 100
+pipe_1824 Junction-54579 Junction-58357 166.26233 300 100
+pipe_1825 Junction-462113 Junction-54507 1.4323567 300 100
+pipe_1826 Junction-11044 Junction-42339 22.02102 300 100
+pipe_1827 Junction-54514 Junction-61036 0.55337816 300 100
+pipe_1828 Junction-9986 Junction-57982 14.814956 300 100
+pipe_1829 Junction-42442 Junction-33889 18.430634 300 100
+pipe_1830 Junction-33470 Junction-33472 1.3621813 300 100
+pipe_1831 Junction-11031 Junction-11032 3.6726341 300 100
+pipe_1832 Junction-22794 Junction-10277 113.11124 300 100
+pipe_1833 Junction-23569 Junction-23570 16.166668 300 100
+pipe_1834 Junction-58029 Junction-22683 17.029066 300 100
+pipe_1835 Junction-473881 Junction-473882 2.2306404 300 100
+pipe_1836 Junction-23577 Junction-60580 5.079527 300 100
+pipe_1837 Junction-60431 Junction-60429 7.1559415 300 100
+pipe_1838 Junction-23915 Junction-11569 15.367852 300 100
+pipe_1839 Junction-33474 Junction-33475 136.10988 300 100
+pipe_1840 Junction-10277 Junction-33196 7.9860663 300 100
+pipe_1841 Junction-33205 Junction-41888 75.52955 300 100
+pipe_1842 Junction-23821 Junction-23823 5.284579 300 100
+pipe_1843 Junction-11204 Junction-11205 19.549837 300 100
+pipe_1844 Junction-476116 Junction-476117 1.8597714 300 100
+pipe_1845 Junction-11019 Junction-11020 15.385607 300 100
+pipe_1846 Junction-468877 Junction-9509 0.27114177 300 100
+pipe_1847 Junction-49237 Junction-23573 20.597864 300 100
+pipe_1848 Junction-23831 Junction-23832 30.18169 300 100
+pipe_1849 Junction-33372 Junction-42019 9.930309 300 100
+pipe_1850 Junction-34013 Junction-42536 3.83805 300 100
+pipe_1851 Junction-60557 Junction-23440 1.1821414 300 100
+pipe_1852 Junction-11192 Junction-58284 4.872031 300 100
+pipe_1853 Junction-33195 Junction-10277 23.335386 300 100
+pipe_1854 Junction-23452 Junction-33778 6.171707 300 100
+pipe_1855 Junction-33197 Junction-22791 5.955713 300 100
+pipe_1856 Junction-23919 Junction-11577 30.839079 300 100
+pipe_1857 Junction-54192 Junction-48822 12.943432 300 100
+pipe_1858 Junction-23249 Junction-42176 45.015938 300 100
+pipe_1859 Junction-10287 Junction-54186 4.910927 300 100
+pipe_1860 Junction-22518 Junction-22519 2.6974325 300 100
+pipe_1861 Junction-476208 Junction-476209 1.0786388 300 100
+pipe_1862 Junction-32761 Junction-32762 8.870321 300 100
+pipe_1863 Junction-33881 Junction-49241 22.074545 300 100
+pipe_1864 Junction-11021 Junction-11023 9.01153 300 100
+pipe_1865 Junction-460478 Junction-33776 28.145493 300 100
+pipe_1866 Junction-475187 Junction-475188 2.1051054 300 100
+pipe_1867 Junction-476253 Junction-476254 22.01067 300 100
+
+[COORDINATES]
+;ID   X   Y
+node_1 -21.8006577 64.0880882
+node_2 -21.8364348 64.0846351
+node_3 -21.8426663 64.0857653
+node_4 -21.8384964 64.0804632
+node_5 -21.8042155 64.0959284
+node_6 -21.8059794 64.0913682
+node_7 -21.8163752 64.0851936
+node_8 -21.7986178 64.0949829
+node_9 -21.7970704 64.0946274
+node_10 -21.8032756 64.0955127
+node_11 -21.8451951 64.0861708
+node_12 -21.8003061 64.0941794
+node_13 -21.8297942 64.0860286
+node_14 -21.8261772 64.0799991
+node_15 -21.8036295 64.0815325
+node_16 -21.8275854 64.0858289
+node_17 -21.8323377 64.0871251
+node_18 -21.8483576 64.0864463
+node_19 -21.8146497 64.0952479
+node_20 -21.8021369 64.0960648
+node_21 -21.8277771 64.0798204
+node_22 -21.8311884 64.0883128
+node_23 -21.8058984 64.0811203
+node_24 -21.8089607 64.0802761
+node_25 -21.8053919 64.0806586
+node_26 -21.808334 64.0940469
+node_27 -21.8450355 64.0802257
+node_28 -21.8032945 64.0954647
+node_29 -21.8051841 64.0909353
+node_30 -21.8220792 64.0863793
+node_31 -21.8399208 64.0802007
+node_32 -21.7973861 64.0930671
+node_33 -21.8275816 64.08868
+node_34 -21.8429117 64.08076
+node_35 -21.8470316 64.0867716
+node_36 -21.8306578 64.0805053
+node_37 -21.8448124 64.0798013
+node_38 -21.8086411 64.0825729
+node_39 -21.8055441 64.0876573
+node_40 -21.8287238 64.0853715
+node_41 -21.8142435 64.0827248
+node_42 -21.8211483 64.0864371
+node_43 -21.8199382 64.082691
+node_44 -21.7970941 64.0920929
+node_45 -21.8044559 64.0805071
+node_46 -21.8273695 64.0840892
+node_47 -21.8353133 64.0874176
+node_48 -21.8154148 64.0842987
+node_49 -21.805906 64.0881161
+node_50 -21.8164399 64.0830863
+node_51 -21.8158333 64.0823045
+node_52 -21.8126651 64.0827346
+node_53 -21.7958103 64.0927303
+node_54 -21.8433097 64.0852394
+node_55 -21.8308949 64.0890485
+node_56 -21.8059984 64.0824576
+node_57 -21.8299898 64.0885565
+node_58 -21.8071136 64.0828066
+node_59 -21.8439439 64.0847679
+node_60 -21.8238822 64.0847771
+node_61 -21.8228161 64.0880287
+node_62 -21.825795 64.080678
+node_63 -21.8131388 64.0890606
+node_64 -21.8020429 64.0875973
+node_65 -21.8276529 64.0859384
+node_66 -21.8320068 64.0879064
+node_67 -21.8044386 64.0950912
+node_68 -21.8070432 64.0828572
+node_69 -21.829343 64.0798392
+node_70 -21.8236783 64.0806125
+node_71 -21.8219639 64.0886911
+node_72 -21.8132767 64.0912552
+node_73 -21.8156609 64.0843801
+node_74 -21.8430047 64.085531
+node_75 -21.8141259 64.0815522
+node_76 -21.8114493 64.0904742
+node_77 -21.8304355 64.0821796
+node_78 -21.8504863 64.0854555
+node_79 -21.8001405 64.0906361
+node_80 -21.8458864 64.0783121
+node_81 -21.8306599 64.0846838
+node_82 -21.8130716 64.0822559
+node_83 -21.8454001 64.0801121
+node_84 -21.8149044 64.0875575
+node_85 -21.8091108 64.0904112
+node_86 -21.8049903 64.0879798
+node_87 -21.8158647 64.0844305
+node_88 -21.8498587 64.0868152
+node_89 -21.8112975 64.0886237
+node_90 -21.8112752 64.0846961
+node_91 -21.8093329 64.0874378
+node_92 -21.8095529 64.0907818
+node_93 -21.8124554 64.0809571
+node_94 -21.8055336 64.0876464
+node_95 -21.8567703 64.0856446
+node_96 -21.8089681 64.082734
+node_97 -21.8172335 64.0818885
+node_98 -21.8042325 64.0880211
+node_99 -21.8097687 64.0919067
+node_100 -21.8048841 64.0884307
+node_101 -21.8042998 64.0902825
+node_102 -21.8215429 64.0878791
+node_103 -21.8194832 64.0813059
+node_104 -21.8100785 64.0829117
+node_105 -21.8013649 64.0889812
+node_106 -21.8007281 64.0899233
+node_107 -21.7996586 64.0912441
+node_108 -21.8087933 64.0877169
+node_109 -21.8202161 64.0870061
+node_110 -21.8444268 64.0790871
+node_111 -21.8544102 64.0859854
+node_112 -21.8345545 64.0809315
+node_113 -21.8103477 64.0914615
+node_114 -21.8409945 64.085654
+node_115 -21.8124989 64.0904283
+node_116 -21.8106248 64.0798823
+node_117 -21.8012557 64.0943922
+node_118 -21.8113023 64.0905056
+node_119 -21.8518273 64.0858978
+node_120 -21.8128033 64.0891249
+node_121 -21.7991097 64.0912637
+node_122 -21.8039454 64.0892065
+node_123 -21.8297758 64.0872351
+node_124 -21.8337551 64.0865397
+node_125 -21.8548717 64.0855116
+node_126 -21.8448396 64.0867808
+node_127 -21.856157 64.0858276
+node_128 -21.809595 64.087509
+node_129 -21.842547 64.0858392
+node_130 -21.8081523 64.0883086
+node_131 -21.7998483 64.0885482
+node_132 -21.8146648 64.080811
+node_133 -21.8175961 64.0810838
+node_134 -21.8292629 64.083531
+node_135 -21.8109938 64.0885605
+node_136 -21.8051 64.0878541
+node_137 -21.8546207 64.0860078
+node_138 -21.8116417 64.0883383
+node_139 -21.7994377 64.0918812
+node_140 -21.8352403 64.0809186
+node_141 -21.8089024 64.0893878
+node_142 -21.8445525 64.0799644
+node_143 -21.8265293 64.0899534
+node_144 -21.8263896 64.0866238
+node_145 -21.8166456 64.0830555
+node_146 -21.8264548 64.0868478
+node_147 -21.8450884 64.0791974
+node_148 -21.8558323 64.0861417
+node_149 -21.8445422 64.0795383
+node_150 -21.8249078 64.0797963
+node_151 -21.8123072 64.0812235
+node_152 -21.8461486 64.0797698
+node_153 -21.7993791 64.0959778
+node_154 -21.819794 64.0859853
+node_155 -21.8099058 64.086886
+node_156 -21.8170475 64.0843184
+node_157 -21.8088765 64.0800958
+node_158 -21.8357597 64.0808534
+node_159 -21.8108818 64.0959097
+node_160 -21.8395972 64.0811205
+node_161 -21.814689 64.0877233
+node_162 -21.8275576 64.0843137
+node_163 -21.8102295 64.0913615
+node_164 -21.8023128 64.0938587
+node_165 -21.8081493 64.092432
+node_166 -21.8399526 64.0850898
+node_167 -21.8074188 64.0903692
+node_168 -21.8206959 64.0835191
+node_169 -21.8349497 64.0846061
+node_170 -21.8367316 64.0849018
+node_171 -21.830777 64.0860326
+node_172 -21.8448452 64.0867807
+node_173 -21.8406457 64.0800676
+node_174 -21.7991816 64.0958557
+node_175 -21.804718 64.0879359
+node_176 -21.8224599 64.0874115
+node_177 -21.7996389 64.0912291
+node_178 -21.8096993 64.0876789
+node_179 -21.8352458 64.0809245
+node_180 -21.8128473 64.0868456
+node_181 -21.8164421 64.0830931
+node_182 -21.8175209 64.0862832
+node_183 -21.8139479 64.0864753
+node_184 -21.804977 64.0902095
+node_185 -21.8130079 64.0889639
+node_186 -21.8479472 64.0788785
+node_187 -21.8275498 64.0806404
+node_188 -21.8120874 64.0963477
+node_189 -21.8121078 64.0963551
+node_190 -21.8134161 64.088642
+node_191 -21.8430993 64.0854545
+node_192 -21.8252959 64.0874068
+node_193 -21.8046375 64.0903114
+node_194 -21.8223675 64.0808493
+node_195 -21.8474888 64.0790866
+node_196 -21.846357 64.0791444
+node_197 -21.8278698 64.0801049
+node_198 -21.809691 64.0919964
+node_199 -21.8503478 64.0857386
+node_200 -21.8185761 64.0841092
+node_201 -21.8429076 64.0807557
+node_202 -21.810373 64.080079
+node_203 -21.8170041 64.081885
+node_204 -21.8122792 64.0798259
+node_205 -21.8156172 64.0842494
+node_206 -21.8464506 64.0784787
+node_207 -21.802899 64.0903785
+node_208 -21.8124787 64.0869993
+node_209 -21.8114071 64.07988
+node_210 -21.8465865 64.0795523
+node_211 -21.8395331 64.081101
+node_212 -21.8490632 64.0853262
+node_213 -21.8313009 64.0850882
+node_214 -21.8303422 64.0866735
+node_215 -21.8055191 64.0806642
+node_216 -21.8391209 64.0853507
+node_217 -21.8462935 64.0861571
+node_218 -21.8461906 64.0797681
+node_219 -21.8019966 64.0901556
+node_220 -21.8099371 64.0954904
+node_221 -21.8056807 64.0909329
+node_222 -21.8303587 64.080486
+node_223 -21.8278414 64.0795305
+node_224 -21.8099389 64.0872966
+node_225 -21.8440475 64.0795831
+node_226 -21.8220698 64.0886814
+node_227 -21.8156837 64.0880106
+node_228 -21.8402403 64.0809729
+node_229 -21.8234669 64.0806097
+node_230 -21.8409354 64.0843686
+node_231 -21.799515 64.0873753
+node_232 -21.7979146 64.0931927
+node_233 -21.7983017 64.0951414
+node_234 -21.8407789 64.0808745
+node_235 -21.8058991 64.0806801
+node_236 -21.8091436 64.0800922
+node_237 -21.8124805 64.0807934
+node_238 -21.810427 64.0840673
+node_239 -21.8063991 64.0857587
+node_240 -21.8191684 64.08517
+node_241 -21.8113399 64.0862619
+node_242 -21.8118514 64.0798503
+node_243 -21.8001148 64.0919639
+node_244 -21.8013368 64.0896464
+node_245 -21.8129988 64.0968043
+node_246 -21.8489235 64.0856285
+node_247 -21.8166889 64.0831637
+node_248 -21.8473839 64.0786357
+node_249 -21.8470027 64.0793326
+node_250 -21.8303398 64.0888125
+node_251 -21.8468324 64.0784107
+node_252 -21.8466193 64.0785337
+node_253 -21.8059867 64.0875774
+node_254 -21.8474463 64.0858997
+node_255 -21.8195527 64.0871829
+node_256 -21.8077695 64.0910907
+node_257 -21.8112107 64.0866587
+node_258 -21.8302039 64.0825772
+node_259 -21.8154809 64.0843135
+node_260 -21.831803 64.0885495
+node_261 -21.8326098 64.088841
+node_262 -21.8229794 64.0814422
+node_263 -21.8201383 64.0838021
+node_264 -21.8326718 64.0888639
+node_265 -21.7985067 64.0924026
+node_266 -21.7984101 64.0923811
+node_267 -21.8507132 64.0852356
+node_268 -21.7963359 64.0940473
+node_269 -21.8287826 64.0854211
+node_270 -21.8086028 64.0826752
+node_271 -21.8131437 64.0967162
+node_272 -21.8037128 64.0882094
+node_273 -21.8489483 64.0853777
+node_274 -21.7996478 64.0939857
+node_275 -21.8058065 64.0916673
+node_276 -21.847541 64.0858494
+node_277 -21.7990129 64.0955401
+node_278 -21.8290468 64.088138
+node_279 -21.837473 64.0814745
+node_280 -21.8076471 64.0922407
+node_281 -21.8303638 64.086675
+node_282 -21.8288842 64.0891511
+node_283 -21.8118279 64.0883818
+node_284 -21.8166254 64.0843278
+node_285 -21.8503453 64.0857811
+node_286 -21.8505024 64.086253
+node_287 -21.8089731 64.0902123
+node_288 -21.8022581 64.0961343
+node_289 -21.8236825 64.0805965
+node_290 -21.798002 64.0885494
+node_291 -21.8195722 64.0850926
+node_292 -21.8392045 64.0864961
+node_293 -21.8267088 64.090023
+node_294 -21.8134345 64.0886258
+node_295 -21.8458084 64.0784314
+node_296 -21.802855 64.0910905
+node_297 -21.8097052 64.08768
+node_298 -21.8149496 64.0938557
+node_299 -21.8336759 64.0865313
+node_300 -21.8281882 64.0857584
+node_301 -21.8476676 64.0857767
+node_302 -21.8095788 64.0862575
+node_303 -21.8139537 64.0864764
+node_304 -21.8015903 64.0944299
+node_305 -21.8453539 64.0790273
+node_306 -21.8023163 64.0959805
+node_307 -21.8077338 64.0924626
+node_308 -21.827405 64.0873833
+node_309 -21.846794 64.0789289
+node_310 -21.8448696 64.0803015
+node_311 -21.8027073 64.091396
+node_312 -21.8044729 64.0879788
+node_313 -21.8439365 64.084638
+node_314 -21.8367338 64.0855635
+node_315 -21.8093169 64.0841339
+node_316 -21.8263045 64.0877503
+node_317 -21.8545189 64.0858121
+node_318 -21.8051092 64.087866
+node_319 -21.8025721 64.0893797
+node_320 -21.8084831 64.0893815
+node_321 -21.8036975 64.0807132
+node_322 -21.8019281 64.0901933
+node_323 -21.8147058 64.0884668
+node_324 -21.846569 64.078557
+node_325 -21.8034649 64.0799465
+node_326 -21.8246681 64.0815033
+node_327 -21.8123172 64.0879886
+node_328 -21.8382001 64.0858182
+node_329 -21.8037924 64.0952645
+node_330 -21.8177026 64.0943848
+node_331 -21.7990091 64.0878716
+node_332 -21.8135348 64.0835852
+node_333 -21.8032733 64.0954879
+node_334 -21.8322196 64.0872928
+node_335 -21.836216 64.0841306
+node_336 -21.8439889 64.0793052
+node_337 -21.8310982 64.0891239
+node_338 -21.8340208 64.0810678
+node_339 -21.8033939 64.0954821
+node_340 -21.850956 64.0852292
+node_341 -21.8351647 64.0808615
+node_342 -21.8099495 64.0873051
+node_343 -21.8138362 64.0805777
+node_344 -21.8088494 64.0874211
+node_345 -21.837143 64.0864116
+node_346 -21.8117506 64.0919291
+node_347 -21.8278442 64.088479
+node_348 -21.8302272 64.0825552
+node_349 -21.84561 64.0793951
+node_350 -21.8098855 64.084982
+node_351 -21.8325376 64.0870347
+node_352 -21.8145178 64.0900988
+node_353 -21.8035587 64.0958742
+node_354 -21.8111377 64.0863336
+node_355 -21.8189148 64.0841418
+node_356 -21.8451716 64.0801963
+node_357 -21.804926 64.0910125
+node_358 -21.8333428 64.0837526
+node_359 -21.8119689 64.084432
+node_360 -21.8350402 64.0848229
+node_361 -21.8023378 64.0959916
+node_362 -21.7992574 64.0890065
+node_363 -21.8061796 64.0962137
+node_364 -21.8169027 64.0844669
+node_365 -21.8058393 64.0825018
+node_366 -21.8298751 64.0883494
+node_367 -21.8567054 64.0856633
+node_368 -21.8439736 64.0792988
+node_369 -21.8404233 64.0844651
+node_370 -21.8062313 64.0924032
+node_371 -21.8499133 64.0867895
+node_372 -21.8065819 64.0814407
+node_373 -21.8345952 64.0809975
+node_374 -21.8029809 64.0883833
+node_375 -21.8087841 64.081912
+node_376 -21.8140871 64.0902875
+node_377 -21.8382923 64.0905222
+node_378 -21.7987644 64.0933827
+node_379 -21.8128072 64.0876897
+node_380 -21.8123079 64.0964187
+node_381 -21.8121828 64.0880886
+node_382 -21.8122881 64.0800211
+node_383 -21.795279 64.0935715
+node_384 -21.8164455 64.0855327
+node_385 -21.8565756 64.0856962
+node_386 -21.8006219 64.0961431
+node_387 -21.8150439 64.0820189
+node_388 -21.829542 64.0788018
+node_389 -21.8104929 64.0803283
+node_390 -21.8163035 64.0832578
+node_391 -21.8114018 64.0909629
+node_392 -21.8371709 64.0863451
+node_393 -21.8056834 64.0959296
+node_394 -21.8382262 64.0856124
+node_395 -21.8400345 64.0868941
+node_396 -21.7959719 64.0938365
+node_397 -21.8456801 64.0799702
+node_398 -21.8108402 64.0912237
+node_399 -21.8067671 64.0902344
+node_400 -21.8247819 64.0872211
+node_401 -21.7926589 64.0948203
+node_402 -21.8452533 64.0786889
+node_403 -21.8408192 64.0808674
+node_404 -21.8099648 64.0891121
+node_405 -21.7993726 64.0904727
+node_406 -21.8295345 64.0894812
+node_407 -21.8225638 64.0871413
+node_408 -21.8475567 64.0789422
+node_409 -21.7987871 64.0914411
+node_410 -21.8040528 64.0800795
+node_411 -21.8041161 64.0800515
+node_412 -21.805735 64.0902626
+node_413 -21.8060911 64.0918386
+node_414 -21.8258126 64.0793651
+node_415 -21.8094559 64.0857455
+node_416 -21.8245158 64.0881451
+node_417 -21.8335387 64.0884479
+node_418 -21.8195697 64.0823754
+node_419 -21.8465688 64.0795458
+node_420 -21.8392206 64.0869021
+node_421 -21.8271241 64.0873164
+node_422 -21.8017077 64.0922271
+node_423 -21.7970757 64.0920847
+node_424 -21.8219325 64.0830826
+node_425 -21.8045978 64.0804406
+node_426 -21.8220797 64.086367
+node_427 -21.8060216 64.0927601
+node_428 -21.8295127 64.0789563
+node_429 -21.8269972 64.0902628
+node_430 -21.8161897 64.0855051
+node_431 -21.8101384 64.0891993
+node_432 -21.8049705 64.0816164
+node_433 -21.8252235 64.0894848
+node_434 -21.8034953 64.0902843
+node_435 -21.8292817 64.0801588
+node_436 -21.8106342 64.0839942
+node_437 -21.8257423 64.0809706
+node_438 -21.8413151 64.0854983
+node_439 -21.8451863 64.0796042
+node_440 -21.8506101 64.0853251
+node_441 -21.8408445 64.0808943
+node_442 -21.8105961 64.0891101
+node_443 -21.8087473 64.0945516
+node_444 -21.8128285 64.0877038
+node_445 -21.8229545 64.0872814
+node_446 -21.7995387 64.0879483
+node_447 -21.8493078 64.0849451
+node_448 -21.8491859 64.0851725
+node_449 -21.8380623 64.081362
+node_450 -21.835196 64.0809238
+node_451 -21.8175208 64.084918
+node_452 -21.8011781 64.0933257
+node_453 -21.7995867 64.0875658
+node_454 -21.8178627 64.0835713
+node_455 -21.8075365 64.0930197
+node_456 -21.8278962 64.0792395
+node_457 -21.8267382 64.0892049
+node_458 -21.8417687 64.0851857
+node_459 -21.8093364 64.0891124
+node_460 -21.8466182 64.0795368
+node_461 -21.8306993 64.0822023
+node_462 -21.7973517 64.0922556
+node_463 -21.8546666 64.0856548
+node_464 -21.8092921 64.0808506
+node_465 -21.848481 64.08638
+node_466 -21.8076309 64.0799315
+node_467 -21.8275831 64.0885929
+node_468 -21.8226741 64.0829243
+node_469 -21.8141328 64.0913533
+node_470 -21.8466045 64.0860307
+node_471 -21.8140758 64.0855688
+node_472 -21.8549819 64.086051
+node_473 -21.802628 64.0939249
+node_474 -21.8124711 64.0946909
+node_475 -21.8136238 64.0874575
+node_476 -21.8201024 64.0824655
+node_477 -21.8449723 64.0793262
+node_478 -21.8245409 64.0879193
+node_479 -21.8166206 64.0843227
+node_480 -21.8062751 64.0813331
+node_481 -21.8127544 64.0901522
+node_482 -21.8474068 64.0786459
+node_483 -21.8338765 64.0810186
+node_484 -21.8029877 64.0885648
+node_485 -21.8038538 64.0901621
+node_486 -21.8252926 64.0873862
+node_487 -21.8448713 64.0848936
+node_488 -21.8392147 64.0853326
+node_489 -21.8295869 64.0785512
+node_490 -21.8186778 64.0840424
+node_491 -21.8405632 64.0844777
+node_492 -21.8214635 64.0867623
+node_493 -21.8153863 64.0855455
+node_494 -21.8001003 64.0941242
+node_495 -21.7997422 64.0912398
+node_496 -21.817335 64.0863053
+node_497 -21.8015647 64.0881554
+node_498 -21.8065207 64.0799281
+node_499 -21.8074157 64.0931698
+node_500 -21.7985139 64.0877998
+node_501 -21.8459355 64.0787772
+node_502 -21.8036948 64.0892374
+node_503 -21.8366715 64.0838719
+node_504 -21.7999566 64.0920498
+node_505 -21.8435513 64.0848515
+node_506 -21.8451694 64.0801972
+node_507 -21.8360657 64.0816394
+node_508 -21.808628 64.0818575
+node_509 -21.8470696 64.0793305
+node_510 -21.8251647 64.084459
+node_511 -21.8293692 64.0796978
+node_512 -21.8239789 64.0890373
+node_513 -21.8258546 64.085892
+node_514 -21.8343787 64.0864799
+node_515 -21.8307828 64.0860337
+node_516 -21.8005935 64.0900052
+node_517 -21.8176221 64.0842394
+node_518 -21.8383371 64.0867849
+node_519 -21.8039848 64.0897973
+node_520 -21.8505426 64.0857852
+node_521 -21.8364508 64.0807688
+node_522 -21.8432415 64.0847041
+node_523 -21.815171 64.0820827
+node_524 -21.8122519 64.0937696
+node_525 -21.8179248 64.0801732
+node_526 -21.8056801 64.0959165
+node_527 -21.8115482 64.0885524
+node_528 -21.8489956 64.08544
+node_529 -21.8426066 64.0805047
+node_530 -21.8210346 64.081361
+node_531 -21.8022767 64.0894194
+node_532 -21.8280771 64.0888411
+node_533 -21.8109589 64.08921
+node_534 -21.8070011 64.0874001
+node_535 -21.836413 64.0845151
+node_536 -21.8270624 64.0871846
+node_537 -21.8202046 64.0859484
+node_538 -21.8090012 64.0841441
+node_539 -21.8065861 64.0826446
+node_540 -21.8114148 64.0885249
+node_541 -21.8398614 64.0802106
+node_542 -21.8489357 64.0859905
+node_543 -21.8178242 64.0800418
+node_544 -21.801296 64.0947176
+node_545 -21.8218616 64.0813913
+node_546 -21.8113778 64.0800564
+node_547 -21.8009891 64.0930079
+node_548 -21.8275115 64.0882531
+node_549 -21.8488498 64.0858022
+node_550 -21.8127038 64.0841662
+node_551 -21.8144639 64.0885461
+node_552 -21.8133253 64.0811242
+node_553 -21.8226533 64.0886594
+node_554 -21.8418534 64.0851069
+node_555 -21.805545 64.093531
+node_556 -21.8473653 64.0786277
+node_557 -21.8238889 64.0802114
+node_558 -21.8056935 64.0859354
+node_559 -21.8069826 64.0823377
+node_560 -21.8176622 64.0801047
+node_561 -21.8468559 64.0784206
+node_562 -21.8124609 64.0840508
+node_563 -21.8080952 64.0967769
+node_564 -21.8028556 64.0910896
+node_565 -21.8166159 64.084317
+node_566 -21.7950892 64.093514
+node_567 -21.8559515 64.0859611
+node_568 -21.8020606 64.0910025
+node_569 -21.8466129 64.0785317
+node_570 -21.835975 64.081557
+node_571 -21.8027172 64.0913971
+node_572 -21.8097901 64.0916637
+node_573 -21.8058756 64.0808519
+node_574 -21.8375258 64.0865524
+node_575 -21.8414451 64.0807527
+node_576 -21.8292936 64.0830818
+node_577 -21.8413497 64.0807031
+node_578 -21.8174196 64.0821851
+node_579 -21.8361008 64.085481
+node_580 -21.7980029 64.0932099
+node_581 -21.805604 64.0959265
+node_582 -21.8061964 64.0813033
+node_583 -21.826301 64.0898705
+node_584 -21.8067652 64.0914275
+node_585 -21.8157191 64.0879616
+node_586 -21.8228602 64.086401
+node_587 -21.8128079 64.0891213
+node_588 -21.8098441 64.0856424
+node_589 -21.8045331 64.0880611
+node_590 -21.8202269 64.0871238
+node_591 -21.8279092 64.0798267
+node_592 -21.826691 64.0871125
+node_593 -21.810852 64.0817823
+node_594 -21.8351911 64.0817204
+node_595 -21.8112135 64.0908826
+node_596 -21.8022921 64.0885753
+node_597 -21.8526249 64.0858762
+node_598 -21.8054451 64.0818067
+node_599 -21.8244813 64.0880297
+node_600 -21.8269428 64.0901927
+node_601 -21.8458007 64.0784347
+node_602 -21.8168553 64.0850204
+node_603 -21.8065654 64.0902398
+node_604 -21.8445639 64.0795409
+node_605 -21.8032971 64.0954827
+node_606 -21.8443385 64.0797962
+node_607 -21.8505254 64.0859365
+node_608 -21.8004607 64.0920657
+node_609 -21.8368006 64.0815206
+node_610 -21.8128018 64.0900923
+node_611 -21.8402066 64.0809794
+node_612 -21.8024495 64.0797246
+node_613 -21.8074461 64.0824901
+node_614 -21.8190387 64.0860521
+node_615 -21.8033964 64.0925409
+node_616 -21.836405 64.0807739
+node_617 -21.8164224 64.0834143
+node_618 -21.824765 64.0872144
+node_619 -21.809472 64.0874066
+node_620 -21.7989948 64.0954552
+node_621 -21.8349783 64.0844476
+node_622 -21.8151221 64.0806836
+node_623 -21.8353293 64.0817037
+node_624 -21.8503468 64.0859001
+node_625 -21.8304727 64.0826
+node_626 -21.8035048 64.0898595
+node_627 -21.7990343 64.0915186
+node_628 -21.8547306 64.0858471
+node_629 -21.8101122 64.0800798
+node_630 -21.810716 64.0799945
+node_631 -21.8293359 64.0798766
+node_632 -21.8215721 64.0849939
+node_633 -21.8383607 64.0845277
+node_634 -21.8047815 64.0901878
+node_635 -21.8010394 64.0908403
+node_636 -21.8451187 64.079747
+node_637 -21.8137039 64.0912988
+node_638 -21.8248085 64.0879514
+node_639 -21.8314211 64.0884147
+node_640 -21.8128074 64.0811517
+node_641 -21.8448287 64.0801147
+node_642 -21.8459974 64.0851569
+node_643 -21.8276035 64.0895153
+node_644 -21.8040113 64.091327
+node_645 -21.7935891 64.0938989
+node_646 -21.8044744 64.0893608
+node_647 -21.8271382 64.0905114
+node_648 -21.8296221 64.0861166
+node_649 -21.8202169 64.0868657
+node_650 -21.8105351 64.0819807
+node_651 -21.8549355 64.0854696
+node_652 -21.8076535 64.09214
+node_653 -21.8324754 64.088794
+node_654 -21.8460759 64.0792022
+node_655 -21.8301234 64.0867155
+node_656 -21.8042249 64.0880127
+node_657 -21.8244058 64.0891922
+node_658 -21.7988073 64.0956038
+node_659 -21.8416189 64.0853058
+node_660 -21.8300306 64.08616
+node_661 -21.8151033 64.0871505
+node_662 -21.8112068 64.0837765
+node_663 -21.8172235 64.0867544
+node_664 -21.8117263 64.0936191
+node_665 -21.8461792 64.0796109
+node_666 -21.8156338 64.0950715
+node_667 -21.8419757 64.0845982
+node_668 -21.8044414 64.0902941
+node_669 -21.8264334 64.0868479
+node_670 -21.8056824 64.0959231
+node_671 -21.8479562 64.0788734
+node_672 -21.8054964 64.0901913
+node_673 -21.7992157 64.0959145
+node_674 -21.8035711 64.095583
+node_675 -21.8032986 64.0954964
+node_676 -21.8029059 64.0939882
+node_677 -21.7985498 64.0949988
+node_678 -21.8235735 64.0814609
+node_679 -21.8059842 64.0819945
+node_680 -21.8445659 64.0799738
+node_681 -21.8071537 64.0817873
+node_682 -21.8041088 64.0892171
+node_683 -21.7991798 64.091568
+node_684 -21.8093503 64.0892018
+node_685 -21.8359141 64.0841125
+node_686 -21.8013252 64.0934561
+node_687 -21.8453805 64.0861501
+node_688 -21.8310483 64.0851716
+node_689 -21.8410772 64.0867551
+node_690 -21.8276097 64.0885007
+node_691 -21.8135393 64.0835788
+node_692 -21.8059894 64.0914989
+node_693 -21.8136764 64.0817326
+node_694 -21.8129457 64.0890144
+node_695 -21.8296714 64.0897064
+node_696 -21.8395697 64.081094
+node_697 -21.8146652 64.0822695
+node_698 -21.7984389 64.0950755
+node_699 -21.818005 64.0861467
+node_700 -21.8312445 64.0843619
+node_701 -21.8038902 64.0902459
+node_702 -21.8160866 64.0821116
+node_703 -21.8127392 64.0944198
+node_704 -21.8135694 64.08634
+node_705 -21.826858 64.0860813
+node_706 -21.8265334 64.0891311
+node_707 -21.8130255 64.0878277
+node_708 -21.8282425 64.0898396
+node_709 -21.8360509 64.0816145
+node_710 -21.8290437 64.0835288
+node_711 -21.8150806 64.0882894
+node_712 -21.8486658 64.0862689
+node_713 -21.8093495 64.0935962
+node_714 -21.8468198 64.0784169
+node_715 -21.8320768 64.0878016
+node_716 -21.8065527 64.0909041
+node_717 -21.8013417 64.0881565
+node_718 -21.8150055 64.0879352
+node_719 -21.8270466 64.0859944
+node_720 -21.8042352 64.0894157
+node_721 -21.8094888 64.0909952
+node_722 -21.85675 64.0863869
+node_723 -21.8061643 64.0925153
+node_724 -21.8291229 64.0880431
+node_725 -21.812086 64.0963477
+node_726 -21.8060185 64.091655
+node_727 -21.8128462 64.0890916
+node_728 -21.8129005 64.0840928
+node_729 -21.8155297 64.0842138
+node_730 -21.815356 64.0885752
+node_731 -21.8472014 64.0858592
+node_732 -21.804101 64.0891895
+node_733 -21.8339189 64.081079
+node_734 -21.8049756 64.0909277
+node_735 -21.7947616 64.0887255
+node_736 -21.8295137 64.089825
+node_737 -21.8065511 64.0901551
+node_738 -21.8050621 64.0814346
+node_739 -21.8147272 64.0875244
+node_740 -21.808675 64.0871684
+node_741 -21.8017584 64.0937227
+node_742 -21.8208944 64.086575
+node_743 -21.8278154 64.0895903
+node_744 -21.8465231 64.0867959
+node_745 -21.8245844 64.0882581
+node_746 -21.8073294 64.0806683
+node_747 -21.8014736 64.0881591
+node_748 -21.8018536 64.0902528
+node_749 -21.8375584 64.0855933
+node_750 -21.8297843 64.082812
+node_751 -21.828519 64.0879623
+node_752 -21.813148 64.0810431
+node_753 -21.7995276 64.0888025
+node_754 -21.8383139 64.0844739
+node_755 -21.825445 64.0895641
+node_756 -21.8013255 64.0944102
+node_757 -21.800033 64.0950316
+node_758 -21.83737 64.0813822
+node_759 -21.8457994 64.0789196
+node_760 -21.8447989 64.0798985
+node_761 -21.8059199 64.0805792
+node_762 -21.8350218 64.0847896
+node_763 -21.8272224 64.0906595
+node_764 -21.8327759 64.0858601
+node_765 -21.8392096 64.08033
+node_766 -21.8421744 64.0846155
+node_767 -21.8203962 64.0833376
+node_768 -21.8357982 64.0808488
+node_769 -21.8016689 64.0880814
+node_770 -21.7991355 64.093582
+node_771 -21.7967056 64.0943356
+node_772 -21.8167027 64.0834976
+node_773 -21.8559349 64.0859781
+node_774 -21.8406505 64.0800712
+node_775 -21.8104453 64.0802476
+node_776 -21.8049067 64.0879968
+node_777 -21.8090356 64.0827464
+node_778 -21.8136571 64.0856675
+node_779 -21.8052739 64.0909418
+node_780 -21.8058923 64.0881184
+node_781 -21.8420974 64.0806356
+node_782 -21.8179184 64.0806076
+node_783 -21.8230975 64.0887281
+node_784 -21.8421389 64.0847109
+node_785 -21.8269571 64.0892837
+node_786 -21.8450567 64.080238
+node_787 -21.8115515 64.0836508
+node_788 -21.827675 64.0874504
+node_789 -21.8330445 64.0810688
+node_790 -21.8238764 64.0847761
+node_791 -21.8058144 64.0930875
+node_792 -21.8362236 64.0838371
+node_793 -21.8113336 64.0907879
+node_794 -21.8070955 64.0964085
+node_795 -21.818303 64.0849082
+node_796 -21.7966768 64.0929081
+node_797 -21.8027997 64.0939631
+node_798 -21.8165161 64.0835243
+node_799 -21.8131203 64.0946004
+node_800 -21.8299653 64.0886634
+node_801 -21.7949465 64.0934712
+node_802 -21.8352911 64.0816417
+node_803 -21.8072092 64.0816633
+node_804 -21.8150101 64.0878917
+node_805 -21.8391361 64.0865055
+node_806 -21.8434573 64.0850281
+node_807 -21.8439556 64.0847391
+node_808 -21.8462328 64.0787199
+node_809 -21.8125075 64.0904218
+node_810 -21.8005606 64.0919977
+node_811 -21.8468021 64.0789382
+node_812 -21.8256957 64.085992
+node_813 -21.8194141 64.0812941
+node_814 -21.8110411 64.0847812
+node_815 -21.8182211 64.0841664
+node_816 -21.8396233 64.0852242
+node_817 -21.8180371 64.0848521
+node_818 -21.8457153 64.079964
+node_819 -21.8475464 64.0790921
+node_820 -21.8132239 64.08208
+node_821 -21.8055206 64.0818327
+node_822 -21.8377225 64.0866281
+node_823 -21.8058217 64.0880901
+node_824 -21.8095558 64.0934196
+node_825 -21.8106081 64.0924413
+node_826 -21.8225292 64.0875247
+node_827 -21.8015581 64.0881637
+node_828 -21.8444163 64.0846778
+node_829 -21.8177271 64.0801864
+node_830 -21.7997363 64.0905455
+node_831 -21.8202317 64.0871326
+node_832 -21.8280532 64.0888559
+node_833 -21.8469018 64.0792863
+node_834 -21.840149 64.0809223
+node_835 -21.8278879 64.0792758
+node_836 -21.7972443 64.0947466
+node_837 -21.809811 64.0848251
+node_838 -21.8058981 64.0918556
+node_839 -21.8150634 64.0857898
+node_840 -21.7986764 64.0922715
+node_841 -21.8075542 64.0929777
+node_842 -21.8282909 64.0899145
+node_843 -21.8079522 64.0910526
+node_844 -21.7970778 64.092084
+node_845 -21.8144833 64.0901291
+node_846 -21.8268507 64.0879245
+node_847 -21.8130369 64.0893217
+node_848 -21.8275552 64.0858433
+node_849 -21.8145853 64.0823253
+node_850 -21.8320216 64.085484
+node_851 -21.8121719 64.087934
+node_852 -21.8289786 64.0835439
+node_853 -21.8074864 64.0801147
+node_854 -21.809146 64.0901906
+node_855 -21.8052634 64.0939869
+node_856 -21.8287768 64.08542
+node_857 -21.8149708 64.0893216
+node_858 -21.8064517 64.0901596
+node_859 -21.8345448 64.0870174
+node_860 -21.798467 64.0950464
+node_861 -21.8002733 64.0883251
+node_862 -21.8507709 64.0851871
+node_863 -21.816887 64.0817577
+node_864 -21.8224648 64.0814232
+node_865 -21.8023975 64.0959695
+node_866 -21.7966141 64.0948921
+node_867 -21.798957 64.0892228
+node_868 -21.8200172 64.0868812
+node_869 -21.8123058 64.0808991
+node_870 -21.8256646 64.0896432
+node_871 -21.8290812 64.0858211
+node_872 -21.8093179 64.0891154
+node_873 -21.8467735 64.0861107
+node_874 -21.8235057 64.0814597
+node_875 -21.8363663 64.0807129
+node_876 -21.8077637 64.0910896
+node_877 -21.8113646 64.0902786
+node_878 -21.8368153 64.0815459
+node_879 -21.8189775 64.084116
+node_880 -21.8125014 64.0878007
+node_881 -21.8292432 64.0830711
+node_882 -21.8371204 64.0839037
+node_883 -21.8015928 64.0936481
+node_884 -21.8109674 64.0888916
+node_885 -21.8370584 64.0849698
+node_886 -21.7999356 64.0927181
+node_887 -21.8057328 64.091066
+node_888 -21.8326871 64.0881414
+node_889 -21.8152069 64.0799974
+node_890 -21.8007099 64.0907689
+node_891 -21.8069499 64.0898478
+node_892 -21.826785 64.0879426
+node_893 -21.8017672 64.0891497
+node_894 -21.8033164 64.0955128
+node_895 -21.8281896 64.0857665
+node_896 -21.7997103 64.0912551
+node_897 -21.8456964 64.079959
+node_898 -21.8153359 64.085521
+node_899 -21.8144177 64.0825125
+node_900 -21.8091245 64.0800053
+node_901 -21.8391596 64.0803253
+node_902 -21.8290449 64.0835423
+node_903 -21.8524117 64.0852347
+node_904 -21.849457 64.0869481
+node_905 -21.8089907 64.0803316
+node_906 -21.7998402 64.0910665
+node_907 -21.8406299 64.0868323
+node_908 -21.8157377 64.0842918
+node_909 -21.7993323 64.0885634
+node_910 -21.7974453 64.092176
+node_911 -21.8093011 64.0857417
+node_912 -21.8158464 64.0938242
+node_913 -21.8331828 64.0858474
+node_914 -21.7997018 64.0912597
+node_915 -21.8097941 64.0849821
+node_916 -21.8215662 64.0849928
+node_917 -21.8033826 64.0881645
+node_918 -21.8056257 64.0874632
+node_919 -21.8250736 64.0887362
+node_920 -21.8275518 64.0843126
+node_921 -21.8179614 64.0818995
+node_922 -21.8108581 64.0805843
+node_923 -21.8294824 64.079119
+node_924 -21.8146747 64.0859925
+node_925 -21.8510588 64.0849791
+node_926 -21.8466413 64.0785233
+node_927 -21.8006705 64.0947431
+node_928 -21.8137568 64.08943
+node_929 -21.7971696 64.0921005
+node_930 -21.799492 64.0914252
+node_931 -21.7965645 64.0928821
+node_932 -21.8210491 64.0870634
+node_933 -21.8104139 64.0872034
+node_934 -21.8420358 64.0844702
+node_935 -21.8039174 64.091494
+node_936 -21.8143673 64.0951066
+node_937 -21.8293895 64.0796049
+node_938 -21.803048 64.0938707
+node_939 -21.840505 64.0845987
+node_940 -21.8262821 64.0877609
+node_941 -21.8189827 64.084834
+node_942 -21.804314 64.0865084
+node_943 -21.8472014 64.0860057
+node_944 -21.8414016 64.0866615
+node_945 -21.8383384 64.09052
+node_946 -21.7994849 64.0873113
+node_947 -21.8070697 64.0932266
+node_948 -21.8246521 64.0872923
+node_949 -21.8049762 64.0909215
+node_950 -21.8033351 64.0812748
+node_951 -21.8282861 64.0874961
+node_952 -21.8149997 64.085826
+node_953 -21.8104958 64.0874673
+node_954 -21.8544702 64.0858804
+node_955 -21.8426248 64.0805004
+node_956 -21.7996927 64.0912498
+node_957 -21.797995 64.0916902
+node_958 -21.8093516 64.095165
+node_959 -21.8058587 64.0930169
+node_960 -21.8166049 64.0836441
+node_961 -21.805195 64.0908958
+node_962 -21.8478171 64.0865303
+node_963 -21.8050584 64.0902073
+node_964 -21.8042416 64.0808502
+node_965 -21.7990034 64.0914298
+node_966 -21.8261904 64.0798988
+node_967 -21.8007826 64.0942751
+node_968 -21.8070989 64.0824378
+node_969 -21.848908 64.0856857
+node_970 -21.8435986 64.0847379
+node_971 -21.8059799 64.0924961
+node_972 -21.8475089 64.079095
+node_973 -21.8239272 64.0890189
+node_974 -21.7998373 64.0910475
+node_975 -21.7979035 64.0950783
+node_976 -21.8265915 64.0862654
+node_977 -21.8455349 64.0795466
+node_978 -21.8096523 64.0811513
+node_979 -21.7994685 64.0952898
+node_980 -21.8174393 64.0813568
+node_981 -21.8000792 64.0927575
+node_982 -21.815388 64.095279
+node_983 -21.8560319 64.0858983
+node_984 -21.8469497 64.0788671
+node_985 -21.810651 64.0806046
+node_986 -21.8072212 64.0964668
+node_987 -21.8283887 64.0874963
+node_988 -21.8001835 64.09497
+node_989 -21.8283802 64.0900662
+node_990 -21.8359853 64.0855571
+node_991 -21.8261147 64.0803368
+node_992 -21.8140109 64.0814904
+node_993 -21.8445568 64.0795444
+node_994 -21.8489035 64.0860989
+node_995 -21.8278321 64.0795657
+node_996 -21.8453847 64.0867861
+node_997 -21.8092045 64.090568
+node_998 -21.7975663 64.0931054
+node_999 -21.8149382 64.0799938
+node_1000 -21.8236531 64.0848274
+node_1001 -21.7992845 64.0924945
+node_1002 -21.8066299 64.0826589
+node_1003 -21.8116075 64.0885646
+node_1004 -21.8021648 64.0883438
+node_1005 -21.8103379 64.0866919
+node_1006 -21.8130431 64.0893673
+node_1007 -21.8462397 64.0787168
+node_1008 -21.8069441 64.0898468
+node_1009 -21.8278171 64.0887738
+node_1010 -21.8174489 64.0861976
+node_1011 -21.8395384 64.0869032
+node_1012 -21.8119088 64.0930826
+node_1013 -21.824779 64.0872061
+node_1014 -21.8277862 64.0797834
+node_1015 -21.83866 64.0868424
+node_1016 -21.7995844 64.0918015
+node_1017 -21.8045222 64.080765
+node_1018 -21.8196575 64.08239
+node_1019 -21.8338696 64.0863386
+node_1020 -21.8256535 64.0876639
+node_1021 -21.8364317 64.0841477
+node_1022 -21.8084535 64.0829556
+node_1023 -21.8273967 64.0894412
+node_1024 -21.8133343 64.0838175
+node_1025 -21.8128867 64.0824815
+node_1026 -21.8299586 64.0885578
+node_1027 -21.8200158 64.0837213
+node_1028 -21.8266147 64.0866182
+node_1029 -21.8135295 64.0843123
+node_1030 -21.8061935 64.0820666
+node_1031 -21.8478038 64.0856923
+node_1032 -21.8101783 64.0829254
+node_1033 -21.8514614 64.0859142
+node_1034 -21.841246 64.0799564
+node_1035 -21.845064 64.0802357
+node_1036 -21.8197934 64.0809976
+node_1037 -21.8319401 64.0878848
+node_1038 -21.8110366 64.0838426
+node_1039 -21.8005372 64.0921692
+node_1040 -21.8296047 64.0828958
+node_1041 -21.8124816 64.0904154
+node_1042 -21.8375573 64.0856129
+node_1043 -21.8077871 64.0911911
+node_1044 -21.8509463 64.0852434
+node_1045 -21.8128691 64.0912033
+node_1046 -21.7993046 64.0953561
+node_1047 -21.8304462 64.0821557
+node_1048 -21.8050623 64.081669
+node_1049 -21.8054936 64.0806628
+node_1050 -21.7986322 64.094915
+node_1051 -21.8384118 64.0844878
+node_1052 -21.8296171 64.0859608
+node_1053 -21.7958805 64.0937908
+node_1054 -21.8145493 64.0884053
+node_1055 -21.8449705 64.0787083
+node_1056 -21.8134902 64.0812159
+node_1057 -21.8027508 64.0884508
+node_1058 -21.8277411 64.0800797
+node_1059 -21.8383107 64.0848573
+node_1060 -21.817014 64.082144
+node_1061 -21.8292687 64.0831054
+node_1062 -21.8114427 64.08369
+node_1063 -21.8156505 64.0799988
+node_1064 -21.8359358 64.08541
+node_1065 -21.8414225 64.0854341
+node_1066 -21.8097481 64.0855694
+node_1067 -21.8120795 64.084391
+node_1068 -21.8038374 64.0926234
+node_1069 -21.8008825 64.0921579
+node_1070 -21.8233271 64.0814535
+node_1071 -21.809976 64.0917069
+node_1072 -21.842138 64.0806278
+node_1073 -21.8022734 64.0900568
+node_1074 -21.8461739 64.0797605
+node_1075 -21.8489783 64.0854176
+node_1076 -21.8033944 64.0954949
+node_1077 -21.8472535 64.0867477
+node_1078 -21.836391 64.0845168
+node_1079 -21.8385444 64.0804547
+node_1080 -21.813728 64.0817042
+node_1081 -21.8268282 64.0879576
+node_1082 -21.8058359 64.0819435
+node_1083 -21.8154156 64.0884802
+node_1084 -21.7986956 64.0949398
+node_1085 -21.7997488 64.0912365
+node_1086 -21.8001852 64.0897235
+node_1087 -21.8300512 64.0861546
+node_1088 -21.8329073 64.0836969
+node_1089 -21.8365128 64.0847765
+node_1090 -21.852269 64.0853375
+node_1091 -21.8357176 64.0853625
+node_1092 -21.8131048 64.0876179
+node_1093 -21.797577 64.0929172
+node_1094 -21.809658 64.084104
+node_1095 -21.844369 64.0848183
+node_1096 -21.8226565 64.0886477
+node_1097 -21.7974534 64.0921683
+node_1098 -21.803613 64.0886646
+node_1099 -21.8103407 64.0956709
+node_1100 -21.8224263 64.0872815
+node_1101 -21.827313 64.0881257
+node_1102 -21.8338826 64.08648
+node_1103 -21.8154865 64.0843091
+node_1104 -21.8416637 64.0845694
+node_1105 -21.8259905 64.0883517
+node_1106 -21.8009494 64.0946048
+node_1107 -21.8196995 64.083069
+node_1108 -21.8257975 64.087567
+node_1109 -21.8037872 64.0801937
+node_1110 -21.8118381 64.0813676
+node_1111 -21.817211 64.0848877
+node_1112 -21.8259617 64.0887268
+node_1113 -21.8100607 64.0821882
+node_1114 -21.8089498 64.081808
+node_1115 -21.8151144 64.0871681
+node_1116 -21.8059306 64.0901729
+node_1117 -21.8162646 64.0800013
+node_1118 -21.7969204 64.0919865
+node_1119 -21.8262307 64.07966
+node_1120 -21.814796 64.0879283
+node_1121 -21.8361422 64.0843697
+node_1122 -21.8126894 64.0940251
+node_1123 -21.795821 64.0937757
+node_1124 -21.8322556 64.0879902
+node_1125 -21.8279943 64.089663
+node_1126 -21.7993842 64.092432
+node_1127 -21.8130167 64.0967952
+node_1128 -21.8123435 64.0871223
+node_1129 -21.8083081 64.0842551
+node_1130 -21.8464178 64.0789996
+node_1131 -21.8320348 64.0886349
+node_1132 -21.7925071 64.0949227
+node_1133 -21.8284346 64.090165
+node_1134 -21.8374056 64.0865129
+node_1135 -21.8153225 64.0853193
+node_1136 -21.8350729 64.0847806
+node_1137 -21.8306377 64.0805042
+node_1138 -21.8148239 64.0882626
+node_1139 -21.8381018 64.0813561
+node_1140 -21.8132697 64.0820321
+node_1141 -21.8115876 64.0798678
+node_1142 -21.8112873 64.081548
+node_1143 -21.8346884 64.0817179
+node_1144 -21.8097031 64.0891992
+node_1145 -21.8179163 64.0944673
+node_1146 -21.8059256 64.0929181
+node_1147 -21.8051257 64.0910439
+node_1148 -21.8105129 64.0866111
+node_1149 -21.8360131 64.0816192
+node_1150 -21.8000733 64.0897849
+node_1151 -21.8147125 64.088092
+node_1152 -21.8081179 64.0913862
+node_1153 -21.816743 64.0864087
+node_1154 -21.818252 64.0848258
+node_1155 -21.8377853 64.0905033
+node_1156 -21.8177269 64.0805855
+node_1157 -21.8031559 64.0893057
+node_1158 -21.8522295 64.0853689
+node_1159 -21.7995612 64.0877452
+node_1160 -21.8060551 64.0799241
+node_1161 -21.8275119 64.0884627
+node_1162 -21.8092407 64.0950793
+node_1163 -21.8166186 64.0843201
+node_1164 -21.8402666 64.0810005
+node_1165 -21.8126368 64.0827605
+node_1166 -21.8027834 64.0911979
+node_1167 -21.8160022 64.0821693
+node_1168 -21.850866 64.0851176
+node_1169 -21.8037138 64.0880956
+node_1170 -21.8057142 64.0932573
+node_1171 -21.8056999 64.0901856
+node_1172 -21.8313238 64.0892025
+node_1173 -21.8033622 64.0925346
+node_1174 -21.8399074 64.0868991
+node_1175 -21.826557 64.086226
+node_1176 -21.8227592 64.0879149
+node_1177 -21.8263734 64.0865908
+node_1178 -21.8322469 64.0872965
+node_1179 -21.7986093 64.0953097
+node_1180 -21.8073725 64.083792
+node_1181 -21.8226863 64.0877948
+node_1182 -21.8404333 64.0847223
+node_1183 -21.8273687 64.0841466
+node_1184 -21.8150412 64.0857823
+node_1185 -21.8251593 64.0874858
+node_1186 -21.80549 64.0936269
+node_1187 -21.8503479 64.0857385
+node_1188 -21.8279935 64.0792791
+node_1189 -21.8251589 64.0844579
+node_1190 -21.813694 64.0833817
+node_1191 -21.8286967 64.0857722
+node_1192 -21.8224382 64.0872459
+node_1193 -21.8258718 64.089716
+node_1194 -21.801659 64.0961532
+node_1195 -21.8000039 64.0941025
+node_1196 -21.8162738 64.0832047
+node_1197 -21.8466112 64.0785309
+node_1198 -21.8554734 64.0853546
+node_1199 -21.8230708 64.0814441
+node_1200 -21.799773 64.0886112
+node_1201 -21.8029753 64.0893293
+node_1202 -21.809519 64.0827257
+node_1203 -21.8518366 64.0858179
+node_1204 -21.8225005 64.0868924
+node_1205 -21.8157092 64.0803237
+node_1206 -21.8220001 64.0831261
+node_1207 -21.8442024 64.0796819
+node_1208 -21.8072672 64.0803323
+node_1209 -21.8148137 64.0875875
+node_1210 -21.8283844 64.0873949
+node_1211 -21.8456574 64.0784877
+node_1212 -21.8367183 64.0814647
+node_1213 -21.856195 64.0863122
+node_1214 -21.8479692 64.0865926
+node_1215 -21.8286795 64.0890764
+node_1216 -21.8129409 64.0943933
+node_1217 -21.813094 64.0966827
+node_1218 -21.8468699 64.0784141
+node_1219 -21.8448591 64.0802937
+node_1220 -21.8260035 64.079268
+node_1221 -21.8184756 64.0861046
+node_1222 -21.8016744 64.09106
+node_1223 -21.83529 64.0851238
+node_1224 -21.8174993 64.0808381
+node_1225 -21.8155639 64.0822196
+node_1226 -21.8512297 64.0850202
+node_1227 -21.8261696 64.0791751
+node_1228 -21.8026655 64.0924108
+node_1229 -21.8114278 64.090424
+node_1230 -21.8349114 64.0844503
+node_1231 -21.7910629 64.0953436
+node_1232 -21.845632 64.0847522
+node_1233 -21.850532 64.0860871
+node_1234 -21.8001372 64.0927717
+node_1235 -21.8112205 64.0908793
+node_1236 -21.8028448 64.0884653
+node_1237 -21.8075198 64.0806425
+node_1238 -21.8039907 64.0802992
+node_1239 -21.8033928 64.0954663
+node_1240 -21.81355 64.0948695
+node_1241 -21.8469396 64.0854634
+node_1242 -21.8290265 64.0839104
+node_1243 -21.8037798 64.095423
+node_1244 -21.8036852 64.0815901
+node_1245 -21.7999129 64.0927129
+node_1246 -21.8019063 64.0894886
+node_1247 -21.8207741 64.0870787
+node_1248 -21.8091187 64.0805524
+node_1249 -21.801582 64.0892019
+node_1250 -21.8298946 64.0883452
+node_1251 -21.8371967 64.0806741
+node_1252 -21.8051428 64.0816992
+node_1253 -21.8080533 64.0825875
+node_1254 -21.8273348 64.0881164
+node_1255 -21.801517 64.0891834
+node_1256 -21.8304601 64.0888911
+node_1257 -21.8033901 64.0881726
+node_1258 -21.8036102 64.090205
+node_1259 -21.814691 64.088465
+node_1260 -21.8550348 64.0855567
+node_1261 -21.8105597 64.0798883
+node_1262 -21.8119478 64.0880757
+node_1263 -21.8468065 64.078937
+node_1264 -21.8059817 64.0824676
+node_1265 -21.8303077 64.0888369
+node_1266 -21.8490014 64.0854208
+node_1267 -21.8399255 64.0802046
+node_1268 -21.8466342 64.0795437
+node_1269 -21.8291811 64.0880645
+node_1270 -21.8113865 64.0800588
+node_1271 -21.8439487 64.0847528
+node_1272 -21.7996979 64.0905369
+node_1273 -21.8123866 64.0842803
+node_1274 -21.809079 64.0820135
+node_1275 -21.7996861 64.0912544
+node_1276 -21.841509 64.0866296
+node_1277 -21.8036078 64.0954396
+node_1278 -21.8173744 64.0810734
+node_1279 -21.8381323 64.0813911
+node_1280 -21.8151288 64.0893574
+node_1281 -21.8475097 64.086706
+node_1282 -21.8169531 64.0850024
+node_1283 -21.814555 64.0875836
+node_1284 -21.8081238 64.0913873
+node_1285 -21.8351898 64.0850295
+node_1286 -21.7990861 64.095515
+node_1287 -21.8278954 64.0884812
+node_1288 -21.8359088 64.0854246
+node_1289 -21.7955503 64.0886858
+node_1290 -21.8203563 64.0833132
+node_1291 -21.8367627 64.0815265
+node_1292 -21.7992 64.0925612
+node_1293 -21.8017326 64.0909579
+node_1294 -21.8054149 64.0937418
+node_1295 -21.8092577 64.0934655
+node_1296 -21.8047066 64.0879237
+node_1297 -21.8202249 64.0833893
+node_1298 -21.8018354 64.089503
+node_1299 -21.8076555 64.0925639
+node_1300 -21.8145493 64.0875799
+node_1301 -21.8405948 64.080066
+node_1302 -21.8094832 64.0931557
+node_1303 -21.8457924 64.0784254
+node_1304 -21.8294476 64.0793115
+node_1305 -21.803629 64.0881303
+node_1306 -21.8065766 64.0826419
+node_1307 -21.8045436 64.0798942
+node_1308 -21.8295519 64.0881956
+node_1309 -21.8007021 64.0907754
+node_1310 -21.8340245 64.081076
+node_1311 -21.7973661 64.0946935
+node_1312 -21.8093907 64.0821204
+node_1313 -21.8275601 64.0805718
+node_1314 -21.8475286 64.0790852
+node_1315 -21.8369815 64.0856043
+node_1316 -21.8094004 64.090543
+node_1317 -21.8091594 64.0806174
+node_1318 -21.8135137 64.0865125
+node_1319 -21.7954843 64.0886407
+node_1320 -21.8446182 64.0794243
+node_1321 -21.8505199 64.0861935
+node_1322 -21.8263919 64.0865916
+node_1323 -21.8040447 64.0881495
+node_1324 -21.8503926 64.0864534
+node_1325 -21.8354046 64.0852017
+node_1326 -21.8108415 64.0848442
+node_1327 -21.8124018 64.082998
+node_1328 -21.8120747 64.0963438
+node_1329 -21.8093365 64.0891155
+node_1330 -21.7985906 64.0923378
+node_1331 -21.8073727 64.0799319
+node_1332 -21.8140754 64.0891724
+node_1333 -21.8246157 64.0878829
+node_1334 -21.7933423 64.0939474
+node_1335 -21.8138754 64.083169
+node_1336 -21.8317996 64.085573
+node_1337 -21.7981897 64.0923332
+node_1338 -21.8022504 64.0923313
+node_1339 -21.8479205 64.0788676
+node_1340 -21.8328566 64.0837719
+node_1341 -21.8384823 64.0804482
+node_1342 -21.8278547 64.0801051
+node_1343 -21.8290836 64.0806789
+node_1344 -21.851865 64.0857131
+node_1345 -21.8289109 64.0874589
+node_1346 -21.8087824 64.0819114
+node_1347 -21.8451348 64.0797532
+node_1348 -21.7974142 64.0946739
+node_1349 -21.8250464 64.0856445
+node_1350 -21.8075996 64.0928136
+node_1351 -21.8439698 64.0798968
+node_1352 -21.8365246 64.085564
+node_1353 -21.8277387 64.0801037
+node_1354 -21.8074848 64.0799308
+node_1355 -21.8400637 64.08503
+node_1356 -21.7989562 64.0913656
+node_1357 -21.8470519 64.0793241
+node_1358 -21.8460105 64.0791946
+node_1359 -21.8243396 64.0891669
+node_1360 -21.8462242 64.0787104
+node_1361 -21.8457444 64.0861535
+node_1362 -21.8220637 64.0813987
+node_1363 -21.7985086 64.0933274
+node_1364 -21.8290971 64.080621
+node_1365 -21.815255 64.0821197
+node_1366 -21.8133576 64.0860106
+node_1367 -21.7924972 64.0949155
+node_1368 -21.8120638 64.0910258
+node_1369 -21.8134776 64.0842947
+node_1370 -21.7978911 64.0921816
+node_1371 -21.809008 64.0841618
+node_1372 -21.8057823 64.0876149
+node_1373 -21.8125767 64.0811681
+node_1374 -21.8055655 64.0934974
+node_1375 -21.8085157 64.0872679
+node_1376 -21.8404063 64.0847656
+node_1377 -21.7958997 64.092726
+node_1378 -21.8176021 64.086685
+node_1379 -21.8126972 64.0811599
+node_1380 -21.8095215 64.0808697
+node_1381 -21.8244961 64.0879744
+node_1382 -21.8093467 64.0891154
+node_1383 -21.8121425 64.0932947
+node_1384 -21.8277836 64.0795269
+node_1385 -21.8051957 64.0878507
+node_1386 -21.8150002 64.0857563
+node_1387 -21.8030035 64.0899214
+node_1388 -21.8432743 64.0852784
+node_1389 -21.8182557 64.0799159
+node_1390 -21.824738 64.0885251
+node_1391 -21.7994855 64.0914288
+node_1392 -21.8493436 64.084986
+node_1393 -21.8103546 64.0867878
+node_1394 -21.8124902 64.0842429
+node_1395 -21.8421628 64.0806553
+node_1396 -21.8033641 64.0812706
+node_1397 -21.8106065 64.0805261
+node_1398 -21.8439501 64.0847462
+node_1399 -21.8282551 64.0889258
+node_1400 -21.810806 64.0839295
+node_1401 -21.8490145 64.0858767
+node_1402 -21.8067609 64.0901527
+node_1403 -21.8468093 64.078935
+node_1404 -21.8323117 64.0870655
+node_1405 -21.8474219 64.078639
+node_1406 -21.8147215 64.0951678
+node_1407 -21.8096279 64.0891988
+node_1408 -21.8056011 64.093537
+node_1409 -21.8322325 64.0887062
+node_1410 -21.8448157 64.0801202
+node_1411 -21.8190883 64.0861305
+node_1412 -21.7950359 64.0935351
+node_1413 -21.827134 64.0873104
+node_1414 -21.811157 64.087232
+node_1415 -21.8260606 64.0806872
+node_1416 -21.807274 64.0803649
+node_1417 -21.8459926 64.0867927
+node_1418 -21.8267072 64.0871076
+node_1419 -21.8327217 64.0871146
+node_1420 -21.830681 64.0889714
+node_1421 -21.8258079 64.0875898
+node_1422 -21.8116303 64.0836409
+node_1423 -21.8006346 64.0921103
+node_1424 -21.8429097 64.0807579
+node_1425 -21.812873 64.0899387
+node_1426 -21.7967712 64.0943869
+node_1427 -21.8212579 64.081369
+node_1428 -21.8060506 64.0812342
+node_1429 -21.8115731 64.0885931
+node_1430 -21.8055433 64.0877892
+node_1431 -21.8092287 64.0834364
+node_1432 -21.8110302 64.0959755
+node_1433 -21.844333 64.0797924
+node_1434 -21.8071961 64.0817628
+node_1435 -21.8036144 64.0955918
+node_1436 -21.8504338 64.0855383
+node_1437 -21.8053625 64.0878212
+node_1438 -21.8161956 64.0855062
+node_1439 -21.8398503 64.0801993
+node_1440 -21.8379284 64.0866894
+node_1441 -21.8053894 64.0901956
+node_1442 -21.8004884 64.0948198
+node_1443 -21.8491545 64.0852054
+node_1444 -21.8066926 64.0909046
+node_1445 -21.8016039 64.0909423
+node_1446 -21.8036942 64.0958774
+node_1447 -21.8041132 64.0902636
+node_1448 -21.8411546 64.086736
+node_1449 -21.8451411 64.0797496
+node_1450 -21.8159376 64.0843543
+node_1451 -21.831752 64.0850966
+node_1452 -21.830296 64.0864016
+node_1453 -21.8096801 64.0875389
+node_1454 -21.8060468 64.0820175
+node_1455 -21.8078576 64.0825568
+node_1456 -21.8131091 64.0945916
+node_1457 -21.8088563 64.0834876
+node_1458 -21.8155754 64.0824702
+node_1459 -21.8086699 64.0825836
+node_1460 -21.8228197 64.0828804
+node_1461 -21.8148286 64.0882547
+node_1462 -21.8005103 64.0928656
+node_1463 -21.8157905 64.0843113
+node_1464 -21.8448451 64.086781
+node_1465 -21.8569895 64.085584
+node_1466 -21.8128407 64.0868417
+node_1467 -21.8156719 64.085625
+node_1468 -21.8375077 64.0849758
+node_1469 -21.8290892 64.0858143
+node_1470 -21.8383109 64.0905109
+node_1471 -21.8260012 64.088723
+node_1472 -21.8014734 64.0921957
+node_1473 -21.8226114 64.0876697
+node_1474 -21.8073251 64.0806474
+node_1475 -21.8144677 64.095413
+node_1476 -21.8250182 64.0894104
+node_1477 -21.8137204 64.0833511
+node_1478 -21.8521557 64.0856207
+node_1479 -21.8366155 64.0840307
+node_1480 -21.8033181 64.0955408
+node_1481 -21.8414071 64.0807605
+node_1482 -21.8024862 64.0900037
+node_1483 -21.7997364 64.0905454
+node_1484 -21.803554 64.0800784
+node_1485 -21.8094181 64.0952121
+node_1486 -21.8162896 64.0820071
+node_1487 -21.8404864 64.0843271
+node_1488 -21.8170091 64.0941711
+node_1489 -21.8296309 64.0859527
+node_1490 -21.8039704 64.0880678
+node_1491 -21.8395642 64.0852429
+node_1492 -21.8168944 64.0862641
+node_1493 -21.8440017 64.0846519
+node_1494 -21.8465756 64.0860346
+node_1495 -21.8170277 64.0850811
+node_1496 -21.8340215 64.083825
+node_1497 -21.8034256 64.0904441
+node_1498 -21.8181107 64.086231
+node_1499 -21.8054412 64.0813603
+node_1500 -21.8039381 64.0808093
+node_1501 -21.8213398 64.0867498
+node_1502 -21.8506974 64.0859359
+node_1503 -21.8112972 64.0904897
+node_1504 -21.8070152 64.0824278
+node_1505 -21.857041 64.0863459
+node_1506 -21.8112616 64.0903866
+node_1507 -21.8248101 64.0886491
+node_1508 -21.8279192 64.0790709
+node_1509 -21.8364551 64.0807754
+node_1510 -21.8363569 64.0843715
+node_1511 -21.8128422 64.0868474
+node_1512 -21.8099028 64.0868837
+node_1513 -21.8166499 64.0843679
+node_1514 -21.8341925 64.0838436
+node_1515 -21.8094773 64.0931546
+node_1516 -21.8371518 64.0806787
+node_1517 -21.8090104 64.0875163
+node_1518 -21.829351 64.0806897
+node_1519 -21.8040881 64.0901794
+node_1520 -21.8275252 64.0840568
+node_1521 -21.7997424 64.0912342
+node_1522 -21.8284606 64.0889994
+node_1523 -21.8035435 64.0955145
+node_1524 -21.8067927 64.0914857
+node_1525 -21.8276046 64.0860886
+node_1526 -21.7979979 64.0921236
+node_1527 -21.8456728 64.0784942
+node_1528 -21.8443199 64.079801
+node_1529 -21.8164396 64.0855316
+node_1530 -21.8251261 64.0815202
+node_1531 -21.8418653 64.0865131
+node_1532 -21.7968102 64.0921812
+node_1533 -21.7967069 64.0886031
+node_1534 -21.8229237 64.0864043
+node_1535 -21.8113181 64.0815558
+node_1536 -21.8139436 64.0855568
+node_1537 -21.8420411 64.0805785
+node_1538 -21.8370788 64.0863865
+node_1539 -21.8254274 64.0795606
+node_1540 -21.8381311 64.0867449
+node_1541 -21.7947375 64.0936581
+node_1542 -21.8276837 64.080386
+node_1543 -21.8503464 64.0857573
+node_1544 -21.8040842 64.0912276
+node_1545 -21.8185942 64.0847893
+node_1546 -21.8463654 64.0786564
+node_1547 -21.814515 64.088443
+node_1548 -21.8169757 64.0815303
+node_1549 -21.8106885 64.0803101
+node_1550 -21.8139295 64.0816245
+node_1551 -21.820487 64.0835873
+node_1552 -21.8440928 64.0791721
+node_1553 -21.837454 64.0814383
+node_1554 -21.8374134 64.081443
+node_1555 -21.8195694 64.0850851
+node_1556 -21.8099731 64.0874756
+node_1557 -21.8352095 64.0817474
+node_1558 -21.8452526 64.08004
+node_1559 -21.8028229 64.0924412
+node_1560 -21.7976537 64.0914897
+node_1561 -21.8370709 64.0840538
+node_1562 -21.8217284 64.0881958
+node_1563 -21.8457428 64.0798604
+node_1564 -21.835721 64.0839072
+node_1565 -21.8152076 64.0800082
+node_1566 -21.8094407 64.0811277
+node_1567 -21.8473719 64.0855916
+node_1568 -21.7963394 64.0940649
+node_1569 -21.8363823 64.0842625
+node_1570 -21.8094535 64.0823576
+node_1571 -21.8122715 64.0870521
+node_1572 -21.8252717 64.0873982
+node_1573 -21.8133396 64.0859774
+node_1574 -21.8337082 64.0837937
+node_1575 -21.8263134 64.087773
+node_1576 -21.8302767 64.0864037
+node_1577 -21.8291006 64.0839095
+node_1578 -21.838022 64.0813013
+node_1579 -21.8081704 64.0874617
+node_1580 -21.7978651 64.0877057
+node_1581 -21.8065819 64.0874746
+node_1582 -21.8023446 64.0885612
+node_1583 -21.8060219 64.0901727
+node_1584 -21.8191625 64.0851689
+node_1585 -21.8101427 64.0893812
+node_1586 -21.8108856 64.0817591
+node_1587 -21.8280304 64.0795732
+node_1588 -21.8121442 64.0930221
+node_1589 -21.8212776 64.0879117
+node_1590 -21.8469105 64.0787529
+node_1591 -21.8519539 64.0855804
+node_1592 -21.8441836 64.0796813
+node_1593 -21.7995427 64.0939046
+node_1594 -21.8036203 64.0955928
+node_1595 -21.8117914 64.0835662
+node_1596 -21.8406032 64.0800749
+node_1597 -21.8112794 64.0904427
+node_1598 -21.8357188 64.080793
+node_1599 -21.8094404 64.0828076
+node_1600 -21.8168244 64.0800028
+node_1601 -21.8382459 64.0905379
+node_1602 -21.8093627 64.090806
+node_1603 -21.8275922 64.0858361
+node_1604 -21.8428379 64.0856557
+node_1605 -21.8243684 64.0800392
+node_1606 -21.8168075 64.083621
+node_1607 -21.8042151 64.0893817
+node_1608 -21.8198711 64.0830137
+node_1609 -21.8154226 64.0933256
+node_1610 -21.805854 64.0809966
+node_1611 -21.8501757 64.0866444
+node_1612 -21.809675 64.0822883
+node_1613 -21.8496677 64.0849484
+node_1614 -21.8278135 64.0795289
+node_1615 -21.8391687 64.0803371
+node_1616 -21.840727 64.0808172
+node_1617 -21.8026873 64.0913395
+node_1618 -21.8034019 64.0911509
+node_1619 -21.7972518 64.0947395
+node_1620 -21.8135297 64.0885151
+node_1621 -21.7973047 64.0876327
+node_1622 -21.8228205 64.0866247
+node_1623 -21.8210338 64.0869333
+node_1624 -21.7999351 64.0927184
+node_1625 -21.8291143 64.0892327
+node_1626 -21.8371246 64.0806186
+node_1627 -21.8295013 64.0790054
+node_1628 -21.8116755 64.0845422
+node_1629 -21.8036908 64.0950395
+node_1630 -21.82709 64.0904271
+node_1631 -21.8064789 64.0931653
+node_1632 -21.8358012 64.0808554
+node_1633 -21.8147096 64.0884621
+node_1634 -21.8124958 64.0937479
+node_1635 -21.8330748 64.0882779
+node_1636 -21.8295894 64.0895579
+node_1637 -21.8101389 64.0841725
+node_1638 -21.8246631 64.0883957
+node_1639 -21.8030004 64.0868298
+node_1640 -21.8325559 64.0859517
+node_1641 -21.8140428 64.0807295
+node_1642 -21.8169523 64.0817674
+node_1643 -21.8292882 64.0893033
+node_1644 -21.8271637 64.0893573
+node_1645 -21.8104517 64.0884856
+node_1646 -21.8106696 64.080081
+node_1647 -21.81101 64.088857
+node_1648 -21.8011 64.089736
+node_1649 -21.846813 64.0784029
+node_1650 -21.8465642 64.0867961
+node_1651 -21.8124591 64.0829395
+node_1652 -21.8067078 64.0910656
+node_1653 -21.8076517 64.092459
+node_1654 -21.8361398 64.0876947
+node_1655 -21.8060358 64.0931127
+node_1656 -21.8260984 64.0897964
+node_1657 -21.8175847 64.0849102
+node_1658 -21.8289151 64.0874677
+node_1659 -21.807014 64.0815945
+node_1660 -21.8130448 64.0822945
+node_1661 -21.8081581 64.0883097
+node_1662 -21.8261789 64.0799913
+node_1663 -21.8103741 64.0914709
+node_1664 -21.8372008 64.0806805
+node_1665 -21.8520895 64.0854641
+node_1666 -21.8026898 64.0913399
+node_1667 -21.8087754 64.094586
+node_1668 -21.8210608 64.0864868
+node_1669 -21.813735 64.0864135
+node_1670 -21.8463502 64.0786503
+node_1671 -21.8449938 64.0847257
+node_1672 -21.8245713 64.0815011
+node_1673 -21.8157419 64.0823528
+node_1674 -21.8261942 64.088993
+node_1675 -21.8130671 64.088922
+node_1676 -21.8465775 64.0794151
+node_1677 -21.812128 64.0812733
+node_1678 -21.8402368 64.0849132
+node_1679 -21.8110146 64.080866
+node_1680 -21.8189766 64.0840769
+node_1681 -21.8447847 64.0798914
+node_1682 -21.8493606 64.0849897
+node_1683 -21.8011541 64.0921765
+node_1684 -21.8316799 64.085513
+node_1685 -21.809502 64.0862705
+node_1686 -21.8178813 64.0944867
+node_1687 -21.8409586 64.085669
+node_1688 -21.8572885 64.085611
+node_1689 -21.8139652 64.0873535
+node_1690 -21.8086771 64.0818748
+node_1691 -21.8276818 64.0874426
+node_1692 -21.8075384 64.0825058
+node_1693 -21.8016615 64.0961316
+node_1694 -21.8454515 64.0850157
+node_1695 -21.8459441 64.0861563
+node_1696 -21.8048268 64.0879163
+node_1697 -21.815393 64.0932106
+node_1698 -21.8367265 64.0855878
+node_1699 -21.8033951 64.0955129
+node_1700 -21.8082026 64.0939029
+node_1701 -21.8391289 64.0868983
+node_1702 -21.8077611 64.0910791
+node_1703 -21.8152631 64.0879051
+node_1704 -21.8069968 64.0873423
+node_1705 -21.8112117 64.0815768
+node_1706 -21.8135938 64.0886972
+node_1707 -21.8126955 64.0841693
+node_1708 -21.8111628 64.0872331
+node_1709 -21.8042567 64.0804228
+node_1710 -21.8301525 64.0825645
+node_1711 -21.8266764 64.0787307
+node_1712 -21.8235279 64.0888774
+node_1713 -21.8553407 64.0852911
+node_1714 -21.8083831 64.0826413
+node_1715 -21.7965703 64.0875359
+node_1716 -21.8353447 64.0851101
+node_1717 -21.8074247 64.0903703
+node_1718 -21.8469337 64.0788607
+node_1719 -21.842029 64.0849115
+node_1720 -21.8429027 64.0846755
+node_1721 -21.8488923 64.0860687
+node_1722 -21.8115683 64.0908912
+node_1723 -21.837207 64.0863291
+node_1724 -21.7991242 64.0925438
+node_1725 -21.8134887 64.0885671
+node_1726 -21.8408587 64.0844998
+node_1727 -21.850525 64.0861668
+node_1728 -21.8036604 64.0887062
+node_1729 -21.8412519 64.0799631
+node_1730 -21.8503474 64.0859371
+node_1731 -21.8008115 64.0898758
+node_1732 -21.8107656 64.0808073
+node_1733 -21.8389317 64.0864774
+node_1734 -21.8300461 64.0887409
+node_1735 -21.8270308 64.0859884
+node_1736 -21.8131944 64.0866537
+node_1737 -21.8202698 64.0871201
+node_1738 -21.8488657 64.0860944
+node_1739 -21.8201887 64.0867923
+node_1740 -21.8264488 64.0891018
+node_1741 -21.8429624 64.0845448
+node_1742 -21.8130506 64.0971626
+node_1743 -21.8445549 64.078928
+node_1744 -21.817476 64.0861947
+node_1745 -21.8479321 64.0866029
+node_1746 -21.800688 64.0881733
+node_1747 -21.7993107 64.0937135
+node_1748 -21.8110043 64.0798497
+node_1749 -21.8074861 64.0803383
+node_1750 -21.8008208 64.0930451
+node_1751 -21.8117161 64.090823
+node_1752 -21.8106045 64.0849012
+node_1753 -21.8120734 64.0963548
+node_1754 -21.8148191 64.0821949
+node_1755 -21.8197392 64.0826634
+node_1756 -21.8168295 64.0843493
+node_1757 -21.8066483 64.0814635
+node_1758 -21.8287297 64.0853725
+node_1759 -21.8014174 64.089617
+node_1760 -21.8443182 64.0798014
+node_1761 -21.802832 64.0924319
+node_1762 -21.8276332 64.0840352
+node_1763 -21.8466905 64.0861228
+node_1764 -21.8176317 64.0849927
+node_1765 -21.8044421 64.0897333
+node_1766 -21.808979 64.0893877
+node_1767 -21.844577 64.0799702
+node_1768 -21.8493093 64.0849492
+node_1769 -21.8247894 64.0872074
+node_1770 -21.8112681 64.0863908
+node_1771 -21.8046999 64.0805977
+node_1772 -21.8357739 64.0838114
+node_1773 -21.8503453 64.0864973
+node_1774 -21.8472805 64.085838
+node_1775 -21.8085349 64.0818262
+node_1776 -21.7969492 64.0946745
+node_1777 -21.8225028 64.0871755
+node_1778 -21.8104033 64.0914318
+node_1779 -21.8282846 64.0875088
+node_1780 -21.809193 64.0870075
+node_1781 -21.8266521 64.0880164
+node_1782 -21.8105016 64.0874683
+node_1783 -21.7981396 64.0951915
+node_1784 -21.8036066 64.095613
+node_1785 -21.826173 64.0878495
+node_1786 -21.8414692 64.0807799
+node_1787 -21.7993947 64.0916834
+node_1788 -21.8091439 64.0901801
+node_1789 -21.8192208 64.0860355
+node_1790 -21.8093163 64.0808936
+node_1791 -21.8159602 64.0799988
+node_1792 -21.8279629 64.0846888
+node_1793 -21.8091791 64.086994
+node_1794 -21.8346404 64.0809932
+node_1795 -21.794463 64.088702
+node_1796 -21.8364307 64.0845142
+node_1797 -21.8115668 64.0845847
+node_1798 -21.8088095 64.0877117
+node_1799 -21.8354827 64.0873495
+node_1800 -21.8299135 64.0884102
+node_1801 -21.840764 64.0863973
+node_1802 -21.8037295 64.0881118
+node_1803 -21.8102303 64.084139
+node_1804 -21.8093784 64.0936357
+node_1805 -21.8439957 64.0793015
+node_1806 -21.8366193 64.0840187
+node_1807 -21.8006562 64.0961268
+node_1808 -21.8158516 64.0822938
+node_1809 -21.8094315 64.0869662
+node_1810 -21.8392132 64.0803333
+node_1811 -21.8552377 64.086078
+node_1812 -21.8488295 64.0858538
+node_1813 -21.8124728 64.0869982
+node_1814 -21.8119244 64.0880699
+node_1815 -21.8441894 64.0796855
+node_1816 -21.848116 64.0865455
+node_1817 -21.8278493 64.0792388
+node_1818 -21.813277 64.0908025
+node_1819 -21.8108609 64.091187
+node_1820 -21.8164887 64.083083
+node_1821 -21.8119639 64.0964166
+node_1822 -21.8366413 64.0840324
+node_1823 -21.8086386 64.0871561
+node_1824 -21.80088 64.0946371
+node_1825 -21.8385495 64.0804581
+node_1826 -21.8454436 64.0785182
+node_1827 -21.8055022 64.090273
+node_1828 -21.8177376 64.083457
+node_1829 -21.8122903 64.0878861
+node_1830 -21.8200552 64.0859616
+node_1831 -21.8077649 64.0910842
+node_1832 -21.8292883 64.0801245
+node_1833 -21.7910139 64.095478
+node_1834 -21.8463023 64.0785966
+node_1835 -21.847021 64.0793395
+node_1836 -21.8394748 64.0810428
+node_1837 -21.8277243 64.0884737
+node_1838 -21.8140563 64.0829613
+node_1839 -21.7991398 64.091466
+node_1840 -21.8389378 64.0868881
+node_1841 -21.8064009 64.0875059
+node_1842 -21.8241184 64.0814842
+node_1843 -21.8269426 64.0872343
+node_1844 -21.8257773 64.0875787
+node_1845 -21.8093622 64.0805949
+node_1846 -21.8081465 64.0923261
+node_1847 -21.7980152 64.0917303
+node_1848 -21.7989033 64.0917181
+node_1849 -21.7929326 64.0942521
+node_1850 -21.834642 64.0809986
+node_1851 -21.7967517 64.0885996
+node_1852 -21.8130503 64.0968221
+node_1853 -21.83471 64.0869492
+node_1854 -21.7966517 64.0886033
+node_1855 -21.829223 64.0804899
+node_1856 -21.7978099 64.09225
+node_1857 -21.8031515 64.0911227
