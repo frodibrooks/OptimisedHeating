@@ -916,7 +916,7 @@ Generated from GeoPackage
  Junction-11035  	117.15332794189453	0.031219917293065877	                	;
  Junction-22245  	124.02750396728516	0.1508100811351613	                	;
  Junction-54579  	79.86666870117188	0           	                	;
- Junction-34013  	84.50016021728516	0           	                	;
+ 101             	84.50016021728516	0           	                	;
  Junction-23683  	92.23999786376953	0           	                	;
  Junction-34009  	96.99250030517578	0           	                	;
  Junction-471421 	104.63750457763672	0.10248880909675305	                	;
@@ -1090,7 +1090,7 @@ Generated from GeoPackage
  Junction-452401 	88.69999694824219	0           	                	;
  Junction-54516  	84.7266616821289	0           	                	;
  Junction-11321  	103.11500549316406	0.06315570279171116	                	;
- Junction-48615  	96.66789245605469	0           	                	;
+ 102             	96.66789245605469	0           	                	;
  Junction-33574  	105.20999908447266	0           	                	;
  Junction-33771  	116.45500183105469	0           	                	;
  Junction-474010 	104.95249938964844	0           	                	;
@@ -1378,7 +1378,7 @@ Generated from GeoPackage
  Junction-469693 	87.42333221435547	0.05269603209791679	                	;
  Junction-10266  	103.52000427246094	0           	                	;
  Junction-54448  	93.58333587646484	0.06430903876674521	                	;
- Junction-42536  	84.46204376220703	0           	                	;
+ 100             	84.46204376220703	0           	                	;
  Junction-23918  	78.93333435058594	0           	                	;
  Junction-476802 	103.26249694824219	0           	                	;
  Junction-62474  	101.16666412353516	0           	                	;
@@ -1865,8 +1865,8 @@ Generated from GeoPackage
 
 [RESERVOIRS]
 ;ID              	Head        	Pattern         
- 4               	90          	                	;
- 8               	100         	                	;
+ 4               	110         	                	;
+ 8               	110         	                	;
 
 [TANKS]
 ;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
@@ -1884,7 +1884,7 @@ Generated from GeoPackage
  Pipe-28942      	Junction-42523  	Junction-42525  	1.961417317390442	29.0        	0.18        	0           	Open  	;
  Pipe-27924      	Junction-9502   	Junction-9503   	31.41299819946289	133.0       	0.18        	0           	Open  	;
  Pipe-28788      	Junction-42343  	Junction-474623 	0.06815313547849655	83.0        	0.18        	0           	Open  	;
- Pipe-62614      	Junction-11349  	Junction-42536  	7.305604457855225	107.0999984741211	0.18        	0           	Open  	;
+ Pipe-62614      	Junction-11349  	100             	7.305604457855225	107.0999984741211	0.18        	0           	Open  	;
  Pipe-44290      	Junction-54507  	Junction-49235  	18.624496459960938	54.0        	0.18        	0           	Open  	;
  Pipe-28372      	Junction-41890  	Junction-33204  	10.941946983337402	22.0        	0.18        	0           	Open  	;
  Pipe-28650      	Junction-23281  	Junction-42194  	177.1703643798828	210.0       	0.18        	0           	Open  	;
@@ -2566,7 +2566,7 @@ Generated from GeoPackage
  Pipe-13148      	Junction-10120  	Junction-10270  	7.657596588134766	54.0        	0.18        	0           	Open  	;
  Pipe-13074      	Junction-22677  	Junction-10128  	30.346792221069336	54.0        	0.18        	0           	Open  	;
  Pipe-28274      	Junction-41796  	Junction-33194  	84.91986846923828	263.0       	0.18        	0           	Open  	;
- Pipe-51188      	Junction-48615  	16              	3.3210647106170654	313.0       	0.18        	0           	Open  	;
+ Pipe-51188      	102             	16              	3.3210647106170654	313.0       	0.18        	0           	Open  	;
  Pipe-13437      	Junction-23245  	Junction-10790  	12.517526626586914	83.0        	0.18        	0           	Open  	;
  Pipe-531399     	Junction-464122 	Junction-467698 	3.0759994983673096	36.0        	0.18        	0           	Open  	;
  Pipe-6105       	Junction-11313  	Junction-11314  	9.71634578704834	29.0        	0.18        	0           	Open  	;
@@ -3727,29 +3727,29 @@ Generated from GeoPackage
  7               	Junction-465496 	Junction-466030 	4.43        	20          	0.18        	0           	Open  	;
  8               	Junction-465496 	Junction-465497 	0.55        	20          	0.18        	0           	Open  	;
  9               	Junction-461074 	Junction-452725 	20.8        	25          	0.18        	0           	Open  	;
- 11              	18              	Junction-48615  	7.87        	300         	0.18        	0           	Open  	;
+ 11              	18              	102             	7.87        	300         	0.18        	0           	Open  	;
  12              	4               	5               	1217        	700         	0.18        	0           	Open  	;
  13              	5               	15              	3.32        	313         	0.18        	0           	Open  	;
  14              	6               	7               	0.82        	200         	0.18        	0           	Open  	;
  15              	7               	Junction-54042  	0.82        	200         	0.18        	0           	Open  	;
- 16              	6               	Junction-48615  	0.82        	250         	0.18        	0           	CV    	;
+ 16              	6               	102             	0.82        	250         	0.18        	0           	CV    	;
  18              	Junction-54579  	8               	1           	313         	0.18        	0           	Open  	;
- 19              	Junction-23704  	Junction-34013  	20.36       	250         	0.18        	0           	Open  	;
- 20              	Junction-34013  	9               	2.05        	150         	0.18        	0           	Closed	;
- 21              	9               	Junction-42536  	1.94        	350         	0.18        	0           	Open  	;
+ 19              	Junction-23704  	101             	20.36       	250         	0.18        	0           	Open  	;
+ 20              	101             	9               	2.05        	150         	0.18        	0           	Closed	;
+ 21              	9               	100             	1.94        	350         	0.18        	0           	Open  	;
  22              	Junction-42538  	Junction-62449  	8           	300         	0.18        	0           	Open  	;
  23              	Junction-62449  	11              	2.05        	300         	0.18        	0           	Open  	;
  24              	11              	Junction-62446  	5.02        	200         	0.18        	0           	Open  	;
  28              	11              	10              	3.1         	200         	0.18        	0           	Open  	;
  29              	Junction-62449  	Junction-62447  	3.1         	200         	0.4         	0           	Open  	;
- 30              	12              	Junction-42536  	3.06        	150         	0.18        	0           	CV    	;
+ 30              	12              	100             	3.06        	150         	0.18        	0           	CV    	;
  31              	13              	9               	3.06        	150         	0.18        	0           	CV    	;
- 32              	14              	Junction-34013  	3.05        	200         	0.18        	0           	CV    	;
+ 32              	14              	101             	3.05        	200         	0.18        	0           	CV    	;
  33              	15              	6               	1.55        	263         	100         	0           	Open  	;
  34              	Junction-57938  	16              	1           	200         	0.18        	0           	CV    	;
  35              	Junction-61113  	17              	1           	200         	0.18        	0           	CV    	;
  36              	18              	Junction-9869   	30.3        	300         	0.18        	0           	Open  	;
- 37              	Junction-42538  	Junction-34013  	1.83        	200         	0.4         	0           	CV    	;
+ 37              	Junction-42538  	101             	1.83        	200         	0.4         	0           	CV    	;
 
 [PUMPS]
 ;ID              	Node1           	Node2           	Parameters
@@ -3775,8 +3775,6 @@ Generated from GeoPackage
 ;Demand varies a bit
  1               	0.8         	0.8         	0.8         	0.7         	0.7         	0.8         
  1               	1           	1.2         	1.4         	1.2         	1           	1           
- 1               	1           	0.9         	0.8         	0.9         	1           	1.2         
- 1               	1.4         	1.2         	1           	0.8         	0.8         	0.8         
 ;stable
  2               	1           	1           	1           	0.8         	0.8         	0.8         
  2               	0.8         	0.8         	0.8         	0.8         	0.8         	0.8         
@@ -3786,34 +3784,45 @@ Generated from GeoPackage
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: PUMP: IC 125-100-400
+;PUMP: PUMP: PUMP: PUMP: IC 125-100-400
  1               	13.88       	60          
  1               	32.09       	58.25       
  1               	41.047      	56.86       
  1               	49.66       	54.41       
  1               	59.258      	50.58       
  1               	65.738      	45.69       
-;PUMP: PUMP: PUMP: IC 150-125-315
+;PUMP: PUMP: PUMP: PUMP: IC 150-125-315
  2               	64.197      	35.58       
  2               	68.825      	34.18       
  2               	74.38       	31.74       
  2               	80.86       	28.25       
-;PUMP: PUMP: PUMP: IC 150-125-400
+;PUMP: PUMP: PUMP: PUMP: IC 150-125-400
  3               	41.027      	61.39       
  3               	55.86       	58.95       
  3               	70.05       	54.06       
  3               	80.22       	48.48       
-;PUMP: 150_125_400 vol2 rjupna
+;PUMP: PUMP: 150_125_400 vol2 rjupna
  4               	63.9        	60          
-;PUMP: 125_100_400 vol2 vatns
+;PUMP: PUMP: 125_100_400 vol2 vatns
  5               	40.27       	45          
-;PUMP: 150_125_315 vol2 vatns
+;PUMP: PUMP: 150_125_315 vol2 vatns
  6               	47.22       	30          
 
 [CONTROLS]
+LINK 25 1.07 IF NODE 12 BELOW 72
+LINK 25 0.93 IF NODE 12 ABOVE 78
+LINK 26 1.07 IF NODE 13 BELOW 72
+LINK 26 0.93 IF NODE 13 ABOVE 78
+LINK 27 1.1 IF NODE 14 BELOW 52
+LINK 27 0.9 IF NODE 14 ABOVE 57
 
+LINK 17 1.15 IF NODE Junction-61113 BELOW 62
+LINK 17 0.85 IF NODE Junction-61113 ABOVE 69
+LINK 10 1.15 IF NODE Junction-57938 BELOW 62
+LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
 
 [RULES]
+
 
 
 [ENERGY]
@@ -3847,7 +3856,7 @@ Generated from GeoPackage
 ;Tank            	Model
 
 [TIMES]
- Duration           	0
+ Duration           	12:00
  Hydraulic Timestep 	1:00 
  Quality Timestep   	0:05 
  Pattern Timestep   	1:00 
@@ -3873,7 +3882,7 @@ Generated from GeoPackage
  MAXCHECK           	10
  DAMPLIMIT          	0
  Unbalanced         	Continue 10
- Pattern            	2
+ Pattern            	1
  Demand Multiplier  	1
  Emitter Exponent   	0.5
  Quality            	None mg/L
@@ -4795,7 +4804,7 @@ Junction-54447  	362956.999        	400611.840
 Junction-11035  	362915.612        	401654.060        
 Junction-22245  	361397.695        	401101.206        
 Junction-54579  	363322.839        	402213.369        
-Junction-34013  	363336.809        	402197.612        
+101             	363336.809        	402197.612        
 Junction-23683  	363301.043        	400437.349        
 Junction-34009  	363404.279        	401539.970        
 Junction-471421 	361188.128        	401320.938        
@@ -4969,7 +4978,7 @@ Junction-54379  	362784.097        	401206.762
 Junction-452401 	363484.221        	401694.905        
 Junction-54516  	363088.937        	400790.695        
 Junction-11321  	363262.718        	401516.719        
-Junction-48615  	361611.065        	401718.841        
+102             	361611.065        	401718.841        
 Junction-33574  	362819.404        	400596.290        
 Junction-33771  	363008.832        	401819.782        
 Junction-474010 	361615.248        	400612.355        
@@ -5257,7 +5266,7 @@ Junction-10142  	361981.381        	401519.113
 Junction-469693 	363066.741        	400758.110        
 Junction-10266  	362063.674        	400470.645        
 Junction-54448  	362974.550        	400719.201        
-Junction-42536  	363332.975        	402197.795        
+100             	363332.975        	402197.795        
 Junction-23918  	363628.855        	402099.163        
 Junction-476802 	361105.222        	400414.023        
 Junction-62474  	362913.792        	401292.328        
