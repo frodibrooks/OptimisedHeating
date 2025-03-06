@@ -3774,7 +3774,7 @@ Generated from GeoPackage
 ;ID              	Multipliers
 ;Demand varies a bit
  1               	0.8         	0.8         	0.8         	0.7         	0.7         	0.8         
- 1               	1           	1.2         	1.4         	1.2         	1           	1           
+ 1               	1           	1.1         	1.2         	1.1         	1           	1           
 ;stable
  2               	1           	1           	1           	0.8         	0.8         	0.8         
  2               	0.8         	0.8         	0.8         	0.8         	0.8         	0.8         
@@ -3784,28 +3784,28 @@ Generated from GeoPackage
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: PUMP: PUMP: IC 125-100-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
  1               	13.88       	60          
  1               	32.09       	58.25       
  1               	41.047      	56.86       
  1               	49.66       	54.41       
  1               	59.258      	50.58       
  1               	65.738      	45.69       
-;PUMP: PUMP: PUMP: PUMP: IC 150-125-315
+;PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
  2               	64.197      	35.58       
  2               	68.825      	34.18       
  2               	74.38       	31.74       
  2               	80.86       	28.25       
-;PUMP: PUMP: PUMP: PUMP: IC 150-125-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
  3               	41.027      	61.39       
  3               	55.86       	58.95       
  3               	70.05       	54.06       
  3               	80.22       	48.48       
-;PUMP: PUMP: 150_125_400 vol2 rjupna
+;PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
  4               	63.9        	60          
-;PUMP: PUMP: 125_100_400 vol2 vatns
+;PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
  5               	40.27       	45          
-;PUMP: PUMP: 150_125_315 vol2 vatns
+;PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
  6               	47.22       	30          
 
 [CONTROLS]
@@ -3821,7 +3821,9 @@ LINK 17 0.85 IF NODE Junction-61113 ABOVE 69
 LINK 10 1.15 IF NODE Junction-57938 BELOW 62
 LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
 
+
 [RULES]
+
 
 
 
@@ -3856,7 +3858,7 @@ LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
 ;Tank            	Model
 
 [TIMES]
- Duration           	12:00
+ Duration           	12:00 
  Hydraulic Timestep 	1:00 
  Quality Timestep   	0:05 
  Pattern Timestep   	1:00 
