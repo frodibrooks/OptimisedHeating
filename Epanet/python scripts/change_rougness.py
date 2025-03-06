@@ -33,4 +33,4 @@ def modify_roughness(inp_file, output_file, new_roughness=0.4):
     print(f"Updated roughness of all pipes to {new_roughness} in {output_file}")
 
 # Example usage
-modify_roughness("change_rougness_2_04.inp", "modified_network.inp", new_roughness=0.4)
+modify_roughness("Vatnsendi_epanet_pumpcurve_018.inp", "modified_network.inp", new_roughness=0.4)
