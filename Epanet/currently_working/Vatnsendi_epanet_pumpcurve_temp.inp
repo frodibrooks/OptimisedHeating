@@ -1865,8 +1865,8 @@ Generated from GeoPackage
 
 [RESERVOIRS]
 ;ID              	Head        	Pattern         
- 4               	110         	                	;
- 8               	110         	                	;
+ 4               	115         	                	;
+ 8               	115         	                	;
 
 [TANKS]
 ;ID              	Elevation   	InitLevel   	MinLevel    	MaxLevel    	Diameter    	MinVol      	VolCurve        	Overflow
@@ -3753,8 +3753,8 @@ Generated from GeoPackage
 
 [PUMPS]
 ;ID              	Node1           	Node2           	Parameters
- 10              	7               	Junction-57938  	HEAD 4	;
- 17              	Junction-54042  	Junction-61113  	HEAD 4	;
+ 10              	7               	Junction-57938  	HEAD 7	;
+ 17              	Junction-54042  	Junction-61113  	HEAD 7	;
  25              	Junction-62446  	12              	HEAD 5	;
  26              	10              	13              	HEAD 5	;
  27              	Junction-62447  	14              	HEAD 6	;
@@ -3781,48 +3781,48 @@ Generated from GeoPackage
 ;
  4               	1           	1           	1           	1           	1           	1           
  4               	1           
+;Demand multiplier til að passa við 2024/10/03
+ 3               	1.014319    	1.005077    	0.991214    	0.985882    	0.978950    	0.994946    
+ 3               	0.997612    	1.024272    	1.002464    	1.051287    	1.055020    	1.047910    
+ 3               	1.026049    	1.005432    	0.981794    	0.993880    	1.011831    	1.039379    
+ 3               	1.038668    	1.002589    	0.962954    	0.921010    	0.877110    
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
  1               	13.88       	60          
  1               	32.09       	58.25       
  1               	41.047      	56.86       
  1               	49.66       	54.41       
  1               	59.258      	50.58       
  1               	65.738      	45.69       
-;PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
  2               	64.197      	35.58       
  2               	68.825      	34.18       
  2               	74.38       	31.74       
  2               	80.86       	28.25       
-;PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
  3               	41.027      	61.39       
  3               	55.86       	58.95       
  3               	70.05       	54.06       
  3               	80.22       	48.48       
-;PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
+;PUMP: PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
  4               	63.9        	60          
-;PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
  5               	40.27       	45          
-;PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
  6               	47.22       	30          
+;PUMP: 
+ 7               	27.7        	61          
+ 7               	61.6        	54.8        
+ 7               	79.7        	46.4        
 
 [CONTROLS]
-LINK 25 1.07 IF NODE 12 BELOW 72
-LINK 25 0.93 IF NODE 12 ABOVE 78
-LINK 26 1.07 IF NODE 13 BELOW 72
-LINK 26 0.93 IF NODE 13 ABOVE 78
-LINK 27 1.1 IF NODE 14 BELOW 52
-LINK 27 0.9 IF NODE 14 ABOVE 57
-
-LINK 17 1.15 IF NODE Junction-61113 BELOW 62
-LINK 17 0.85 IF NODE Junction-61113 ABOVE 69
-LINK 10 1.15 IF NODE Junction-57938 BELOW 62
-LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
-
+LINK 27 1.15 IF NODE 14 BELOW 52
+LINK 27 0.85 IF NODE 14 ABOVE 56
 
 [RULES]
+
 
 
 
@@ -3858,8 +3858,8 @@ LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
 ;Tank            	Model
 
 [TIMES]
- Duration           	12:00 
- Hydraulic Timestep 	1:00 
+ Duration           	23
+ Hydraulic Timestep 	1:00
  Quality Timestep   	0:05 
  Pattern Timestep   	1:00 
  Pattern Start      	0:00 
@@ -3884,7 +3884,7 @@ LINK 10 0.85 IF NODE Junction-57938 ABOVE 69
  MAXCHECK           	10
  DAMPLIMIT          	0
  Unbalanced         	Continue 10
- Pattern            	1
+ Pattern            	3
  Demand Multiplier  	1
  Emitter Exponent   	0.5
  Quality            	None mg/L
