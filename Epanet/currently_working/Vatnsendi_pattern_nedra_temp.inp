@@ -3798,56 +3798,52 @@ Generated from GeoPackage
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
  1               	13.88       	60          
  1               	32.09       	58.25       
  1               	41.047      	56.86       
  1               	49.66       	54.41       
  1               	59.258      	50.58       
  1               	65.738      	45.69       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
  2               	64.197      	35.58       
  2               	68.825      	34.18       
  2               	74.38       	31.74       
  2               	80.86       	28.25       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
  3               	41.027      	61.39       
  3               	55.86       	58.95       
  3               	70.05       	54.06       
  3               	80.22       	48.48       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
  4               	63.9        	60          
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
  5               	40.27       	45          
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
  6               	47.22       	30          
-;PUMP: PUMP: PUMP: PUMP: PUMP: 
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 
  7               	27.7        	61          
  7               	61.6        	54.8        
  7               	79.7        	46.4        
-;PUMP: PUMP: PUMP: PUMP: PUMP: 125-100-400 vol3
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 125-100-400 vol3
  8               	22.3        	60          
  8               	43.5        	54          
  8               	54.4        	45          
-;PUMP: PUMP: PUMP: PUMP: PUMP: 150-125315
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150-125315
  9               	47.2        	30          
 
 [CONTROLS]
-
-LINK 27 1.15 IF NODE 14 BELOW 52
-LINK 27 0.85 IF NODE 14 ABOVE 56
+LINK 27 0.85 IF NODE 14 ABOVE 1
 
 
-LINK 17 1.15 IF NODE Junction-61113 BELOW 77.5
-LINK 17 0.85 IF NODE Junction-61113 ABOVE 81.5
-LINK 10 1.15 IF NODE Junction-57938 BELOW 77.5
-LINK 10 0.85 IF NODE Junction-57938 ABOVE 81.5
+LINK 25 1 IF NODE 14 ABOVE 1
+LINK 26 1 IF NODE 14 ABOVE 1
 
-
-
-
+LINK 17 1 IF NODE 14 ABOVE 1
+LINK 10 1 IF NODE 14 ABOVE 1
 
 [RULES]
+
 
 
 
