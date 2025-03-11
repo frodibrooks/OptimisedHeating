@@ -3798,38 +3798,38 @@ Generated from GeoPackage
 
 [CURVES]
 ;ID              	X-Value     	Y-Value
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 125-100-400
  1               	13.88       	60          
  1               	32.09       	58.25       
  1               	41.047      	56.86       
  1               	49.66       	54.41       
  1               	59.258      	50.58       
  1               	65.738      	45.69       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-315
  2               	64.197      	35.58       
  2               	68.825      	34.18       
  2               	74.38       	31.74       
  2               	80.86       	28.25       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: IC 150-125-400
  3               	41.027      	61.39       
  3               	55.86       	58.95       
  3               	70.05       	54.06       
  3               	80.22       	48.48       
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_400 vol2 rjupna
  4               	63.9        	60          
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 125_100_400 vol2 vatns
  5               	40.27       	45          
-;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
+;PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: PUMP: 150_125_315 vol2 vatns
  6               	47.22       	30          
-;PUMP: PUMP: PUMP: PUMP: 
+;PUMP: PUMP: PUMP: PUMP: PUMP: 
  7               	27.7        	61          
  7               	61.6        	54.8        
  7               	79.7        	46.4        
-;PUMP: PUMP: PUMP: PUMP: 125-100-400 vol3
+;PUMP: PUMP: PUMP: PUMP: PUMP: 125-100-400 vol3
  8               	22.3        	60          
  8               	43.5        	54          
  8               	54.4        	45          
-;PUMP: PUMP: PUMP: PUMP: 150-125315
+;PUMP: PUMP: PUMP: PUMP: PUMP: 150-125315
  9               	47.2        	30          
 
 [CONTROLS]
@@ -3846,7 +3846,9 @@ LINK 10 0.85 IF NODE Junction-57938 ABOVE 81.5
 
 
 
+
 [RULES]
+
 
 
 
@@ -3913,7 +3915,7 @@ LINK 10 0.85 IF NODE Junction-57938 ABOVE 81.5
  DAMPLIMIT          	0
  Unbalanced         	Continue 10
  Pattern            	6
- Demand Multiplier  	1
+ Demand Multiplier  	1.03
  Emitter Exponent   	0.5
  Quality            	None mg/L
  Diffusivity        	1
