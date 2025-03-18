@@ -11,8 +11,8 @@ class wds():
             speed_increment         = 0.05,
             episode_len             = 10,
             pump_groups             = [['17', '10', '25', '26','27']],
-            total_demand_lo         = 0.3,
-            total_demand_hi         = 1.1,
+            total_demand_lo         = 0.7,
+            total_demand_hi         = 1.3,
             reset_orig_pump_speeds  = False,
             reset_orig_demands      = False,
             seed                    = None 
@@ -70,13 +70,13 @@ class wds():
         # Reward control
         self.dimensions     = len(self.pumpGroups)
         self.episodeLength  = episode_len
-        self.headLimitLo    = 37
+        self.headLimitLo    = 35
         self.headLimitHi    = 120
         self.maxHead        = np.max(peak_heads)
-        self.rewScale       = [5,8,3] # eff, head, pump
+        self.rewScale       = [5,8,3] # eff, head, pump skoða þetta seinna 
         self.baseReward     = +1
         self.bumpPenalty    = -1
-        self.distanceRange  = .5
+        self.distanceRange  = 0.5
         self.wrongMovePenalty   = -1
         self.lazinessPenalty    = -1
         # ----- ----- ----- ----- -----
@@ -93,8 +93,8 @@ class wds():
         self.totalDemandLo  = total_demand_lo
         self.totalDemandHi  = total_demand_hi
         self.speedIncrement = speed_increment
-        self.speedLimitLo   = .7
-        self.speedLimitHi   = 1.2
+        self.speedLimitLo   = 0.7
+        self.speedLimitHi   = 1.3
         self.validSpeeds   = np.arange(
                                 self.speedLimitLo,
                                 self.speedLimitHi+.001,
@@ -115,6 +115,85 @@ class wds():
                                     high    = +1,
                                     shape   = (len(self.wds.junctions)+len(self.pumpGroups),),
                                     dtype   = np.float32)
+
+
+
+
+        def step(self, action, training=True):
+            "Reward computed from the euclidean distance between the speed of pumps and the optimized speed"
+            self.step       += 1
+            self.done       = (self.step == self.self.episodeLength) # becomes true when have stepped the number of episodes
+            group_id        = action // 2
+            command         = action % 2
+            if training: # training duh
+                if group_id != self.dimensions:
+                    self.n_siesta = 0
+                    first_pump_in_grp = self.wds.pumps[self.pumpGroups[group_id][0]]
+                    if command == 0:
+                        if first_pump_in_grp.speed < self.speedLimitHi:
+                            for pump in self.pumpGroups[group_id]:
+                                self.wds.pumps[pump].speed += self.speedIncrement
+                            self.update_pump_speeds()
+                            distance = np.linalg.norm(self.optimized_speeds - self.pump_speeds)
+                            if distance < self.previous_distance:  # reward for getting closer to the optimized speed
+                                reward = distance * self.baseReward / self.distanceRange / self.maxReward
+                            else: 
+                                reward = self.wrongMovePenalty
+                            self.previous_distance = distance
+                        else:
+                            self.n_bumb += 1
+                            reward = self.bumpPenalty
+                    else:
+                        if first_pump_in_grp.speed > self.speedLimitLo:
+                            for pump in self.pumpGroups[group_id]:
+                                self.wds.pumps[pump].speed -= self.speedIncrement
+                            self.update_pump_speeds()
+                            distance = np.linag.norm(self.optimized_speeds - self.pump_speeds)
+                            if distance < self.previous_distance:  # reward for getting closer to the optimized speed
+                                reward = distance * self.baseReward / self.distanceRange / self.maxReward
+                            else:
+                                reward = self.wrongMovePenalty
+                            self.previous_distance = distance
+                        else:
+                            self.n_bumb += 1
+                            reward = self.bumpPenalty
+                else:
+                    self.n_siesta += 1
+                    value = self.get_state_value()
+                    if self.n_siesta == 3:
+                        self.done = True
+                        if value/self.optimized_value > 0.98:
+                            reward = 5/self.maxReward
+                        else:
+                            reward = self.lazinessPenalty
+                    else:
+                        if value/self.optimized_value > 0.98:
+                            reward = self.n_siesta * self.baseReward
+                        else:
+                            reward = self.lazinessPenalty
+                self.wds.solve()
+            else: # Not training, using 
+                if group_id != self.dimensions:
+                    self.n_siestas = 0
+                    first_pump_in_grp = self.wds.pumps[self.pumpGroups[group_id][0]]
+                    if command == 0:
+                        if first_pump_in_grp.speed < self.speedLimitHi:
+                            for pump in self.pumpGroups[group_id]:
+                                self.wds.pumps[pump].speed += self.speedIncrement   
+
+                        else:
+                            self.n_bump += 1
+                    
+                    else:
+                        if first_pump_in_grp.speed > self.speedLimitLo:
+                            for pump in self.pumpGroups[group_id]:
+                                self.wds.pumps[pump].speed -= self.speedIncrement
+                        else:
+                            self.n_bum
+
+
+
+
 
 
 
