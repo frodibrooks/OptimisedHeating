@@ -15,8 +15,7 @@ class wds():
             total_demand_hi         = 1.3,
             reset_orig_pump_speeds  = False,
             reset_orig_demands      = False,
-            seed                    = None 
-             ):
+            seed                    = None ):
         
 
         # Þetta er seed fyrir random draslið, gefur manni valkost að fá sömu niðutstöður, ef þú setur sama seed, td 8 færðu það sama
@@ -102,11 +101,7 @@ class wds():
                                 dtype=np.float32)
         self.resetOrigPumpSpeeds= reset_orig_pump_speeds
         self.resetOrigDemands   = reset_orig_demands
-        self.optimized_speeds   = np.empty(shape=(len(self.pumpGroups)),
-                                    dtype=np.float32)
-        self.optimized_speeds.fill(np.nan)
-        self.optimized_value    = np.nan
-        self.previous_distance  = np.nan
+     
         # initialization of {observation, steps, done}
         observation = self.reset(training=False)
         self.action_space   = gym.spaces.Discrete(2*self.dimensions+1)
@@ -200,6 +195,7 @@ class wds():
             return obersvation, reward, self.done, {}
 
             def reset(self, training=True):
+                
                 if training:
                     if self.resetOrigDemands:
                         self.restore_original_demands()
@@ -209,6 +205,36 @@ class wds():
 
                     if self.resetOrigPumpSpeeds:
                         initial_speed = 1
+                        for pump in self.wds.pumps:
+                            pump.speed = initial_speed
+                    else:
+                        for pump_grp in self.pumpGroups:
+                            initial_speed = np.random.choice(self.validSpeeds)
+                            for pump in pump_grp:
+                                self.wds.pumps[pump].speeds = initial_speed
+                                # ekki training
+                else:
+                    if self.resetOrigPumpSpeeds:
+                        initial_speed = 1
+                        for pump in self.wds.pumps:
+                            pump.speed = initial_speed
+                    else:
+                        for pump_grp in self.pumpGroups:
+                            initial_speed = np.random.choice(self.validSpeeds)
+                            for pump in pump_grp:
+                                self.wds.pumps[pump].speed = initial_speed
+                self.wds.solve()
+                obersvation = self.get_observation()
+                self.done = False
+                self.step = 0
+                self.n_bump = 0
+                self.n_siesta = 0
+                return obersvation
+            
+            def seed(self, seed=None):
+                "collecting seeds"
+                return [seed]
+                        
                         
         
 
