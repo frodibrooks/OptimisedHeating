@@ -173,7 +173,7 @@ class wds():
                             reward = self.lazinessPenalty
                 self.wds.solve()
             else: # Not training, using 
-                if group_id != self.dimensions:
+                if group_id != self.dimensions:  # adjusting pump speed
                     self.n_siestas = 0
                     first_pump_in_grp = self.wds.pumps[self.pumpGroups[group_id][0]]
                     if command == 0:
@@ -189,7 +189,31 @@ class wds():
                             for pump in self.pumpGroups[group_id]:
                                 self.wds.pumps[pump].speed -= self.speedIncrement
                         else:
-                            self.n_bum
+                            self.n_bump += 1
+                else:
+                    self.n_siesta += 1
+                    if self.n_siesta == 3:
+                        self.done = True
+                self.wds.solve()
+                reward = self.get_state_value()
+            obersvation = self.get_observation()
+            return obersvation, reward, self.done, {}
+
+            def reset(self, training=True):
+                if training:
+                    if self.resetOrigDemands:
+                        self.restore_original_demands()
+                    else:
+                        self.randomize_demands()
+                    self.optimize_state()
+
+                    if self.resetOrigPumpSpeeds:
+                        initial_speed = 1
+                        
+        
+
+    
+
 
 
 
