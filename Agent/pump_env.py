@@ -366,7 +366,7 @@ class wds():
             
             return eff_ratio, valid_heads_ratio
            
-        def get_state_value(self):
+        def get_state_value(self):   # Þetta er reward systemið
             self.calculate_pump_efficencies()
             pump_ok = (self.pumpEffs < 1).all() and (self.pumpEffs > 0).all()
             if pump_ok:
@@ -383,4 +383,36 @@ class wds():
                             self.rewScale[1] * valid_heads_ratio
                             #self.rewScale[2] * total_demand / self.sumOfDemands
                             )
-                
+
+
+            else:
+                reward = 0
+            return reward
+        
+
+        def get_state_value_to_opti(self,pump_speeds):
+            np.clip(a = pump_speeds,
+                    a_min = self.speedLimitLo,
+                    a_max = self.speedLimitHi,
+                    out = pump_speeds)
+            for group_id, pump_group in enumerate(self.pumpGroups):
+                for pump in pump_group:
+                    self.wds.pumps[pump].speed = pump_speeds[group_id]
+            self.wds.solve()
+            return self.get_state_value()
+        
+        def reward_to_scipy(self, pump_speeds):
+            return -self.get_state_value_to_opti(pump_speeds)  # öll 3 tengd
+        
+        def reward_to_deap(self, pump_speeds):
+            return (self.get_state_value_to_opti(np.asarray(pump_speeds)))
+        
+        def update_pump_speeds(self):
+            for i, pump_group in enumerate(self.pumpGroups):
+                self.pump_speeds[i] = self.wds.pumps[pump_group[0]].speed
+                return self.pump_speeds
+            
+        def get_pump_speeds(self):
+            self.update_pump_speeds()
+            return self.pump_speeds()
+        
