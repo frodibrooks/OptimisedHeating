@@ -4,6 +4,7 @@ import scipy.stats as stats
 from scipy.optimize import minimize
 import gym.spaces 
 from epynet import Network
+from opti_algorithms import nm
 
 class wds():
     def __init__(self,
@@ -40,6 +41,7 @@ class wds():
                                             nomHCurvePtsDict,
                                             degree = 2,
                                             encapulated = True)
+        self.nomECurvePoliDict  = self.fit_polynomials(nomECurvePtsDict, degree = 4, encapsulated = True)
 
         self.sumOfDemands       = sum(
             [demand for demand in self.wds.junctions.basedemand])
@@ -101,7 +103,11 @@ class wds():
                                 dtype=np.float32)
         self.resetOrigPumpSpeeds= reset_orig_pump_speeds
         self.resetOrigDemands   = reset_orig_demands
-     
+        self.optimized_speeds   = np.empty(shape=(len(self.pumpGroups)),
+                                    dtype=np.float32)
+        self.optimized_speeds.fill(np.nan)
+        self.optimized_value    = np.nan
+        self.previous_distance  = np.nan
         # initialization of {observation, steps, done}
         observation = self.reset(training=False)
         self.action_space   = gym.spaces.Discrete(2*self.dimensions+1)
@@ -194,76 +200,187 @@ class wds():
             obersvation = self.get_observation()
             return obersvation, reward, self.done, {}
 
-            def reset(self, training=True):
-                
-                if training:
-                    if self.resetOrigDemands:
-                        self.restore_original_demands()
-                    else:
-                        self.randomize_demands()
-                    self.optimize_state()
-
-                    if self.resetOrigPumpSpeeds:
-                        initial_speed = 1
-                        for pump in self.wds.pumps:
-                            pump.speed = initial_speed
-                    else:
-                        for pump_grp in self.pumpGroups:
-                            initial_speed = np.random.choice(self.validSpeeds)
-                            for pump in pump_grp:
-                                self.wds.pumps[pump].speeds = initial_speed
-                                # ekki training
+        def reset(self, training=True):
+            if training:
+                if self.resetOrigDemands:
+                    self.restore_original_demands()
                 else:
-                    if self.resetOrigPumpSpeeds:
-                        initial_speed = 1
-                        for pump in self.wds.pumps:
-                            pump.speed = initial_speed
-                    else:
-                        for pump_grp in self.pumpGroups:
-                            initial_speed = np.random.choice(self.validSpeeds)
-                            for pump in pump_grp:
-                                self.wds.pumps[pump].speed = initial_speed
-                self.wds.solve()
-                obersvation = self.get_observation()
-                self.done = False
-                self.step = 0
-                self.n_bump = 0
-                self.n_siesta = 0
-                return obersvation
-            
-            def seed(self, seed=None):
-                "collecting seeds"
-                return [seed]
-                        
-                        
+                    self.randomize_demands()
+                self.optimize_state()
+
+                if self.resetOrigPumpSpeeds:
+                    initial_speed = 1
+                    for pump in self.wds.pumps:
+                        pump.speed = initial_speed
+                else:
+                    for pump_grp in self.pumpGroups:
+                        initial_speed = np.random.choice(self.validSpeeds)
+                        for pump in pump_grp:
+                            self.wds.pumps[pump].speeds = initial_speed
+                            # ekki training
+            else:
+                if self.resetOrigPumpSpeeds:
+                    initial_speed = 1
+                    for pump in self.wds.pumps:
+                        pump.speed = initial_speed
+                else:
+                    for pump_grp in self.pumpGroups:
+                        initial_speed = np.random.choice(self.validSpeeds)
+                        for pump in pump_grp:
+                            self.wds.pumps[pump].speed = initial_speed
+            self.wds.solve()
+            obersvation = self.get_observation()
+            self.done = False
+            self.step = 0
+            self.n_bump = 0
+            self.n_siesta = 0
+            return obersvation
         
+        def seed(self, seed=None):
+            "collecting seeds"
+            return [seed]
+                        
+        def optimize_state(self):
+            "Optimizing the state of the system"
+            speeds, target_val, _ = nm.minimize(
+                self.reward_to_scipy, self.dimensions)
+            self.optimized_speeds = speeds
+            self.optimized_value = -target_val
 
-    
+        def optimized_state_with_one_shit(self):
+            pass
+            
 
+        def fit_polynomials(self, pts_dict, degree, encapsulated = False):
+            polynomials = dict()
+            if encapsulated:
+                for curve in pts_dict:
+                    polynomials[curve] = np.poly1d(np.polyfit(
 
+                        pts_dict[curve][:,0], pts_dict[curve][:,1],degree))
+            else:
+                for curve in pts_dict:
+                    polynomials[curve] = np.polyfit(
+                        pts_dict[curve][:,0], pts_dict[curve][:,1], degree)
+            return polynomials
+        
+        def get_performance_curve_points(self):
+            "sækir H(Q) og E(Q)"
+            head_curves = dict()
+            eff_curves = dict()
 
+            for curve in self.wds.curves:
+                if curve.uid[0] == "H":
+                    head_curves[curve.uid[1:]] = np.empty([len(curve.values), 2],dtype=np.float32)
+                    for i, op_pnt in enumerate(curve.values):
+                        head_curves[curve.uid[1:]][i,0] = op_pnt[0]
+                        head_curves[curve.uid[1:]][i,1] = op_pnt[1]
+            for curve in self.wds.curves:
+                if curve.uid[0] == "E":
+                    eff_curves[curve.uid[1:]] = np.empty([len(curve.values), 2],dtype=np.float32)
+                    for i, op_pnt in enumerate(curve.values):
+                        eff_curves[curve.uid[1:]][i,0] = op_pnt[0]
+                        eff_curves[curve.uid[1:]][i,1] = op_pnt[1]
+            
+                # Checking consistency
+            for head_key in head_curves.keys():
+                if all(head_key != eff_key for eff_key in eff_curves.keys()):
+                    print('\nInconsistency in H(Q) and P(Q) curves.\n')
+                    raise IndexError
+            return head_curves, eff_curves
+        
+        def get_junction_heads(self):
+            junc_heads = np.empty(
+                shape = (len(self.wds.junctions),),
+                dtype=np.float32)
+            for junc_id, junction in enumerate(self.wds.junctions):
+                junc_heads[junc_id] = junction.head
+            return junc_heads
+        
+        def get_observation(self):
+            head = (2*self.get_junction_heads() / self.maxHead) - 1
+            self.update_pump_speeds()
+            speeds = self.pump_speeds/self.speedLimitHi
+            return np.concatenate((head, self.pump_speeds))
 
+        def restore_orignal_demands(self):
+            for junction in self.wds.junctions:
+                junction.basedemand = self.demandDict[junction.uid]
 
+        def build_truncnorm_randomizer(self, lo, hi, mu, sigma):
+            randomizer = stats.truncnorm((lo-mu)/sigma, (hi-mu)/sigma, loc=mu, scale=sigma)
+            return randomizer
 
+        def randomize_demands(self):
+            target_sum_of_demands = self.sumOfDemands * (self.totalDemandLo + 
+                        np.random.rand()*(self.totalDemandHi-self.totalDemandLo))
+            sum_of_random_demands = 0
+            if self.seedNum:
+                for junction in self.wds.junctions:
+                    junction.basedemand = (self.demandDict[junction.uid] * 
+                        self.demandRandomizer.rvs(random_state=self.seedNum*
+                                int(np.abs(np.floor(junction.coordinates[0])))))
 
+                    sum_of_random_demands += junction.basedemand
+            else:
+                for junction in self.wds.junctions:
+                    junction.basedemand = (self.demandDict[junction.uid] * 
+                        self.demandRandomizer.rvs())
+                    sum_of_random_demands += junction.basedemand
+            for junction in self.wds.junctions:
+                junction.basedemand *= target_sum_of_demands / sum_of_random_demands        #erum að skala
 
-
-
+        def calculate_pump_efficencies(self):
+            for i, group in enumerate(self.pumpGroups):
+                pump = self.wds.pumps[group[0]]
+                curve_id = pump.curve.uid[1:]
+                pump_head = pump.downstream_head - pump.upstream_node.head
+                eff_poli = self.nomEHCurvePoliDict[curve_id]
+                self.pumpEffs[i] = eff_poli(pump.flow/pump.speed)
 
 
         def build_demand_dict(self):
-            pass
-            return
+            demand_dict = dict()
+            for junction in self.wds.junctions:
+                demand_dict[junction.uid] = junction.basedemand
+            return demand_dict
+        
+        def get_state_value_seperated(self):
+            self.calculate_pump_efficencies()
+            pump_ok = (self.pumpEffs < 1).all() and (self.pumpEffs > 0).all()
+            if pump_ok :
+                heads = np.array([head for head in self.wds.junctions.head])
+                invalid_heads_count = (np.count_nonzero(heads < self.headLimitLo) + np.count_nonzero(heads > self.headLimitHi))
+                valid_heads_ratio = 1 - (invalid_heads_count / len(heads))
 
-        def get_performance_curve_points(self):
-            pass
-            return
 
-        def fit_polynomials(self):
-            pass
+                total_demand = sum(
+                    junction.basedemand for junction in self.wds.junctions)
 
-        def build_truncnorm_randomizer(self):
-            pass
-                                    
-                                    
-                            
+                total_efficency = np.prod(self.pumpEffs)  # reiknar efficeny í sequence
+
+                eff_ratio = total_efficency / self.peakTotEff
+            else:
+                eff_ratio = 0
+                valid_heads_ratio = 0
+            
+            return eff_ratio, valid_heads_ratio
+           
+        def get_state_value(self):
+            self.calculate_pump_efficencies()
+            pump_ok = (self.pumpEffs < 1).all() and (self.pumpEffs > 0).all()
+            if pump_ok:
+                heads = np.array([head for head in self.wds.junctions.head])
+                invalid_heads_count = (np.count_nonzero(heads < self.headLimitLo) + np.count_nonzero(heads > self.headLimitHi))
+                valid_heads_ratio = 1 - (invalid_heads_count / len(heads))
+
+                total_demand = sum(
+                    junction.basedemand for junction in self.wds.junctions)
+
+                total_efficency = np.prod(self.pumpEffs)  # reiknar efficeny í sequence
+
+                reward = (self.rewScale[0] * total_efficency +
+                            self.rewScale[1] * valid_heads_ratio
+                            #self.rewScale[2] * total_demand / self.sumOfDemands
+                            )
+                
