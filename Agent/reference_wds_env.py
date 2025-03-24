@@ -5,15 +5,15 @@ import scipy.stats as stats
 from scipy.optimize import minimize
 import gym.spaces
 from epynet import Network
-from opti_algorithms import nm, rs
+from opti_algorithms import nm
 
 class wds():
     """Gym-like environment for water distribution systems."""
     def __init__(self,
-            wds_name        = 'anytown_master',
+            wds_name        = 'Vatnsendi',
             speed_increment = .05,
             episode_len     = 10,
-            pump_groups     = [['78', '79']],
+            pump_groups     = [['17', '10', '25', '26','27']],
             total_demand_lo = .3,
             total_demand_hi = 1.1,
             reset_orig_pump_speeds  = False,
@@ -27,7 +27,7 @@ class wds():
             np.random.seed()
 
         pathToRoot  = os.path.dirname(os.path.realpath(__file__))
-        pathToWDS   = os.path.join(pathToRoot, 'water_networks', wds_name+'.inp')
+        pathToWDS   = os.path.join(pathToRoot, 'water_network', wds_name+'.inp')
 
         self.wds        = Network(pathToWDS)
         self.demandDict = self.build_demand_dict()
@@ -378,9 +378,9 @@ class wds():
 
             total_demand    = sum(
                 [junction.basedemand for junction in self.wds.junctions])
-            total_tank_flow = sum(
-                [tank.inflow+tank.outflow for tank in self.wds.tanks])
-            demand_to_total = total_demand / (total_demand+total_tank_flow)
+            # total_tank_flow = sum(
+            #     [tank.inflow+tank.outflow for tank in self.wds.tanks])
+            # demand_to_total = total_demand / (total_demand+total_tank_flow)
 
             total_efficiency    = np.prod(self.pumpEffs)
             eff_ratio           = total_efficiency / self.peakTotEff
@@ -388,7 +388,7 @@ class wds():
             eff_ratio           = 0
             valid_heads_ratio   = 0
             demand_to_total     = 0
-        return eff_ratio, valid_heads_ratio, demand_to_total
+        return eff_ratio, valid_heads_ratio
 
     def get_state_value(self):
         self.calculate_pump_efficiencies()
