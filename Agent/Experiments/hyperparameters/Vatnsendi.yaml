@@ -1,0 +1,24 @@
+env:
+    waterNet        : Vatnsendi
+    speedIncrement  : .05
+    episodeLen      : 100
+    pumpGroups      : [['17','10'],['25','26','27']]
+    totalDemandLo   : 0.3
+    totalDemandHi   : 1.3
+    resetOrigDemands    : False
+    resetOrigPumpSpeeds : False
+
+model:
+    layers  : [256, 128, 12]
+    restore : None
+
+evaluation:
+    dbName      : dtown_rnd
+
+training:
+    initLrnRate     : .0001
+    totalSteps      : 1000000
+    gamma           : .9
+    batchSize       : 64
+    learningStarts  : 10000
+    bufferSize      : 350000
