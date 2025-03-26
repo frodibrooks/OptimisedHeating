@@ -1,9 +1,9 @@
 env:
-    waterNet        : Vatnsendi
+    waterNet        : Vatnsendi_dummy_ecurves
     speedIncrement  : .05
     episodeLen      : 100
     pumpGroups      : [['17','10'],['25','26','27']]
-    totalDemandLo   : 0.3
+    totalDemandLo   : 0.8
     totalDemandHi   : 1.3
     resetOrigDemands    : False
     resetOrigPumpSpeeds : False
@@ -13,7 +13,7 @@ model:
     restore : None
 
 evaluation:
-    dbName      : dtown_rnd
+    dbName      : Vatnsendi_rnd
 
 training:
     initLrnRate     : .0001

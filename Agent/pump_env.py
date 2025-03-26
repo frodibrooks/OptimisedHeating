@@ -8,7 +8,7 @@ from opti_algorithms import nm
 
 class wds():
     def __init__(self,
-            wds_name                = "Vatnsendi",
+            wds_name                = "Vatnsendi_dummy_ecurves",
             speed_increment         = 0.05,
             episode_len             = 10,
             pump_groups             = [['17', '10', '25', '26','27']],
