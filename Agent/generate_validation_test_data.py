@@ -15,7 +15,7 @@ from deap import tools
 from pump_env import wds
 
 parser  = argparse.ArgumentParser()
-parser.add_argument('--params', default='anytownMaster', type=str, help="Name of the YAML file.")
+parser.add_argument('--params', default='Vatnsendi', type=str, help="Name of the YAML file.")
 parser.add_argument('--nscenes', default=100, type=int, help="Number of the scenes to generate.")
 parser.add_argument('--seed', default=None, type=int, help="Random seed for the optimization methods.")
 parser.add_argument('--dbname', default=None, type=str, help="Name of the generated database.")
@@ -25,7 +25,7 @@ args    = parser.parse_args()
 pathToRoot      = os.path.dirname(os.path.realpath(__file__))
 pathToParams    = os.path.join(
                     pathToRoot,
-                    'experiments',
+                    'Experiments',
                     'hyperparameters',
                     args.params+'.yaml')
 with open(pathToParams, 'r') as fin:
@@ -38,7 +38,7 @@ if args.dbname:
     db_name = args.dbname
 else:
     db_name     = test_db_name+'_db'
-pathToDB    = os.path.join(pathToRoot, 'experiments', db_name+'.h5')
+pathToDB    = os.path.join(pathToRoot, 'Experiments', db_name+'.h5')
 n_scenes    = args.nscenes
 seed        = args.seed
 n_proc      = args.nproc
@@ -56,7 +56,7 @@ else:
     verbosity   = 1
 
 env = wds(
-        wds_name        = hparams['env']['waterNet']+'_master',
+        wds_name        = hparams['env']['waterNet'],
         speed_increment = hparams['env']['speedIncrement'],
         episode_len     = hparams['env']['episodeLen'],
         pump_groups     = hparams['env']['pumpGroups'],

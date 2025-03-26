@@ -348,7 +348,7 @@ class wds():
         for i, group in enumerate(self.pumpGroups):
             pump = self.wds.pumps[group[0]]
             curve_id = pump.curve.uid[1:]
-            pump_head = pump.downstream_head - pump.upstream_node.head
+            pump_head   = pump.downstream_node.head - pump.upstream_node.head
             eff_poli = self.nomEHCurvePoliDict[curve_id]
             self.pumpEffs[i] = eff_poli(pump.flow/pump.speed)
 
