@@ -398,7 +398,6 @@ class wds():
                         #self.rewScale[2] * total_demand / self.sumOfDemands
                         )
 
-
         else:
             reward = 0
         return reward

@@ -29,7 +29,7 @@ pathToHistory   = os.path.join(pathToExp, 'history')
 pathToParams    = os.path.join(pathToExp, 'hyperparameters', args.params+'.yaml')
 with open(pathToParams, 'r') as fin:
     hparams = yaml.load(fin, Loader=yaml.Loader)
-pathToSceneDB   = os.path.join(pathToExp, hparams['evaluation']['dbName']+'_db.h5')
+pathToSceneDB   = os.path.join(pathToExp, hparams['evaluation']['dbName']+'_db.h5') # finnur ekki þennan file
 history_files   = [f for f in glob.glob(os.path.join(pathToHistory, '*.h5'))]
 runId   = 1
 while os.path.join(pathToHistory, args.params+str(runId)+'_vld.h5') in history_files:
