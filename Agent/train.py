@@ -73,7 +73,7 @@ def init_trn_history():
 
 def init_vldtst_history(scenes, tst=False):
     hist_header = [
-        'lastReward', 'bestReward', 'worstReward',
+        'lastReward', 'bestReward', 'worstReward'
         'nFail', 'nBump', 'nSiesta', 'nStep',
         'explorationFactor']
     for i in range(env.dimensions):
@@ -206,6 +206,7 @@ lr_schedule = PiecewiseSchedule(([
                 (1*totalSteps // 2, initLrnRate * .1),
                 (3*totalSteps // 4, initLrnRate * .01)
 ]))
+# actual training
 model   = DQN(
     policy                  = CustomPolicy,
     env                     = env,
