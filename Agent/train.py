@@ -12,7 +12,7 @@ try:
     from pump_env import wds
 
 
-    print("successfully imported all libraries")
+    print("successfully imported all libraries(mac and windows)")
 except ImportError as e:
     print("Import Error: ", e)
 
@@ -238,3 +238,6 @@ if args.tstsplit:
     pathToTstHistoryDB  = os.path.join(pathToHistory, runId+'_tst.h5')
     tst_history.to_hdf(pathToTstHistoryDB, key=runId, mode='w')
     play_scenes(tst_scenes, tst_history, pathToTstHistoryDB, tst=True)
+
+
+print("ran entire training code")
