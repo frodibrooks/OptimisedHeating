@@ -1,16 +1,13 @@
 import os
 import numpy as np
-import scipy.stats as stats
-import gym
+import random
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from collections import deque
-import random
+import gym
 from epynet import Network
 import gym.spaces
-from opti_algorithms import nm
-from scipy.optimize import minimize
 
 class wds():
     def __init__(self,
@@ -56,13 +53,18 @@ class wds():
         return self.pump_speeds
 
     def step(self, action):
-        # Update pump speeds based on the action
-        self.pump_speeds += action * self.speed_increment
+        # Define the action effects: 0 is decrease by 0.5%, 1 is no change, 2 is increase by 0.5%
+        if action == 0:
+            self.pump_speeds *= (1 - 0.005)  # Decrease by 0.5%
+        elif action == 1:
+            self.pump_speeds *= 1  # No change
+        elif action == 2:
+            self.pump_speeds *= (1 + 0.005)  # Increase by 0.5%
 
-        # Ensure pump speeds stay within a feasible range
-        self.pump_speeds = np.clip(self.pump_speeds, 0.1, 2.0)
+        # Clip the pump speeds to be between 0.8 and 1.3
+        self.pump_speeds = np.clip(self.pump_speeds, 0.8, 1.3)
 
-        # Update demands (based on random fluctuation for the example)
+        # Update demands (random fluctuation for the example)
         demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
         self.demandDict = {k: v * demand_scale for k, v in self.demandDict.items()}
 
@@ -73,10 +75,13 @@ class wds():
         return np.array(self.pump_speeds), reward, done, {}
 
     def action_space(self):
-        return gym.spaces.Box(low=-1, high=1, shape=(len(self.pumpGroups),), dtype=np.float32)
+        # Discrete action space: 0 = decrease, 1 = no change, 2 = increase
+        return gym.spaces.Discrete(3)
 
     def observation_space(self):
-        return gym.spaces.Box(low=0, high=2, shape=(len(self.pumpGroups),), dtype=np.float32)
+        # Observation space is the pump speeds, each in the range [0.8, 1.3]
+        return gym.spaces.Box(low=0.8, high=1.3, shape=(len(self.pumpGroups),), dtype=np.float32)
+
 
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
@@ -89,6 +94,7 @@ class DQN(nn.Module):
         x = torch.relu(self.fc1(state))
         x = torch.relu(self.fc2(x))
         return self.fc3(x)
+
 
 class Agent:
     def __init__(self, state_size, action_size, seed=0):
@@ -114,10 +120,10 @@ class Agent:
 
     def act(self, state):
         if random.random() < self.epsilon:
-            return np.random.uniform(-1, 1, size=self.action_size)  # Random action
+            return random.choice([0, 1, 2])  # Random action
         state = torch.FloatTensor(state).unsqueeze(0)
         with torch.no_grad():
-            return self.policy_net(state).numpy()
+            return self.policy_net(state).argmax().item()
 
     def step(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
@@ -134,14 +140,14 @@ class Agent:
         states, actions, rewards, next_states, dones = zip(*batch)
 
         states = torch.FloatTensor(states)
-        actions = torch.FloatTensor(actions)
+        actions = torch.LongTensor(actions)
         rewards = torch.FloatTensor(rewards)
         next_states = torch.FloatTensor(next_states)
         dones = torch.FloatTensor(dones)
 
         # Compute Q values for current states
-        q_values = self.policy_net(states).gather(1, actions.long().unsqueeze(-1))
-        
+        q_values = self.policy_net(states).gather(1, actions.unsqueeze(-1))
+
         # Compute target Q values (using the target network)
         with torch.no_grad():
             next_q_values = self.target_net(next_states).max(1)[0]
@@ -163,9 +169,10 @@ class Agent:
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 
+
 # Initialize environment and agent
 env = wds()
-agent = Agent(state_size=len(env.pumpGroups), action_size=len(env.pumpGroups))
+agent = Agent(state_size=len(env.pumpGroups), action_size=env.action_space().n)
 
 # Training loop
 num_episodes = 500
@@ -180,4 +187,4 @@ for episode in range(num_episodes):
         total_reward += reward
         if done:
             break
-    print(f"Episode {episode+1}/{num_episodes}, Total Reward: {total_reward}")
+    print(f"Episode {episode + 1}/{num_episodes}, Total Reward: {total_reward}")
