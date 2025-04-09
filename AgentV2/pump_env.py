@@ -50,25 +50,27 @@ class wds():
         return self.pump_speeds.copy()
 
     def step(self, action):
+        # Update pump speeds based on action
         if action == 0:
-            self.pump_speeds *= (1 - 0.005)
+            self.pump_speeds *= (1 - self.speed_increment)
         elif action == 1:
-            pass
+            pass  # No change
         elif action == 2:
-            self.pump_speeds *= (1 + 0.005)
+            self.pump_speeds *= (1 + self.speed_increment)
 
         self.pump_speeds = np.clip(self.pump_speeds, 0.8, 1.3)
 
-        # Set pump speeds
+        # Apply pump speeds to model
         for group, speed in zip(self.pumpGroups, self.pump_speeds):
             for pid in group:
                 self.wds.links[pid].speed = speed
 
-        # Randomize demand
+        # Randomize demands
         demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
+        # Solve network
         self.wds.solve()
 
         # Calculate efficiencies
@@ -79,12 +81,24 @@ class wds():
             heads = np.array([j.head for j in self.wds.junctions])
             valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
+            # Base reward from efficiency
             total_efficiency = np.prod(self.pumpEffs)
             eff_ratio = total_efficiency / self.peakTotEff
 
-            reward = (eff_ratio * valid_heads_ratio) - np.sum(self.pump_speeds) * 0.1
+            reward = eff_ratio
 
-            print(f"Efficiency ratio: {eff_ratio:.3f}, Valid heads ratio: {valid_heads_ratio:.3f}, Reward: {reward:.3f}")
+            # Pressure quality reward/penalty
+            if valid_heads_ratio == 1.0:
+                reward += 5
+            elif valid_heads_ratio < 0.8:
+                reward -= 3
+            else:
+                reward += valid_heads_ratio  # Mild reward between 0 and 1
+
+            # Penalty for total pump usage
+            reward -= np.sum(self.pump_speeds) * 0.1
+
+            print(f"Efficiency ratio: {eff_ratio:.3f}, Valid heads ratio: {valid_heads_ratio:.3f}, Reward: {reward:.3f}", flush=True)
         else:
             reward = 0
             valid_heads_ratio = 0
@@ -114,3 +128,28 @@ class wds():
 
     def observation_space(self):
         return gym.spaces.Box(low=0.8, high=1.3, shape=(len(self.pumpGroups),), dtype=np.float32)
+
+# Debugging prints added below
+env = wds()
+obs, reward, done, info = env.step(1)  # Steady state, no change in pump speeds
+print(f"Reward: {reward}")
+
+# Additional debugging prints to track variables
+print("------ Debugging Output ------")
+
+# Printing demand values before and after scaling
+demand_scale = np.random.uniform(env.total_demand_lo, env.total_demand_hi)
+print(f"Demand scale: {demand_scale}")
+for junction in env.wds.junctions:
+    print(f"Junction {junction.uid} original demand: {env.demandDict[junction.uid]}, scaled demand: {junction.basedemand}")
+
+# Printing the efficiency values
+print(f"Pump efficiencies: {env.pumpEffs}")
+
+# Printing the head pressures
+heads = np.array([j.head for j in env.wds.junctions])
+print(f"Heads at junctions: {heads}")
+
+# Printing the valid heads ratio
+valid_heads_ratio = np.mean(heads >= env.headLimitLo)
+print(f"Valid heads ratio: {valid_heads_ratio}")
