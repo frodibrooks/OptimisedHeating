@@ -16,7 +16,9 @@ class wds():
                  total_demand_hi=1.2,
                  reset_orig_pump_speeds=False,
                  reset_orig_demands=False,
-                 seed=None):
+                 seed=None,
+                 eff_weight=1.0,
+                 pressure_weight=1.0):
 
         if seed:
             np.random.seed(seed)
@@ -35,9 +37,11 @@ class wds():
         self.total_demand_hi = total_demand_hi
         self.speed_increment = speed_increment
 
-        # Constants for reward
-        self.headLimitLo = 35  # Bar, example minimum head pressure
-        self.peakTotEff = 0.85 ** len(self.pumpGroups)  # Best case efficiency product
+        # Reward config
+        self.headLimitLo = 35  # Minimum pressure (in meters)
+        self.peakTotEff = 0.0629
+        self.eff_weight = eff_weight
+        self.pressure_weight = pressure_weight
 
     def build_demand_dict(self):
         return {j.uid: j.basedemand for j in self.wds.junctions}
@@ -75,30 +79,30 @@ class wds():
 
         # Calculate efficiencies
         self.calculate_pump_efficencies()
-        pump_eff_ok = (self.pumpEffs >= 0).all() and (self.pumpEffs <= 1.2).all()
+        pump_eff_ok = (np.array(self.pumpEffs) >= 0).all() and (np.array(self.pumpEffs) <= 1.2).all()
+
 
         if pump_eff_ok:
             heads = np.array([j.head for j in self.wds.junctions])
-            valid_heads_ratio = np.mean(heads >= self.headLimitLo)
+            valid_heads_count = np.sum(heads >= self.headLimitLo)
+            total_heads_count = len(heads)
+            valid_heads_ratio = valid_heads_count / total_heads_count
+           
 
-            # Base reward from efficiency
+
+            # Normalized reward components
             total_efficiency = np.prod(self.pumpEffs)
-            eff_ratio = total_efficiency / self.peakTotEff
+            eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
+            pressure_score = np.clip(valid_heads_ratio, 0, 1)
 
-            reward = eff_ratio
+            # Weighted reward
+            reward = (
+                self.eff_weight * eff_ratio +
+                self.pressure_weight * pressure_score
+            )
 
-            # Pressure quality reward/penalty
-            if valid_heads_ratio == 1.0:
-                reward += 5
-            elif valid_heads_ratio < 0.8:
-                reward -= 3
-            else:
-                reward += valid_heads_ratio  # Mild reward between 0 and 1
-
-            # Penalty for total pump usage
+            # Penalty for using higher pump speeds
             reward -= np.sum(self.pump_speeds) * 0.1
-
-            print(f"Efficiency ratio: {eff_ratio:.3f}, Valid heads ratio: {valid_heads_ratio:.3f}, Reward: {reward:.3f}", flush=True)
         else:
             reward = 0
             valid_heads_ratio = 0
@@ -107,21 +111,17 @@ class wds():
         return self.pump_speeds.copy(), reward, done, {}
 
     def calculate_pump_efficencies(self):
-        self.pumpEffs = []
+        self.pumpEffs = []  # Initialize the list to store individual efficiencies
         for group in self.pumpGroups:
-            effs = []
             for pid in group:
                 pump = self.wds.pumps[pid]
                 try:
-                    flow_lps = pump.flow  # already in LPS
+                    flow_lps = pump.flow  # Already in LPS
                     eff = self.calculate_efficiency(pid, flow_lps)
-                    effs.append(eff)
+                    self.pumpEffs.append(eff)  # Append individual efficiency
                 except Exception as e:
                     print(f"Error getting efficiency for pump {pid}: {e}")
-                    effs.append(0)
-            self.pumpEffs.append(np.mean(effs))
-        self.pumpEffs = np.array(self.pumpEffs)
-
+                    self.pumpEffs.append(0)  # Append 0 if there's an error
 
 
     def calculate_efficiency(self, pump_id, flow_lps):
@@ -129,7 +129,6 @@ class wds():
         if curve:
             try:
                 efficiency = float(curve(flow_lps))
-                print(f"Pump {pump_id}, Flow: {flow_lps:.2f} L/s, Efficiency: {efficiency:.2f}")
                 return efficiency
             except Exception as e:
                 print(f"Error calculating efficiency for pump {pump_id}, Flow: {flow_lps}: {e}")
@@ -137,14 +136,12 @@ class wds():
         else:
             raise ValueError(f"No efficiency curve for pump {pump_id}")
 
-
-
-
     def action_space(self):
         return gym.spaces.Discrete(3)
 
     def observation_space(self):
         return gym.spaces.Box(low=0.8, high=1.3, shape=(len(self.pumpGroups),), dtype=np.float32)
+
 
 # Debugging prints added below
 env = wds()
@@ -172,3 +169,9 @@ print(f"Heads at junctions: {heads}")
 # Printing the valid heads ratio
 valid_heads_ratio = np.mean(heads >= env.headLimitLo)
 print(f"Valid heads ratio: {valid_heads_ratio}")
+
+# Printing reward components
+total_efficiency = np.prod(env.pumpEffs)
+eff_ratio = np.clip(total_efficiency / env.peakTotEff, 0, 1)
+
+print(f"Pressure score is {total_efficiency} divided by {env.peakTotEff} = {eff_ratio}")

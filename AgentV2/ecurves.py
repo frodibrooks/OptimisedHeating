@@ -15,14 +15,17 @@ eff_curves = {
 }
 
 
-# # Choose a pump
-# pump_id = '25'
+# # # Choose a pump
+# pump_id = '17'
 # curve = eff_curves[pump_id]
 
 # # Define speed range
 # speeds = np.linspace(0, 90, 100)
 # efficiencies = curve(speeds)
 # efficiencies = np.clip(efficiencies, 0, 1)  # Optional: Clamp to [0, 1]
+
+# max_efficiency = np.max(efficiencies)
+# print(max_efficiency)
 
 # # Plot
 # plt.plot(speeds, efficiencies, label=f"Pump {pump_id} Efficiency Curve")
@@ -32,3 +35,4 @@ eff_curves = {
 # plt.grid(True)
 # plt.legend()
 # plt.show()
+

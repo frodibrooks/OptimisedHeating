@@ -78,7 +78,7 @@ class Agent:
 
 
 # === Train Agent ===
-env = wds()
+env = wds(eff_weight=2.0, pressure_weight=1.0)
 agent = Agent(state_size=len(env.pumpGroups), action_size=env.action_space().n)
 
 reward_file_path = "reward_log.csv"
