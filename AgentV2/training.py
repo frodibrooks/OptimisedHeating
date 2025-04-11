@@ -12,12 +12,24 @@ class DQN(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(state_size, 128)
         self.fc2 = nn.Linear(128, 128)
-        self.fc3 = nn.Linear(128, action_size)
+
+        # Value stream
+        self.value_fc = nn.Linear(128, 1)
+
+        # Advantage stream
+        self.advantage_fc = nn.Linear(128, action_size)
 
     def forward(self, state):
         x = torch.relu(self.fc1(state))
         x = torch.relu(self.fc2(x))
-        return self.fc3(x)
+
+        value = self.value_fc(x)  # Shape: (batch_size, 1)
+        advantage = self.advantage_fc(x)  # Shape: (batch_size, action_size)
+
+        # Combine value and advantage into Q-values
+        q_values = value + advantage - advantage.mean(dim=1, keepdim=True)
+        return q_values
+
 
 
 class Agent:
@@ -118,22 +130,22 @@ for episode in range(num_episodes):
         # Make action an array of actions for each of the 5 pumps
         action = agent.act(state)
 
-        # Printing action details
-        action_details = []
-        for pump_idx, pump_action in enumerate(action):
-            if pump_action == 0:
-                action_details.append(f"Pump {pump_idx+1}: Decrease speed")
-            elif pump_action == 1:
-                action_details.append(f"Pump {pump_idx+1}: Keep speed")
-            elif pump_action == 2:
-                action_details.append(f"Pump {pump_idx+1}: Increase speed")
-        print(f"Episode {episode+1}, Step {t+1}: {', '.join(action_details)}")
+        # # Printing action details
+        # action_details = []
+        # for pump_idx, pump_action in enumerate(action):
+        #     if pump_action == 0:
+        #         action_details.append(f"Pump {pump_idx+1}: Decrease speed")
+        #     elif pump_action == 1:
+        #         action_details.append(f"Pump {pump_idx+1}: Keep speed")
+        #     elif pump_action == 2:
+        #         action_details.append(f"Pump {pump_idx+1}: Increase speed")
+        # print(f"Episode {episode+1}, Step {t+1}: {', '.join(action_details)}")
 
         next_state, reward, done, _ = env.step(action)
         agent.step(state, action, reward, next_state, done)
         state = next_state
         total_reward += reward
-        episode_actions.append(action_details)
+        # episode_actions.append(action_details)
 
     # Log the total reward for the episode
     with open(reward_file_path, mode='a', newline='') as file:

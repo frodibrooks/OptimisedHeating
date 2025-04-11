@@ -10,7 +10,7 @@ class wds():
                  wds_name="Vatnsendi_dummy_ecurves",
                  speed_increment=0.05,
                  episode_len=1,
-                 pump_groups=[['17', '10', '25', '26', '27']],
+                 pump_groups=[['17', '10'], ['25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
                  reset_orig_pump_speeds=False,
@@ -29,7 +29,7 @@ class wds():
         self.demandDict = self.build_demand_dict()
         self.pumpGroups = pump_groups
 
-        # Create a list of individual pump speeds, one per pump in each group
+        # Store individual pump speeds and efficiencies
         self.pump_speeds = {pid: 1.0 for group in pump_groups for pid in group}
         self.pumpEffs = {pid: 1.0 for group in pump_groups for pid in group}
 
@@ -56,38 +56,34 @@ class wds():
         return self.get_state()
 
     def get_state(self):
-        # Get pump speeds, pressures, and flows as the state
         pump_speeds = list(self.pump_speeds.values())
-        pressures = [j.head for j in self.wds.junctions]  # Pressure at each junction
-        flows = [p.flow for p in self.wds.pumps.values()]  # Flow for each pump
-
-        state = pump_speeds + pressures + flows  # Combine all information into one state vector
-        return state
+        pressures = [j.head for j in self.wds.junctions]
+        flows = [p.flow for p in self.wds.pumps.values()]
+        return pump_speeds + pressures + flows
 
     def step(self, action):
-        # Ensure action has correct shape
-        action = np.clip(action, 0, 2)  # Action should be between 0 and 2
+        # Ensure valid shape and clip action values
+        action = np.clip(action, 0, 2)
 
-        # Update pump speeds based on action for each pump
+        # Each action[i] applies to group i
         for i, group in enumerate(self.pumpGroups):
-            for j, pump_id in enumerate(group):
-                pump_action = action[i * len(group) + j]  # Flatten the group index and pump index
-
-                if pump_action == 0:
+            group_action = action[i]
+            for pump_id in group:
+                if group_action == 0:
                     self.pump_speeds[pump_id] *= (1 - self.speed_increment)
-                elif pump_action == 1:
-                    pass  # No change in pump speed
-                elif pump_action == 2:
+                elif group_action == 1:
+                    pass  # No change
+                elif group_action == 2:
                     self.pump_speeds[pump_id] *= (1 + self.speed_increment)
 
-        # Ensure pump speeds stay within the allowed range
+        # Clamp pump speeds
         self.pump_speeds = {pid: np.clip(speed, 0.8, 1.3) for pid, speed in self.pump_speeds.items()}
 
-        # Apply pump speeds to the model
+        # Apply to model
         for pump_id, speed in self.pump_speeds.items():
             self.wds.links[pump_id].speed = speed
 
-        # Randomize demands
+        # Randomize demand
         demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
@@ -98,47 +94,41 @@ class wds():
         # Calculate efficiencies
         self.calculate_pump_efficencies()
 
-        # Calculate reward
+        # Compute reward
         pump_eff_ok = all(0 <= eff <= 1.2 for eff in self.pumpEffs.values())
 
         if pump_eff_ok:
             heads = np.array([j.head for j in self.wds.junctions])
-            valid_heads_count = np.sum(heads >= self.headLimitLo)
-            total_heads_count = len(heads)
-            valid_heads_ratio = valid_heads_count / total_heads_count
+            valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
-            # Normalized reward components
             total_efficiency = np.prod(list(self.pumpEffs.values()))
             eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
             pressure_score = np.clip(valid_heads_ratio, 0, 1)
 
-            # Weighted reward
             reward = (
                 self.eff_weight * eff_ratio +
                 self.pressure_weight * pressure_score
             )
 
-            # Penalty for using higher pump speeds
             reward -= np.sum(list(self.pump_speeds.values())) * 0.1
         else:
             reward = 0
-            valid_heads_ratio = 0
 
         done = False
         return self.get_state(), reward, done, {}
 
     def calculate_pump_efficencies(self):
-        self.pumpEffs = {}  # Initialize the dictionary to store individual efficiencies
+        self.pumpEffs = {}
         for group in self.pumpGroups:
             for pump_id in group:
                 pump = self.wds.pumps[pump_id]
                 try:
-                    flow_lps = pump.flow  # Already in LPS
+                    flow_lps = pump.flow
                     eff = self.calculate_efficiency(pump_id, flow_lps)
-                    self.pumpEffs[pump_id] = eff  # Store individual efficiency
+                    self.pumpEffs[pump_id] = eff
                 except Exception as e:
                     print(f"Error getting efficiency for pump {pump_id}: {e}")
-                    self.pumpEffs[pump_id] = 0  # Assign 0 if there's an error
+                    self.pumpEffs[pump_id] = 0
 
     def calculate_efficiency(self, pump_id, flow_lps):
         curve = eff_curves.get(pump_id)
@@ -153,42 +143,42 @@ class wds():
             raise ValueError(f"No efficiency curve for pump {pump_id}")
 
     def action_space(self):
-        # Each pump has 3 possible actions (increase, no change, decrease)
-        return gym.spaces.Discrete(3 * len(self.pumpGroups))  # 3 actions per pump
+        return gym.spaces.MultiDiscrete([3] * len(self.pumpGroups))
 
     def observation_space(self):
-        # State is the combination of pump speeds, pressures, and flows
-        return gym.spaces.Box(low=0.0, high=1.3, shape=(len(self.pumpGroups) * 3 + len(self.wds.junctions) + len(self.wds.pumps),), dtype=np.float32)
+        num_state_elements = len(self.pump_speeds) + len(self.wds.junctions) + len(self.wds.pumps)
+        return gym.spaces.Box(low=0.0, high=1.3, shape=(num_state_elements,), dtype=np.float32)
 
+# Debugging prints added below
+env = wds()
+env.reset()  # <--- This is important
+obs, reward, done, info = env.step([0,2,1])  # Example action for each pump (no change, decrease, increase)
+# Steady state, no change in pump speeds
+print(f"Reward: {reward}")
 
+# Additional debugging prints to track variables
+print("------ Debugging Output ------")
 
-# # Debugging prints added below
-# env = wds()
-# env.reset()  # <--- This is important
-# obs, reward, done, info = env.step([1, 1, 1, 1, 2])  # Example action for each pump (no change, decrease, increase)
-# # Steady state, no change in pump speeds
-# print(f"Reward: {reward}")
+# Printing the efficiency values
+print(f"Pump efficiencies: {env.pumpEffs}")
 
-# # Additional debugging prints to track variables
-# print("------ Debugging Output ------")
+# Printing the head pressures
+heads = np.array([j.head for j in env.wds.junctions])
+print(f"Heads at junctions: {heads}")
 
-# # Printing the efficiency values
-# print(f"Pump efficiencies: {env.pumpEffs}")
+# Printing the valid heads ratio
+valid_heads_ratio = np.mean(heads >= env.headLimitLo)
+print(f"Valid heads ratio: {valid_heads_ratio}")
 
-# # Printing the head pressures
-# heads = np.array([j.head for j in env.wds.junctions])
-# print(f"Heads at junctions: {heads}")
+# Printing reward components
+total_efficiency = np.prod(list(env.pumpEffs.values()))
+eff_ratio = np.clip(total_efficiency / env.peakTotEff, 0, 1)
+print(f"Pressure score is {total_efficiency} divided by {env.peakTotEff} = {eff_ratio}")
 
-# # Printing the valid heads ratio
-# valid_heads_ratio = np.mean(heads >= env.headLimitLo)
-# print(f"Valid heads ratio: {valid_heads_ratio}")
+# Printing pump IDs and their respective speeds
+print("------ Pump ID and Speeds ------")
+for pump_id, speed in env.pump_speeds.items():
+    print(f"Pump ID: {pump_id}, Speed: {speed:.3f}")
 
-# # Printing reward components
-# total_efficiency = np.prod(list(env.pumpEffs.values()))
-# eff_ratio = np.clip(total_efficiency / env.peakTotEff, 0, 1)
-# print(f"Pressure score is {total_efficiency} divided by {env.peakTotEff} = {eff_ratio}")
-
-# # Printing pump IDs and their respective speeds
-# print("------ Pump ID and Speeds ------")
-# for pump_id, speed in env.pump_speeds.items():
-#     print(f"Pump ID: {pump_id}, Speed: {speed:.3f}")
+# state = env.get_state()
+# print(state)
