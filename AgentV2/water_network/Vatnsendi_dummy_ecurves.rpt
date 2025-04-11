@@ -1,4 +1,4 @@
-  Page 1                                    Fri Apr 11 14:38:46 2025
+  Page 1                                    Fri Apr 11 16:11:55 2025
 
   ******************************************************************
   *                           E P A N E T                          *
@@ -7,7 +7,7 @@
   *                         Version 2.2                            *
   ******************************************************************
   
-  Analysis begun Fri Apr 11 14:38:46 2025
+  Analysis begun Fri Apr 11 16:11:55 2025
 
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
@@ -16,6 +16,39 @@
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
   WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
   WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
@@ -28,11 +61,6 @@
   WARNING: Negative pressures at 0:00:00 hrs.
   WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
   WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
-   
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
-  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
@@ -82,21 +110,6 @@
   WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
   WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
    
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
-   
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
-  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
-   
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
-   
   WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
   WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
    
@@ -107,6 +120,51 @@
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
   WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
   WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
@@ -132,13 +190,13 @@
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
@@ -151,11 +209,24 @@
   WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
    
   WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
   WARNING: Negative pressures at 0:00:00 hrs.
@@ -166,4 +237,43 @@
   WARNING: Negative pressures at 0:00:00 hrs.
   WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
   WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
+  WARNING: Negative pressures at 0:00:00 hrs.
+  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
+  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
+   
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
    
