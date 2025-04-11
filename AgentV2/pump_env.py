@@ -108,20 +108,37 @@ class wds():
 
     def calculate_pump_efficencies(self):
         self.pumpEffs = []
-        for group, speed in zip(self.pumpGroups, self.pump_speeds):
+        for group in self.pumpGroups:
             effs = []
             for pid in group:
-                eff = self.calculate_efficiency(pid, speed)
-                effs.append(eff)
+                pump = self.wds.pumps[pid]
+                try:
+                    flow_lps = pump.flow  # already in LPS
+                    eff = self.calculate_efficiency(pid, flow_lps)
+                    effs.append(eff)
+                except Exception as e:
+                    print(f"Error getting efficiency for pump {pid}: {e}")
+                    effs.append(0)
             self.pumpEffs.append(np.mean(effs))
         self.pumpEffs = np.array(self.pumpEffs)
 
-    def calculate_efficiency(self, pump_id, speed):
+
+
+    def calculate_efficiency(self, pump_id, flow_lps):
         curve = eff_curves.get(pump_id)
         if curve:
-            return float(curve(speed))
+            try:
+                efficiency = float(curve(flow_lps))
+                print(f"Pump {pump_id}, Flow: {flow_lps:.2f} L/s, Efficiency: {efficiency:.2f}")
+                return efficiency
+            except Exception as e:
+                print(f"Error calculating efficiency for pump {pump_id}, Flow: {flow_lps}: {e}")
+                return 0
         else:
             raise ValueError(f"No efficiency curve for pump {pump_id}")
+
+
+
 
     def action_space(self):
         return gym.spaces.Discrete(3)
@@ -131,17 +148,19 @@ class wds():
 
 # Debugging prints added below
 env = wds()
-obs, reward, done, info = env.step(1)  # Steady state, no change in pump speeds
+env.reset()  # <--- This is important
+obs, reward, done, info = env.step(1)
+ # Steady state, no change in pump speeds
 print(f"Reward: {reward}")
 
 # Additional debugging prints to track variables
 print("------ Debugging Output ------")
 
-# Printing demand values before and after scaling
-demand_scale = np.random.uniform(env.total_demand_lo, env.total_demand_hi)
-print(f"Demand scale: {demand_scale}")
-for junction in env.wds.junctions:
-    print(f"Junction {junction.uid} original demand: {env.demandDict[junction.uid]}, scaled demand: {junction.basedemand}")
+# # Printing demand values before and after scaling
+# demand_scale = np.random.uniform(env.total_demand_lo, env.total_demand_hi)
+# print(f"Demand scale: {demand_scale}")
+# for junction in env.wds.junctions:
+#     print(f"Junction {junction.uid} original demand: {env.demandDict[junction.uid]}, scaled demand: {junction.basedemand}")
 
 # Printing the efficiency values
 print(f"Pump efficiencies: {env.pumpEffs}")

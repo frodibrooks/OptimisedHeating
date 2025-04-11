@@ -16,7 +16,7 @@ eff_curves = {
 
 
 # # Choose a pump
-# pump_id = '17'
+# pump_id = '25'
 # curve = eff_curves[pump_id]
 
 # # Define speed range
