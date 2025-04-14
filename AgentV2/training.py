@@ -88,7 +88,7 @@ class Agent:
 env = wds(eff_weight=1.0, pressure_weight=1.0)
 initial_state = env.reset()
 state_size = len(initial_state)
-action_size = 3 * 3  # 3 groups × 3 actions = 9
+action_size = 2 * 3  # 3 groups × 3 actions = 9
 
 agent = Agent(state_size=state_size, action_size=action_size)
 
@@ -106,8 +106,7 @@ for episode in range(num_episodes):
         # Convert flat action index to multi-action for the environment
         group1 = flat_action % 3
         group2 = (flat_action // 3) % 3
-        group3 = flat_action // 9
-        multi_action = [group1, group2, group3]
+        multi_action = [group1, group2]
 
         next_state, reward, done, _ = env.step(multi_action)
         agent.step(state, flat_action, reward, next_state, done)
