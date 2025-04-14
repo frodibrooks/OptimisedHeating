@@ -8,7 +8,7 @@ class wds():
     def __init__(self,
                  wds_name="Vatnsendi_dummy_ecurves",
                  speed_increment=0.05,
-                 episode_len=20,
+                 episode_len=200,
                  pump_groups=[['17', '10'], ['25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
@@ -44,8 +44,8 @@ class wds():
         self.pressure_weight = pressure_weight
 
         # Define speed limits
-        self.min_speed = 0.85
-        self.max_speed = 1.3
+        self.min_speed = 0.7
+        self.max_speed = 1.4
 
     def build_demand_dict(self):
         return {j.uid: j.basedemand for j in self.wds.junctions}
@@ -99,6 +99,7 @@ class wds():
         self.calculate_pump_efficencies()
 
         # Compute reward
+       # Compute reward
         pump_eff_ok = all(0 <= eff <= 1.2 for eff in self.pumpEffs.values())
 
         if pump_eff_ok:
@@ -107,16 +108,17 @@ class wds():
 
             total_efficiency = np.prod(list(self.pumpEffs.values()))
             eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
-            pressure_score = np.clip(valid_heads_ratio, 0, 1)
 
-            reward = (
-                self.eff_weight * eff_ratio +
-                self.pressure_weight * pressure_score
-            )
-
-            # reward -= np.sum(list(self.pump_speeds.values())) * 0.1
+            if valid_heads_ratio < 1.0:
+                # Big penalty if any node has pressure below threshold
+                reward = -10.0
+            else:
+                # Pressure constraint met, reward with scaled efficiency
+                reward = eff_ratio * 100.0  # scale for better gradient
+                print(f"Efficiency ratio: {eff_ratio:.4f}  Pressure ratio {valid_heads_ratio:.4f}")
         else:
-            reward = 0
+            reward = 0.0
+
 
         done = False
         return self.get_state(), reward, done, {}
