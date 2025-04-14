@@ -8,7 +8,7 @@ class wds():
     def __init__(self,
                  wds_name="Vatnsendi",
                  speed_increment=0.05,
-                 episode_len=200,
+                 episode_len=300,
                  pump_groups=[['17', '10','25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
@@ -117,9 +117,9 @@ class wds():
             reward = (self.eff_weight * eff_ratio) + (self.pressure_weight * valid_heads_ratio)
 
             # # Print details for debugging
-            speeds = self.get_state()
-            print(f"Efficiency ratio: {eff_ratio:.4f}  Pressure ratio: {valid_heads_ratio:.4f} Pump speeds: {speeds[:5]}")
-            # print(heads.mean())
+            # 
+            # print(heads.mean())speeds = self.get_state()
+            # print(f"Efficiency ratio: {eff_ratio:.4f}  Pressure ratio: {valid_heads_ratio:.4f} Pump speeds: {speeds[:5]}")
         else:
             reward = 0.0
 
