@@ -85,7 +85,7 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 # === Training Process ===
-env = wds(eff_weight=1.0, pressure_weight=1.0)
+env = wds(eff_weight=3.0, pressure_weight=1.0)
 initial_state = env.reset()
 state_size = len(initial_state)
 action_size = 2 * 3  # 3 groups × 3 actions = 9
