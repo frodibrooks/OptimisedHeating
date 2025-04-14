@@ -8,7 +8,7 @@ class wds():
     def __init__(self,
                  wds_name="Vatnsendi",
                  speed_increment=0.05,
-                 episode_len=30,
+                 episode_len=200,
                  pump_groups=[['17', '10','25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,

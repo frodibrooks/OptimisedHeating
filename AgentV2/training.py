@@ -96,7 +96,7 @@ reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_
 with open(reward_file_path, mode='w', newline='') as file:
     csv.writer(file).writerow(['Episode', 'Total Reward'])
 
-num_episodes = 5
+num_episodes = 200
 for episode in range(num_episodes):
     state = env.reset()
     total_reward = 0
@@ -117,3 +117,12 @@ for episode in range(num_episodes):
         csv.writer(file).writerow([episode + 1, total_reward])
 
     print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}")
+
+
+
+
+
+
+torch.save(agent.policy_net.state_dict(), "trained_model.pth")
+print("Model saved!")
+
