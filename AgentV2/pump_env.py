@@ -8,7 +8,7 @@ class wds():
     def __init__(self,
                  wds_name="Vatnsendi_dummy_ecurves",
                  speed_increment=0.05,
-                 episode_len=200,
+                 episode_len=20,
                  pump_groups=[['17', '10'], ['25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
@@ -75,10 +75,12 @@ class wds():
                 # Adjusting pump speeds by fixed value (0.05)
                 if group_action == 0:
                     self.pump_speeds[pump_id] -= self.speed_increment  # Decrease speed by fixed amount
+                    self.pump_speeds[pump_id] = np.round(self.pump_speeds[pump_id],3)
                 elif group_action == 1:
                     pass  # No change
                 elif group_action == 2:
                     self.pump_speeds[pump_id] += self.speed_increment  # Increase speed by fixed amount
+                    self.pump_speeds[pump_id] = np.round(self.pump_speeds[pump_id],3)
 
         # Clamp pump speeds to the defined range [0.85, 1.3]
         self.pump_speeds = {pid: np.clip(speed, self.min_speed, self.max_speed) for pid, speed in self.pump_speeds.items()}
@@ -113,9 +115,10 @@ class wds():
                 # Big penalty if any node has pressure below threshold
                 reward = -10.0
             else:
+                speeds = self.get_state()
                 # Pressure constraint met, reward with scaled efficiency
                 reward = eff_ratio * 100.0  # scale for better gradient
-                print(f"Efficiency ratio: {eff_ratio:.4f}  Pressure ratio {valid_heads_ratio:.4f}")
+                print(f"Efficiency ratio: {eff_ratio:.4f}  Pressure ratio: {valid_heads_ratio:.4f} Pump speeds: {speeds[:5]} ")
         else:
             reward = 0.0
 
