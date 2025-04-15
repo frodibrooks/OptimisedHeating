@@ -1,9 +1,14 @@
 # test_agent.py
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 import torch
 import numpy as np
 from pump_env import wds
-from train_agent import DQN  # assuming train code is saved in train_agent.py
+from training import DQN
+
 
 # === Load Environment ===
 env = wds(eff_weight=3.0, pressure_weight=1.0)
@@ -13,7 +18,7 @@ action_size = 2 * 3  # 3 actions per group, 2 groups
 
 # === Load Trained Model ===
 policy_net = DQN(state_size, action_size)
-model_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models\policy_net_ep200.pth"
+model_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models\trained_model.pth"
 policy_net.load_state_dict(torch.load(model_path))
 policy_net.eval()
 
