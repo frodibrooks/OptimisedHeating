@@ -162,7 +162,7 @@ class wds():
 # # Debugging prints added below
 # env = wds()
 # env.reset()  # <--- This is important
-# obs, reward, done, info = env.step([0,1])  # Example action for each pump (no change, decrease, increase)
+# obs, reward, done, info = env.step([0,2])  # Example action for each pump (no change, decrease, increase)
 # # Steady state, no change in pump speeds
 # print(f"Reward: {reward}")
 
