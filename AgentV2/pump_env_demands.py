@@ -1,12 +1,12 @@
 import pandas as pd
 import numpy as np
 from pump_env import wds
+
 class WdsWithDemand(wds):
     def __init__(self, demand_pattern=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         # Action map: mapping flattened action index to list of actions for each pump group
-        # Action range per group: 0 (slow), 1 (same), 2 (fast)
         self.action_map = [
             [0, 0],  # Action 0: [slow, slow]
             [0, 1],  # Action 1: [slow, same]
@@ -43,10 +43,10 @@ class WdsWithDemand(wds):
     def step(self, action):        
         # Execute action using base class method
         state, reward, done, info = super().step(action)
-        
+
         # Apply the demand pattern if available
         if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
-            demand_scale = self.demand_pattern[self.demand_index]  # Get the current demand scaling factor
+            demand_scale = self.demand_pattern[self.demand_index]
             self.demand_index += 1
         else:
             demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
@@ -54,6 +54,12 @@ class WdsWithDemand(wds):
         # Update demands in the network with the new demand scale
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
+
+        # Solve the network to update properties like flow, pressure, and pump power
+        self.wds.solve()
+
+        # Call pump_power() to update the pump power values
+        self.pump_power()
 
         return state, reward, done, info
 
@@ -90,6 +96,8 @@ if __name__ == "__main__":
         print(f"Pump Speeds at Step {t+1}:")
         for pump_id, speed in env.pump_speeds.items():
             print(f"  Pump {pump_id}: Speed {speed:.3f}")
+
+        print(f"Pump powers: {env.pumpPower}")
 
         # Print the reward at this step for debugging purposes
         print(f"Reward at Step {t+1}: {reward:.3f}")
