@@ -2,15 +2,18 @@ import torch
 import pandas as pd
 import numpy as np
 from training import DQN
-from pump_env import WdsWithDemand
+from pump_env_demands import WdsWithDemand
+
 
 # === Load environment ===
-demand_pattern_path = "tests/demand_pattern_2024-11-03.csv"
+demand_pattern_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\tests\demand_pattern_2024-11-03"
 env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, demand_pattern=demand_pattern_path, episode_len=1)
 
 # === Load trained model ===
-state_dim = env.observation_space.shape[0]
-action_dim = env.action_space.n
+state_dim = int(env.observation_space().shape[0])
+action_dim = 6
+
+
 model = DQN(state_dim, action_dim)
 model.load_state_dict(torch.load("trained_model.pth"))
 model.eval()

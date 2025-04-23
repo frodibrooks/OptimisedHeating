@@ -84,45 +84,46 @@ class Agent:
 
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
-# === Training Process ===
-env = wds(eff_weight=3.0, pressure_weight=1.0)
-initial_state = env.reset()
-state_size = len(initial_state)
-action_size = 2 * 3  # 3 groups × 3 actions = 9
+if __name__ == "__main__":
+    # === Training Process ===
+    env = wds(eff_weight=3.0, pressure_weight=1.0)
+    initial_state = env.reset()
+    state_size = len(initial_state)
+    action_size = 2 * 3  # 3 groups × 3 actions = 9
 
-agent = Agent(state_size=state_size, action_size=action_size)
+    agent = Agent(state_size=state_size, action_size=action_size)
 
-reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
-with open(reward_file_path, mode='w', newline='') as file:
-    csv.writer(file).writerow(['Episode', 'Total Reward'])
+    reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
+    with open(reward_file_path, mode='w', newline='') as file:
+        csv.writer(file).writerow(['Episode', 'Total Reward'])
 
-num_episodes = 200
-for episode in range(num_episodes):
-    state = env.reset()
-    total_reward = 0
+    num_episodes = 200
+    for episode in range(num_episodes):
+        state = env.reset()
+        total_reward = 0
 
-    for t in range(env.episode_len):
-        flat_action = agent.act(state)
-        # Convert flat action index to multi-action for the environment
-        group1 = flat_action % 3
-        group2 = (flat_action // 3) % 3
-        multi_action = [group1, group2]
+        for t in range(env.episode_len):
+            flat_action = agent.act(state)
+            # Convert flat action index to multi-action for the environment
+            group1 = flat_action % 3
+            group2 = (flat_action // 3) % 3
+            multi_action = [group1, group2]
 
-        next_state, reward, done, _ = env.step(multi_action)
-        agent.step(state, flat_action, reward, next_state, done)
-        state = next_state
-        total_reward += reward
+            next_state, reward, done, _ = env.step(multi_action)
+            agent.step(state, flat_action, reward, next_state, done)
+            state = next_state
+            total_reward += reward
 
-    with open(reward_file_path, mode='a', newline='') as file:
-        csv.writer(file).writerow([episode + 1, total_reward])
+        with open(reward_file_path, mode='a', newline='') as file:
+            csv.writer(file).writerow([episode + 1, total_reward])
 
-    print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}")
-
-
-
+        print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}")
 
 
 
-torch.save(agent.policy_net.state_dict(), "trained_model.pth")
-print("Model saved!")
+
+
+
+    torch.save(agent.policy_net.state_dict(), "trained_model.pth")
+    print("Model saved!")
 
