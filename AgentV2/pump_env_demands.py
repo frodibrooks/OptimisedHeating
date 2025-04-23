@@ -5,6 +5,20 @@ from pump_env import wds
 class WdsWithDemand(wds):
     def __init__(self, demand_pattern=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        
+        # Action map: mapping flattened action index to list of actions for the pump groups
+        self.action_map = [
+            [-1, -1],  # Action 0: [slow, slow]
+            [-1, 0],   # Action 1: [slow, same]
+            [-1, 1],   # Action 2: [slow, fast]
+            [0, -1],   # Action 3: [same, slow]
+            [0, 0],    # Action 4: [same, same]
+            [0, 1],    # Action 5: [same, fast]
+            [1, -1],   # Action 6: [fast, slow]
+            [1, 0],    # Action 7: [fast, same]
+            [1, 1],    # Action 8: [fast, fast]
+        ]
+        
         # If demand pattern is provided, load it
         if demand_pattern is not None:
             self.demand_pattern = pd.read_csv(demand_pattern)['demand_pattern'].values
@@ -22,7 +36,26 @@ class WdsWithDemand(wds):
 
         return state
 
+    def action_index_to_list(self, action_idx):
+        # Convert flattened action index to a list of pump group actions
+        return self.action_map[action_idx]
+
     def step(self, action):
+        # Convert the action (flattened index) into pump group actions
+        action_list = self.action_index_to_list(action)
+
+        # Apply the action to each pump group
+        for i, group in enumerate(self.pumpGroups):
+            group_action = action_list[i]
+            for pump_id in group:
+                if group_action == -1:
+                    self.pump_speeds[pump_id] -= self.speed_increment  # Slow down
+                elif group_action == 0:
+                    pass  # No change
+                elif group_action == 1:
+                    self.pump_speeds[pump_id] += self.speed_increment  # Speed up
+                self.pump_speeds[pump_id] = np.round(self.pump_speeds[pump_id], 3)
+        
         # Execute action using base class method
         state, reward, done, info = super().step(action)
         
@@ -38,8 +71,6 @@ class WdsWithDemand(wds):
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
         return state, reward, done, info
-
-
 
 
 # # Set the path to your demand pattern CSV

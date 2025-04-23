@@ -11,8 +11,7 @@ env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, demand_pattern=demand_p
 
 # === Load trained model ===
 state_dim = int(env.observation_space().shape[0])
-action_dim = 6
-
+action_dim = 6  # This needs to match the number of discrete actions (e.g., 3 pump groups * 2 actions per group)
 
 model = DQN(state_dim, action_dim)
 model.load_state_dict(torch.load("trained_model.pth"))
@@ -25,7 +24,7 @@ full_logs = []  # Storage for full logs
 for timestep in range(len(env.demand_pattern)):  # 24 hours
     print(f"timestep {timestep}/24")
     # Reset the environment for the specific timestep (hour)
-    state = env.reset(timestep=timestep)
+    state = env.reset()
     
     # Get the state tensor
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
@@ -35,8 +34,14 @@ for timestep in range(len(env.demand_pattern)):  # 24 hours
         q_values = model(state_tensor)
         action_idx = torch.argmax(q_values, dim=1).item()
 
-    action = env.discrete_to_action(action_idx)  # Convert to action if necessary
-    state, reward, done, info = env.step(action)  # Take action in the environment
+    
+    print(f"action_idx: {action_idx}")
+
+    # Convert the action index to a list of actions using the environment's method
+    action_list = env.action_index_to_list(action_idx)  # action_idx is a single integer
+
+    # Step the environment with the action list
+    state, reward, done, info = env.step(action_list)  # Pass the action list instead of the index
 
     # === Log system state ===
     row = {
