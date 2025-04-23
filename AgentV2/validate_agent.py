@@ -58,10 +58,12 @@ for timestep in range(len(env.demand_pattern)):  # 24 hours
     for junction in env.wds.junctions:
         row[f"Head_{junction.uid}"] = junction.head
 
-    # Add pump speeds and power to the log
+    # Add pump speeds to the log
     for pump_id, speed in env.pump_speeds.items():
         row[f"PumpSpeed_{pump_id}"] = speed
-    for pump_id, power in env.pump_power.items():
+    
+    # Ensure you are logging the pump power correctly
+    for pump_id, power in zip(env.wds.pumps.keys(), env.pumpPower):  # Ensure you map power to the correct pump
         row[f"PumpPower_{pump_id}"] = power
 
     # Store the log row
