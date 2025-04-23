@@ -42,40 +42,40 @@ class WdsWithDemand(wds):
 
 
 
-# Set the path to your demand pattern CSV
-demand_pattern_path = r'C:\Users\frodi\Documents\OptimisedHeating\AgentV2\tests\demand_pattern_2024-11-03'
+# # Set the path to your demand pattern CSV
+# demand_pattern_path = r'C:\Users\frodi\Documents\OptimisedHeating\AgentV2\tests\demand_pattern_2024-11-03'
 
-# Initialize the environment with the demand pattern
-env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, demand_pattern=demand_pattern_path)
+# # Initialize the environment with the demand pattern
+# env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, demand_pattern=demand_pattern_path)
 
-# Reset the environment
-state = env.reset()
+# # Reset the environment
+# state = env.reset()
 
-# Print initial state and demand pattern
-print("Initial State:", state[:10])
-print("\nDemand Pattern (Scaling Factor):")
-print(env.demand_pattern)  # Print the entire demand pattern
+# # Print initial state and demand pattern
+# print("Initial State:", state[:10])
+# print("\nDemand Pattern (Scaling Factor):")
+# print(env.demand_pattern)  # Print the entire demand pattern
 
-# Run through the demand pattern and print out the demand at each step
-for t in range(len(env.demand_pattern)):
-    # Print demand at current timestep
-    demand_scale = env.demand_pattern[t]
-    print(f"Step {t+1}: Applied Demand Scale = {demand_scale}")
+# # Run through the demand pattern and print out the demand at each step
+# for t in range(len(env.demand_pattern)):
+#     # Print demand at current timestep
+#     demand_scale = env.demand_pattern[t]
+#     print(f"Step {t+1}: Applied Demand Scale = {demand_scale}")
 
-    # Apply the demand change in the environment
-    state, reward, done, info = env.step([1, 1])  # Using a dummy action as we just want to test demand change
+#     # Apply the demand change in the environment
+#     state, reward, done, info = env.step([1, 1])  # Using a dummy action as we just want to test demand change
 
-    # Print the updated demands at each junction
-    print(f"Junction Demands at Step {t+1}:")
-    for junction in list(env.wds.junctions)[:5]:
-        print(f"  {junction.uid}: {junction.basedemand}")
+#     # Print the updated demands at each junction
+#     print(f"Junction Demands at Step {t+1}:")
+#     for junction in list(env.wds.junctions)[:5]:
+#         print(f"  {junction.uid}: {junction.basedemand}")
 
-    # Optionally print the pump speeds or other relevant system states
-    print(f"Pump Speeds at Step {t+1}:")
-    for pump_id, speed in env.pump_speeds.items():
-        print(f"  Pump {pump_id}: Speed {speed:.3f}")
+#     # Optionally print the pump speeds or other relevant system states
+#     print(f"Pump Speeds at Step {t+1}:")
+#     for pump_id, speed in env.pump_speeds.items():
+#         print(f"  Pump {pump_id}: Speed {speed:.3f}")
 
-    # Print the reward at this step for debugging purposes
-    print(f"Reward at Step {t+1}: {reward:.3f}")
+#     # Print the reward at this step for debugging purposes
+#     print(f"Reward at Step {t+1}: {reward:.3f}")
     
-    print("-" * 50)
+#     print("-" * 50)
