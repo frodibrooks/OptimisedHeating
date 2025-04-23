@@ -31,6 +31,7 @@ class wds():
         # Store individual pump speeds and efficiencies
         self.pump_speeds = {pid: 1.0 for group in pump_groups for pid in group}
         self.pumpEffs = {pid: 1.0 for group in pump_groups for pid in group}
+        
 
         self.episode_len = episode_len
         self.total_demand_lo = total_demand_lo
@@ -49,6 +50,9 @@ class wds():
 
     def build_demand_dict(self):
         return {j.uid: j.basedemand for j in self.wds.junctions}
+    
+    def pump_power(self):
+        self.pumpPower = [p.energy for p in self.wds.pumps.values()]
 
     def reset(self):
         self.pump_speeds = {pid: 1.0 for group in self.pumpGroups for pid in group}
@@ -99,6 +103,7 @@ class wds():
 
         # Calculate efficiencies
         self.calculate_pump_efficencies()
+        self.pump_power()
 
         # Compute reward
        # Compute reward
@@ -150,6 +155,8 @@ class wds():
                 return 0
         else:
             raise ValueError(f"No efficiency curve for pump {pump_id}")
+        
+   
 
     def action_space(self):
         return gym.spaces.MultiDiscrete([2] * len(self.pumpGroups))
@@ -162,7 +169,7 @@ if __name__ == "__main__":
     # Debugging prints added below
     env = wds()
     env.reset()  # <--- This is important
-    obs, reward, done, info = env.step([1,2])  # Example action for each pump (no change, decrease, increase)
+    obs, reward, done, info = env.step([2,1])  # Example action for each pump (no change, decrease, increase)
     # Steady state, no change in pump speeds
     print(f"Reward: {reward}")
 
@@ -171,6 +178,9 @@ if __name__ == "__main__":
 
     # Printing the efficiency values
     print(f"Pump efficiencies: {env.pumpEffs}")
+
+    # Printing the power values
+    print(f"Pump power: {env.pumpPower}")
 
     # Printing the head pressures
     heads  = np.array([head for head in env.wds.junctions.pressure])
