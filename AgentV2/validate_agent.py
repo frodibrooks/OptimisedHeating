@@ -3,7 +3,14 @@ import pandas as pd
 import numpy as np
 from training import DQN
 from pump_env_demands import WdsWithDemand
+import os
 
+
+
+
+# Set the program directory and change the working directory
+program_dir = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models"
+os.chdir(program_dir)  # Change the current working directory to program_dir
 
 # === Load environment ===
 demand_pattern_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\tests\demand_pattern_2024-11-03"
