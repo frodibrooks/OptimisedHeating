@@ -5,7 +5,7 @@ import numpy as np
 from collections import deque
 import torch.nn as nn
 import torch.optim as optim
-from pump_env import wds  # Custom environment
+from pump_env import wds  # Make sure correct path
 
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
@@ -43,10 +43,9 @@ class Agent:
         self.action_size = action_size
 
     def act(self, state):
-        state = torch.FloatTensor(state).unsqueeze(0)  # Add batch dimension
+        state = torch.FloatTensor(state).unsqueeze(0)
         if random.random() < self.epsilon:
-            return random.randint(0, self.action_size - 1)  # Return flat index
-
+            return random.randint(0, self.action_size - 1)
         with torch.no_grad():
             action_values = self.policy_net(state)
             return torch.argmax(action_values).item()
@@ -68,8 +67,8 @@ class Agent:
 
         q_values = self.policy_net(states)
         actions_tensor = torch.LongTensor(actions).unsqueeze(1)
-
         q_values = q_values.gather(1, actions_tensor)
+
         next_q_values = self.target_net(next_states).max(1)[0].detach()
 
         targets = rewards + self.gamma * next_q_values * (1 - dones)
@@ -85,11 +84,10 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    # === Training Process ===
     env = wds(eff_weight=3.0, pressure_weight=1.0)
     initial_state = env.reset()
     state_size = len(initial_state)
-    action_size = 2 * 3  # 3 groups × 3 actions = 9
+    action_size = 9  # 3 actions per group × 2 groups = 9 combinations
 
     agent = Agent(state_size=state_size, action_size=action_size)
 
@@ -103,14 +101,9 @@ if __name__ == "__main__":
         total_reward = 0
 
         for t in range(env.episode_len):
-            flat_action = agent.act(state)
-            # Convert flat action index to multi-action for the environment
-            group1 = flat_action % 3
-            group2 = (flat_action // 3) % 3
-            multi_action = [group1, group2]
-
-            next_state, reward, done, _ = env.step(multi_action)
-            agent.step(state, flat_action, reward, next_state, done)
+            action_flat = agent.act(state)
+            next_state, reward, done, _ = env.step(action_flat)
+            agent.step(state, action_flat, reward, next_state, done)
             state = next_state
             total_reward += reward
 
@@ -119,11 +112,5 @@ if __name__ == "__main__":
 
         print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}")
 
-
-
-
-
-
     torch.save(agent.policy_net.state_dict(), "trained_model.pth")
     print("Model saved!")
-

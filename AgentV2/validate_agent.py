@@ -5,9 +5,6 @@ from training import DQN
 from pump_env_demands import WdsWithDemand
 import os
 
-
-
-
 # Set the program directory and change the working directory
 program_dir = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models"
 os.chdir(program_dir)  # Change the current working directory to program_dir
@@ -30,6 +27,7 @@ full_logs = []  # Storage for full logs
 # Each timestep corresponds to one hour of the demand pattern
 for timestep in range(len(env.demand_pattern)):  # 24 hours
     print(f"timestep {timestep}/24")
+    
     # Reset the environment for the specific timestep (hour)
     state = env.reset()
     
@@ -41,17 +39,10 @@ for timestep in range(len(env.demand_pattern)):  # 24 hours
         q_values = model(state_tensor)
         action_idx = torch.argmax(q_values, dim=1).item()
 
-    
-# After calculating action_idx
     print(f"action_idx: {action_idx}")
 
-    # Convert the action index to a list of actions using the environment's method
-    action_list = env.action_index_to_list(action_idx)  # action_idx is a single integer
-
-    print(f"action_list: {action_list}")
-
-    # Step the environment with the action list
-    state, reward, done, info = env.step(action_list)  # Pass the action list instead of the index
+    # === Step the environment directly with the integer action ===
+    state, reward, done, info = env.step(action_idx)
 
     # === Log system state ===
     row = {
