@@ -12,16 +12,19 @@ try:
     from pump_env import wds
 
 
-    print("successfully imported all libraries")
+    print("successfully imported all libraries(mac and windows)")
 except ImportError as e:
     print("Import Error: ", e)
 
+# Get runnað custom í command line the bara default
 parser  = argparse.ArgumentParser()
 parser.add_argument('--params', default='Vatnsendi', help="Name of the YAML file.")
 parser.add_argument('--seed', default=None, type=int, help="Random seed for the optimization methods.")
 parser.add_argument('--nproc', default=1, type=int, help="Number of processes to raise.")
 parser.add_argument('--tstsplit', default=20, type=int, help="Ratio of scenes moved from vld to tst scene in percentage.")
 args    = parser.parse_args()
+
+# path að experiments sem geymir run
 
 pathToRoot      = os.path.dirname(os.path.realpath(__file__))
 pathToExp       = os.path.join(pathToRoot, 'Experiments')
@@ -238,3 +241,6 @@ if args.tstsplit:
     pathToTstHistoryDB  = os.path.join(pathToHistory, runId+'_tst.h5')
     tst_history.to_hdf(pathToTstHistoryDB, key=runId, mode='w')
     play_scenes(tst_scenes, tst_history, pathToTstHistoryDB, tst=True)
+
+
+print("ran entire training code")
