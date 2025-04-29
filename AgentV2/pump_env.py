@@ -2,7 +2,7 @@ import os
 import numpy as np
 import gym
 from epynet import Network
-from ecurves import eff_curves  # Must exist
+from ecurves import eff_curves
 
 class wds():
     def __init__(self,
@@ -42,6 +42,10 @@ class wds():
         self.min_speed = 0.7
         self.max_speed = 1.4
 
+        # New attributes for logging
+        self.eff_ratio = 0.0
+        self.valid_heads_ratio = 0.0
+
     def build_demand_dict(self):
         return {j.uid: j.basedemand for j in self.wds.junctions}
 
@@ -62,7 +66,6 @@ class wds():
         return pump_speeds + pressures + flows
 
     def step(self, action_flat):
-        # Flat integer action (0-8) → 2 actions
         group1 = action_flat % 3
         group2 = (action_flat // 3) % 3
         actions = [group1, group2]
@@ -95,14 +98,16 @@ class wds():
 
         if pump_eff_ok:
             heads = np.array([j.pressure for j in self.wds.junctions])
-            valid_heads_ratio = np.mean(heads >= self.headLimitLo)
+            self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
             total_efficiency = np.prod(list(self.pumpEffs.values()))
-            eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
+            self.eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
 
-            reward = (self.eff_weight * eff_ratio) + (self.pressure_weight * valid_heads_ratio)
+            reward = (self.eff_weight * self.eff_ratio) + (self.pressure_weight * self.valid_heads_ratio)
         else:
             reward = 0.0
+            self.eff_ratio = 0.0
+            self.valid_heads_ratio = 0.0
 
         done = False
         return self.get_state(), reward, done, {}
