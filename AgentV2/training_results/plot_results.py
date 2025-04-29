@@ -45,7 +45,9 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
 # Example usage:
 if __name__ == "__main__":
     # Replace with the path to your saved CSV file
-    csv_file = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
-    save_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results"
+    # csv_file = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
+    csv_file = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log.csv"
+    # save_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results"
+    save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results"
 
     plot_rewards_from_csv(csv_file, save_path)

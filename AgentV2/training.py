@@ -81,6 +81,7 @@ class Agent:
         if self.steps % self.update_target_every == 0:
             self.target_net.load_state_dict(self.policy_net.state_dict())
 
+    def decay_epsilon(self):
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
@@ -91,7 +92,9 @@ if __name__ == "__main__":
 
     agent = Agent(state_size=state_size, action_size=action_size)
 
-    reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
+    # reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
+       # reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
+    reward_file_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log.csv"
     with open(reward_file_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
 
@@ -107,10 +110,13 @@ if __name__ == "__main__":
             state = next_state
             total_reward += reward
 
+        # After each episode, decay epsilon
+        agent.decay_epsilon()
+
         with open(reward_file_path, mode='a', newline='') as file:
             csv.writer(file).writerow([episode + 1, total_reward])
 
-        print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}")
+        print(f"Episode {episode + 1}: Total Reward = {total_reward:.3f}, Epsilon = {agent.epsilon:.3f}")
 
-    torch.save(agent.policy_net.state_dict(), "trained_model.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol4.pth")
     print("Model saved!")

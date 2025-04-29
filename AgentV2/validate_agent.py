@@ -69,10 +69,10 @@ for timestep in range(max_steps):
     if done:
         break
 
-# Save to CSV
-df = pd.DataFrame(full_logs)
-csv_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
-os.chdir(csv_path)
-df.to_csv("validation_full_log.csv", index=False)
+# # Save to CSV
+# df = pd.DataFrame(full_logs)
+# csv_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
+# os.chdir(csv_path)
+# df.to_csv("validation_full_log.csv", index=False)
 
 print("Validation complete. Results saved to validation_full_log.csv.")

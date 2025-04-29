@@ -66,6 +66,7 @@ class wds():
         return pump_speeds + pressures + flows
 
     def step(self, action_flat):
+        # Process actions (grouping pumps and adjusting speeds)
         group1 = action_flat % 3
         group2 = (action_flat // 3) % 3
         actions = [group1, group2]
@@ -85,24 +86,39 @@ class wds():
         for pump_id, speed in self.pump_speeds.items():
             self.wds.links[pump_id].speed = speed
 
+        # Scale demand
         demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
         self.wds.solve()
 
+        # Calculate efficiencies for each pump group
         self.calculate_pump_efficiencies()
         self.pump_power()
 
+        # Reward calculation
         pump_eff_ok = all(0 <= eff <= 1.2 for eff in self.pumpEffs.values())
 
         if pump_eff_ok:
-            heads = np.array([j.pressure for j in self.wds.junctions])
+            # Check if any pressure exceeds the threshold (either < 30 or > 100)
+            pressures = [j.pressure for j in self.wds.junctions]
+        
+            group_eff_ratios = {}
+            for i, group in enumerate(self.pumpGroups):
+                group_eff = [self.pumpEffs.get(pump_id, 0) for pump_id in group]
+                group_eff_ratio = np.mean(group_eff)  # Average efficiency for the group
+                group_eff_ratios[i] = np.clip(group_eff_ratio, 0, 1)  # Clip to [0, 1] range
+
+            # Calculate the total efficiency ratio (weighted average of group efficiencies)
+            total_efficiency = np.mean(list(group_eff_ratios.values()))
+            self.eff_ratio = total_efficiency  # Update overall efficiency ratio
+
+            # Pressure reward based on valid heads ratio
+            heads = np.array(pressures)
             self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
-            total_efficiency = np.prod(list(self.pumpEffs.values()))
-            self.eff_ratio = np.clip(total_efficiency / self.peakTotEff, 0, 1)
-
+            # Final reward, weighted by efficiency and pressure
             reward = (self.eff_weight * self.eff_ratio) + (self.pressure_weight * self.valid_heads_ratio)
         else:
             reward = 0.0
@@ -111,6 +127,7 @@ class wds():
 
         done = False
         return self.get_state(), reward, done, {}
+
 
     def calculate_pump_efficiencies(self):
         self.pumpEffs = {}
@@ -143,3 +160,19 @@ class wds():
     def observation_space(self):
         num_state_elements = len(self.pump_speeds) + len(self.wds.junctions) + len(self.wds.pumps)
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
+
+
+if __name__ == "__main__":
+    env = wds(eff_weight=3.0, pressure_weight=1.0)
+    env.step(4)
+
+    print("Pump Speeds:", env.pump_speeds)
+    print("Pump Efficiencies:", env.pumpEffs)
+    print("Pump Power:", env.pumpPower)
+
+    env.step(5)
+
+    print("Pump Speeds:", env.pump_speeds)
+    print("Pump Efficiencies:", env.pumpEffs)
+    print("Pump Power:", env.pumpPower)
+
