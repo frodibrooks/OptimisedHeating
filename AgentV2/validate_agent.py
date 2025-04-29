@@ -18,7 +18,7 @@ state_dim = int(env.observation_space().shape[0])
 action_dim = len(env.action_map)
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_modelVol3.pth"))
+model.load_state_dict(torch.load("trained_model_vol4.pth"))
 model.eval()
 
 # === Run validation ===
