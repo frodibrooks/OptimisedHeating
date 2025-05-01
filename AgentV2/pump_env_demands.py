@@ -3,103 +3,117 @@ import numpy as np
 from pump_env import wds
 
 class WdsWithDemand(wds):
-    def __init__(self, demand_pattern=None, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, action_map=None, demand_pattern=None, eff_weight=3.0, pressure_weight=1.0, episode_len=300, *args, **kwargs):
+        # Initialize the parent class, passing only the necessary arguments
+        super().__init__(episode_len=episode_len, eff_weight=eff_weight, pressure_weight=pressure_weight, *args, **kwargs)
 
-        # Action map: mapping flattened action index to list of actions for each pump group
-        self.action_map = [
-            [0, 0],  # Action 0: [slow, slow]
-            [0, 1],  # Action 1: [slow, same]
-            [0, 2],  # Action 2: [slow, fast]
-            [1, 0],  # Action 3: [same, slow]
-            [1, 1],  # Action 4: [same, same]
-            [1, 2],  # Action 5: [same, fast]
-            [2, 0],  # Action 6: [fast, slow]
-            [2, 1],  # Action 7: [fast, same]
-            [2, 2],  # Action 8: [fast, fast]
+        # If action_map is passed, use it; otherwise, create the default action_map
+        self.action_map = action_map if action_map is not None else [
+            (i, j)
+            for i in range(len(np.round(np.arange(0.8, 1.3001, 0.025), 3)))
+            for j in range(len(np.round(np.arange(0.8, 1.3001, 0.025), 3)))
         ]
 
-        # If demand pattern is provided, load it
-        if demand_pattern is not None:
-            self.demand_pattern = pd.read_csv(demand_pattern)['demand_pattern'].values
-        else:
-            self.demand_pattern = None
-
-        self.demand_index = 0  # To track where we are in the demand pattern
-
-    def reset(self):
-        # Reset base class functionality
-        state = super().reset()
+        # Define speed levels for the pumps
+        self.speed_levels = np.round(np.arange(0.8, 1.3001, 0.025), 3)
         
-        # Reset demand index for new episode
+        # Debugging print to check the ACTION_MAP and SPEED_LEVELS
+        # print(f"Action Map: {self.action_map}")
+        # print(f"Speed Levels: {self.speed_levels}")
+        
+        # Load the demand pattern if provided
+        self.demand_pattern = self._load_pattern(demand_pattern)
         self.demand_index = 0
 
-        return state
+    def _load_pattern(self, pattern):
+        """Load a demand pattern from a CSV or use the provided numpy array."""
+        if isinstance(pattern, str):  # Assume CSV path
+            return pd.read_csv(pattern)['demand_pattern'].values
+        elif isinstance(pattern, np.ndarray):  # Already an array
+            return pattern
+        else:
+            return None
+
+    def reset(self, demand_pattern=None):
+        """Reset the environment with the given or current demand pattern."""
+        self.demand_index = 0
+        if demand_pattern is not None:
+            self.demand_pattern = self._load_pattern(demand_pattern)
+        return super().reset()
 
     def action_index_to_list(self, action_idx):
-        # Convert flattened action index to a list of pump group actions
+        """Convert action index to a tuple of pump speed indices."""
+        # Debugging print statement to show the action_idx and the mapped action
+        # print(f"Converting action_idx {action_idx} to speed levels")
         return self.action_map[action_idx]
 
-    def step(self, action):        
-        # Execute action using base class method
-        state, reward, done, info = super().step(action)
+    def step(self, action_idx):
+        """Take a step in the environment based on the selected action."""
+        # Debugging print statements
+        # print(f"Action Index: {action_idx}")  # Print the action index received
+        idx1, idx2 = self.action_index_to_list(action_idx)
+        # print(f"Action Index Mapped: idx1 = {idx1}, idx2 = {idx2}")  # Print idx1 and idx2 values
 
-        # Apply the demand pattern if available
+        # Ensure that idx1 and idx2 are integers
+        # print(f"Speed Levels: {self.speed_levels}")
+        
+        # Convert speed values to their indices in the speed_levels array
+        try:
+            # Ensure the values are valid and match the speed_levels array
+            idx1 = np.where(self.speed_levels == idx1)[0][0]
+            idx2 = np.where(self.speed_levels == idx2)[0][0]
+            # print(f"Converted idx1 = {idx1}, idx2 = {idx2}")
+            speed1 = self.speed_levels[idx1]
+            speed2 = self.speed_levels[idx2]
+            # print(f"Selected Speeds: speed1 = {speed1}, speed2 = {speed2}")
+        except IndexError as e:
+            print(f"Error: {e}, idx1 = {idx1}, idx2 = {idx2}, speed_levels length = {len(self.speed_levels)}")
+
+        # Apply the chosen speeds to the pumps
+        for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
+            for pump_id in self.pumpGroups[group_idx]:
+                self.pump_speeds[pump_id] = speed
+                self.wds.pumps[pump_id].speed = speed
+
+
+        # Set the demand scale for the current timestep
         if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
             demand_scale = self.demand_pattern[self.demand_index]
             self.demand_index += 1
         else:
+            # If no pattern or if we run out, use a random demand scale
             demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
 
-        # Update demands in the network with the new demand scale
+        # Adjust the demand for all junctions
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
-        # Solve the network to update properties like flow, pressure, and pump power
+        # Solve the water distribution system
         self.wds.solve()
 
-        # Call pump_power() to update the pump power values
+        # Calculate pump power and compute the reward
         self.pump_power()
+        reward = self._compute_reward()
 
-        return state, reward, done, info
+        # Get the next state
+        state = self.get_state()
+
+        # Increment the timestep
+        self.timestep += 1
+
+        # Check if the episode is done
+        done = self.timestep >= self.episode_len
+
+        return state, reward, done, {}
 
 if __name__ == "__main__":
-    # Set the path to your demand pattern CSV
-    demand_pattern_path = r'C:\Users\frodi\Documents\OptimisedHeating\AgentV2\tests\demand_pattern_2024-11-03'
-
-    # Initialize the environment with the demand pattern
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, demand_pattern=demand_pattern_path)
-
-    # Reset the environment
-    state = env.reset()
-
-    # Print initial state and demand pattern
-    print("Initial State:", state[:10])
-    print("\nDemand Pattern (Scaling Factor):")
-    print(env.demand_pattern)  # Print the entire demand pattern
-
-    # Run through the demand pattern and print out the demand at each step
-    for t in range(len(env.demand_pattern)):
-        # Print demand at current timestep
-        demand_scale = env.demand_pattern[t]
-        print(f"Step {t+1}: Applied Demand Scale = {demand_scale}")
-
-        # Apply the demand change in the environment
-        state, reward, done, info = env.step([1, 1])  # Using a dummy action as we just want to test demand change
-
-        # Print the updated demands at each junction
-        print(f"Junction Demands at Step {t+1}:")
-        for junction in list(env.wds.junctions)[:5]:
-            print(f"  {junction.uid}: {junction.basedemand}")
-
-        # Optionally print the pump speeds or other relevant system states
-        print(f"Pump Speeds at Step {t+1}:")
-        for pump_id, speed in env.pump_speeds.items():
-            print(f"  Pump {pump_id}: Speed {speed:.3f}")
-
-        print(f"Pump powers: {env.pumpPower}")
-
-        # Print the reward at this step for debugging purposes
-        print(f"Reward at Step {t+1}: {reward:.3f}")
         
-        print("-" * 50)
+    SPEED_LEVELS = np.round(np.arange(0.8, 1.301, 0.025), 3)
+    ACTION_MAP = [(s1, s2) for s1 in SPEED_LEVELS for s2 in SPEED_LEVELS]
+    # print(f"Action Map: {ACTION_MAP}")
+    env = WdsWithDemand(action_map=ACTION_MAP, eff_weight=3.0, pressure_weight=1.0, episode_len=300)
+    env.step(155)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Reward: {reward}")
+    print(f"States: {states}")

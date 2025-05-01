@@ -5,7 +5,7 @@ from epynet import Network
 from ecurves import eff_curves
 
 class wds():
-    def __init__(self,
+    def __init__(self, 
                  wds_name="Vatnsendi",
                  speed_increment=0.025,
                  episode_len=300,
@@ -15,7 +15,6 @@ class wds():
                  seed=None,
                  eff_weight=1.0,
                  pressure_weight=1.0):
-
         if seed:
             np.random.seed(seed)
 
@@ -42,9 +41,9 @@ class wds():
         self.min_speed = 0.7
         self.max_speed = 1.4
 
-        # New attributes for logging
         self.eff_ratio = 0.0
         self.valid_heads_ratio = 0.0
+        self.timestep = 0
 
     def build_demand_dict(self):
         return {j.uid: j.basedemand for j in self.wds.junctions}
@@ -53,6 +52,7 @@ class wds():
         self.pumpPower = [p.energy for p in self.wds.pumps.values()]
 
     def reset(self):
+        self.timestep = 0
         self.pump_speeds = {pid: 1.0 for group in self.pumpGroups for pid in group}
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid]
@@ -66,72 +66,56 @@ class wds():
         return pump_speeds + pressures + flows
 
     def step(self, action_flat):
-        # Map the action_flat to the discrete values for each pump group
-        actions = [(action_flat % 3), ((action_flat // 3) % 3)]  # Action for group 1 and 2
-
-        # Update pump speeds based on the action
+        actions = [(action_flat % 3), ((action_flat // 3) % 3)]
         for i, group in enumerate(self.pumpGroups):
-            group_action = actions[i]  # This will be 0, 1, or 2
+            group_action = actions[i]
             for pump_id in group:
                 if group_action == 0:
-                    self.pump_speeds[pump_id] -= self.speed_increment  # Decrease speed
+                    self.pump_speeds[pump_id] -= self.speed_increment
                 elif group_action == 2:
-                    self.pump_speeds[pump_id] += self.speed_increment  # Increase speed
-                # If group_action == 1, the speed remains the same
+                    self.pump_speeds[pump_id] += self.speed_increment
+                self.pump_speeds[pump_id] = np.clip(round(self.pump_speeds[pump_id], 3), self.min_speed, self.max_speed)
 
-                # Clip speed to the allowed range
-                self.pump_speeds[pump_id] = np.clip(self.pump_speeds[pump_id], self.min_speed, self.max_speed)
-
-        # Update the pump speeds in the simulation
         for pump_id, speed in self.pump_speeds.items():
             self.wds.links[pump_id].speed = speed
 
-        # Scale demand
         demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
         self.wds.solve()
-
-        # Calculate efficiencies for each pump group
         self.calculate_pump_efficiencies()
         self.pump_power()
 
-        # Reward calculation
+        reward = self._compute_reward()
+
+        self.timestep += 1
+        done = self.timestep >= self.episode_len
+        return self.get_state(), reward, done, {}
+
+    def _compute_reward(self):
         pump_eff_ok = all(0 <= eff <= 1.2 for eff in self.pumpEffs.values())
-
-        if pump_eff_ok:
-            # Check if any pressure exceeds the threshold (either < 30 or > 100)
-            pressures = [j.pressure for j in self.wds.junctions]
-        
-            group_eff_ratios = {}
-            for i, group in enumerate(self.pumpGroups):
-                group_eff = [self.pumpEffs.get(pump_id, 0) for pump_id in group]
-                group_eff_ratio = np.mean(group_eff)  # Average efficiency for the group
-                group_eff_ratios[i] = np.clip(group_eff_ratio, 0, 1)  # Clip to [0, 1] range
-
-            # Calculate the total efficiency ratio (weighted average of group efficiencies)
-            total_efficiency = np.mean(list(group_eff_ratios.values()))
-            self.eff_ratio = total_efficiency  # Update overall efficiency ratio
-
-            # Pressure reward based on valid heads ratio
-            heads = np.array(pressures)
-            self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
-
-            # Final reward, weighted by efficiency and pressure
-            reward = (self.eff_weight * self.eff_ratio) + (self.pressure_weight * self.valid_heads_ratio)
-        else:
-            reward = 0.0
+        if not pump_eff_ok:
             self.eff_ratio = 0.0
             self.valid_heads_ratio = 0.0
+            return 0.0
+        
 
-        done = False
+        pressures = [j.pressure for j in self.wds.junctions]
 
-        # Output the current pump speeds after action
-        optimal_speeds = [self.pump_speeds[pid] for pid in self.pump_speeds]
-        print("Optimal Speeds:", optimal_speeds)
+        if any(p < 15 or p > 95 for p in pressures):
+            return 0.0
+        
+        group_eff_ratios = {
+            i: np.clip(np.mean([self.pumpEffs.get(pid, 0) for pid in group]), 0, 1)
+            for i, group in enumerate(self.pumpGroups)
+        }
+        self.eff_ratio = np.mean(list(group_eff_ratios.values()))
+        heads = np.array(pressures)
+        self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
+        
 
-        return self.get_state(), reward, done, {}
+        return (self.eff_weight * self.eff_ratio) + (self.pressure_weight * self.valid_heads_ratio)
 
     def calculate_pump_efficiencies(self):
         self.pumpEffs = {}
@@ -150,19 +134,16 @@ class wds():
         curve = eff_curves.get(pump_id)
         if curve:
             try:
-                efficiency = float(curve(flow_lps))
-                return efficiency
+                return float(curve(flow_lps))
             except Exception as e:
                 print(f"Error calculating efficiency for pump {pump_id}, flow={flow_lps}: {e}")
-                return 0
         else:
             raise ValueError(f"No efficiency curve for pump {pump_id}")
+        return 0
 
     def action_space(self):
-        # 3 actions per pump group × 2 pump groups = 9 actions in total
         return gym.spaces.Discrete(9)
 
     def observation_space(self):
         num_state_elements = len(self.pump_speeds) + len(self.wds.junctions) + len(self.wds.pumps)
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
-

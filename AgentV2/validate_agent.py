@@ -5,25 +5,26 @@ from training import DQN
 from pump_env_demands import WdsWithDemand
 import os
 
-# === Set working directory to where model is stored ===
+# === Set paths ===
 program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
-os.chdir(program_dir)
-
-# === Load environment with extended episode ===
 demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
+save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
+
+# === Load environment ===
+os.chdir(program_dir)
 env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.0,
     demand_pattern=demand_pattern_path,
-    episode_len=100  # Agent can take 100 actions
+    episode_len=100
 )
 
-# === Load trained model ===
+# === Load model ===
 state_dim = int(env.observation_space().shape[0])
 action_dim = len(env.action_map)
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol4.pth"))
+model.load_state_dict(torch.load("trained_model_vol5.pth"))
 model.eval()
 
 # === Run validation ===
@@ -43,24 +44,32 @@ for timestep in range(env.episode_len):
 
     state, reward, done, info = env.step(action_idx)
 
+    # === Log everything ===
     row = {
         "Step": timestep,
-        "Action": action_idx,
+        "ActionIndex": action_idx,
         "DemandScale": env.demand_pattern[timestep],
         "Reward": reward,
         "EffRatio": env.eff_ratio,
-        "ValidHeadsRatio": env.valid_heads_ratio
+        "ValidHeadsRatio": env.valid_heads_ratio,
     }
 
+    # Log Q-values
     for i, q in enumerate(q_values):
         row[f"Q_{i}"] = q.item()
 
+    # Log pressures
     for junction in env.wds.junctions:
         row[f"Head_{junction.uid}"] = junction.pressure
 
-    for pump_id, speed in env.pump_speeds.items():
-        row[f"PumpSpeed_{pump_id}"] = speed
+    # Log actual speeds from action map
+    speed_idx1, speed_idx2 = env.action_index_to_list(action_idx)
+    speed1 = env.speed_levels[speed_idx1]
+    speed2 = env.speed_levels[speed_idx2]
+    row["PumpSpeed_1"] = speed1
+    row["PumpSpeed_2"] = speed2
 
+    # Log pump powers
     for pump_id, power in zip(env.wds.pumps.keys(), env.pumpPower):
         row[f"PumpPower_{pump_id}"] = power
 
@@ -70,10 +79,9 @@ for timestep in range(env.episode_len):
         print("Episode terminated early.")
         break
 
-# === Save to CSV ===
+# === Save logs ===
 df = pd.DataFrame(full_logs)
-csv_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
-os.chdir(csv_path)
-df.to_csv("validation_full_log_agent4.csv", index=False)
+os.chdir(save_path)
+df.to_csv("validation_full_log_agent5.csv", index=False)
 
 print("Validation complete. Results saved to validation_full_log_agent4.csv.")
