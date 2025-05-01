@@ -7,7 +7,7 @@ from ecurves import eff_curves
 class wds():
     def __init__(self,
                  wds_name="Vatnsendi",
-                 speed_increment=0.05,
+                 speed_increment=0.025,
                  episode_len=300,
                  pump_groups=[['17', '10','25', '26'], ['27']],
                  total_demand_lo=0.8,
@@ -66,23 +66,23 @@ class wds():
         return pump_speeds + pressures + flows
 
     def step(self, action_flat):
-        # Process actions (grouping pumps and adjusting speeds)
-        group1 = action_flat % 3
-        group2 = (action_flat // 3) % 3
-        actions = [group1, group2]
+        # Map the action_flat to the discrete values for each pump group
+        actions = [(action_flat % 3), ((action_flat // 3) % 3)]  # Action for group 1 and 2
 
+        # Update pump speeds based on the action
         for i, group in enumerate(self.pumpGroups):
-            group_action = actions[i]
+            group_action = actions[i]  # This will be 0, 1, or 2
             for pump_id in group:
                 if group_action == 0:
-                    self.pump_speeds[pump_id] -= self.speed_increment
+                    self.pump_speeds[pump_id] -= self.speed_increment  # Decrease speed
                 elif group_action == 2:
-                    self.pump_speeds[pump_id] += self.speed_increment
+                    self.pump_speeds[pump_id] += self.speed_increment  # Increase speed
+                # If group_action == 1, the speed remains the same
 
-                self.pump_speeds[pump_id] = np.round(self.pump_speeds[pump_id], 3)
+                # Clip speed to the allowed range
+                self.pump_speeds[pump_id] = np.clip(self.pump_speeds[pump_id], self.min_speed, self.max_speed)
 
-        self.pump_speeds = {pid: np.clip(speed, self.min_speed, self.max_speed) for pid, speed in self.pump_speeds.items()}
-
+        # Update the pump speeds in the simulation
         for pump_id, speed in self.pump_speeds.items():
             self.wds.links[pump_id].speed = speed
 
@@ -126,8 +126,12 @@ class wds():
             self.valid_heads_ratio = 0.0
 
         done = False
-        return self.get_state(), reward, done, {}
 
+        # Output the current pump speeds after action
+        optimal_speeds = [self.pump_speeds[pid] for pid in self.pump_speeds]
+        print("Optimal Speeds:", optimal_speeds)
+
+        return self.get_state(), reward, done, {}
 
     def calculate_pump_efficiencies(self):
         self.pumpEffs = {}
@@ -155,24 +159,10 @@ class wds():
             raise ValueError(f"No efficiency curve for pump {pump_id}")
 
     def action_space(self):
+        # 3 actions per pump group × 2 pump groups = 9 actions in total
         return gym.spaces.Discrete(9)
 
     def observation_space(self):
         num_state_elements = len(self.pump_speeds) + len(self.wds.junctions) + len(self.wds.pumps)
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
-
-
-if __name__ == "__main__":
-    env = wds(eff_weight=3.0, pressure_weight=1.0)
-    env.step(4)
-
-    print("Pump Speeds:", env.pump_speeds)
-    print("Pump Efficiencies:", env.pumpEffs)
-    print("Pump Power:", env.pumpPower)
-
-    env.step(5)
-
-    print("Pump Speeds:", env.pump_speeds)
-    print("Pump Efficiencies:", env.pumpEffs)
-    print("Pump Power:", env.pumpPower)
 

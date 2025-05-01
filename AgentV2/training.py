@@ -92,8 +92,6 @@ if __name__ == "__main__":
 
     agent = Agent(state_size=state_size, action_size=action_size)
 
-    # reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
-       # reward_file_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log.csv"
     reward_file_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log.csv"
     with open(reward_file_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
@@ -104,7 +102,8 @@ if __name__ == "__main__":
         total_reward = 0
 
         for t in range(env.episode_len):
-            action_flat = agent.act(state)
+            action_flat = agent.act(state)  # Get the chosen action index
+            # Apply action to modify pump speeds accordingly (this may be different from 0.05 increments)
             next_state, reward, done, _ = env.step(action_flat)
             agent.step(state, action_flat, reward, next_state, done)
             state = next_state
