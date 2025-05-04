@@ -63,7 +63,8 @@ class wds():
         pump_speeds = list(self.pump_speeds.values())
         pressures = [j.pressure for j in self.wds.junctions]
         flows = [p.flow for p in self.wds.pumps.values()]
-        return pump_speeds + pressures + flows
+        power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)
+        return pump_speeds + pressures + flows + power
 
     def step(self, action_flat):
         actions = [(action_flat % 3), ((action_flat // 3) % 3)]
@@ -99,13 +100,12 @@ class wds():
             self.eff_ratio = 0.0
             self.valid_heads_ratio = 0.0
             return 0.0
-        
 
         pressures = [j.pressure for j in self.wds.junctions]
 
         if any(p < 15 or p > 95 for p in pressures):
             return 0.0
-        
+
         group_eff_ratios = {
             i: np.clip(np.mean([self.pumpEffs.get(pid, 0) for pid in group]), 0, 1)
             for i, group in enumerate(self.pumpGroups)
@@ -113,9 +113,18 @@ class wds():
         self.eff_ratio = np.mean(list(group_eff_ratios.values()))
         heads = np.array(pressures)
         self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
-        
 
-        return (self.eff_weight * self.eff_ratio) + (self.pressure_weight * self.valid_heads_ratio)
+        # Power penalty term
+        total_power = np.sum(self.pumpPower)
+        power_penalty_weight = 0.01  # You can tune this hyperparameter
+
+        reward = (
+            self.eff_weight * self.eff_ratio
+            + self.pressure_weight * self.valid_heads_ratio
+            - power_penalty_weight * total_power
+        )
+        return reward
+
 
     def calculate_pump_efficiencies(self):
         self.pumpEffs = {}
@@ -145,5 +154,12 @@ class wds():
         return gym.spaces.Discrete(9)
 
     def observation_space(self):
-        num_state_elements = len(self.pump_speeds) + len(self.wds.junctions) + len(self.wds.pumps)
+        num_state_elements = (
+    len(self.pump_speeds)  # speeds
+    + len(self.wds.junctions)  # pressures
+    + len(self.wds.pumps)  # flows
+    + len(self.wds.pumps))  # power
+
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
+
+

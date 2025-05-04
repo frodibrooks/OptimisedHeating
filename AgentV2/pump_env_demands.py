@@ -82,7 +82,7 @@ class WdsWithDemand(wds):
             self.demand_index += 1
         else:
             # If no pattern or if we run out, use a random demand scale
-            demand_scale = np.random.uniform(self.total_demand_lo, self.total_demand_hi)
+            demand_scale = 1
 
         # Adjust the demand for all junctions
         for junction in self.wds.junctions:
@@ -93,6 +93,7 @@ class WdsWithDemand(wds):
 
         # Calculate pump power and compute the reward
         self.pump_power()
+        self.calculate_pump_efficiencies()
         reward = self._compute_reward()
 
         # Get the next state
@@ -110,10 +111,51 @@ if __name__ == "__main__":
         
     SPEED_LEVELS = np.round(np.arange(0.8, 1.301, 0.025), 3)
     ACTION_MAP = [(s1, s2) for s1 in SPEED_LEVELS for s2 in SPEED_LEVELS]
-    # print(f"Action Map: {ACTION_MAP}")
+   
     env = WdsWithDemand(action_map=ACTION_MAP, eff_weight=3.0, pressure_weight=1.0, episode_len=300)
-    env.step(155)
+
+    # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+
+    env.step(168)
     states = env.get_state()
     reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Pump efficiencies: {env.pumpEffs}")
+    print()
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
     print(f"Reward: {reward}")
-    print(f"States: {states}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Eff ratio: {3*env.eff_ratio}")
+
+
+    print(f"States: {states[:10]}")
+
+    env.step(176)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Pump efficiencies: {env.pumpEffs}")
+    print()
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
+    print(f"Reward: {reward}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Eff ratio: {3*env.eff_ratio}")
+
+
+    print(f"States: {states[:10]}")
+    # for i in range(len(ACTION_MAP)):
+    #     print(f"Action {i}: {ACTION_MAP[i]}")
