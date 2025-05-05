@@ -35,7 +35,7 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
     os.makedirs(save_path, exist_ok=True)
     
     # Create the full path by joining the save path with a file name
-    full_save_path = os.path.join(save_path, "reward_plot_agent7.png")
+    full_save_path = os.path.join(save_path, "reward_plot_agent8.png")
     
     # Save the plot
     plt.savefig(full_save_path)
