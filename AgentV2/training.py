@@ -8,8 +8,7 @@ import torch.optim as optim
 from pump_env_demands import WdsWithDemand
 
 # Adjusted speed levels for smaller action space
-SPEED_LEVELS = np.round(np.arange(0.85, 1.25, 0.05), 3)
-ACTION_MAP = [(s1, s2) for s1 in SPEED_LEVELS for s2 in SPEED_LEVELS]
+
 
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
@@ -40,7 +39,7 @@ class Agent:
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
-        self.epsilon_decay = 0.995
+        self.epsilon_decay = 0.99
         self.update_target_every = 10
         self.steps = 0
         self.action_size = action_size
@@ -83,24 +82,24 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 2
+    num_episodes = 25
     episode_len = 300  # Modify episode length here
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent9.csv"
-    demand_pattern = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent10.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
 
     # Initialize the WDS environment with demand pattern scaling and temporal variation
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, episode_len=episode_len,demand_pattern=demand_pattern)
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, episode_len=episode_len)
 
     state_size = len(env.reset())
-    action_size = len(ACTION_MAP)
+    action_size = len(env.action_map)
+    print(f"State size: {state_size}, Action size: {action_size}")
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
         print()
-        print(f"Episode {episode + 1}/{num_episodes}")
+        print(f"Episode {episode + 1}/{num_episodes} , Demand scale: {env.episode_demand_scale}")
         print()
         state = env.reset()  # No demand pattern passed here
         total_reward = 0
@@ -112,8 +111,8 @@ if __name__ == "__main__":
             agent.step(state, action_idx, reward, next_state, done)
             state = next_state
             total_reward += reward
-            print(f"Step {step + 1}/{episode_len}")
-            print(f"Pump speeds: {env.pump_speeds}")
+            print(f"\rStep {step + 1}/{episode_len}",end='',flush =True)
+
 
             if done:
                 break
@@ -122,7 +121,8 @@ if __name__ == "__main__":
 
         with open(reward_log_path, mode='a', newline='') as file:
             csv.writer(file).writerow([episode + 1, total_reward])
+        print()
         print(f"Episode {episode + 1}: Reward = {total_reward:.3f}, Epsilon = {agent.epsilon:.3f}")
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol9.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol10.pth")
     print("Model saved!")

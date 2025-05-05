@@ -7,6 +7,8 @@ class WdsWithDemand(wds):
         super().__init__(*args, **kwargs)
         self.demand_pattern = self._load_pattern(demand_pattern)
         self.demand_index = 0
+        self.episode_demand_scale = 1.0
+
 
     def _load_pattern(self, pattern):
         """Load a demand pattern from a CSV or use the provided numpy array."""
@@ -18,31 +20,28 @@ class WdsWithDemand(wds):
             return None
 
     def reset(self, demand_pattern=None):
-        """Reset the environment with a given or existing demand pattern."""
         self.demand_index = 0
+        self.episode_demand_scale = np.random.uniform(0.8, 1.2)  # One scale per episode
         if demand_pattern is not None:
             self.demand_pattern = self._load_pattern(demand_pattern)
         return super().reset()
+
 
     def action_index_to_list(self, action_idx):
         """Convert action index to a tuple of speed indices."""
         return self.action_map[action_idx]
 
     def step(self, action_idx):
-        # Convert action index to tuple of speeds using the action map
         speed1, speed2 = self.action_map[action_idx]
         
-        # Update pump speeds
         for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
             for pump_id in self.pumpGroups[group_idx]:
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
 
-        # Apply random demand scaling factor per episode
-        demand_scale = np.random.uniform(0.8, 1.2)
-        print(f"Demand scale: {demand_scale}")
+        demand_scale = self.episode_demand_scale  # Use fixed scale for episode
 
-        # Temporal variation by modifying demand scaling per step
+        # Optional: combine with temporal pattern if provided
         if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
             demand_scale *= self.demand_pattern[self.demand_index]
             self.demand_index += 1
@@ -50,7 +49,6 @@ class WdsWithDemand(wds):
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
-        # Simulate and compute reward
         self.wds.solve()
         self.pump_power()
         self.calculate_pump_efficiencies()
@@ -65,38 +63,58 @@ class WdsWithDemand(wds):
 
 
 
+
 if __name__ == "__main__":
 
    
     env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, episode_len=300)
 
-    # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+    # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(40)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    # env.step(40)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
 
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
+    # print(f"Pump efficiencies: {env.pumpEffs}")
+    # print()
 
-    print(f"Pump power: {env.pumpPower}")
-    print()
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Eff ratio: {3*env.eff_ratio}")
+    # print(f"Energy: {-0.02*env.total_power}")
 
-    print(f"Reward: {reward}")
-    print()
+    # print(f"Reward: {reward}")
+    # print()
 
     
 
 
-    print(f"States: {states[:10]}")
+    # print(f"States: {states[:10]}")
 
-    env.step(44)
+    # env.step(44)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
+
+    # print(f"Pump efficiencies: {env.pumpEffs}")
+    # print()
+
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
+
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Eff ratio: {3*env.eff_ratio}")
+    # print(f"Energy: {-0.02*env.total_power}")
+
+    # print(f"Reward: {reward}")
+    # print()
+
+    env.step(22)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -120,3 +138,8 @@ if __name__ == "__main__":
     # for i in range(len(env.action_map)):
     #     print(f"Action {i}: {env.action_map[i]}")
   
+    # # print(f"Action map: {env.action_map}")
+    # state_dim = int(env.observation_space().shape[0])
+    # action_dim = len(env.action_map)
+    # print(state_dim,action_dim)
+   
