@@ -48,7 +48,7 @@ class wds():
         self.timestep = 0
 
         # Define the speed levels
-        self.speed_levels = np.round(np.arange(0.85, 1.25, 0.05), 3)
+        self.speed_levels = np.round(np.arange(0.8, 1.251, 0.05), 3)
 
         # Define the action map
         self.action_map = [

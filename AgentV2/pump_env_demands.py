@@ -29,17 +29,9 @@ class WdsWithDemand(wds):
         return self.action_map[action_idx]
 
     def step(self, action_idx):
-        # Extract idx1, idx2 from the action_idx
-        idx1, idx2 = self.action_index_to_list(action_idx)
+        # Convert action index to tuple of speeds using the action map
+        speed1, speed2 = self.action_map[action_idx]
         
-        # Ensure idx1 and idx2 are valid indices for speed_levels
-        if not (0 <= idx1 < len(self.speed_levels)) or not (0 <= idx2 < len(self.speed_levels)):
-            raise ValueError(f"Invalid indices: idx1={idx1}, idx2={idx2} for speed_levels.")
-
-        # Get pump speeds based on the action
-        speed1 = self.speed_levels[idx1]
-        speed2 = self.speed_levels[idx2]
-
         # Update pump speeds
         for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
             for pump_id in self.pumpGroups[group_idx]:
@@ -48,6 +40,7 @@ class WdsWithDemand(wds):
 
         # Apply random demand scaling factor per episode
         demand_scale = np.random.uniform(0.8, 1.2)
+        print(f"Demand scale: {demand_scale}")
 
         # Temporal variation by modifying demand scaling per step
         if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
@@ -71,16 +64,15 @@ class WdsWithDemand(wds):
 
 
 
+
 if __name__ == "__main__":
-        
-    SPEED_LEVELS = np.round(np.arange(0.8, 1.301, 0.025), 3)
-    ACTION_MAP = [(s1, s2) for s1 in SPEED_LEVELS for s2 in SPEED_LEVELS]
+
    
-    env = WdsWithDemand(action_map=ACTION_MAP, eff_weight=3.0, pressure_weight=1.0, episode_len=300)
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, episode_len=300)
 
     # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(168)
+    env.step(40)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -94,7 +86,7 @@ if __name__ == "__main__":
 
     print(f"Valid heads ratio: {env.valid_heads_ratio}")
     print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.01*env.total_power}")
+    print(f"Energy: {-0.02*env.total_power}")
 
     print(f"Reward: {reward}")
     print()
@@ -104,7 +96,7 @@ if __name__ == "__main__":
 
     print(f"States: {states[:10]}")
 
-    env.step(176)
+    env.step(44)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -116,13 +108,15 @@ if __name__ == "__main__":
     print(f"Pump power: {env.pumpPower}")
     print()
 
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Eff ratio: {3*env.eff_ratio}")
+    print(f"Energy: {-0.02*env.total_power}")
+
     print(f"Reward: {reward}")
     print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
 
-
-    print(f"States: {states[:10]}")
-    # for i in range(len(ACTION_MAP)):
-    #     print(f"Action {i}: {ACTION_MAP[i]}")
+    
+    # for i in range(len(env.action_map)):
+    #     print(f"Action {i}: {env.action_map[i]}")
+  
