@@ -17,7 +17,7 @@ env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.0,
     demand_pattern=demand_pattern_path,
-    episode_len = 23 # Þetta er lenngd demand pattern
+    episode_len = 23 # Þetta er lengd demand pattern
 
 )
 
@@ -32,7 +32,7 @@ model.eval()
 
 # === Run validation ===
 full_logs = []
-state = env.reset()
+state = env.get_state()
 
 for timestep in range(env.episode_len):
     print(f"timestep {timestep + 1}/{env.episode_len}")

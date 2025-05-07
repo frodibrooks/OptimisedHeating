@@ -74,6 +74,7 @@ class wds():
         return self.get_state()
 
     def get_state(self):
+        self.wds.solve()
         pump_speeds = list(self.pump_speeds.values())
         pressures = [j.pressure for j in self.wds.junctions]
         flows = [p.flow for p in self.wds.pumps.values()]
@@ -191,15 +192,15 @@ class wds():
 
 
 if __name__ == "__main__":
-        
-    SPEED_LEVELS = np.round(np.arange(0.8, 1.301, 0.025), 3)
-    ACTION_MAP = [(s1, s2) for s1 in SPEED_LEVELS for s2 in SPEED_LEVELS]
+    
    
-    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
+    # # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
+    env = wds(eff_weight=3.0, pressure_weight=1)
 
-    # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(12)
+    # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+
+    env.step(76)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -220,9 +221,11 @@ if __name__ == "__main__":
 
     
 
-    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
+    # # # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
+    env = wds(eff_weight=3.0, pressure_weight=1)
 
-    env.step(8)
+
+    env.step(72)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -241,5 +244,25 @@ if __name__ == "__main__":
     print(f"Reward: {reward}")
     print()
 
-    # for i in range(len(ACTION_MAP)):
-    #     print(f"Action {i}: {ACTION_MAP[i]}")
+    # env = wds(eff_weight=3.0, pressure_weight=1.0)
+    # env.step(40)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
+
+    # print(f"Pump efficiencies: {env.pumpEffs}")
+    # print()
+
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
+
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Eff ratio: {3*env.eff_ratio}")
+    # print(f"Energy: {-0.02*env.total_power}")
+
+    # print(f"Reward: {reward}")
+    # print()
+
+    # for i in range(len(env.action_map)):
+    #     print(f"Action {i}: {env.action_map[i]}")
