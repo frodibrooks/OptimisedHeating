@@ -82,9 +82,10 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 25
+    num_episodes = 1000
     episode_len = 300  # Modify episode length here
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent10.csv"
+    #reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent11.csv"
+    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent11.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
@@ -124,5 +125,5 @@ if __name__ == "__main__":
         print()
         print(f"Episode {episode + 1}: Reward = {total_reward:.3f}, Epsilon = {agent.epsilon:.3f}")
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol10.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol11.pth")
     print("Model saved!")
