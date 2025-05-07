@@ -39,7 +39,7 @@ class Agent:
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
-        self.epsilon_decay = 0.99
+        self.epsilon_decay = 0.995
         self.update_target_every = 10
         self.steps = 0
         self.action_size = action_size
@@ -82,10 +82,10 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 1000
+    num_episodes = 2
     episode_len = 300  # Modify episode length here
-    #reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent11.csv"
-    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent11.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent12.csv"
+    # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent12.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         print()
         print(f"Episode {episode + 1}/{num_episodes} , Demand scale: {env.episode_demand_scale}")
         print()
-        state = env.reset()  # No demand pattern passed here
+        state = env.reset()  # Búum til random demand scale inn í reset
         total_reward = 0
 
         for step in range(episode_len):
@@ -125,5 +125,5 @@ if __name__ == "__main__":
         print()
         print(f"Episode {episode + 1}: Reward = {total_reward:.3f}, Epsilon = {agent.epsilon:.3f}")
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol11.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol12.pth")
     print("Model saved!")

@@ -39,13 +39,14 @@ class WdsWithDemand(wds):
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
 
-        demand_scale = self.episode_demand_scale  # Use fixed scale for episode
+        demand_scale = 1
 
         # Optional: combine with temporal pattern if provided
         if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
             demand_scale *= self.demand_pattern[self.demand_index]
             self.demand_index += 1
-
+        self.episode_demand_scale = demand_scale
+        
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 

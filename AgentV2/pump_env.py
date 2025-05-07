@@ -194,13 +194,13 @@ class wds():
 if __name__ == "__main__":
     
    
-    # # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
-    env = wds(eff_weight=3.0, pressure_weight=1)
+    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
+    # env = wds(eff_weight=3.0, pressure_weight=1)
 
 
     # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(76)
+    env.step(12)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -221,11 +221,11 @@ if __name__ == "__main__":
 
     
 
-    # # # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.045781)
-    env = wds(eff_weight=3.0, pressure_weight=1)
+    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
+    # env = wds(eff_weight=3.0, pressure_weight=1)
 
 
-    env.step(72)
+    env.step(8)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")

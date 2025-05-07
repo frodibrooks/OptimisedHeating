@@ -46,6 +46,14 @@ for timestep in range(env.episode_len):
     # print(f"Q-values: {q_values.numpy()}")
 
     state, reward, done, info = env.step(action_idx)
+    print()
+    print(f"Reward: {reward:.3f}")
+    print()
+    print(f"Eff ratio: {env.eff_ratio:.3f}")
+    print(f"Valid heads ratio: {env.valid_heads_ratio:.3f}")
+    print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
+    print(f"Pump speeds: {env.pump_speeds}")
+    print(f"Pump efficiencies: {env.episode_demand_scale}")
 
     # === Log everything ===
     row = {
