@@ -82,10 +82,10 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 2
-    episode_len = 300  # Modify episode length here
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent12.csv"
-    # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent12.csv"
+    num_episodes = 1000
+    episode_len = 400  # Modify episode length here
+    # reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent12.csv"
+    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent12.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
@@ -99,11 +99,12 @@ if __name__ == "__main__":
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
+        
+        state = env.reset()  # Búum til random demand scale inn í reset
+        total_reward = 0
         print()
         print(f"Episode {episode + 1}/{num_episodes} , Demand scale: {env.episode_demand_scale}")
         print()
-        state = env.reset()  # Búum til random demand scale inn í reset
-        total_reward = 0
 
         for step in range(episode_len):
             
