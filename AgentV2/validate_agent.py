@@ -13,11 +13,20 @@ save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 # === Load environment ===
 os.chdir(program_dir)
+
+# env = WdsWithDemand(
+#     eff_weight=3.0,
+#     pressure_weight=1.0,
+#     demand_pattern=demand_pattern_path,
+#     episode_len = 23 # Þetta er lengd demand pattern
+
+# )
+
 env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.0,
-    demand_pattern=demand_pattern_path,
-    episode_len = 23 # Þetta er lengd demand pattern
+    demand_pattern=np.array([1.2 ,1 , 0.8]), # Þetta er demand pattern
+    episode_len = 3# Þetta er lengd demand pattern
 
 )
 
@@ -27,7 +36,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol12.pth"))
+model.load_state_dict(torch.load("trained_model_vol13.pth"))
 model.eval()
 
 # === Run validation ===
@@ -57,7 +66,7 @@ for timestep in range(env.episode_len):
     print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
     print(f"Demand Scaling: {env.episode_demand_scale}")
-    print("Q-values at timestep 1:", q_values.tolist())
+    # print("Q-values at timestep 1:", q_values.tolist())
 
     
 
@@ -99,6 +108,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent12.csv", index=False)
+df.to_csv("validation_full_log_agent13.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent12.csv.")
+print("Validation complete. Results saved to validation_full_log_agent13.csv.")

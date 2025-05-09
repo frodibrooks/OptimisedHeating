@@ -14,16 +14,16 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
     data = pd.read_csv(csv_file)
 
     # Check if the CSV contains a 'reward' column
-    if 'Total Reward' not in data.columns:
+    if 'Reward' not in data.columns:
         print("Error: The CSV file must have a 'Total Reward' column.")
         return
 
-    rewards = data['Total Reward'].values
+    rewards = data['Reward'].values
     episodes = data.index + 1  # Assuming episodes are numbered starting from 1
 
     # Plotting the rewards
     plt.figure(figsize=(10, 6))
-    plt.plot(episodes, rewards, label="Reward per Episode", color="b", linestyle='-', marker='o')
+    plt.plot(episodes, rewards, label="Reward per Episode", color="b", marker='o',alpha=0.7)
     plt.xlabel("Episodes")
     plt.ylabel("Total Reward")
     plt.title("Reward Over Episodes")
@@ -45,9 +45,10 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
 # Example usage:
 if __name__ == "__main__":
     # Replace with the path to your saved CSV file
-    csv_file = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log_agent13.csv"
-    # csv_file = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent13.csv"
-    save_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results"
-    # save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results"
+    # csv_file = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log_agent13.csv"
+    # save_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results"
+
+    csv_file = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent13.csv"
+    save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results"
 
     plot_rewards_from_csv(csv_file, save_path)

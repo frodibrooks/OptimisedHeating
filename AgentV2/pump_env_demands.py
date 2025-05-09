@@ -68,11 +68,11 @@ class WdsWithDemand(wds):
 if __name__ == "__main__":
 
    
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0,demand_pattern=np.array([1.045780954728453]))
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0,demand_pattern=np.array([1]))
 
     # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(124)
+    env.step(60)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -92,10 +92,10 @@ if __name__ == "__main__":
     print()
 
     
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0,demand_pattern=np.array([1.045780954728453]))
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0,demand_pattern=np.array([1]))
 
 
-    env.step(116)
+    env.step(114)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -114,28 +114,7 @@ if __name__ == "__main__":
     print(f"Reward: {reward}")
     
 
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0,demand_pattern=np.array([1.045780954728453]))
-
-
-    env.step(88)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
-
-    print(f"Reward: {reward}")
-    print()
-
+    
 
 
     
