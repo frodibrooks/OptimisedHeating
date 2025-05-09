@@ -36,7 +36,7 @@ class Agent:
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
-        self.epsilon_decay = 0.995
+        self.epsilon_decay = 0.995  # hversu hratt epsilon minnkar
         self.update_target_every = 1000
         self.steps = 0
         self.action_size = action_size
@@ -80,7 +80,8 @@ class Agent:
 
 if __name__ == "__main__":
     num_episodes = 10000  # You can now train for more episodes since they're fast
-    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent14.csv"
+    # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent15.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -88,7 +89,7 @@ if __name__ == "__main__":
     env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5, episode_len=1)
     state_size = len(env.reset())
     action_size = len(env.action_map)
-    print(f"State size: {state_size}, Action size: {action_size}")
+    # print(f"State size: {state_size}, Action size: {action_size}")
 
     agent = Agent(state_size, action_size)
 
@@ -102,7 +103,8 @@ if __name__ == "__main__":
         with open(reward_log_path, mode='a', newline='') as file:
             csv.writer(file).writerow([episode + 1, reward])
         
-        print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}")
+        print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol14.pth")
+
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol5.pth")
     print("Model saved!")
