@@ -24,7 +24,7 @@ os.chdir(program_dir)
 
 env = WdsWithDemand(
     eff_weight=3.0,
-    pressure_weight=1.0,
+    pressure_weight=1.5,
     demand_pattern=np.array([1.2 ,1 , 0.8]), # Þetta er demand pattern
     episode_len = 3# Þetta er lengd demand pattern
 
@@ -62,7 +62,7 @@ for timestep in range(env.episode_len):
     print(f"Reward: {reward:.3f}")
     print()
     print(f"Eff ratio: {env.eff_ratio:.3f}")
-    print(f"Valid heads ratio: {env.valid_heads_ratio:.3f}")
+    print(f"Pressure score: {env.pressure_score:.3f}")
     print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
     print(f"Demand Scaling: {env.episode_demand_scale}")
@@ -77,8 +77,8 @@ for timestep in range(env.episode_len):
         "DemandScale": env.demand_pattern[timestep],
         "Reward": reward,
         "EffRatio": env.eff_ratio,
-        "ValidHeadsRatio": env.valid_heads_ratio,
-        "Energy": sum(env.pumpPower),
+        "Pressure Score": env.pressure_score,
+        "Energy": env.total_power,
     }
 
     # Log Q-values
