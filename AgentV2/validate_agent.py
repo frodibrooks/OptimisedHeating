@@ -27,7 +27,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol11.pth"))
+model.load_state_dict(torch.load("trained_model_vol12.pth"))
 model.eval()
 
 # === Run validation ===
@@ -46,6 +46,9 @@ for timestep in range(env.episode_len):
     # print(f"Q-values: {q_values.numpy()}")
 
     state, reward, done, info = env.step(action_idx)
+    # Add this line!
+    state = env.get_state()
+
     print()
     print(f"Reward: {reward:.3f}")
     print()
@@ -53,7 +56,10 @@ for timestep in range(env.episode_len):
     print(f"Valid heads ratio: {env.valid_heads_ratio:.3f}")
     print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
-    print(f"Pump efficiencies: {env.episode_demand_scale}")
+    print(f"Demand Scaling: {env.episode_demand_scale}")
+    print("Q-values at timestep 1:", q_values.tolist())
+
+    
 
     # === Log everything ===
     row = {
@@ -93,6 +99,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent11.csv", index=False)
+df.to_csv("validation_full_log_agent12.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent11.csv.")
+print("Validation complete. Results saved to validation_full_log_agent12.csv.")
