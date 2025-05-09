@@ -85,7 +85,7 @@ if __name__ == "__main__":
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
 
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.0, episode_len=1)
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5, episode_len=1)
     state_size = len(env.reset())
     action_size = len(env.action_map)
     print(f"State size: {state_size}, Action size: {action_size}")
