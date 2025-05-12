@@ -50,7 +50,7 @@ class wds():
         self.timestep = 0
 
         # Define the speed levels
-        self.speed_levels = np.round(np.arange(0.6, 1.251, 0.05), 3)
+        self.speed_levels = np.round(np.arange(0.7, 1.251, 0.03), 3)
 
         # Define the action map
         self.action_map = [
@@ -79,7 +79,8 @@ class wds():
         pressures = [j.pressure for j in self.wds.junctions]
         flows = [p.flow for p in self.wds.pumps.values()]
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)
-        return pump_speeds + pressures + flows + power
+        demand = [j.basedemand for j in self.wds.junctions]
+        return pump_speeds + pressures + flows + power+ demand
 
     def step(self, action_idx):
         # Map the action index to pump speeds using the action_map

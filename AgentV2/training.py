@@ -79,14 +79,14 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 10000  # You can now train for more episodes since they're fast
+    num_episodes = 15000  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent17.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent18.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
 
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5, episode_len=1,use_constant_demand=False)
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1, episode_len=1,use_constant_demand=False)
     state_size = len(env.reset())
     action_size = len(env.action_map)
     # print(f"State size: {state_size}, Action size: {action_size}")
@@ -94,7 +94,7 @@ if __name__ == "__main__":
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
-        state = env.reset()
+        state = env.reset(training=True)
         action_idx = agent.act(state)
         next_state, reward, done, _ = env.step(action_idx)
         agent.step(state, action_idx, reward, next_state, done)
@@ -105,5 +105,5 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol17.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol18.pth")
     print("Model saved!")

@@ -7,30 +7,30 @@ import os
 
 # === Set paths ===
 program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
-# demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
-demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern"
+demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
+# demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern"
 save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 
 # === Load environment ===
 os.chdir(program_dir)
 
-env = WdsWithDemand(
-    eff_weight=3.0,
-    pressure_weight=1.5,
-    demand_pattern=demand_pattern_path,
-    episode_len = 9, # Þetta er lengd demand pattern
-    use_constant_demand=False
-)
-
 # env = WdsWithDemand(
 #     eff_weight=3.0,
 #     pressure_weight=1.5,
-#     demand_pattern=np.array([1.2 ,1 , 0.8]), # Þetta er demand pattern
-#     episode_len = 3 ,# Þetta er lengd demand pattern
+#     demand_pattern=demand_pattern_path,
+#     episode_len = 24, # Þetta er lengd demand pattern
 #     use_constant_demand=False
-
 # )
+
+env = WdsWithDemand(
+    eff_weight=3.0,
+    pressure_weight=1.5,
+    demand_pattern=np.array([1.2 ,1 , 0.8]), # Þetta er demand pattern
+    episode_len = 3 ,# Þetta er lengd demand pattern
+    use_constant_demand=False
+
+)
 
 # === Load model ===
 state_dim = int(env.observation_space().shape[0])
@@ -38,7 +38,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol17.pth"))
+model.load_state_dict(torch.load("trained_model_vol18.pth"))
 model.eval()
 
 # === Run validation ===
@@ -113,6 +113,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent17.csv", index=False)
+df.to_csv("validation_full_log_agent18.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent17.csv.")
+print("Validation complete. Results saved to validation_full_log_agent18.csv.")

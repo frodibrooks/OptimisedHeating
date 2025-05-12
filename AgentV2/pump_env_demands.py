@@ -20,15 +20,15 @@ class WdsWithDemand(wds):
         else:
             return None
 
-    def reset(self, demand_pattern=None):
+    def reset(self, demand_pattern=None, training = False):
         self.demand_index = 0
         
         # If using a pattern, base scale is 1.0
         if self.demand_pattern is not None:
             self.episode_demand_scale = 1.0
-        else:
+        if training:
             # Use random demand scale if no pattern is provided
-            self.episode_demand_scale = np.random.uniform(0.8, 1.2) if self.use_constant_demand else 1.0
+            self.episode_demand_scale = np.random.uniform(0.75, 1.4)
 
         if demand_pattern is not None:
             self.demand_pattern = self._load_pattern(demand_pattern)
@@ -150,6 +150,7 @@ if __name__ == "__main__":
 
     print(f"Reward: {reward}")
     print()
+    print(states[-20:])
 
 
     
