@@ -7,7 +7,8 @@ import os
 
 # === Set paths ===
 program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
-demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
+# demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
+demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern"
 save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 
@@ -18,7 +19,7 @@ env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.5,
     demand_pattern=demand_pattern_path,
-    episode_len = 23, # Þetta er lengd demand pattern
+    episode_len = 9, # Þetta er lengd demand pattern
     use_constant_demand=False
 )
 
