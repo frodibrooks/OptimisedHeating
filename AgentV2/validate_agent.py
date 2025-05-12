@@ -17,7 +17,7 @@ os.chdir(program_dir)
 
 # env = WdsWithDemand(
 #     eff_weight=3.0,
-#     pressure_weight=1.5,
+#     pressure_weight=1,
 #     demand_pattern=demand_pattern_path,
 #     episode_len = 24, # Þetta er lengd demand pattern
 #     use_constant_demand=False
@@ -26,8 +26,8 @@ os.chdir(program_dir)
 env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.5,
-    demand_pattern=np.array([1 ,1.2 ,1 , 0.8]), # Þetta er demand pattern
-    episode_len = 4 ,# Þetta er lengd demand pattern
+    demand_pattern=np.array([1.4 ,1.4 ,1 , 1.4, 1.4]), # Þetta er demand pattern
+    episode_len = 5 ,# Þetta er lengd demand pattern
     use_constant_demand=False
 
 )

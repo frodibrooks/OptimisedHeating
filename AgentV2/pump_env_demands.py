@@ -181,8 +181,8 @@ if __name__ == "__main__":
   
 
     
-    # for i in range(len(env.action_map)):
-    #     print(f"Action {i}: {env.action_map[i]}")
+    for i in range(len(env.action_map)):
+        print(f"Action {i}: {env.action_map[i]}")
   
 
   
