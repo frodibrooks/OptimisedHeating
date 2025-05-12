@@ -22,10 +22,20 @@ class WdsWithDemand(wds):
 
     def reset(self, demand_pattern=None):
         self.demand_index = 0
-        self.episode_demand_scale = np.random.uniform(0.8, 1.2)  # One scale per episode
+        
+        # If using a pattern, base scale is 1.0
+        if self.demand_pattern is not None:
+            self.episode_demand_scale = 1.0
+        else:
+            # Use random demand scale if no pattern is provided
+            self.episode_demand_scale = np.random.uniform(0.8, 1.2) if self.use_constant_demand else 1.0
+
         if demand_pattern is not None:
             self.demand_pattern = self._load_pattern(demand_pattern)
+
         return super().reset()
+
+
 
 
     def action_index_to_list(self, action_idx):
@@ -45,6 +55,7 @@ class WdsWithDemand(wds):
 
         if not self.use_constant_demand and self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
             demand_scale *= self.demand_pattern[self.demand_index]
+            # print(f"[STEP] timestep={self.demand_index}, demand_multiplier={self.demand_pattern[self.demand_index]}")
             self.demand_index += 1
 
         for junction in self.wds.junctions:
