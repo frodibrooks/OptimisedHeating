@@ -79,7 +79,7 @@ class WdsWithDemand(wds):
 if __name__ == "__main__":
 
    
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5,demand_pattern=np.array([1.3]))
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1.4]))
 
     # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
@@ -89,64 +89,93 @@ if __name__ == "__main__":
     print(f"Pump speeds: {env.pump_speeds}")
     print()
 
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Pressure score: {env.pressure_score}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
-
-    print(f"Reward: {reward}")
-    print()
-
-    
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5,demand_pattern=np.array([1.3]))
-
-
-    env.step(104)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Pressure score: {env.pressure_score}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
-
-    print(f"Reward: {reward}")
-    
-
-    
-
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1.5,demand_pattern=np.array([1.3]))
-
-
-    env.step(60)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
+    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
 
     print(f"Pump power: {env.pumpPower}")
     print()
 
     print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
+    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
 
     print(f"Reward: {reward}")
+    print()
+
+
+    
+
+    
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1.4]))
+
+
+    env.step(146)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+
+    print(f"Reward: {reward}")
+    print()
+    
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+
+    # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+
+    env.step(103)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+
+    print(f"Reward: {reward}")
+    print()
+
+
+    
+
+    
+    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+
+
+    env.step(146)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+
+    print(f"Reward: {reward}")
+    print()
     
   
 

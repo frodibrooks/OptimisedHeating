@@ -145,14 +145,14 @@ class wds():
 
         # Power penalty term
         self.total_power = np.sum(self.pumpPower)
-        power_penalty_weight = 0.02 # You can tune this hyperparameter
+        self.power_penalty_weight = 0.005 # You can tune this hyperparameter
 
-        self.pressure_score = self.valid_heads_ratio**2
+        self.pressure_score = self.valid_heads_ratio**2.5
 
         reward = (
             self.eff_weight * self.eff_ratio
             + self.pressure_weight * self.pressure_score
-            - power_penalty_weight * self.total_power
+            - self.power_penalty_weight * self.total_power
         )
         return reward
 
