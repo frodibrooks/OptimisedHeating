@@ -3,11 +3,12 @@ import numpy as np
 from pump_env import wds
 
 class WdsWithDemand(wds):
-    def __init__(self, demand_pattern=None, *args, **kwargs):
+    def __init__(self, demand_pattern=None,use_constant_demand=False ,*args, **kwargs):
         super().__init__(*args, **kwargs)
         self.demand_pattern = self._load_pattern(demand_pattern)
         self.demand_index = 0
         self.episode_demand_scale = 1.0
+        self.use_constant_demand = use_constant_demand
 
 
     def _load_pattern(self, pattern):
@@ -33,20 +34,19 @@ class WdsWithDemand(wds):
 
     def step(self, action_idx):
         speed1, speed2 = self.action_map[action_idx]
-        
+
         for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
             for pump_id in self.pumpGroups[group_idx]:
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
 
-        demand_scale = 1
+        # Default scale
+        demand_scale = self.episode_demand_scale
 
-        # Optional: combine with temporal pattern if provided
-        if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
+        if not self.use_constant_demand and self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
             demand_scale *= self.demand_pattern[self.demand_index]
             self.demand_index += 1
-        self.episode_demand_scale = demand_scale
-        
+
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid] * demand_scale
 
