@@ -81,7 +81,7 @@ class Agent:
 if __name__ == "__main__":
     num_episodes = 15000  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent18.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent19.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -103,7 +103,7 @@ if __name__ == "__main__":
         with open(reward_log_path, mode='a', newline='') as file:
             csv.writer(file).writerow([episode + 1, reward])
         
-        print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
+        print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}, Speeds: {env.pump_speeds}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol18.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol19.pth")
     print("Model saved!")

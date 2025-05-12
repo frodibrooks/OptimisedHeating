@@ -189,7 +189,8 @@ class wds():
             len(self.pump_speeds)  # speeds
             + len(self.wds.junctions)  # pressures
             + len(self.wds.pumps)  # flows
-            + len(self.wds.pumps))  # power
+            + len(self.wds.pumps)  # power
+            + len(self.wds.junctions) ) # demand
 
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
 
