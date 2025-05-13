@@ -26,7 +26,7 @@ os.chdir(program_dir)
 env = WdsWithDemand(
     eff_weight=3.0,
     pressure_weight=1.5,
-    demand_pattern=np.array([1.4 ,1.4 ,1 , 1.4, 1.4]), # Þetta er demand pattern
+    demand_pattern=np.array([1.4 ,1.2 ,1 , 0.8, 1]), # Þetta er demand pattern
     episode_len = 5 ,# Þetta er lengd demand pattern
     use_constant_demand=False
 
@@ -93,6 +93,9 @@ for timestep in range(env.episode_len):
     # Log pressures
     for junction in env.wds.junctions:
         row[f"Head_{junction.uid}"] = junction.pressure
+    # log Demand
+    for junction in env.wds.junctions:
+        row[f"Demand_{junction.uid}"] = junction.basedemand
 
     # Log actual speeds from action map
     speed1, speed2 = env.action_map[action_idx]

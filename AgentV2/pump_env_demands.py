@@ -79,110 +79,111 @@ class WdsWithDemand(wds):
 if __name__ == "__main__":
 
    
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1.4]))
-
-    # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
-
-    env.step(103)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
-
-    print(f"Reward: {reward}")
-    print()
-
-
-    
-
-    
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1.4]))
-
-
-    env.step(146)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
-
-    print(f"Reward: {reward}")
-    print()
-    
     env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+    print(env.get_state())
 
-    # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+    # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(103)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    # env.step(103)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
 
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+    # print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
 
-    print(f"Pump power: {env.pumpPower}")
-    print()
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Energy: {-env.power_penalty_weight*env.total_power}")
 
-    print(f"Reward: {reward}")
-    print()
-    print(states[-20:])
+    # print(f"Reward: {reward}")
+    # print()
 
 
     
 
     
-    env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+    # env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1.4]))
 
 
-    env.step(146)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    # env.step(146)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
 
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+    # print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
 
-    print(f"Pump power: {env.pumpPower}")
-    print()
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Energy: {-env.power_penalty_weight*env.total_power}")
 
-    print(f"Reward: {reward}")
-    print()
+    # print(f"Reward: {reward}")
+    # print()
+    
+    # env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+
+    # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+
+    # env.step(103)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
+
+    # print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
+
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+
+    # print(f"Reward: {reward}")
+    # print()
+    # print(states[-20:])
+
+
+    
+
+    
+    # env = WdsWithDemand(eff_weight=3.0, pressure_weight=1,demand_pattern=np.array([1]))
+
+
+    # env.step(146)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
+
+    # print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
+
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Pressure reward: {env.pressure_weight*env.pressure_score}")
+    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Energy: {-env.power_penalty_weight*env.total_power}")
+
+    # print(f"Reward: {reward}")
+    # print()
     
   
 
     
-    for i in range(len(env.action_map)):
-        print(f"Action {i}: {env.action_map[i]}")
+    # for i in range(len(env.action_map)):
+    #     print(f"Action {i}: {env.action_map[i]}")
   
 
   
