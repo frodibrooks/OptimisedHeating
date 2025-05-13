@@ -13,8 +13,8 @@ class wds():
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
                  seed=None,
-                 eff_weight=1.0,
-                 pressure_weight=1.0,
+                 eff_weight=3.0,
+                 power_penalty_weight=0.0095,
                  random_demand_scaling=False,
                  demand_scale=None):
         if seed:
@@ -29,6 +29,10 @@ class wds():
 
         self.pump_speeds = {pid: 1.0 for group in pump_groups for pid in group}
         self.pumpEffs = {pid: 1.0 for group in pump_groups for pid in group}
+        self.pumpPower = [0.0 for _ in self.wds.pumps.values()]
+        self.total_power = 0.0
+
+
 
         self.episode_len = episode_len
         self.total_demand_lo = total_demand_lo
@@ -38,7 +42,7 @@ class wds():
         self.headLimitLo = 35
         self.peakTotEff = 0.0629
         self.eff_weight = eff_weight
-        self.pressure_weight = pressure_weight
+        self.power_penalty_weight = power_penalty_weight
         self.random_demand_scaling = random_demand_scaling
         self.demand_scale = demand_scale
 
@@ -150,7 +154,7 @@ class wds():
 
         # Calculate the total power used by the pumps
         self.total_power = np.sum(self.pumpPower)
-        self.power_penalty_weight = 0.005  # This is a hyperparameter for power penalty
+          # This is a hyperparameter for power penalty
 
         # Reward is based on efficiency ratio and total power usage
         reward = (
