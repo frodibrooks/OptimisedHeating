@@ -36,7 +36,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol20.pth"))
+model.load_state_dict(torch.load("trained_model_vol21.pth"))
 model.eval()
 
 # === Run validation ===
@@ -113,6 +113,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent20.csv", index=False)
+df.to_csv("validation_full_log_agent21.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent20.csv.")
+print("Validation complete. Results saved to validation_full_log_agent21.csv.")
