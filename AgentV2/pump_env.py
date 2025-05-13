@@ -132,30 +132,33 @@ class wds():
             return 0.0
 
         pressures = [j.pressure for j in self.wds.junctions]
+        
+        # Calculate valid heads ratio
+        heads = np.array(pressures)
+        self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
-        # if any(p < 15 or p > 105 for p in pressures):
-        #     return 0.0
+        # Check if the valid heads ratio is acceptable
+        if self.valid_heads_ratio < 0.99:
+            return 0.0  # If the pressure is too low, return 0 reward
 
+        # Calculate the effectiveness ratio
         group_eff_ratios = {
             i: np.clip(np.mean([self.pumpEffs.get(pid, 0) for pid in group]), 0, 1)
             for i, group in enumerate(self.pumpGroups)
         }
         self.eff_ratio = np.mean(list(group_eff_ratios.values()))
-        heads = np.array(pressures)
-        self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
-        # Power penalty term
+        # Calculate the total power used by the pumps
         self.total_power = np.sum(self.pumpPower)
-        self.power_penalty_weight = 0.005 # You can tune this hyperparameter
+        self.power_penalty_weight = 0.005  # This is a hyperparameter for power penalty
 
-        self.pressure_score = self.valid_heads_ratio**2.5
-
+        # Reward is based on efficiency ratio and total power usage
         reward = (
             self.eff_weight * self.eff_ratio
-            + self.pressure_weight * self.pressure_score
             - self.power_penalty_weight * self.total_power
         )
         return reward
+
 
     def calculate_pump_efficiencies(self):
         self.pumpEffs = {}
