@@ -24,8 +24,6 @@ os.chdir(program_dir)
 # )
 
 env = WdsWithDemand(
-    eff_weight=3.0,
-    pressure_weight=1.5,
     demand_pattern=np.array([1.4 ,1.2 ,1 , 0.8, 1]), # Þetta er demand pattern
     episode_len = 5 ,# Þetta er lengd demand pattern
     use_constant_demand=False
@@ -38,7 +36,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol19.pth"))
+model.load_state_dict(torch.load("trained_model_vol20.pth"))
 model.eval()
 
 # === Run validation ===
@@ -66,7 +64,6 @@ for timestep in range(env.episode_len):
     print(f"Reward: {reward:.3f}")
     print()
     print(f"Eff ratio: {env.eff_ratio:.3f}")
-    print(f"Pressure score: {env.pressure_score:.3f}")
     print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
     print(f"Demand Scaling: {env.demand_pattern[timestep]}")
@@ -81,9 +78,9 @@ for timestep in range(env.episode_len):
         "ActionIndex": action_idx,
         "DemandScale": env.demand_pattern[timestep],
         "Reward": reward,
-        "EffRatio": env.eff_ratio,
-        "Pressure Score": env.pressure_score,
-        "Energy": env.total_power,
+        "EffReward": env.eff_ratio*env.eff_weight,
+        "Valid heads ratio": env.valid_heads_ratio,
+        "Energy reward": -env.total_power*env.power_penalty_weight,
     }
 
     # Log Q-values
@@ -116,6 +113,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent19.csv", index=False)
+df.to_csv("validation_full_log_agent20.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent19.csv.")
+print("Validation complete. Results saved to validation_full_log_agent20.csv.")

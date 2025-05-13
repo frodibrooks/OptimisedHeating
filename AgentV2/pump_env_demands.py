@@ -81,6 +81,7 @@ if __name__ == "__main__":
    
     env = WdsWithDemand(demand_pattern=np.array([1.3]))
 
+
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     env.step(177)
@@ -107,7 +108,7 @@ if __name__ == "__main__":
 
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(176)
+    env.step(178)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
@@ -126,7 +127,7 @@ if __name__ == "__main__":
 
     print(f"Reward: {reward}")
     print()
-
+ 
 
   
 
@@ -135,8 +136,8 @@ if __name__ == "__main__":
     
 
     
-    for i in range(len(env.action_map)):
-        print(f"Action {i}: {env.action_map[i]}")
+    # for i in range(len(env.action_map)):
+    #     print(f"Action {i}: {env.action_map[i]}")
   
 
   
