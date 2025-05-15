@@ -165,15 +165,15 @@ class wds():
         # Calculate the total power used by the pumps
         self.total_power = np.sum(self.pumpPower)
           # This is a hyperparameter for power penalty
-
+        self.pressure_score = self.valid_heads_ratio**2
         # Reward is based on efficiency ratio and total power usage
         reward = (
             self.eff_weight * self.eff_ratio
-            - self.power_penalty_weight * self.total_power
+            - self.power_penalty_weight * self.total_power+self.pressure_score
         )
 
         if self.valid_heads_ratio < 0.99:
-            reward*=0.7
+            reward*=0.5
         return reward
 
 

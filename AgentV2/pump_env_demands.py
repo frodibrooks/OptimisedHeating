@@ -110,6 +110,7 @@ def printing_states(step,inp_demand_pattern):
     print()
 
     print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Pressure Score: {env.pressure_score}")
     print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
     print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
     print(f"Total Energy: {env.total_power}")
@@ -124,11 +125,11 @@ def printing_states(step,inp_demand_pattern):
 
 if __name__ == "__main__":
 
-    ptr = np.array([1])
-    printing_states(200,ptr)
+    ptr = np.array([0.8])
+    printing_states(0,ptr)
 
-    ptr = np.array([1.2])
-    printing_states(200,ptr)
+    ptr = np.array([0.8])
+    printing_states(100,ptr)
   
 
 
