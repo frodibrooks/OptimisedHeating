@@ -89,21 +89,11 @@ class wds():
         demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
 
         
-        # Min-Max Normalization for demand
-        demand_min = min(demand)  # Find the min demand
-        demand_max = max(demand)  # Find the max demand
-        demand_range = demand_max - demand_min if demand_max != demand_min else 1  # Prevent division by zero
-
         
-        norm_demand = [(d - demand_min) / demand_range for d in demand]  # Apply Min-Max Normalization for demand
 
-        # Clip and combine
-        norm_demands = (list(np.clip(norm_demand, 0.0, 1.0)))
+        state = pump_speeds + pressures + flows + power + demand
 
-
-        state = pump_speeds + pressures + demand + flows + power
-
-        return norm_demands,state
+        return demand,state
 
 
 

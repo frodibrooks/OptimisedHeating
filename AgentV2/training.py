@@ -81,23 +81,24 @@ class Agent:
 if __name__ == "__main__":
     num_episodes = 15000  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent21.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent22.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
 
     env = WdsWithDemand(episode_len=1,use_constant_demand=False)
-    state_size = len(env.reset())
+    norm_demands,state = env.reset()
+    state_size = len(norm_demands)
     action_size = len(env.action_map)
     # print(f"State size: {state_size}, Action size: {action_size}")
 
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
-        norm_state,state = env.reset(training=True)
-        action_idx = agent.act(norm_state)
-        next_state, reward, done, _ = env.step(action_idx)
-        agent.step(state, action_idx, reward, next_state, done)
+        demand,state = env.reset(training=True)
+        action_idx = agent.act(demand)
+        next_demand, reward, done, _ = env.step(action_idx)
+        agent.step(state, action_idx, reward, next_demand, done)
         agent.decay_epsilon()
 
         with open(reward_log_path, mode='a', newline='') as file:
@@ -105,5 +106,5 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol21.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol22.pth")
     print("Model saved!")
