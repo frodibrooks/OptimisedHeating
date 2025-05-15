@@ -94,8 +94,8 @@ if __name__ == "__main__":
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
-        state = env.reset(training=True)
-        action_idx = agent.act(state)
+        norm_state,state = env.reset(training=True)
+        action_idx = agent.act(norm_state)
         next_state, reward, done, _ = env.step(action_idx)
         agent.step(state, action_idx, reward, next_state, done)
         agent.decay_epsilon()

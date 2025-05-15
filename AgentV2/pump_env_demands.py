@@ -20,20 +20,38 @@ class WdsWithDemand(wds):
         else:
             return None
 
-    def reset(self, demand_pattern=None, training = False):
+    def reset(self, demand_pattern=None, training=False):
         self.demand_index = 0
-        
-        # If using a pattern, base scale is 1.0
-        if self.demand_pattern is not None:
-            self.episode_demand_scale = 1.0
-        if training:
-            # Use random demand scale if no pattern is provided
-            self.episode_demand_scale = np.random.uniform(0.75, 1.4)
+        self.timestep = 0
 
+        # Load new demand pattern if provided
         if demand_pattern is not None:
             self.demand_pattern = self._load_pattern(demand_pattern)
 
-        return super().reset()
+        # Determine scale
+        if self.demand_pattern is None and training:
+            self.episode_demand_scale = np.random.uniform(0.75, 1.4)
+        else:
+            self.episode_demand_scale = 1.0
+
+        # === First reset base env ===
+        state = super().reset()  # might reinitialize pressures, heads, etc.
+
+        # === Now apply scaled demand for timestep 0 ===
+        demand_scale = self.episode_demand_scale
+        if not self.use_constant_demand and self.demand_pattern is not None and len(self.demand_pattern) > 0:
+            demand_scale *= self.demand_pattern[0]  # timestep 0
+
+        for junction in self.wds.junctions:
+            junction.basedemand = self.demandDict[junction.uid] * demand_scale
+
+        self.wds.solve()
+        self.pump_power()
+        self.calculate_pump_efficiencies()
+
+        return self.get_state()
+
+
 
 
 
@@ -73,62 +91,44 @@ class WdsWithDemand(wds):
 
 
 
+def printing_states(step,inp_demand_pattern):
+       
+    env = WdsWithDemand(demand_pattern=np.array([inp_demand_pattern]))
+
+
+    # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+
+    env.step(step)
+    states = env.get_state()
+    reward = env._compute_reward()
+    print(f"Pump speeds: {env.pump_speeds}")
+    print()
+
+    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    print(f"Pump power: {env.pumpPower}")
+    print()
+
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
+    print(f"Total Energy: {env.total_power}")
+
+
+    print(f"Reward: {reward}")
+    print()
+
+
 
 
 
 if __name__ == "__main__":
 
-   
-    env = WdsWithDemand(demand_pattern=np.array([1.3]))
-
-
-    # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
-
-    env.step(177)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
-    print(f"Total Energy: {env.total_power}")
-
-
-    print(f"Reward: {reward}")
-    print()
-
-    env = WdsWithDemand(demand_pattern=np.array([1.3]))
-
-    # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
-
-    env.step(178)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
-
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
-    print(f"Total Energy: {env.total_power}")
-
-
-    print(f"Reward: {reward}")
-    print()
- 
-
+    for i in range(10):
+        env = WdsWithDemand(episode_len=1,use_constant_demand=False)
+        norm_state,state = env.reset(training=True)
+        print(env.episode_demand_scale,state[-22])
+    
   
 
 

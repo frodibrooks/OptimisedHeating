@@ -107,15 +107,16 @@ class wds():
         norm_demand = [(d - demand_min) / demand_range for d in demand]  # Apply Min-Max Normalization for demand
 
         # Clip and combine
-        state = (
+        norm_state = (
             list(np.clip(norm_speeds, 0.0, 1.0)) +
             list(np.clip(norm_pressures, 0.0, 1.0)) +
             list(np.clip(norm_flows, 0.0, 1.0)) +
             list(np.clip(norm_power, 0.0, 1.0)) +
             list(np.clip(norm_demand, 0.0, 1.0))
         )
+        state = pump_speeds + pressures + flows + power + demand
 
-        return state
+        return norm_state,state
 
 
 
