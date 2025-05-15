@@ -23,7 +23,7 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
 
     # Plotting the rewards
     plt.figure(figsize=(10, 6))
-    plt.plot(episodes, rewards, label="Reward per Episode", color="b", marker='o',alpha=0.7)
+    plt.plot(episodes, rewards, label="Reward per Episode", color="b", marker='o',alpha=0.3)
     plt.xlabel("Episodes")
     plt.ylabel("Total Reward")
     plt.title("Reward Over Episodes")
@@ -35,7 +35,7 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
     os.makedirs(save_path, exist_ok=True)
     
     # Create the full path by joining the save path with a file name
-    full_save_path = os.path.join(save_path, "reward_plot_agent23.png")
+    full_save_path = os.path.join(save_path, "reward_plot_agent24.png")
     
     # Save the plot
     plt.savefig(full_save_path)
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     # csv_file = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results\reward_log_agent13.csv"
     # save_path = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\training_results"
 
-    csv_file = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent23.csv"
+    csv_file = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent24.csv"
     save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results"
 
     plot_rewards_from_csv(csv_file, save_path)
