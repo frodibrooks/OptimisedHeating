@@ -152,9 +152,8 @@ class wds():
         heads = np.array(pressures)
         self.valid_heads_ratio = np.mean(heads >= self.headLimitLo)
 
-        # Check if the valid heads ratio is acceptable
-        if self.valid_heads_ratio < 0.99:
-            return 0.0  # If the pressure is too low, return 0 reward
+  
+
 
         # Calculate the effectiveness ratio
         group_eff_ratios = {
@@ -172,6 +171,9 @@ class wds():
             self.eff_weight * self.eff_ratio
             - self.power_penalty_weight * self.total_power
         )
+
+        if self.valid_heads_ratio < 0.99:
+            reward*=0.7
         return reward
 
 
@@ -203,12 +205,7 @@ class wds():
         return gym.spaces.Discrete(len(self.action_map))
 
     def observation_space(self):
-        num_state_elements = (
-            len(self.pump_speeds)  # speeds
-            + len(self.wds.junctions)  # pressures
-            + len(self.wds.pumps)  # flows
-            + len(self.wds.pumps)  # power
-            + len(self.wds.junctions) ) # demand
+        num_state_elements = (len(self.wds.junctions) ) # demand
 
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
 

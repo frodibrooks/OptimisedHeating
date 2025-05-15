@@ -23,7 +23,7 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([1.3 , 0.8 , 1, 1.2])
+demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.9 , 1.3 , 0.8 , 1, 1.2, 1.1 , 0.9 , 1.3 , 0.8 , 1, 1.2, 1.1 , 0.9 , 1.3 , 0.8 , 1, 1.2, 1.1 , 0.9])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -37,20 +37,18 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol21.pth"))
+model.load_state_dict(torch.load("trained_model_vol22.pth"))
 model.eval()
 
 # === Run validation ===
 full_logs = []
 env.reset(demand_pattern=demand_ptr)
 
-norm_state,state = env.get_state()
+demand,state = env.get_state()
 
 for timestep in range(env.episode_len):
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    # print(f"[Timestep {timestep}] Normalized state: {norm_state[:100]}")
-    print(f"Agent sees state with demand scale {env.demand_pattern[timestep]} and ")
-    state_tensor = torch.tensor(norm_state, dtype=torch.float32).unsqueeze(0)
+    state_tensor = torch.tensor(demand, dtype=torch.float32).unsqueeze(0)
 
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
@@ -59,7 +57,7 @@ for timestep in range(env.episode_len):
     print(f"action_idx: {action_idx} Speeds: {env.action_map[action_idx]}")
     # print(f"Q-values: {q_values.numpy()}")
 
-    norm_state, state, reward, done, info = env.step(action_idx)
+    demand, state, reward, done, info = env.step(action_idx)
     # Add this line!
     # state = env.get_state()
 
@@ -69,7 +67,7 @@ for timestep in range(env.episode_len):
     print(f"Energy: {-env.total_power*env.power_penalty_weight:.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
     print(f"Demand Scaling: {env.demand_pattern[timestep]}")
-    print(f"Demands: {state[1998]}")
+
     # print("Q-values at timestep 1:", q_values.tolist())
 
     
@@ -116,6 +114,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent21.csv", index=False)
+df.to_csv("validation_full_log_agent22.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent21.csv.")
+print("Validation complete. Results saved to validation_full_log_agent22.csv.")
