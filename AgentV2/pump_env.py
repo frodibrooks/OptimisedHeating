@@ -88,35 +88,22 @@ class wds():
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)  # Normalize based on estimated max power
         demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
 
-        # Normalization ranges — adjust these to match your system
-        speed_min, speed_max = 0.7, 1.4
-        pressure_min, pressure_max = 30.0, 146
-        flow_max = 100  # Adjust to realistic upper bound in your network (e.g. 30–60 L/s?)
-        power_max = 70  # Adjust if your pumps draw more than this
         
         # Min-Max Normalization for demand
         demand_min = min(demand)  # Find the min demand
         demand_max = max(demand)  # Find the max demand
         demand_range = demand_max - demand_min if demand_max != demand_min else 1  # Prevent division by zero
 
-        # Normalize
-        norm_speeds = [(s - speed_min) / (speed_max - speed_min) for s in pump_speeds]
-        norm_pressures = [(p - pressure_min) / (pressure_max - pressure_min) for p in pressures]
-        norm_flows = [min(f / flow_max, 1.0) for f in flows]
-        norm_power = [min(p / power_max, 1.0) for p in power]
+        
         norm_demand = [(d - demand_min) / demand_range for d in demand]  # Apply Min-Max Normalization for demand
 
         # Clip and combine
-        norm_state = (
-            list(np.clip(norm_speeds, 0.0, 1.0)) +
-            list(np.clip(norm_pressures, 0.0, 1.0)) +
-            list(np.clip(norm_flows, 0.0, 1.0)) +
-            list(np.clip(norm_power, 0.0, 1.0)) +
-            list(np.clip(norm_demand, 0.0, 1.0))
-        )
-        state = pump_speeds + pressures + flows + power + demand
+        norm_demands = (list(np.clip(norm_demand, 0.0, 1.0)))
 
-        return norm_state,state
+
+        state = pump_speeds + pressures + demand + flows + power
+
+        return norm_demands,state
 
 
 

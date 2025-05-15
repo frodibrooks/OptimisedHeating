@@ -83,11 +83,11 @@ class WdsWithDemand(wds):
         self.pump_power()
         self.calculate_pump_efficiencies()
         reward = self._compute_reward()
-        state = self.get_state()
+        norm_state,state = self.get_state()
         self.timestep += 1
         done = self.timestep >= self.episode_len
 
-        return state, reward, done, {}
+        return norm_state,state, reward, done, {}
 
 
 
@@ -124,13 +124,35 @@ def printing_states(step,inp_demand_pattern):
 
 if __name__ == "__main__":
 
-    for i in range(10):
-        env = WdsWithDemand(episode_len=1,use_constant_demand=False)
-        norm_state,state = env.reset(training=True)
-        print(env.episode_demand_scale,state[-22])
+    # for i in range(10):
+    #     env = WdsWithDemand(episode_len=1,use_constant_demand=False)
+    #     norm_state,state = env.reset(training=True)
+    #     print(env.episode_demand_scale,state[-22])
     
   
+    ptr = np.array([1.0])
+    env = WdsWithDemand()
+    norm_states, states = env.reset(demand_pattern=ptr)
+    print(states)
+    print(f"State (1.0x): {states[-22]}")
+    print(f"State (1.0x) pump speeds: {env.pump_speeds}")
+    print(f"Total power: {env.total_power}")
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
 
+    env.step(200)
+    print(f"State (1.0x) pump speeds: {env.pump_speeds}")
+    print(f"Total power: {env.total_power}")
+    print(f"Valid heads ratio: {env.valid_heads_ratio}")
+
+    
+
+    # ptr = np.array([1.2])
+    # env = WdsWithDemand()
+    # norm_states, states = env.reset(demand_pattern=ptr)
+    # print(f"State (1.2x): {states[-22]}")
+    # print(f"State (1.0x) pump speeds: {env.pump_speeds}")
+    # print(f"Total power: {env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
 
 
     

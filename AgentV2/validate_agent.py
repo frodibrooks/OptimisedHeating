@@ -23,10 +23,10 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-input_array = np.array([1.3 ,0.8 ,1.2, 1])
+demand_ptr = np.array([1.3 , 0.8 , 1, 1.2])
 env = WdsWithDemand(
-    demand_pattern=input_array, # Þetta er demand pattern
-    episode_len = len(input_array) ,# Þetta er lengd demand pattern
+    demand_pattern=demand_ptr, # Þetta er demand pattern
+    episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
     use_constant_demand=False
 
 )
@@ -42,13 +42,15 @@ model.eval()
 
 # === Run validation ===
 full_logs = []
-env.reset()
+env.reset(demand_pattern=demand_ptr)
 
-state = env.get_state()
+norm_state,state = env.get_state()
 
 for timestep in range(env.episode_len):
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
+    # print(f"[Timestep {timestep}] Normalized state: {norm_state[:100]}")
+    print(f"Agent sees state with demand scale {env.demand_pattern[timestep]} and ")
+    state_tensor = torch.tensor(norm_state, dtype=torch.float32).unsqueeze(0)
 
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
@@ -57,18 +59,17 @@ for timestep in range(env.episode_len):
     print(f"action_idx: {action_idx} Speeds: {env.action_map[action_idx]}")
     # print(f"Q-values: {q_values.numpy()}")
 
-    state, reward, done, info = env.step(action_idx)
+    norm_state, state, reward, done, info = env.step(action_idx)
     # Add this line!
     # state = env.get_state()
 
     print()
     print(f"Reward: {reward:.3f}")
     print()
-    print(f"Eff ratio: {env.eff_ratio:.3f}")
-    print(f"Energy: {-0.02*sum(env.pumpPower):.3f}")
+    print(f"Energy: {-env.total_power*env.power_penalty_weight:.3f}")
     print(f"Pump speeds: {env.pump_speeds}")
     print(f"Demand Scaling: {env.demand_pattern[timestep]}")
-    print(f"Demand index {env.demand_index}")
+    print(f"Demands: {state[1998]}")
     # print("Q-values at timestep 1:", q_values.tolist())
 
     
@@ -84,9 +85,12 @@ for timestep in range(env.episode_len):
         "Energy reward": -env.total_power*env.power_penalty_weight,
     }
 
-    # Log Q-values
-    for i, q in enumerate(q_values):
+    # Flatten q_values to 1D tensor to avoid multi-element tensors during iteration
+    q_values_flat = q_values.flatten()
+
+    for i, q in enumerate(q_values_flat):
         row[f"Q_{i}"] = q.item()
+
 
     # Log pressures
     for junction in env.wds.junctions:
@@ -107,9 +111,7 @@ for timestep in range(env.episode_len):
 
     full_logs.append(row)
 
-    if done:
-        print("Episode terminated early.")
-        break
+
 
 # === Save logs ===
 df = pd.DataFrame(full_logs)
