@@ -83,7 +83,7 @@ class WdsWithDemand(wds):
         self.pump_power()
         self.calculate_pump_efficiencies()
         reward = self._compute_reward()
-        norm_state,state = self.get_state()
+        demand,state = self.get_state()
         self.timestep += 1
         done = self.timestep >= self.episode_len
 
