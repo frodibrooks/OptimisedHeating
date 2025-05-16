@@ -99,7 +99,7 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     env.step(step)
-    states = env.get_state()
+    demand, states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
     print()
@@ -118,6 +118,7 @@ def printing_states(step,inp_demand_pattern):
 
     print(f"Reward: {reward}")
     print()
+    print(demand[:10])
 
 
 
@@ -125,10 +126,10 @@ def printing_states(step,inp_demand_pattern):
 
 if __name__ == "__main__":
 
-    ptr = np.array([0.8])
-    printing_states(0,ptr)
+    ptr = np.array([1])
+    printing_states(89,ptr)
 
-    ptr = np.array([0.8])
+    ptr = np.array([1.3])
     printing_states(100,ptr)
   
 

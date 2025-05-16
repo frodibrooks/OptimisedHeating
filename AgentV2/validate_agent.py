@@ -23,7 +23,7 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1, 1.3, 1.2 , 1.1 , 0.8 , 1, 1.3 , 1.2 , 1.1 , 2 , 1, 1.3 , 1.2 , 1.1 , 0.8 , 1, 1.3 , 1.2 , 1.1 ])
+demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -37,7 +37,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol24.pth"))
+model.load_state_dict(torch.load("trained_model_vol27.pth"))
 model.eval()
 
 # === Run validation ===
@@ -114,6 +114,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent24.csv", index=False)
+df.to_csv("validation_full_log_agent27.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent24.csv.")
+print("Validation complete. Results saved to validation_full_log_agent27.csv.")
