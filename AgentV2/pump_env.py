@@ -87,13 +87,15 @@ class wds():
         flows = [p.flow for p in self.wds.pumps.values()]  # Normalize based on expected max flow
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)  # Normalize based on estimated max power
         demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
+        max_demand = max(demand) if demand else 1.0
+        norm_demand = [d / max_demand for d in demand]  # Normalize demand
 
         
         
 
         state = pump_speeds + pressures + flows + power + demand
 
-        return demand,state
+        return norm_demand,state
 
 
 
