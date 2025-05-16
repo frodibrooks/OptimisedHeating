@@ -48,13 +48,15 @@ demand,state = env.get_state()
 
 for timestep in range(env.episode_len):
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    state_tensor = torch.tensor(demand, dtype=torch.float32).unsqueeze(0)
+    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep]}")
 
+    state_tensor = torch.tensor(demand, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
         action_idx = torch.argmax(q_values).item()
 
-    print(f"action_idx: {action_idx} Speeds: {env.action_map[action_idx]}")
+
+    print(f"Agent selects Speeds: {env.action_map[action_idx]}")
     # print(f"Q-values: {q_values.numpy()}")
 
     demand, state, reward, done, info = env.step(action_idx)
@@ -65,8 +67,6 @@ for timestep in range(env.episode_len):
     print(f"Reward: {reward:.3f}")
     print()
     print(f"Energy: {-env.total_power*env.power_penalty_weight:.3f}")
-    print(f"Pump speeds: {env.pump_speeds}")
-    print(f"Demand Scaling: {env.demand_pattern[timestep]}")
 
     # print("Q-values at timestep 1:", q_values.tolist())
 

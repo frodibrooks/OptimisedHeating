@@ -33,7 +33,7 @@ class Agent:
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=1e-4)
         self.memory = deque(maxlen=100_000)
         self.batch_size = 64
-        self.gamma = 0.9
+        self.gamma = 0
         self.epsilon = 1.0
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.9999  # hversu hratt epsilon minnkar
@@ -81,7 +81,7 @@ class Agent:
 if __name__ == "__main__":
     num_episodes = 12500  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent24.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent25.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         demand,state = env.reset(training=True)
         action_idx = agent.act(demand)
         next_demand,state, reward, done, _ = env.step(action_idx)
-        agent.step(demand, action_idx, reward, np.zeros_like(demand), done)
+        agent.step(demand, action_idx, reward, next_demand, done)
         agent.decay_epsilon()
 
         with open(reward_log_path, mode='a', newline='') as file:
@@ -106,5 +106,5 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol24.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol25.pth")
     print("Model saved!")
