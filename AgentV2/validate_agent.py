@@ -60,6 +60,7 @@ for timestep in range(env.episode_len):
     # print(f"Q-values: {q_values.numpy()}")
 
     demand, state, reward, done, info = env.step(action_idx)
+    print(demand[:10])
     # Add this line!
     # state = env.get_state()
 

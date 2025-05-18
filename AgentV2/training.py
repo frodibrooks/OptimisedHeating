@@ -30,9 +30,9 @@ class Agent:
         self.target_net.load_state_dict(self.policy_net.state_dict())
         self.target_net.eval()
 
-        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=1e-4)
+        self.optimizer = optim.Adam(self.policy_net.parameters(), lr=5e-4)
         self.memory = deque(maxlen=100_000)
-        self.batch_size = 64
+        self.batch_size = 128
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
