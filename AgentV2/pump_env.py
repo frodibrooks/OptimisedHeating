@@ -172,8 +172,8 @@ class wds():
             - self.power_penalty_weight * self.total_power+self.pressure_score
         )
 
-        if self.valid_heads_ratio < 0.99:
-            reward*=0.5
+        if self.valid_heads_ratio < 0.97:
+            reward*=0.65
         return reward
 
 

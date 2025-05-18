@@ -111,7 +111,7 @@ def printing_states(step,inp_demand_pattern):
 
     print(f"Valid heads ratio: {env.valid_heads_ratio}")
     print(f"Pressure Score: {env.pressure_score}")
-    print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
     print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
     print(f"Total Energy: {env.total_power}")
 
@@ -127,16 +127,19 @@ def printing_states(step,inp_demand_pattern):
 if __name__ == "__main__":
 
     ptr = np.array([1])
-    printing_states(89,ptr)
+    printing_states(218,ptr)
 
-    ptr = np.array([1.3])
-    printing_states(100,ptr)
+    ptr = np.array([1])
+    printing_states(195,ptr)
+
+    ptr = np.array([1])
+    printing_states(176,ptr)
   
 
 
 
     
-
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
     
     # for i in range(len(env.action_map)):
     #     print(f"Action {i}: {env.action_map[i]}")
