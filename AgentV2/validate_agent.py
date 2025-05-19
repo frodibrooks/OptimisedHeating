@@ -23,7 +23,8 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
+# demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
+demand_ptr = np.array([1 , 1.1 , 1.2, 1.3, 1 , 1 , 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -47,8 +48,7 @@ env.reset(demand_pattern=demand_ptr)
 demand,state = env.get_state()
 
 for timestep in range(env.episode_len):
-    print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep]}")
+
 
     state_tensor = torch.tensor(demand, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
@@ -56,14 +56,16 @@ for timestep in range(env.episode_len):
         action_idx = torch.argmax(q_values).item()
 
 
-    print(f"Agent selects Speeds: {env.action_map[action_idx]}")
-    # print(f"Q-values: {q_values.numpy()}")
 
     demand, state, reward, done, info = env.step(action_idx)
-    print(demand[:10])
-    # Add this line!
-    # state = env.get_state()
 
+
+
+    current_demand, _ = env.get_state()
+
+    print(f"timestep {timestep + 1}/{env.episode_len}")
+    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep-1]:.2f}")  # or use env.demand_pattern[timestep+1] safely
+    print(f"Agent selects Speeds: {env.action_map[action_idx]}")
     print()
     print(f"Reward: {reward:.3f}")
     print()
