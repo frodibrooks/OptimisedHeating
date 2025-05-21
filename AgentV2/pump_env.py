@@ -72,7 +72,14 @@ class wds():
 
     def reset(self):
         self.timestep = 0
-        self.pump_speeds = {pid: 1.0 for group in self.pumpGroups for pid in group}
+        for group_idx, group in enumerate(self.pumpGroups):
+            initial_speed = 1 if group_idx == 0 else 0.8
+            for pump_id in group:
+                self.pump_speeds[pump_id] = initial_speed
+                self.wds.pumps[pump_id].speed = initial_speed  # Also update the actual network
+  
+
+
         for junction in self.wds.junctions:
             junction.basedemand = self.demandDict[junction.uid]
         self.wds.solve()
@@ -86,13 +93,11 @@ class wds():
         pressures = [j.pressure for j in self.wds.junctions]  # Normalize based on expected pressure range
         flows = [p.flow for p in self.wds.pumps.values()]  # Normalize based on expected max flow
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)  # Normalize based on estimated max power
-        # demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
-        # max_demand = max(demand) if demand else 1.0
-        # norm_demand = [d / max_demand for d in demand]  # Normalize demand
-        
-        # ætlum að prófa að sýna honum pressure og speeds
-        # state = pump_speeds + pressures + flows + power + demand
-        state = pressures + pump_speeds
+
+        max_power = max(pressures) if max(pressures) > 0 else 100
+        norm_pressures = [p / max_power for p in pressures]
+
+        state = norm_pressures + pump_speeds
 
         return state
     def get_demands(self):
