@@ -45,23 +45,23 @@ model.eval()
 full_logs = []
 env.reset(demand_pattern=demand_ptr)
 
-demand,state = env.get_state()
+state = env.get_state()
 
 for timestep in range(env.episode_len):
 
 
-    state_tensor = torch.tensor(demand, dtype=torch.float32).unsqueeze(0)
+    state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
         action_idx = torch.argmax(q_values).item()
 
 
 
-    demand, state, reward, done, info = env.step(action_idx)
+    state, reward, done, info = env.step(action_idx)
 
 
 
-    current_demand, _ = env.get_state()
+    state = env.get_state()
 
     print(f"timestep {timestep + 1}/{env.episode_len}")
     print(f"Agent sees demands with scaling: {env.demand_pattern[timestep-1]:.2f}")  # or use env.demand_pattern[timestep+1] safely

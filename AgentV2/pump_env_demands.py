@@ -83,11 +83,11 @@ class WdsWithDemand(wds):
         self.pump_power()
         self.calculate_pump_efficiencies()
         reward = self._compute_reward()
-        demand,state = self.get_state()
+        state = self.get_state()
         self.timestep += 1
         done = self.timestep >= self.episode_len
 
-        return demand,state, reward, done, {}
+        return state, reward, done, {}
 
 
 
@@ -99,7 +99,7 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     env.step(step)
-    demand, states = env.get_state()
+    states = env.get_state()
     reward = env._compute_reward()
     print(f"Pump speeds: {env.pump_speeds}")
     print()
@@ -118,6 +118,7 @@ def printing_states(step,inp_demand_pattern):
 
     print(f"Reward: {reward}")
     print()
+    demand = env.get_demands()
     print(demand[:10])
 
 

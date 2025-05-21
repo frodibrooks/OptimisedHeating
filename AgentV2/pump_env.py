@@ -86,16 +86,18 @@ class wds():
         pressures = [j.pressure for j in self.wds.junctions]  # Normalize based on expected pressure range
         flows = [p.flow for p in self.wds.pumps.values()]  # Normalize based on expected max flow
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)  # Normalize based on estimated max power
-        demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
+        # demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
         # max_demand = max(demand) if demand else 1.0
         # norm_demand = [d / max_demand for d in demand]  # Normalize demand
         
+        # ætlum að prófa að sýna honum pressure og speeds
+        # state = pump_speeds + pressures + flows + power + demand
+        state = pressures + pump_speeds
 
-        state = pump_speeds + pressures + flows + power + demand
-
-        return demand,state
-
-
+        return state
+    def get_demands(self):
+        self.wds.solve()
+        return [j.basedemand for j in self.wds.junctions]
 
     def step(self, action_idx):
         # Map the action index to pump speeds using the action_map
