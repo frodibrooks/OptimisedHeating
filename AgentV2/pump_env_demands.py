@@ -3,12 +3,13 @@ import numpy as np
 from pump_env import wds
 
 class WdsWithDemand(wds):
-    def __init__(self, demand_pattern=None,use_constant_demand=False ,*args, **kwargs):
+    def __init__(self, demand_pattern=None, use_constant_demand=False, episode_len=1, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.demand_pattern = self._load_pattern(demand_pattern)
         self.demand_index = 0
         self.episode_demand_scale = 1.0
         self.use_constant_demand = use_constant_demand
+        self.episode_len = episode_len  # NEW
 
 
     def _load_pattern(self, pattern):
@@ -146,19 +147,8 @@ if __name__ == "__main__":
     #     print(f"Action {i}: {env.action_map[i]}")
 
 
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
-    # env.step(200)
-    # states = env.get_state()
-    # reward = env._compute_reward()
-    # print(f"Reward: {reward}")
-    # print("States/pressures: ", states[-10:])
-
-    # demands = env.get_demands()
-
-    # print("Demands: ", demands[:10])
-
     env = WdsWithDemand(demand_pattern=np.array([1]))
-    env.reset()
+    env.step(200)
     states = env.get_state()
     reward = env._compute_reward()
     print(f"Reward: {reward}")
@@ -167,3 +157,4 @@ if __name__ == "__main__":
     demands = env.get_demands()
 
     print("Demands: ", demands[:10])
+

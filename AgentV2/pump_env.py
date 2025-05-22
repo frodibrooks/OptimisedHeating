@@ -212,7 +212,8 @@ class wds():
         return gym.spaces.Discrete(len(self.action_map))
 
     def observation_space(self):
-        num_state_elements = (len(self.wds.junctions) ) # demand
+        num_state_elements = (len(self.wds.junctions) +
+                              len(self.wds.pumps)) # demand
 
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
 

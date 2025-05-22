@@ -7,116 +7,86 @@ import os
 
 # === Set paths ===
 program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
-demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
-# demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern"
 save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
+# === Demand pattern ===
+demand_ptr = np.array([1, 1.2 , 1.4, 1.2, 1, 0.8, 0.7, 0.9])
+episode_len = len(demand_ptr)
 
 # === Load environment ===
 os.chdir(program_dir)
 
-# env = WdsWithDemand(
-#     eff_weight=3.0,
-#     pressure_weight=1,
-#     demand_pattern=demand_pattern_path,
-#     episode_len = 24, # Þetta er lengd demand pattern
-#     use_constant_demand=False
-# )
-
-# demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
-demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
-    demand_pattern=demand_ptr, # Þetta er demand pattern
-    episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
+    demand_pattern=demand_ptr,
+    episode_len=episode_len,
     use_constant_demand=False
-
 )
 
 # === Load model ===
 state_dim = int(env.observation_space().shape[0])
 action_dim = len(env.action_map)
 
-
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol28.pth"))
+model.load_state_dict(torch.load("trained_model_vol29.pth"))
 model.eval()
 
 # === Run validation ===
 full_logs = []
-env.reset(demand_pattern=demand_ptr)
-
-state = env.get_state()
+state = env.reset(demand_pattern=demand_ptr)
 
 for timestep in range(env.episode_len):
-
-
+    # === Agent selects action ===
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
         action_idx = torch.argmax(q_values).item()
 
+    # === Step environment ===
+    next_state, reward, done, info = env.step(action_idx)
 
-
-    state, reward, done, info = env.step(action_idx)
-
-
-
-    state = env.get_state()
-
-    print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep-1]:.2f}")  # or use env.demand_pattern[timestep+1] safely
-    print(f"Agent selects Speeds: {env.action_map[action_idx]}")
-    print()
+    # === Debug print ===
+    print(f"Timestep {timestep + 1}/{env.episode_len}")
+    print(f"Demand scale: {env.demand_pattern[timestep]:.2f}")
+    print(f"Selected pump speeds: {env.action_map[action_idx]}")
     print(f"Reward: {reward:.3f}")
-    print()
-    print(f"Energy: {-env.total_power*env.power_penalty_weight:.3f}")
+    print(f"Energy: {-env.total_power * env.power_penalty_weight:.3f}\n")
 
-    # print("Q-values at timestep 1:", q_values.tolist())
-
-    
-
-    # === Log everything ===
+    # === Log row ===
     row = {
         "Step": timestep,
         "ActionIndex": action_idx,
         "DemandScale": env.demand_pattern[timestep],
         "Reward": reward,
-        "EffReward": env.eff_ratio*env.eff_weight,
+        "EffReward": env.eff_ratio * env.eff_weight,
         "Valid heads ratio": env.valid_heads_ratio,
-        "Energy reward": -env.total_power*env.power_penalty_weight,
+        "Energy reward": -env.total_power * env.power_penalty_weight,
     }
 
-    # Flatten q_values to 1D tensor to avoid multi-element tensors during iteration
-    q_values_flat = q_values.flatten()
-
-    for i, q in enumerate(q_values_flat):
+    for i, q in enumerate(q_values):
         row[f"Q_{i}"] = q.item()
 
-
-    # Log pressures
+    # Junction pressures and demands
     for junction in env.wds.junctions:
         row[f"Head_{junction.uid}"] = junction.pressure
-    # log Demand
-    for junction in env.wds.junctions:
         row[f"Demand_{junction.uid}"] = junction.basedemand
 
-    # Log actual speeds from action map
+    # Pump speeds
     speed1, speed2 = env.action_map[action_idx]
-
     row["PumpGroupSpeed_1"] = speed1
     row["PumpGroupSpeed_2"] = speed2
 
-    # Log pump powers
+    # Pump powers
     for pump_id, power in zip(env.wds.pumps.keys(), env.pumpPower):
         row[f"PumpPower_{pump_id}"] = power
 
     full_logs.append(row)
 
-
+    # Move to next state
+    state = next_state
 
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent28.csv", index=False)
+df.to_csv("validation_full_log_agent29.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent28.csv.")
+print("Validation complete. Results saved to validation_full_log_agent29.csv.")
