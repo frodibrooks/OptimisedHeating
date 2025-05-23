@@ -10,7 +10,9 @@ program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/mo
 save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 # === Demand pattern ===
-demand_ptr = np.array([1, 1.2 , 1.4, 1.2, 1, 0.8, 0.7, 0.9])
+# demand_ptr = np.array([1, 1.2 , 1.4, 1.2, 1, 0.8, 0.7, 0.9])
+demand_ptr = np.array([1.2, 1.2, 1.2, 1.2])
+
 episode_len = len(demand_ptr)
 
 # === Load environment ===
@@ -27,7 +29,7 @@ state_dim = int(env.observation_space().shape[0])
 action_dim = len(env.action_map)
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol29.pth"))
+model.load_state_dict(torch.load("trained_model_vol30.pth"))
 model.eval()
 
 # === Run validation ===
@@ -87,6 +89,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent29.csv", index=False)
+df.to_csv("validation_full_log_agent30.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent29.csv.")
+print("Validation complete. Results saved to validation_full_log_agent30.csv.")

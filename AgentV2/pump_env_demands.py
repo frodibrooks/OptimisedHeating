@@ -61,7 +61,7 @@ class WdsWithDemand(wds):
         """Convert action index to a tuple of speed indices."""
         return self.action_map[action_idx]
 
-    def step(self, action_idx):
+    def step(self, action_idx,training=False):
         speed1, speed2 = self.action_map[action_idx]
 
         for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
@@ -70,6 +70,8 @@ class WdsWithDemand(wds):
                 self.wds.pumps[pump_id].speed = speed
 
         # Default scale
+        if training:
+            self.episode_demand_scale = np.random.uniform(0.75, 1.4)
         demand_scale = self.episode_demand_scale
 
         if not self.use_constant_demand and self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
@@ -134,27 +136,27 @@ if __name__ == "__main__":
     # ptr = np.array([1])
     # printing_states(195,ptr)
 
-    # ptr = np.array([1])
-    # printing_states(176,ptr)
+    ptr = np.array([1.3])
+    printing_states(200,ptr)
   
 
 
 
     
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # env = WdsWithDemand(demand_pattern=np.array([1.3]))
     
     # for i in range(len(env.action_map)):
     #     print(f"Action {i}: {env.action_map[i]}")
 
 
-    env = WdsWithDemand(demand_pattern=np.array([1]))
-    env.step(200)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Reward: {reward}")
-    print("States/pressures: ", states[-10:])
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # env.step(200)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Reward: {reward}")
+    # print("States/pressures: ", states[-10:])
 
-    demands = env.get_demands()
+    # demands = env.get_demands()
 
-    print("Demands: ", demands[:10])
+    # print("Demands: ", demands[:10])
 

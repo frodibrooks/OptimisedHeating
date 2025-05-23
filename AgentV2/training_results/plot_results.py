@@ -14,11 +14,11 @@ def plot_rewards_from_csv(csv_file, save_path="reward_plot.png"):
     data = pd.read_csv(csv_file)
 
     # Check if the CSV contains a 'reward' column
-    if 'Reward' not in data.columns:
+    if 'Total Reward' not in data.columns:
         print("Error: The CSV file must have a 'Total Reward' column.")
         return
 
-    rewards = data['Reward'].values
+    rewards = data['Total Reward'].values
     episodes = data.index + 1  # Assuming episodes are numbered starting from 1
 
     # Plotting the rewards
