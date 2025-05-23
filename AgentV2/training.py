@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
         for t in range(episode_len):
             # print("Agent sees this state ",state[-10:])
-            # demands = env.get_demands()
+            demands = env.get_demands()
             # print("System has these demands: ", demands[:10])
 
             action_idx = agent.act(state)
