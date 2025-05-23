@@ -11,7 +11,7 @@ save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 # === Demand pattern ===
 # demand_ptr = np.array([1, 1.2 , 1.4, 1.2, 1, 0.8, 0.7, 0.9])
-demand_ptr = np.array([1.2, 1.2, 1.2, 1.2])
+demand_ptr = np.array([1])
 
 episode_len = len(demand_ptr)
 
