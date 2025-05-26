@@ -108,3 +108,5 @@ if __name__ == "__main__":
 
     torch.save(agent.policy_net.state_dict(), "trained_model_vol28.pth")
     print("Model saved!")
+
+    # Losum okkur við demand
