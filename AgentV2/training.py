@@ -36,7 +36,7 @@ class Agent:
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
-        self.epsilon_decay = 0.995 # hversu hratt epsilon minnkar
+        self.epsilon_decay = 0.99  # hversu hratt epsilon minnkar
         self.update_target_every = 200
         self.steps = 0
         self.action_size = action_size
@@ -79,9 +79,9 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 500
-    episode_len = 300
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent33.csv"
+    num_episodes = 10
+    episode_len = 10
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent30.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Total Reward'])
@@ -106,8 +106,7 @@ if __name__ == "__main__":
             action_idx = agent.act(state)
             # print(f"Agent selects Speeds: {env.action_map[action_idx]}")
             next_state, reward, done, _ = env.step(action_idx)
-            # print("New state is ", next_state[-10:])
-            # print(f"Reward: {reward:.3f}")
+            print("New state is ", next_state[-10:])
             agent.step(state, action_idx, reward, next_state, done)
             total_reward += reward
             state = next_state
