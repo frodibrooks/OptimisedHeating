@@ -86,14 +86,20 @@ class wds():
         pressures = [j.pressure for j in self.wds.junctions]  # Normalize based on expected pressure range
         flows = [p.flow for p in self.wds.pumps.values()]  # Normalize based on expected max flow
         power = self.pumpPower if hasattr(self, 'pumpPower') else [0.0] * len(self.wds.pumps)  # Normalize based on estimated max power
-        demand = [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
-        # max_demand = max(demand) if demand else 1.0
-        # norm_demand = [d / max_demand for d in demand]  # Normalize demand
+
+
+        max_power = max(pressures) if max(pressures) > 0 else 100
+        norm_pressures = [p / max_power for p in pressures]
         
 
-        state = pump_speeds + pressures + flows + power + demand
+        # state = pump_speeds + pressures + flows + power 
+        state = norm_pressures + pump_speeds
 
-        return demand,state
+        return state
+    
+    def get_demand(self):
+        return [j.basedemand for j in self.wds.junctions]  # Normalize based on max demand
+
 
 
 
@@ -205,7 +211,7 @@ class wds():
         return gym.spaces.Discrete(len(self.action_map))
 
     def observation_space(self):
-        num_state_elements = (len(self.wds.junctions) ) # demand
+        num_state_elements = (len(self.wds.junctions) + len(self.pump_speeds) ) # demand
 
         return gym.spaces.Box(low=0.0, high=1.5, shape=(num_state_elements,), dtype=np.float32)
 
