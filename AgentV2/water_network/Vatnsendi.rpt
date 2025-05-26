@@ -1,4 +1,4 @@
-  Page 1                                    Thu May 22 10:27:39 2025
+  Page 1                                    Mon May 26 10:23:51 2025
 
   ******************************************************************
   *                           E P A N E T                          *
@@ -7,10 +7,4 @@
   *                         Version 2.2                            *
   ******************************************************************
   
-  Analysis begun Thu May 22 10:27:39 2025
-
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 open but exceeds maximum flow at 0:00:00 hrs.
-  WARNING: Pump 17 open but exceeds maximum flow at 0:00:00 hrs.
-   
+  Analysis begun Mon May 26 10:23:51 2025
