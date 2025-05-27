@@ -9,71 +9,99 @@ class WdsWithDemand(wds):
         self.demand_index = 0
         self.episode_demand_scale = 1.0
         self.use_constant_demand = use_constant_demand
+        self.timestep = 0
 
     def _load_pattern(self, pattern):
-        """Load a demand pattern from a CSV or use the provided numpy array."""
+        """Load a demand pattern from CSV or numpy array, or None."""
         if isinstance(pattern, str):
-            return pd.read_csv(pattern)['demand_pattern'].values
+            df = pd.read_csv(pattern)
+            # Assumes pattern column named 'demand_pattern' or adapt accordingly
+            return df['demand_pattern'].values  
         elif isinstance(pattern, np.ndarray):
-            return pattern
+            return pattern.flatten()  # flatten in case of 2D array like np.array([[...]])
         else:
             return None
 
     def scale_demands(self, scale):
-        """Apply a given demand scale to all junctions."""
+        """Apply given demand scale to all junctions based on base demands."""
         for junction in self.wds.junctions:
-            junction.basedemand = self.demandDict[junction.uid] * scale
+            base = self.demandDict[junction.uid]
+            junction.basedemand = base * scale
 
-    def reset(self, demand_pattern=None, training=False):
+    def reset(self, demand_pattern=None, randomize_demand=False):
+        """
+        Reset environment.
+        
+        Parameters:
+            demand_pattern: Optional new demand pattern to load.
+            randomize_demand: If True, pick a random base demand scale; else fixed 1.0.
+        """
         self.timestep = 0
         self.demand_index = 0
 
         if demand_pattern is not None:
             self.demand_pattern = self._load_pattern(demand_pattern)
 
-        if training and self.demand_pattern is None:
+        # Decide base episode demand scale
+        if randomize_demand:
             self.episode_demand_scale = np.random.uniform(0.75, 1.4)
         else:
             self.episode_demand_scale = 1.0
 
-        state = super().reset()
-
+        # Compose initial demand scale
         demand_scale = self.episode_demand_scale
-        if not self.use_constant_demand and self.demand_pattern is not None:
-            if len(self.demand_pattern) > 0:
-                demand_scale *= self.demand_pattern[0]
-                self.demand_index = 1  # So step() starts with the next
+        if not self.use_constant_demand and self.demand_pattern is not None and len(self.demand_pattern) > 0:
+            demand_scale *= self.demand_pattern[0]
+            self.demand_index = 1  # step() will continue from next index
 
         self.scale_demands(demand_scale)
 
+        # Call base reset
+        state = super().reset()
+
+        # Solve hydraulic state and calculate metrics
         self.wds.solve()
         self.pump_power()
         self.calculate_pump_efficiencies()
 
         return self.get_state()
 
-    def step(self, action_idx):
+    def step(self, action_idx, training=False):
+        """
+        Take an action and update environment state.
+        
+        Parameters:
+            action_idx: Discrete action index.
+            training: If True, randomize demand scale at each step; else use demand pattern.
+        """
         speed1, speed2 = self.action_map[action_idx]
 
-        for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
+        # Apply pump speeds
+        for group_idx, speed in enumerate([speed1, speed2]):
             for pump_id in self.pumpGroups[group_idx]:
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
 
-        if not self.use_constant_demand:
-            if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
-                demand_scale = self.episode_demand_scale * self.demand_pattern[self.demand_index]
-                self.demand_index += 1
-            else:
-                # Apply new random demand scale every step if no pattern is provided
-                self.episode_demand_scale = np.random.uniform(0.75, 1.4)
-                demand_scale = self.episode_demand_scale
-        else:
+        # Determine demand scale for this step
+        if self.use_constant_demand:
             demand_scale = 1.0
+        else:
+            if training:
+                # Randomize demand scale every step during training
+                demand_scale = np.random.uniform(0.75, 1.4)
+            else:
+                # Use next value from demand pattern, or repeat last if at end
+                if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
+                    demand_scale = self.episode_demand_scale * self.demand_pattern[self.demand_index]
+                    self.demand_index += 1
+                else:
+                    demand_scale = self.episode_demand_scale
 
+        # print(f"[DEBUG] Applying demand_scale {demand_scale:.3f} at timestep {self.timestep}")
 
         self.scale_demands(demand_scale)
 
+        # Solve hydraulic model and compute metrics
         self.wds.solve()
         self.pump_power()
         self.calculate_pump_efficiencies()
@@ -87,6 +115,7 @@ class WdsWithDemand(wds):
 
     def action_index_to_list(self, action_idx):
         return self.action_map[action_idx]
+
 
 
 

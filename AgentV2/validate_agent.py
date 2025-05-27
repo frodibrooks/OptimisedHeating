@@ -6,12 +6,12 @@ from pump_env_demands import WdsWithDemand
 import os
 
 # === Set paths ===
-# program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
-program_dir = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models"
+program_dir = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/models"
+# program_dir = r"C:\Users\frodi\Documents\OptimisedHeating\AgentV2\models"
 demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern_2024-11-03"
 # demand_pattern_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/tests/demand_pattern"
-# save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
-save_path = r"C:\Users\frodi\Documents\OptimisedHeating\validation"
+save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
+# save_path = r"C:\Users\frodi\Documents\OptimisedHeating\validation"
 
 
 # === Load environment ===
@@ -25,8 +25,8 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-# demand_ptr = np.array([0.8 , 0.9 , 1, 1.1, 1.2 , 1.3])
-demand_ptr = np.array([1,1,1,1,1])
+demand_ptr = np.array([0.8 , 0.9 , 1, 1.1, 1.2 , 1.3])
+# demand_ptr = np.array([1,1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -40,7 +40,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol101.pth"))
+model.load_state_dict(torch.load("trained_model_vol102.pth"))
 model.eval()
 
 # === Run validation ===
@@ -53,7 +53,7 @@ for timestep in range(env.episode_len):
 
     demand = env.get_demand()
     print(f"Agent sees state {state[-8:]}")
-    print(f"Agent sees demand {state[:10]}")
+    print(f"Agent sees demand {state[:4]}")
 
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
@@ -119,6 +119,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent101.csv", index=False)
+df.to_csv("validation_full_log_agent102.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent101.csv.")
+print("Validation complete. Results saved to validation_full_log_agent102.csv.")

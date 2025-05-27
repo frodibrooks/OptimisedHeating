@@ -94,20 +94,20 @@ if __name__ == "__main__":
     # print(f"State size: {state_size}, Action size: {action_size}")
 
     agent = Agent(state_size, action_size)
-    state = env.reset(training=True)
+    state = env.reset()
     for episode in range(num_episodes):
 
         state = env.get_state()
-        # print("Agent sees this: ",state[-8:])
+        print("Agent sees this: ",state[-8:])
         demand = env.get_demand()
-        # print("System demand is: ", demand[:5])
+        print("System demand is: ", demand[:5])
         action_idx = agent.act(state)
-        # print("Speed: ", env.action_map[action_idx])
-        next_state, reward, done, _ = env.step(action_idx)
+        print("Speed: ", env.action_map[action_idx])
+        next_state, reward, done, _ = env.step(action_idx,training=True)
 
-        # print("New state: ",next_state[-8:])
-        # print("Reward: ", reward)
-        # print()
+        print("New state: ",next_state[-8:])
+        print("Reward: ", reward)
+        print()
         agent.step(state, action_idx, reward, np.zeros_like(state), done)
         agent.decay_epsilon()
         state = next_state
