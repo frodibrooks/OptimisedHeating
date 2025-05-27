@@ -128,8 +128,8 @@ def printing_states(step,inp_demand_pattern):
 
 if __name__ == "__main__":
 
-    # ptr = np.array([1])
-    # printing_states(218,ptr)
+    ptr = np.array([1])
+    printing_states(200,ptr)
 
     # ptr = np.array([1])
     # printing_states(195,ptr)
@@ -147,13 +147,3 @@ if __name__ == "__main__":
     #     print(f"Action {i}: {env.action_map[i]}")
 
 
-    env = WdsWithDemand(demand_pattern=np.array([1]))
-    env.step(200)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Reward: {reward}")
-    print("States/pressures: ", states[-10:])
-
-    demands = env.get_demands()
-
-    print("Demands: ", demands[:10])

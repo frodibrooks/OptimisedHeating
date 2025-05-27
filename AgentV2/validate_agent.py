@@ -11,7 +11,7 @@ save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation"
 
 # === Demand pattern ===
 # demand_ptr = np.array([1, 1.2 , 1.4, 1.2, 1, 0.8, 0.7, 0.9])
-demand_ptr = np.array([1])
+demand_ptr = np.array([1, 1.4])
 
 episode_len = len(demand_ptr)
 
@@ -29,7 +29,7 @@ state_dim = int(env.observation_space().shape[0])
 action_dim = len(env.action_map)
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol34.pth"))
+model.load_state_dict(torch.load("trained_model_vol33.pth"))
 model.eval()
 
 # === Run validation ===
@@ -91,4 +91,4 @@ df = pd.DataFrame(full_logs)
 os.chdir(save_path)
 df.to_csv("validation_full_log_agent34.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent34.csv.")
+print("Validation complete. Results saved to validation_full_log_agent33.csv.")
