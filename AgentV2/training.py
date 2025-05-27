@@ -79,8 +79,8 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    # num_episodes = 20000  # You can now train for more episodes since they're fast
-    num_episodes = 5
+    num_episodes = 20000  # You can now train for more episodes since they're fast
+    # num_episodes = 5
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent102.csv"
     reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent102.csv"
 
@@ -98,16 +98,16 @@ if __name__ == "__main__":
     for episode in range(num_episodes):
 
         state = env.get_state()
-        print("Agent sees this: ",state[-8:])
+        # print("Agent sees this: ",state[-8:])
         demand = env.get_demand()
-        print("System demand is: ", demand[:5])
+        # print("System demand is: ", demand[:5])
         action_idx = agent.act(state)
-        print("Speed: ", env.action_map[action_idx])
+        # print("Speed: ", env.action_map[action_idx])
         next_state, reward, done, _ = env.step(action_idx)
 
-        print("New state: ",next_state[-8:])
-        print("Reward: ", reward)
-        print()
+        # print("New state: ",next_state[-8:])
+        # print("Reward: ", reward)
+        # print()
         agent.step(state, action_idx, reward, np.zeros_like(state), done)
         agent.decay_epsilon()
         state = next_state
