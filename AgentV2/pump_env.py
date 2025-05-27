@@ -93,7 +93,7 @@ class wds():
         
 
         # state = pump_speeds + pressures + flows + power 
-        state = pressures + pump_speeds
+        state = norm_pressures + pump_speeds
 
         return state
     

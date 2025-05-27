@@ -25,8 +25,8 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-# demand_ptr = np.array([1.4])
-demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3,])
+demand_ptr = np.array([1 , 1, 1.3 ,1])
+# demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3,])
 env = WdsWithDemand(demand_pattern=demand_ptr,episode_len=len(demand_ptr))
 
 # === Load model ===
