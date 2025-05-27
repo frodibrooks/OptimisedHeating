@@ -60,10 +60,17 @@ class WdsWithDemand(wds):
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
 
-        demand_scale = self.episode_demand_scale
-        if not self.use_constant_demand and self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
-            demand_scale *= self.demand_pattern[self.demand_index]
-            self.demand_index += 1
+        if not self.use_constant_demand:
+            if self.demand_pattern is not None and self.demand_index < len(self.demand_pattern):
+                demand_scale = self.episode_demand_scale * self.demand_pattern[self.demand_index]
+                self.demand_index += 1
+            else:
+                # Apply new random demand scale every step if no pattern is provided
+                self.episode_demand_scale = np.random.uniform(0.75, 1.4)
+                demand_scale = self.episode_demand_scale
+        else:
+            demand_scale = 1.0
+
 
         self.scale_demands(demand_scale)
 

@@ -80,9 +80,9 @@ class Agent:
 
 if __name__ == "__main__":
     # num_episodes = 20000  # You can now train for more episodes since they're fast
-    num_episodes = 3
-    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent103.csv"
-    # reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent101.csv"
+    num_episodes = 5
+    # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent102.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent102.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -94,25 +94,30 @@ if __name__ == "__main__":
     # print(f"State size: {state_size}, Action size: {action_size}")
 
     agent = Agent(state_size, action_size)
-
+    state = env.reset(training=True)
     for episode in range(num_episodes):
-        state = env.reset(training=True)
-        print("Agent sees this ",state[-10:])
+
+        state = env.get_state()
+        print("Agent sees this: ",state[-8:])
         demand = env.get_demand()
-        print("System demand", demand[:10])
+        print("System demand is: ", demand[:5])
         action_idx = agent.act(state)
         print("Speed: ", env.action_map[action_idx])
         next_state, reward, done, _ = env.step(action_idx)
-        print("New state",next_state[-10:], reward)
+
+        print("New state: ",next_state[-8:])
+        print("Reward: ", reward)
+        print()
         agent.step(state, action_idx, reward, np.zeros_like(state), done)
         agent.decay_epsilon()
+        state = next_state
 
         with open(reward_log_path, mode='a', newline='') as file:
             csv.writer(file).writerow([episode + 1, reward])
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol103.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol102.pth")
     print("Model saved!")
 
     # Losum okkur við demand
