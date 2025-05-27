@@ -25,14 +25,9 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([0.8 , 0.9 , 1, 1.1, 1.2 , 1.3])
-# demand_ptr = np.array([1,1])
-env = WdsWithDemand(
-    demand_pattern=demand_ptr, # Þetta er demand pattern
-    episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
-    use_constant_demand=False
-
-)
+# demand_ptr = np.array([1,1,1])
+demand_ptr = np.array([0.8,0.8,0.8])
+env = WdsWithDemand(demand_pattern=demand_ptr,episode_len=len(demand_ptr))
 
 # === Load model ===
 state_dim = int(env.observation_space().shape[0])
@@ -45,7 +40,7 @@ model.eval()
 
 # === Run validation ===
 full_logs = []
-env.reset(demand_pattern=demand_ptr)
+env.reset(demand_pattern=demand_ptr,randomize_demand=False)
 
 state = env.get_state()
 
@@ -53,7 +48,8 @@ for timestep in range(env.episode_len):
 
     demand = env.get_demand()
     print(f"Agent sees state {state[-8:]}")
-    print(f"Agent sees demand {state[:4]}")
+    print(f"Demand is {demand[:4]}")
+    print()
 
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
@@ -61,17 +57,17 @@ for timestep in range(env.episode_len):
         action_idx = torch.argmax(q_values).item()
 
 
-    print(f"Pick speed {env.action_map[action_idx]}")
-    state, reward, done, info = env.step(action_idx)
+    print(f"Picks speed {env.action_map[action_idx]}")
+    state, reward, done, info = env.step(action_idx,training=False)
     print(f"New state {state[-8:]}")
 
 
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep]:.2f}")  # or use env.demand_pattern[timestep+1] safely
+    print(f"Agent sees demands with scaling: {env.episode_demand_scale:.2f}")  # or use env.demand_pattern[timestep+1] safely
     print()
     print(f"Reward: {reward:.3f}")
     print()
-    print(env.demand_pattern[timestep])
+
 
     # print("Q-values at timestep 1:", q_values.tolist())
 
