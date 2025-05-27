@@ -146,11 +146,14 @@ if __name__ == "__main__":
     # ptr = np.array([1])
     # printing_states(195,ptr)
 
-    # ptr = np.array([0.8])
-    # printing_states(157,ptr)
+    ptr = np.array([0.8])
+    printing_states(80,ptr)
+
+    ptr = np.array([0.8])
+    printing_states(99,ptr)
   
-    # ptr = np.array([0.8])
-    # printing_states(201,ptr)
+    ptr = np.array([1])
+    printing_states(99,ptr)
 
 
     
@@ -160,6 +163,6 @@ if __name__ == "__main__":
     #     print(f"Action {i}: {env.action_map[i]}")
 
     
-    for i in range(200):
-        ptr = np.array([0.8])
-        printing_states(i,ptr)
+    # for i in range(200):
+    #     ptr = np.array([0.8])
+    #     printing_states(i,ptr)

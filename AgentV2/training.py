@@ -82,7 +82,7 @@ if __name__ == "__main__":
     num_episodes = 25000  # You can now train for more episodes since they're fast
     # num_episodes = 5
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent102.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent103.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent104.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -108,7 +108,7 @@ if __name__ == "__main__":
         # print("New state: ",next_state[-8:])
         # print("Reward: ", reward)
         # print()
-        agent.step(state, action_idx, reward, next_state, done)
+        agent.step(state, action_idx, reward, np.zeros_like(next_state), done)
         agent.decay_epsilon()
         state = next_state
 
@@ -117,7 +117,7 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol103.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol104.pth")
     print("Model saved!")
 
     # Losum okkur við demand
