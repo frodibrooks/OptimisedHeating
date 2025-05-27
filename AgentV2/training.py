@@ -79,9 +79,9 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 20000  # You can now train for more episodes since they're fast
-    # num_episodes = 10
-    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent100.csv"
+    # num_episodes = 20000  # You can now train for more episodes since they're fast
+    num_episodes = 3
+    reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent103.csv"
     # reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent101.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
@@ -97,13 +97,13 @@ if __name__ == "__main__":
 
     for episode in range(num_episodes):
         state = env.reset(training=True)
-        # print("Agent sees this ",state[-10:])
-        # demand = env.get_demand()
-        # print("System demand", demand[:10])
+        print("Agent sees this ",state[-10:])
+        demand = env.get_demand()
+        print("System demand", demand[:10])
         action_idx = agent.act(state)
-        # print("Speed: ", env.action_map[action_idx])
+        print("Speed: ", env.action_map[action_idx])
         next_state, reward, done, _ = env.step(action_idx)
-        # print("New state",next_state[-10:], reward)
+        print("New state",next_state[-10:], reward)
         agent.step(state, action_idx, reward, np.zeros_like(state), done)
         agent.decay_epsilon()
 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol101.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol103.pth")
     print("Model saved!")
 
     # Losum okkur við demand

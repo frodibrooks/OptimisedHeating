@@ -25,8 +25,8 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-# demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
-demand_ptr = np.array([0.8])
+# demand_ptr = np.array([0.8 , 0.9 , 1, 1.1, 1.2 , 1.3])
+demand_ptr = np.array([1,1,1,1,1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -40,7 +40,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol100.pth"))
+model.load_state_dict(torch.load("trained_model_vol101.pth"))
 model.eval()
 
 # === Run validation ===
@@ -51,6 +51,9 @@ state = env.get_state()
 
 for timestep in range(env.episode_len):
 
+    demand = env.get_demand()
+    print(f"Agent sees state {state[-8:]}")
+    print(f"Agent sees demand {state[:10]}")
 
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
@@ -58,20 +61,17 @@ for timestep in range(env.episode_len):
         action_idx = torch.argmax(q_values).item()
 
 
-
+    print(f"Pick speed {env.action_map[action_idx]}")
     state, reward, done, info = env.step(action_idx)
+    print(f"New state {state[-8:]}")
 
-
-
-    state = env.get_state()
 
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep-1]:.2f}")  # or use env.demand_pattern[timestep+1] safely
-    print(f"Agent selects Speeds: {env.action_map[action_idx]}")
+    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep]:.2f}")  # or use env.demand_pattern[timestep+1] safely
     print()
     print(f"Reward: {reward:.3f}")
     print()
-    print(f"Energy: {-env.total_power*env.power_penalty_weight:.3f}")
+    print(env.demand_pattern[timestep])
 
     # print("Q-values at timestep 1:", q_values.tolist())
 
@@ -119,6 +119,6 @@ for timestep in range(env.episode_len):
 # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent100.csv", index=False)
+df.to_csv("validation_full_log_agent101.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent100.csv.")
+print("Validation complete. Results saved to validation_full_log_agent101.csv.")
