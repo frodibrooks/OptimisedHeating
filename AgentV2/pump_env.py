@@ -15,7 +15,7 @@ class wds():
                  total_demand_hi=1.2,
                  seed=None,
                  eff_weight=3.0,
-                 power_penalty_weight=0.0095,
+                 power_penalty_weight=0.0099,
                  random_demand_scaling=False,
                  demand_scale=None):
         if seed:
@@ -93,7 +93,7 @@ class wds():
         
 
         # state = pump_speeds + pressures + flows + power 
-        state = norm_pressures + pump_speeds
+        state = pressures + pump_speeds
 
         return state
     
