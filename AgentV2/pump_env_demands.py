@@ -101,10 +101,11 @@ def printing_states(step,inp_demand_pattern):
 
     state, demand, reward, done, _ = env.step(step)
 
-    print(f"State {state[:6]}")
-    print(f"Flows: {state[-6:]}")
-    print(f"Demand: {demand[:6]}")
-    print(f"Reward: {reward:.3f}")
+    print(f"Reward {reward:.3f} speed {env.pump_speeds}")
+    # print(f"State {state[:6]}")
+    # print(f"Flows: {state[-6:]}")
+    # print(f"Demand: {demand[:6]}")
+    # print(f"Reward: {reward:.3f}")
 
 
     # print(f"Pump speeds: {env.pump_speeds}")
@@ -142,16 +143,19 @@ if __name__ == "__main__":
     # printing_states(176,ptr)
 
 
-    ptr = np.array([0.8])
-    printing_states(195,ptr)
+    # ptr = np.array([0.8])
+    # printing_states(195,ptr)
 
-    ptr = np.array([1])
-    printing_states(195,ptr)
+    # ptr = np.array([1])
+    # printing_states(195,ptr)
 
-    ptr = np.array([1.2])
-    printing_states(195,ptr)    
+    # ptr = np.array([1.2])
+    # printing_states(195,ptr)    
   
-
+    env = WdsWithDemand(demand_pattern=np.array([1]))
+    for i in range(len(env.action_map)):
+        ptr = np.array([0.8])
+        printing_states(i,ptr)
 
 
     
