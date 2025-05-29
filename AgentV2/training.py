@@ -95,10 +95,10 @@ if __name__ == "__main__":
     agent = Agent(state_size, action_size)
 
     for episode in range(num_episodes):
-        demand,state = env.reset(training=True)
-        action_idx = agent.act(demand)
-        next_demand,state, reward, done, _ = env.step(action_idx)
-        agent.step(demand, action_idx, reward, np.zeros_like(demand), done)
+        state = env.reset(training=True)
+        action_idx = agent.act(state)
+        next_state, reward, done, _ = env.step(action_idx)
+        agent.step(state, action_idx, reward, np.zeros_like(next_state), done)
         agent.decay_epsilon()
 
         with open(reward_log_path, mode='a', newline='') as file:
