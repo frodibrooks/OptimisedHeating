@@ -83,11 +83,12 @@ class WdsWithDemand(wds):
         self.pump_power()
         self.calculate_pump_efficiencies()
         reward = self._compute_reward()
-        demand,state = self.get_state()
+        state = self.get_state()
+        demand = self.get_demand()
         self.timestep += 1
         done = self.timestep >= self.episode_len
 
-        return demand,state, reward, done, {}
+        return state,demand, reward, done, {}
 
 
 
@@ -98,27 +99,32 @@ def printing_states(step,inp_demand_pattern):
 
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(step)
-    demand, states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    state, demand, reward, done, _ = env.step(step)
 
-    print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
-
-    print(f"Pump power: {env.pumpPower}")
-    print()
-
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Pressure Score: {env.pressure_score}")
-    # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
-    print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
-    print(f"Total Energy: {env.total_power}")
+    print(f"State {state[:6]}")
+    print(f"Flows: {state[-6:]}")
+    print(f"Demand: {demand[:6]}")
+    print(f"Reward: {reward:.3f}")
 
 
-    print(f"Reward: {reward}")
-    print()
-    print(demand[:10])
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
+
+    # print(f"Demand Scale: {env.demand_pattern[env.demand_index-1]}")
+
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
+
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Pressure Score: {env.pressure_score}")
+    # # print(f"Eff ratio: {env.eff_weight*env.eff_ratio}")
+    # print(f"Energy reward: {-env.power_penalty_weight*env.total_power}")
+    # print(f"Total Energy: {env.total_power}")
+
+
+    # print(f"Reward: {reward}")
+    # print()
+    # print(demand[:10])
 
 
 
@@ -126,14 +132,24 @@ def printing_states(step,inp_demand_pattern):
 
 if __name__ == "__main__":
 
-    ptr = np.array([1])
-    printing_states(218,ptr)
+    # ptr = np.array([1])
+    # printing_states(218,ptr)
+
+    # ptr = np.array([1])
+    # printing_states(195,ptr)
+
+    # ptr = np.array([1])
+    # printing_states(176,ptr)
+
+
+    ptr = np.array([0.8])
+    printing_states(195,ptr)
 
     ptr = np.array([1])
     printing_states(195,ptr)
 
-    ptr = np.array([1])
-    printing_states(176,ptr)
+    ptr = np.array([1.2])
+    printing_states(195,ptr)    
   
 
 
