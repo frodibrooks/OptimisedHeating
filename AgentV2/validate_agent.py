@@ -23,8 +23,8 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-# demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
-demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
+demand_ptr = np.array([1,1,1,1.4,1,1])
+# demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
@@ -113,9 +113,9 @@ for timestep in range(env.episode_len):
 
 
 
-# === Save logs ===
-df = pd.DataFrame(full_logs)
-os.chdir(save_path)
-df.to_csv("validation_full_log_agent200.csv", index=False)
+# # === Save logs ===
+# df = pd.DataFrame(full_logs)
+# os.chdir(save_path)
+# df.to_csv("validation_full_log_agent200.csv", index=False)
 
 print("Validation complete. Results saved to validation_full_log_agent200.csv.")
