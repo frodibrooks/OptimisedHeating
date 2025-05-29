@@ -24,7 +24,7 @@ os.chdir(program_dir)
 # )
 
 # demand_ptr = np.array([1.3 , 0.8 , 1, 1.2, 1.1 , 0.8 , 1])
-demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
+demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
     episode_len = len(demand_ptr) ,# Þetta er lengd demand pattern
