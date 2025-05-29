@@ -87,8 +87,8 @@ if __name__ == "__main__":
         csv.writer(file).writerow(['Episode', 'Reward'])
 
     env = WdsWithDemand(episode_len=1,use_constant_demand=False)
-    norm_demands,state = env.reset()
-    state_size = len(norm_demands)
+    state = env.reset()
+    state_size = len(state)
     action_size = len(env.action_map)
     # print(f"State size: {state_size}, Action size: {action_size}")
 
@@ -97,7 +97,7 @@ if __name__ == "__main__":
     for episode in range(num_episodes):
         state = env.reset(training=True)
         action_idx = agent.act(state)
-        next_state, reward, done, _ = env.step(action_idx)
+        next_state, demand, reward, done, _ = env.step(action_idx)
         agent.step(state, action_idx, reward, np.zeros_like(next_state), done)
         agent.decay_epsilon()
 
