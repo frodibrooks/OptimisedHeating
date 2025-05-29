@@ -49,7 +49,7 @@ state = env.get_state()
 
 for timestep in range(env.episode_len):
 
-
+    print(f"Agent sees state: {state[:10]}")
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
@@ -62,8 +62,9 @@ for timestep in range(env.episode_len):
 
 
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {env.demand_pattern[timestep-1]:.2f}")  # or use env.demand_pattern[timestep+1] safely
+    print(f"Agent sees demands with scaling: {demand[:5]}", env.demand_pattern[timestep])  # or use env.demand_pattern[timestep+1] safely
     print(f"Agent selects Speeds: {env.action_map[action_idx]}")
+    print(f"New state: {state[:10]}")
     print()
     print(f"Reward: {reward:.3f}")
     print()
