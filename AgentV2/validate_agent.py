@@ -23,7 +23,7 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([1,1,1,1.4,1,1])
+demand_ptr = np.array([0.8,0.8,0.8,0.8,1.3,0.8])
 # demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
@@ -38,7 +38,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol200.pth"))
+model.load_state_dict(torch.load("trained_model_vol201.pth"))
 model.eval()
 
 # === Run validation ===
@@ -49,7 +49,7 @@ state = env.get_state()
 
 for timestep in range(env.episode_len):
 
-    print(f"Agent sees state: {state[:10]}")
+    # print(f"Agent sees state: {state[:10]}")
     state_tensor = torch.tensor(state, dtype=torch.float32).unsqueeze(0)
     with torch.no_grad():
         q_values = model(state_tensor).squeeze(0)
@@ -64,7 +64,7 @@ for timestep in range(env.episode_len):
     print(f"timestep {timestep + 1}/{env.episode_len}")
     print(f"Agent sees demands with scaling: {demand[:5]}", env.demand_pattern[timestep])  # or use env.demand_pattern[timestep+1] safely
     print(f"Agent selects Speeds: {env.action_map[action_idx]}")
-    print(f"New state: {state[:10]}")
+    # print(f"New state: {state[:10]}")
     print()
     print(f"Reward: {reward:.3f}")
     print()
@@ -116,6 +116,6 @@ for timestep in range(env.episode_len):
 # # === Save logs ===
 # df = pd.DataFrame(full_logs)
 # os.chdir(save_path)
-# df.to_csv("validation_full_log_agent200.csv", index=False)
+# df.to_csv("validation_full_log_agent201.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent200.csv.")
+print("Validation complete. Results saved to validation_full_log_agent201.csv.")
