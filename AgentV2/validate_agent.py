@@ -26,7 +26,9 @@ os.chdir(program_dir)
 # demand_ptr = np.array([1.25,1.25,1.25,1.26,1.25,1.29,1.37,1.35,1.33,1.3,1.25,1.24,1.17,1.16,1.16,1.17,1.2,1.25,1.23,1.26,1.24,1.22,1.16]) winter
 # demand_ptr = np.array([0.55,0.56,0.56,0.56,0.57,0.6,0.66,0.66,0.65,0.63,0.61,0.61,0.59,0.6,0.6,0.63,0.67,0.65,0.63,0.65,0.63]) # sumar
 
-demand_ptr = np.array([1.3,1.3,1.3,1.3,1,1.3,1.3]) # sumar
+# demand_ptr = np.array([1.3,1.3,1.3,1.3,1,1.3,1.3]) # sumar
+demand_ptr = np.array([0.8,0.8,1,1.3,1,1]) # sumar
+
 
 # demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
@@ -42,7 +44,7 @@ action_dim = len(env.action_map)
 
 
 model = DQN(state_dim, action_dim)
-model.load_state_dict(torch.load("trained_model_vol202.pth"))
+model.load_state_dict(torch.load("trained_model_vol300.pth"))
 model.eval()
 
 # === Run validation ===
@@ -105,10 +107,11 @@ for timestep in range(env.episode_len):
         row[f"Demand_{junction.uid}"] = junction.basedemand
 
     # Log actual speeds from action map
-    speed1, speed2 = env.action_map[action_idx]
+    speed1, speed2, speed3  = env.action_map[action_idx]
 
     row["PumpGroupSpeed_1"] = speed1
     row["PumpGroupSpeed_2"] = speed2
+    row["PumpGroupSpeed_3"] = speed3
 
     # Log pump powers
     for pump_id, power in zip(env.wds.pumps.keys(), env.pumpPower):
@@ -121,6 +124,6 @@ for timestep in range(env.episode_len):
 # # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent202.csv", index=False)
+df.to_csv("validation_full_log_agent300.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent202.csv.")
+print("Validation complete. Results saved to validation_full_log_agent300.csv.")
