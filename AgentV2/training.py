@@ -79,7 +79,7 @@ class Agent:
         self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
 if __name__ == "__main__":
-    num_episodes = 25000  # You can now train for more episodes since they're fast
+    num_episodes = 20000  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
     reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent301.csv"
 
