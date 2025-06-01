@@ -174,7 +174,7 @@ class wds():
         # Reward is based on efficiency ratio and total power usage
         reward = (
             self.eff_weight * self.eff_ratio
-            - self.power_penalty_weight * self.total_power+self.pressure_score
+            - (self.total_power/100)+self.pressure_score
         )
 
         if self.valid_heads_ratio < 0.97:

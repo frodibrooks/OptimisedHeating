@@ -134,10 +134,10 @@ def printing_states(step,inp_demand_pattern):
 if __name__ == "__main__":
 
     # ptr = np.array([1])
-    # printing_states(218,ptr)
+    # printing_states(177,ptr)
 
     # ptr = np.array([1])
-    # printing_states(195,ptr)
+    # printing_states(180,ptr)
 
     # ptr = np.array([1])
     # printing_states(176,ptr)
@@ -149,10 +149,10 @@ if __name__ == "__main__":
     # ptr = np.array([1])
     # printing_states(195,ptr)
 
-    # ptr = np.array([1.2])
-    # printing_states(195,ptr)    
+    # ptr = np.array([1])
+    # printing_states(198,ptr)    
   
-    env = WdsWithDemand(demand_pattern=np.array([1]))
+    env = WdsWithDemand(demand_pattern=np.array([0.8]))
     for i in range(len(env.action_map)):
         ptr = np.array([0.8])
         printing_states(i,ptr)

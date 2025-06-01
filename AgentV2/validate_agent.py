@@ -23,7 +23,11 @@ os.chdir(program_dir)
 #     use_constant_demand=False
 # )
 
-demand_ptr = np.array([0.8,0.8,0.8,0.8,1.3,0.8])
+# demand_ptr = np.array([1.25,1.25,1.25,1.26,1.25,1.29,1.37,1.35,1.33,1.3,1.25,1.24,1.17,1.16,1.16,1.17,1.2,1.25,1.23,1.26,1.24,1.22,1.16]) winter
+# demand_ptr = np.array([0.55,0.56,0.56,0.56,0.57,0.6,0.66,0.66,0.65,0.63,0.61,0.61,0.59,0.6,0.6,0.63,0.67,0.65,0.63,0.65,0.63]) # sumar
+
+demand_ptr = np.array([1.3,1.3,1.3,1.3,1,1.3,1.3]) # sumar
+
 # demand_ptr = np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1,0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1])
 env = WdsWithDemand(
     demand_pattern=demand_ptr, # Þetta er demand pattern
@@ -62,7 +66,8 @@ for timestep in range(env.episode_len):
 
 
     print(f"timestep {timestep + 1}/{env.episode_len}")
-    print(f"Agent sees demands with scaling: {demand[:5]}", env.demand_pattern[timestep])  # or use env.demand_pattern[timestep+1] safely
+    # print(f"Agent sees demands with scaling: {demand[:5]}", env.demand_pattern[timestep])  # or use env.demand_pattern[timestep+1] safely
+    print(f"Demand scale: {env.demand_pattern[timestep]:.3f}")
     print(f"Agent selects Speeds: {env.action_map[action_idx]}")
     # print(f"New state: {state[:10]}")
     print()
