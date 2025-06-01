@@ -10,7 +10,7 @@ class wds():
                  wds_name="Vatnsendi",
                  speed_increment=0.025,
                  episode_len=300,
-                 pump_groups=[['17', '10','25', '26'], ['27']],
+                 pump_groups=[['17', '10',],['25', '26'], ['27']],
                  total_demand_lo=0.8,
                  total_demand_hi=1.2,
                  seed=None,
@@ -57,11 +57,11 @@ class wds():
         # Define the speed levels
         self.speed_levels = np.round(np.arange(0.7, 1.251, 0.03), 3)
 
-        # Define the action map
         self.action_map = [
-            (s1, s2) 
-            for s1 in self.speed_levels 
+            (s1, s2, s3)
+            for s1 in self.speed_levels
             for s2 in self.speed_levels
+            for s3 in self.speed_levels
         ]
 
     def build_demand_dict(self):
@@ -104,10 +104,10 @@ class wds():
 
     def step(self, action_idx):
         # Map the action index to pump speeds using the action_map
-        idx1, idx2 = self.action_map[action_idx]
+        idx1, idx2, idx3 = self.action_map[action_idx]
 
         # Apply the chosen speeds to the pumps
-        for group_idx, speed in zip(range(len(self.pumpGroups)), [idx1, idx2]):
+        for group_idx, speed in zip(range(len(self.pumpGroups)), [idx1, idx2, idx3]):
             for pump_id in self.pumpGroups[group_idx]:
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed

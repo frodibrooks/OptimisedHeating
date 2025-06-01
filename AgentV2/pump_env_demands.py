@@ -61,9 +61,9 @@ class WdsWithDemand(wds):
         return self.action_map[action_idx]
 
     def step(self, action_idx):
-        speed1, speed2 = self.action_map[action_idx]
+        speed1, speed2, speed3 = self.action_map[action_idx]
 
-        for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2]):
+        for group_idx, speed in zip(range(len(self.pumpGroups)), [speed1, speed2, speed3]):
             for pump_id in self.pumpGroups[group_idx]:
                 self.pump_speeds[pump_id] = speed
                 self.wds.pumps[pump_id].speed = speed
@@ -152,14 +152,14 @@ if __name__ == "__main__":
     # ptr = np.array([1])
     # printing_states(198,ptr)    
   
-    env = WdsWithDemand(demand_pattern=np.array([0.8]))
-    for i in range(len(env.action_map)):
-        ptr = np.array([0.8])
-        printing_states(i,ptr)
-
-
-    
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
-    
+    # env = WdsWithDemand(demand_pattern=np.array([0.8]))
     # for i in range(len(env.action_map)):
-    #     print(f"Action {i}: {env.action_map[i]}")
+    #     ptr = np.array([0.8])
+    #     printing_states(i,ptr)
+
+
+    
+    env = WdsWithDemand(demand_pattern=np.array([1]))
+    
+    for i in range(len(env.action_map)):
+        print(f"Action {i}: {env.action_map[i]}")
