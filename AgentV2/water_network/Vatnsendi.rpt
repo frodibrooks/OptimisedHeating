@@ -1,4 +1,4 @@
-  Page 1                                    Mon Jun  2 16:07:04 2025
+  Page 1                                    Mon Jun  2 20:08:30 2025
 
   ******************************************************************
   *                           E P A N E T                          *
@@ -7,4 +7,8 @@
   *                         Version 2.2                            *
   ******************************************************************
   
-  Analysis begun Mon Jun  2 16:07:04 2025
+  Analysis begun Mon Jun  2 20:08:30 2025
+
+  WARNING: Pump 25 closed because cannot deliver head at 0:00:00 hrs.
+  WARNING: Pump 26 closed because cannot deliver head at 0:00:00 hrs.
+   
