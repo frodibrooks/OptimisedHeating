@@ -59,6 +59,23 @@ class WdsWithDemand(wds):
     def action_index_to_list(self, action_idx):
         """Convert action index to a tuple of speed indices."""
         return self.action_map[action_idx]
+    
+
+    def get_state_named(self) -> dict:
+        """Return a dictionary of named state values, including pressures and demands per junction."""
+        state_dict = {}
+
+        for junction in self.wds.junctions:
+            uid = junction.uid
+            state_dict[f"{uid}_pressure"] = junction.pressure
+            state_dict[f"{uid}_head"] = junction.head
+            state_dict[f"{uid}_demand"] = junction.basedemand
+
+        # Optionally include pump speeds or other relevant state
+        for pump_id, speed in self.pump_speeds.items():
+            state_dict[f"{pump_id}_speed"] = speed
+
+        return state_dict
 
     def step(self, action_idx):
         speed1, speed2, speed3 = self.action_map[action_idx]
@@ -89,6 +106,9 @@ class WdsWithDemand(wds):
         done = self.timestep >= self.episode_len
 
         return state,demand, reward, done, {}
+
+
+
 
 
 
