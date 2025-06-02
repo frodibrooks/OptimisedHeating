@@ -62,20 +62,24 @@ class WdsWithDemand(wds):
     
 
     def get_state_named(self) -> dict:
-        """Return a dictionary of named state values, including pressures and demands per junction."""
+        """Return a dictionary of named state values, including pressures, demands, pump speeds, and pump power."""
+        self.wds.solve()  # Ensure the WDS is solved before getting state
         state_dict = {}
 
+        # Junction pressures, heads, and demands
         for junction in self.wds.junctions:
             uid = junction.uid
             state_dict[f"{uid}_pressure"] = junction.pressure
             state_dict[f"{uid}_head"] = junction.head
             state_dict[f"{uid}_demand"] = junction.basedemand
 
-        # Optionally include pump speeds or other relevant state
+        # Pump speeds and power
         for pump_id, speed in self.pump_speeds.items():
             state_dict[f"{pump_id}_speed"] = speed
+            state_dict[f"{pump_id}_power"] = self.wds.pumps[pump_id].energy  # Add power per pump
 
         return state_dict
+
 
     def step(self, action_idx):
         speed1, speed2, speed3 = self.action_map[action_idx]
