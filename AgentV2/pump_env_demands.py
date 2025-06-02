@@ -198,18 +198,19 @@ if __name__ == "__main__":
 
 
     
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    env = WdsWithDemand(demand_pattern=np.array([1]))
+    print(len(env.action_map))
     # print(env.action_map[1038])
 
     # env = WdsWithDemand(demand_pattern=np.array([1]))
     # print(env.action_map[1038])
 
 
-    ptr = np.array([1])
-    printing_states(1038,ptr)
+    # ptr = np.array([1])
+    # printing_states(1038,ptr)
 
-    ptr = np.array([1])
-    printing_states(1037,ptr)
+    # ptr = np.array([1])
+    # printing_states(1037,ptr)
     
     # for i in range(len(env.action_map)):
     #     print(f"Action {i}: {env.action_map[i]}")
