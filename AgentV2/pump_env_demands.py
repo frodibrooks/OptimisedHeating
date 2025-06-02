@@ -125,6 +125,7 @@ def printing_states(step,inp_demand_pattern):
 
     state, demand, reward, done, _ = env.step(step)
 
+  
     print(f"Reward {reward:.3f} speed {env.pump_speeds}")
     # print(f"State {state[:6]}")
     # print(f"Flows: {state[-6:]}")
@@ -174,16 +175,41 @@ if __name__ == "__main__":
     # printing_states(195,ptr)
 
     # ptr = np.array([1])
-    # printing_states(198,ptr)    
-  
-    # env = WdsWithDemand(demand_pattern=np.array([0.8]))
+    # printing_states(198,ptr)   
+    # my_dict = {}  
+    
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
     # for i in range(len(env.action_map)):
-    #     ptr = np.array([0.8])
-    #     printing_states(i,ptr)
+    #     ptr = np.array([1])
+    #     step, reward = printing_states(i, ptr)
+    #     my_dict[step] = reward
+    #     print(f"\rStep {i}/{len(env.action_map)}", end="", flush=True)
+
+
+    # # Sort the dictionary by reward (values), descending
+    # sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+
+    # # Print the top 10 entries
+    # print("Top 10 actions with highest rewards:")
+    # for i, (step, reward) in enumerate(sorted_dict.items()):
+    #     if i >= 10:
+    #         break
+    #     print(f"{step}: {reward}")
 
 
     
-    env = WdsWithDemand(demand_pattern=np.array([1]))
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # print(env.action_map[1038])
+
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # print(env.action_map[1038])
+
+
+    ptr = np.array([1])
+    printing_states(1038,ptr)
+
+    ptr = np.array([1])
+    printing_states(1037,ptr)
     
-    for i in range(len(env.action_map)):
-        print(f"Action {i}: {env.action_map[i]}")
+    # for i in range(len(env.action_map)):
+    #     print(f"Action {i}: {env.action_map[i]}")
