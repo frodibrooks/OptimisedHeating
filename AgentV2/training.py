@@ -36,7 +36,7 @@ class Agent:
         self.gamma = 0.9
         self.epsilon = 1.0
         self.epsilon_min = 0.01
-        self.epsilon_decay = 0.99993  # hversu hratt epsilon minnkar
+        self.epsilon_decay = 0.9998  # hversu hratt epsilon minnkar
         self.update_target_every = 200
         self.steps = 0
         self.action_size = action_size
@@ -81,7 +81,7 @@ class Agent:
 if __name__ == "__main__":
     num_episodes = 30000  # You can now train for more episodes since they're fast
     # reward_log_path = r"C:\Users\frodi\Desktop\OptimisedHeating\AgentV2\training_results\reward_log_agent15.csv"
-    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent302.csv"
+    reward_log_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/AgentV2/training_results/reward_log_agent303.csv"
 
     with open(reward_log_path, mode='w', newline='') as file:
         csv.writer(file).writerow(['Episode', 'Reward'])
@@ -106,6 +106,6 @@ if __name__ == "__main__":
         
         print(f"Episode {episode + 1}/{num_episodes}: Reward = {reward:.3f}, Epsilon = {agent.epsilon:.3f}, Demand Scale: {env.episode_demand_scale}", end="\r", flush=True)
 
-    torch.save(agent.policy_net.state_dict(), "trained_model_vol302.pth")
+    torch.save(agent.policy_net.state_dict(), "trained_model_vol303.pth")
     print()
     print("Model saved!")

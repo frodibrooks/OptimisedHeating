@@ -177,8 +177,9 @@ class wds():
             - (self.total_power/100)+self.pressure_score
         )
 
-        if self.valid_heads_ratio < 0.97:
-            reward*=0.65
+        if self.valid_heads_ratio < 0.97 or any(j.pressure > 105 for j in self.wds.junctions):
+            reward *= 0.65
+
         return reward
 
 
