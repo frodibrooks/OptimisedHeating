@@ -1,4 +1,4 @@
-  Page 1                                    Mon Jun  2 21:45:04 2025
+  Page 1                                    Tue Jun  3 09:32:40 2025
 
   ******************************************************************
   *                           E P A N E T                          *
@@ -7,10 +7,4 @@
   *                         Version 2.2                            *
   ******************************************************************
   
-  Analysis begun Mon Jun  2 21:45:04 2025
-
-  WARNING: Maximum trials exceeded at 0:00:00 hrs. System may be unstable.
-  WARNING: Negative pressures at 0:00:00 hrs.
-  WARNING: Pump 10 closed because cannot deliver head at 0:00:00 hrs.
-  WARNING: Pump 17 closed because cannot deliver head at 0:00:00 hrs.
-   
+  Analysis begun Tue Jun  3 09:32:40 2025
