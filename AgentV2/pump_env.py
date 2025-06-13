@@ -217,57 +217,56 @@ class wds():
 
 
 if __name__ == "__main__":
-    
    
-    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
-    # env = wds(eff_weight=3.0, pressure_weight=1)
+    # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
+    # # env = wds(eff_weight=3.0, pressure_weight=1)
 
 
-    # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
+    # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
-    env.step(12)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    # env.step(12)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
 
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
+    # print(f"Pump efficiencies: {env.pumpEffs}")
+    # print()
 
-    print(f"Pump power: {env.pumpPower}")
-    print()
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Eff ratio: {3*env.eff_ratio}")
+    # print(f"Energy: {-0.02*env.total_power}")
 
-    print(f"Reward: {reward}")
-    print()
+    # print(f"Reward: {reward}")
+    # print()
 
     
 
-    env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
-    # env = wds(eff_weight=3.0, pressure_weight=1)
+    # env = wds(eff_weight=3.0, pressure_weight=1.0,demand_scale = 1.026884)
+    # # env = wds(eff_weight=3.0, pressure_weight=1)
 
 
-    env.step(8)
-    states = env.get_state()
-    reward = env._compute_reward()
-    print(f"Pump speeds: {env.pump_speeds}")
-    print()
+    # env.step(8)
+    # states = env.get_state()
+    # reward = env._compute_reward()
+    # print(f"Pump speeds: {env.pump_speeds}")
+    # print()
 
-    print(f"Pump efficiencies: {env.pumpEffs}")
-    print()
+    # print(f"Pump efficiencies: {env.pumpEffs}")
+    # print()
 
-    print(f"Pump power: {env.pumpPower}")
-    print()
+    # print(f"Pump power: {env.pumpPower}")
+    # print()
 
-    print(f"Valid heads ratio: {env.valid_heads_ratio}")
-    print(f"Eff ratio: {3*env.eff_ratio}")
-    print(f"Energy: {-0.02*env.total_power}")
+    # print(f"Valid heads ratio: {env.valid_heads_ratio}")
+    # print(f"Eff ratio: {3*env.eff_ratio}")
+    # print(f"Energy: {-0.02*env.total_power}")
 
-    print(f"Reward: {reward}")
-    print()
+    # print(f"Reward: {reward}")
+    # print()
 
     # env = wds(eff_weight=3.0, pressure_weight=1.0)
     # env.step(40)
@@ -290,4 +289,7 @@ if __name__ == "__main__":
     # print()
 
     # for i in range(len(env.action_map)):
-    #     print(f"Action {i}: {env.action_map[i]}")
+    env = wds(eff_weight=3.0, pressure_weight=1.0)
+
+    for i in range(10):
+        print(f"Action {i}: {env.action_map[i]}")
