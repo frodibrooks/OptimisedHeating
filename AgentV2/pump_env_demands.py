@@ -212,13 +212,12 @@ if __name__ == "__main__":
     # ptr = np.array([1])
     # printing_states(1050,ptr)
 
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
     # # # print(len(env.wds.junctions) + len(env.pump_speeds)*2 )
     
     # for i in range(1300,1700):
     #     print(i, env.action_map[i])
 
-    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # env = WdsWithDemand(demand_pattern=np.array([1]))s
     # state = env.reset()
     # print(f"Initial state: {state[:10]}")
 
@@ -227,4 +226,4 @@ if __name__ == "__main__":
 
     for i in range(7):
         state, demand, reward, done, info = env.step(1477)
-        print(state[:10])
+        print(state[:10],env.demand_pattern[i])
