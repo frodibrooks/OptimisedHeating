@@ -124,8 +124,9 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     state, demand, reward, done, _ = env.step(step)
+    pressures = [j.pressure for j in env.wds.junctions]
 
-  
+    print(len(pressures))
     # print(f"Reward {reward:.3f} speed {env.pump_speeds}")
     print(f"State {state[:10]}")
     # print(f"Flows: {state[-10:]}")
@@ -206,8 +207,8 @@ if __name__ == "__main__":
     # # print(env.action_map[1038])
 
 
-    # ptr = np.array([1])
-    # printing_states(1477,ptr)
+    ptr = np.array([1])
+    printing_states(1477,ptr)
 
     # ptr = np.array([1])
     # printing_states(1050,ptr)
@@ -221,9 +222,9 @@ if __name__ == "__main__":
     # state = env.reset()
     # print(f"Initial state: {state[:10]}")
 
-    env = WdsWithDemand(demand_pattern=np.array([0.8, 0.9 , 1.0, 1.1, 1.2, 1.3, 1.4]))
-    # env.reset(demand_pattern=np.array([0.8, 0.9 , 1.0, 1.1, 1.2, 1.3, 1.4]))
+    # env = WdsWithDemand(demand_pattern=np.array([0.8, 0.9 , 1.0, 1.1, 1.2, 1.3, 1.4]))
+    # # env.reset(demand_pattern=np.array([0.8, 0.9 , 1.0, 1.1, 1.2, 1.3, 1.4]))
 
-    for i in range(7):
-        state, demand, reward, done, info = env.step(1477)
-        print(state[:10],env.demand_pattern[i])
+    # for i in range(7):
+    #     state, demand, reward, done, info = env.step(1477)
+    #     print(state[:10],env.demand_pattern[i])
