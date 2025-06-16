@@ -124,14 +124,14 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     state, demand, reward, done, _ = env.step(step)
-    pump_effs = env.pumpEffs
+    # pump_effs = env.pumpEffs
    
 
     # print(f"Reward {reward:.3f} speed {env.pump_speeds}")
     print(f"State {state[:10]}")
-    print(pump_effs)
-    print(f"Flows: {state[-5:]}")
-    print(env.eff_ratio)
+    # print(f"Flows: {state[-5:]}")
+    print("Valid heads ratio:", env.valid_heads_ratio)
+    print("Pressure Score:", env.pressure_score)
     # print(f"Demand: {demand[:6]}")
     # print(f"Reward: {reward:.3f}")
 
@@ -210,8 +210,9 @@ if __name__ == "__main__":
 
 
     ptr = np.array([1])
-    # printing_states(1477,ptr)
     printing_states(858,ptr)
+    printing_states(1477,ptr)
+
 
 
     # ptr = np.array([1])
