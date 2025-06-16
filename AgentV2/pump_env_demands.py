@@ -130,8 +130,8 @@ def printing_states(step,inp_demand_pattern):
     # print(f"Reward {reward:.3f} speed {env.pump_speeds}")
     print(f"State {state[:10]}")
     # print(f"Flows: {state[-5:]}")
-    print("Valid heads ratio:", env.valid_heads_ratio)
-    print("Pressure Score:", env.pressure_score)
+    print("Total Power:", env.total_power)
+
     # print(f"Demand: {demand[:6]}")
     # print(f"Reward: {reward:.3f}")
 
