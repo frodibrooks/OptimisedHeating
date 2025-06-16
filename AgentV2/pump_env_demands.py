@@ -124,12 +124,14 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     state, demand, reward, done, _ = env.step(step)
-    pressures = [j.pressure for j in env.wds.junctions]
+    pump_effs = env.pumpEffs
+   
 
-    print(len(pressures))
     # print(f"Reward {reward:.3f} speed {env.pump_speeds}")
     print(f"State {state[:10]}")
-    # print(f"Flows: {state[-10:]}")
+    print(pump_effs)
+    print(f"Flows: {state[-5:]}")
+    print(env.eff_ratio)
     # print(f"Demand: {demand[:6]}")
     # print(f"Reward: {reward:.3f}")
 
@@ -203,19 +205,21 @@ if __name__ == "__main__":
     # # print(len(env.action_map))
     # # print(env.action_map[1038])
 
-    # # env = WdsWithDemand(demand_pattern=np.array([1]))
-    # # print(env.action_map[1038])
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # print(env.action_map[1038])
 
 
     ptr = np.array([1])
-    printing_states(1477,ptr)
+    # printing_states(1477,ptr)
+    printing_states(858,ptr)
+
 
     # ptr = np.array([1])
     # printing_states(1050,ptr)
 
     # # # print(len(env.wds.junctions) + len(env.pump_speeds)*2 )
     
-    # for i in range(1300,1700):
+    # for i in range(800,1200):
     #     print(i, env.action_map[i])
 
     # env = WdsWithDemand(demand_pattern=np.array([1]))s
