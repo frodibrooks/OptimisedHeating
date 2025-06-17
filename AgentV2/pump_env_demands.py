@@ -131,6 +131,7 @@ def printing_states(step,inp_demand_pattern):
     print(f"State {state[:10]}")
     # print(f"Flows: {state[-5:]}")
     print("Total Power:", env.total_power)
+    print(f"Energy reward: {float(-env.total_power) / 116:.3f}")
 
     # print(f"Demand: {demand[:6]}")
     # print(f"Reward: {reward:.3f}")
