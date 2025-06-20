@@ -55,7 +55,7 @@ class wds():
         self.timestep = 0
 
         # Define the speed levels
-        self.speed_levels = np.round(np.arange(0.8, 1.201, 0.03), 3)
+        self.speed_levels = np.round(np.arange(0.8, 1.151, 0.03), 3)
 
         self.action_map = [
             (s1, s2, s3)
@@ -177,7 +177,7 @@ class wds():
             - (self.total_power/100)+self.pressure_score
         )
 
-        if self.valid_heads_ratio < 0.97 or any(j.pressure > 105 for j in self.wds.junctions):
+        if self.valid_heads_ratio < 0.98 or any(j.pressure > 105 for j in self.wds.junctions):
             reward *= 0.65
 
         return reward

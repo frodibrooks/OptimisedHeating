@@ -124,15 +124,19 @@ def printing_states(step,inp_demand_pattern):
     # # # # # Gott dæmi um að ecurves gefa betra reward en nsamt er consumed power meira 
 
     state, demand, reward, done, _ = env.step(step)
-    return step,reward
+    # return step,reward
     # pump_effs = env.pumpEffs
    
 
-    # print(f"Reward {reward:.3f} speed {env.pump_speeds}")
-    # print(f"State {state[:10]}")
+    print(f"Reward {reward:.3f}")
+    print(f"State {state[:10]}")
     # # print(f"Flows: {state[-5:]}")
-    # print("Total Power:", env.total_power)
-    # print(f"Energy reward: {float(-env.total_power) / 116:.3f}")
+    print("Total Power:", env.total_power)
+    print(f"Energy reward: {float(-env.total_power) / 100:.3f}")
+    print(f"Valid heads ratio: {env.valid_heads_ratio:.3f}")
+    print(f"Pressure Score: {env.pressure_score:.3f}")
+    print("Eff score: ",env.eff_weight * env.eff_ratio)
+    print()
 
     # print(f"Demand: {demand[:6]}")
     # print(f"Reward: {reward:.3f}")
@@ -181,25 +185,25 @@ if __name__ == "__main__":
 
     # ptr = np.array([1])
     # printing_states(198,ptr)   
-    my_dict = {}  
+    # my_dict = {}  
     
-    env = WdsWithDemand(demand_pattern=np.array([1.3]))
-    for i in range(len(env.action_map)):
-        ptr = np.array([1.3])
-        step, reward = printing_states(i, ptr)
-        my_dict[step] = reward
-        print(f"\rStep {i}/{len(env.action_map)}", end="", flush=True)
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # for i in range(len(env.action_map)):
+    #     ptr = np.array([0.8])
+    #     step, reward = printing_states(i, ptr)
+    #     my_dict[step] = reward
+    #     print(f"\rStep {i}/{len(env.action_map)}", end="", flush=True)
 
 
-    # Sort the dictionary by reward (values), descending
-    sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
+    # # Sort the dictionary by reward (values), descending
+    # sorted_dict = dict(sorted(my_dict.items(), key=lambda item: item[1], reverse=True))
 
-    # Print the top 10 entries
-    print("Top 10 actions with highest rewards:")
-    for i, (step, reward) in enumerate(sorted_dict.items()):
-        if i >= 10:
-            break
-        print(f"{step}: {reward}")
+    # # Print the top 10 entries
+    # print("Top 10 actions with highest rewards:")
+    # for i, (step, reward) in enumerate(sorted_dict.items()):
+    #     if i >= 10:
+    #         break
+    #     print(f"{step}: {reward}")
 
 
     
@@ -211,11 +215,10 @@ if __name__ == "__main__":
     # print(env.action_map[1038])
 
 
-    # ptr = np.array([0.8])
-    # printing_states(100,ptr)
-    # printing_states(91,ptr)
-    # # printing_states(1477,ptr)
-
+    ptr = np.array([0.8])
+    printing_states(82,ptr)
+    printing_states(83,ptr)
+    printing_states(154,ptr)
 
 
     # ptr = np.array([1])
