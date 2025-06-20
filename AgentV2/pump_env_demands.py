@@ -216,9 +216,16 @@ if __name__ == "__main__":
 
 
     ptr = np.array([0.8])
-    printing_states(82,ptr)
-    printing_states(83,ptr)
-    printing_states(154,ptr)
+    printing_states(0,ptr)
+    printing_states(1,ptr)
+    printing_states(2,ptr)
+    printing_states(3,ptr)
+    printing_states(90,ptr)
+    printing_states(4,ptr)
+    printing_states(91,ptr)
+
+    
+
 
 
     # ptr = np.array([1])

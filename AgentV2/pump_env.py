@@ -40,7 +40,7 @@ class wds():
         self.total_demand_hi = total_demand_hi
         self.speed_increment = speed_increment
 
-        self.headLimitLo = 35
+        self.headLimitLo = 30
         self.peakTotEff = 0.0629
         self.eff_weight = eff_weight
         self.power_penalty_weight = power_penalty_weight
@@ -177,7 +177,7 @@ class wds():
             - (self.total_power/100)+self.pressure_score
         )
 
-        if self.valid_heads_ratio < 0.98 or any(j.pressure > 105 for j in self.wds.junctions):
+        if self.valid_heads_ratio < 0.975 or any(j.pressure > 105 for j in self.wds.junctions):
             reward *= 0.65
 
         return reward

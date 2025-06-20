@@ -30,8 +30,8 @@ os.chdir(program_dir)
 # demand_ptr = np.array([1,1,1,1,1,1]) # sumar
 
 
-demand_ptr = np.array([0.8, 0.8, 0.9,0.9, 1.0,1.0, 1.1,1.1, 1.2,1.2, 1.3,1.3, 1.4,1.4])
-# demand_ptr = np.array([0.8, 0.8, 0.8, 1,0.8, 0.8])
+# demand_ptr = np.array([0.8, 0.8, 0.9,0.9, 1.0,1.0, 1.1,1.1, 1.2,1.2, 1.3,1.3, 1.4,1.4])
+demand_ptr = np.array([1, 0.8, 0.8, 0.8,0.8, 0.8])
 # demand_ptr = np.array([1.3,1.3,1.3,1.4,1.4,1.4])
 
 
@@ -125,9 +125,9 @@ for timestep in range(env.episode_len):
 
 
 
-# # === Save logs ===
-df = pd.DataFrame(full_logs)
-os.chdir(save_path)
-df.to_csv("validation_full_log_agent404.csv", index=False)
+# # # === Save logs ===
+# df = pd.DataFrame(full_logs)
+# os.chdir(save_path)
+# df.to_csv("validation_full_log_agent404.csv", index=False)
 
 print("Validation complete. Results saved to validation_full_log_agent404.csv.")
