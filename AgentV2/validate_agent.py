@@ -30,9 +30,9 @@ os.chdir(program_dir)
 # demand_ptr = np.array([1,1,1,1,1,1]) # sumar
 
 
-# demand_ptr = np.array([0.8, 0.8, 0.9,0.9, 1.0,1.0, 1.1,1.1, 1.2,1.2, 1.3,1.3, 1.4,1.4])
+demand_ptr = np.array([0.8,0.9,1.0,1.1,1.2,1.3,1.4])
 # demand_ptr = np.array([1, 0.8, 0.8, 0.8,0.8, 0.8])
-demand_ptr = np.array([1.3,1.3,1.3,1.4,1.4,1.4])
+# demand_ptr = np.array([1.3,1.3,1.3,1.4,1.4,1.4])
 
 
 env = WdsWithDemand(
