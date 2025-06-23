@@ -15,24 +15,26 @@ save_path = "/Users/frodibrooks/Desktop/DTU/Thesis/OptimisedHeating/validation/l
 # === Load environment ===
 os.chdir(program_dir)
 
-# env = WdsWithDemand(
-#     eff_weight=3.0,
-#     pressure_weight=1,
-#     demand_pattern=demand_pattern_path,
-#     episode_len = 24, # Þetta er lengd demand pattern
-#     use_constant_demand=False
-# )
-
-# demand_ptr = np.array([1.25,1.25,1.25,1.26,1.25,1.29,1.37,1.35,1.33,1.3,1.25,1.24,1.17,1.16,1.16,1.17,1.2,1.25,1.23,1.26,1.24,1.22,1.16]) winter
-# demand_ptr = np.array([0.55,0.56,0.56,0.56,0.57,0.6,0.66,0.66,0.65,0.63,0.61,0.61,0.59,0.6,0.6,0.63,0.67,0.65,0.63,0.65,0.63]) # sumar
-
-# demand_ptr = np.array([0.898, 0.915, 0.918, 0.917, 0.924, 0.978, 1.083, 1.076, 1.059, 1.052, 1.022, 0.998, 0.999, 0.967,0.976,0.971,1.018,1.017,1.084,1.047,1.022,1.044,1.018	]) # sumar
-# demand_ptr = np.array([1,1,1,1,1,1]) # sumar
 
 
-demand_ptr = np.array([0.8,0.9,1.0,1.1,1.2,1.3,1.4])
+# demand_ptr = np.array([0.8,0.9,1.0,1.1,1.2,1.3,1.4])
 # demand_ptr = np.array([1, 0.8, 0.8, 0.8,0.8, 0.8])
 # demand_ptr = np.array([1.3,1.3,1.3,1.4,1.4,1.4])
+
+
+# demand_ptr = np.array([
+#     0.896, 0.897, 0.896, 0.899, 0.921, 0.969,
+#     1.087, 1.031, 1.047, 1.052, 1.056, 1.055,
+#     1.050, 1.038, 0.993, 0.989, 1.064, 1.102,
+#     1.161, 1.132, 1.157, 1.122, 1.080
+# ])   # haust dagur goðar nidustoduer
+
+demand_ptr = np.array([
+    1.140, 1.179, 1.159, 1.159, 1.146, 1.186,
+    1.268, 1.287, 1.315, 1.315, 1.307, 1.270,
+    1.253, 1.249, 1.249, 1.232, 1.267, 1.335,
+    1.40, 1.383, 1.389, 1.357, 1.308
+])
 
 
 env = WdsWithDemand(
@@ -106,9 +108,7 @@ for timestep in range(env.episode_len):
     # Log pressures
     for junction in env.wds.junctions:
         row[f"Head_{junction.uid}"] = junction.pressure
-    # log Demand
-    for junction in env.wds.junctions:
-        row[f"Demand_{junction.uid}"] = junction.basedemand
+
 
     # Log actual speeds from action map
     speed1, speed2, speed3  = env.action_map[action_idx]
@@ -125,9 +125,9 @@ for timestep in range(env.episode_len):
 
 
 
-# # # === Save logs ===
-# df = pd.DataFrame(full_logs)
-# os.chdir(save_path)
-# df.to_csv("validation_full_log_agent404.csv", index=False)
+# # === Save logs ===
+df = pd.DataFrame(full_logs)
+os.chdir(save_path)
+df.to_csv("validation_full_log_agent406.csv", index=False)
 
-print("Validation complete. Results saved to validation_full_log_agent408.csv.")
+print("Validation complete. Results saved to validation_full_log_agent406.csv.")
