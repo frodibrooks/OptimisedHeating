@@ -30,11 +30,19 @@ os.chdir(program_dir)
 # ])   # haust dagur goðar nidustoduer
 
 demand_ptr = np.array([
-    1.140, 1.179, 1.159, 1.159, 1.146, 1.186,
-    1.268, 1.287, 1.315, 1.315, 1.307, 1.270,
-    1.253, 1.249, 1.249, 1.232, 1.267, 1.335,
-    1.40, 1.383, 1.389, 1.357, 1.308
+    0.928, 0.927, 0.920, 0.900, 0.895, 0.932,
+    1.011, 0.987, 0.993, 1.002, 0.998, 1.002,
+    0.990, 0.990, 0.990, 0.993,
+    1.046, 1.088, 1.120, 1.119, 1.080, 1.056, 1.032
 ])
+
+
+# demand_ptr = np.array([
+#     1.140, 1.179, 1.159, 1.159, 1.146, 1.186,
+#     1.268, 1.287, 1.315, 1.315, 1.307, 1.270,
+#     1.253, 1.249, 1.249, 1.232, 1.267, 1.335,
+#     1.40, 1.383, 1.389, 1.357, 1.308
+# ])
 
 
 env = WdsWithDemand(
@@ -128,6 +136,6 @@ for timestep in range(env.episode_len):
 # # === Save logs ===
 df = pd.DataFrame(full_logs)
 os.chdir(save_path)
-df.to_csv("validation_full_log_agent406.csv", index=False)
+df.to_csv("validation_full_log_agent406_spring.csv", index=False)
 
 print("Validation complete. Results saved to validation_full_log_agent406.csv.")
