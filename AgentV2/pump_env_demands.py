@@ -232,8 +232,8 @@ if __name__ == "__main__":
     # printing_states(1050,ptr)
 
     # # # print(len(env.wds.junctions) + len(env.pump_speeds)*2 )
-    
-    # for i in range(800,1200):
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+    # for i in range(len(env.action_map)):
     #     print(i, env.action_map[i])
 
     # env = WdsWithDemand(demand_pattern=np.array([1]))s
@@ -246,3 +246,23 @@ if __name__ == "__main__":
     # for i in range(7):
     #     state, demand, reward, done, info = env.step(1477)
     #     print(state[:10],env.demand_pattern[i])
+# Set print options globally for numpy
+    # np.set_printoptions(precision=2, suppress=True)
+
+    # env = WdsWithDemand(demand_pattern=np.array([1]))
+
+    # state, demand, reward, done, _ = env.step(99)
+    # print("State vector: ", state[:10].2f)
+    # print("Pump speeds: ", state[:5])
+    # print("Junction pressures: ", state[5:10])
+
+    # state, demand, reward, done, _ = env.step(304)
+    # print("State vector: ", state[:10])
+    # print("Pump speeds: ", state[:5])
+    # print("Junction pressures: ", state[5:10])
+
+    # env = WdsWithDemand(demand_pattern=np.array([0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4]))
+
+    # for i in range(7):
+    #     state, demand, reward, done, info = env.step(304)
+    #     print(f"State vector: {state[:10]} Demand scale: {env.demand_pattern[i]}")
